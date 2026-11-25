@@ -28,7 +28,7 @@ function start() {
   });
   server.listen(port, HOST, () => {
     console.log(
-      `XRPL Core Reference: serving ${site.files.size} files for rippled ${site.commitSha.slice(0, 12)} on ${HOST}:${port}`,
+      `XRPLD C++ Reference: serving ${site.files.size} files for rippled ${site.commitSha.slice(0, 12)} on ${HOST}:${port}`,
     );
   });
   const shutdown = (signal) => {
@@ -44,6 +44,6 @@ try {
   start();
 } catch (error) {
   const message = error instanceof SiteLoadError ? error.message : `${error.name}: ${error.message}`;
-  console.error(`XRPL Core Reference failed to start. ${message}`);
+  console.error(`XRPLD C++ Reference failed to start. ${message}`);
   process.exit(1);
 }

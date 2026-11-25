@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 const PAGES = Object.freeze([
-  ['overview', '/', 'XRPL Core Reference'],
+  ['overview', '/', 'XRPLD C++ Reference'],
   ['namespace', '/symbols/xrpl', 'xrpl'],
   ['class', '/symbols/xrpl/ApplyContext', 'ApplyContext'],
   ['inherited documentation', '/symbols/xrpl/detail/ApplyViewBase/open/3d5a0786', 'open'],

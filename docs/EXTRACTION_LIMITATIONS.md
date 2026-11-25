@@ -1,6 +1,6 @@
 # Extraction Limitations
 
-XRPL Core Reference extracts the rippled C++ API with Doxygen 1.17.0. Doxygen parses C++ heuristically: it does not compile the code, resolve overloads, or instantiate templates. This document lists every known way the raw output deviates from the source, and what the pipeline does about each.
+XRPLD C++ Reference extracts rippled's C++ source code, including internal implementation details, with Doxygen 1.17.0. Doxygen parses C++ heuristically: it does not compile the code, resolve overloads, or instantiate templates. This document lists every known way the raw output deviates from the source, and what the pipeline does about each.
 
 All figures are for `XRPLF/rippled@develop` at commit `c2534ff9c84422e00711da31629a76f3f59feb98`. Every dataset reports its own figures in `coverage-report.json` under `corrections`, `exclusions`, `references` and `sourceLocations`.
 

@@ -1,4 +1,4 @@
-# XRPL Core Reference — Phase 1 Feasibility Report
+# XRPLD C++ Reference — Phase 1 Feasibility Report
 
 Status: approved. This is the historical Phase 1 record. The prototype it describes (`research/phase-1/`) was replaced in Phase 2 by the pipeline in `scripts/documentation/`; current figures are in each dataset's `coverage-report.json`.
 

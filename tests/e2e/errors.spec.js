@@ -30,7 +30,7 @@ test('a failed symbol file keeps the rest of the site working', async ({ page })
   await expect(page.getByRole('navigation', { name: 'Breadcrumb' })).toBeVisible();
   await page.unrouteAll({ behavior: 'ignoreErrors' });
   await page.getByRole('navigation', { name: 'Breadcrumb' }).getByRole('link', { name: 'Overview' }).click();
-  await expect(page.getByRole('heading', { level: 1, name: 'XRPL Core Reference' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: 'XRPLD C++ Reference' })).toBeVisible();
 });
 
 test('a failed inheritance file only affects the inheritance section', async ({ page }) => {

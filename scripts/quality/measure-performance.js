@@ -11,7 +11,7 @@ const DIST_ASSETS = join(process.cwd(), 'dist', 'assets');
 const SAMPLES = 3;
 
 const PAGES = Object.freeze([
-  { name: 'overview', path: '/', heading: 'XRPL Core Reference' },
+  { name: 'overview', path: '/', heading: 'XRPLD C++ Reference' },
   { name: 'namespace xrpl', path: '/symbols/xrpl', heading: 'xrpl' },
   { name: 'class STObject', path: '/symbols/xrpl/STObject', heading: 'STObject' },
   { name: 'class ApplyContext', path: '/symbols/xrpl/ApplyContext', heading: 'ApplyContext' },
@@ -108,7 +108,7 @@ async function measureNavigation(browser) {
 async function measureSearch(browser) {
   const { context, page } = await openMeasuredPage(browser);
   await page.goto(BASE_URL);
-  await page.getByRole('heading', { level: 1, name: 'XRPL Core Reference', exact: true }).waitFor();
+  await page.getByRole('heading', { level: 1, name: 'XRPLD C++ Reference', exact: true }).waitFor();
   const timings = [];
   for (const query of ['ApplyContext', 'preflight', 'a', 'xrpl::STTx::getTxnType']) {
     const input = page.getByRole('combobox', { name: 'Search the reference' });

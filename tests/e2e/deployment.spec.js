@@ -31,7 +31,7 @@ test('refreshing a method page keeps the page', async ({ page }) => {
 test('assets, favicon and the dataset load from the repository sub-path', async ({ page, request }) => {
   const failures = await collectFailures(page);
   await page.goto('./');
-  await expect(page.getByRole('heading', { level: 1, name: 'XRPL Core Reference' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: 'XRPLD C++ Reference' })).toBeVisible();
   const favicon = await page.locator('link[rel="icon"]').getAttribute('href');
   expect(favicon).toMatch(/^\/XRPL-Core-Reference\/assets\//);
   expect((await request.get(favicon)).ok()).toBe(true);

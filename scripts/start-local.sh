@@ -27,5 +27,5 @@ if [[ ! -f public/data/current.json ]]; then
   npm run docs:generate
 fi
 
-echo "Starting XRPL Core Reference at http://localhost:5173"
+echo "Starting XRPLD C++ Reference at http://localhost:5173"
 npm run dev -- --open

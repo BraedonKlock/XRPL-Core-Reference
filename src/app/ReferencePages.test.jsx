@@ -144,7 +144,7 @@ describe('search', () => {
   it('finds a symbol from the header with the keyboard', async () => {
     const user = userEvent.setup();
     const { router } = renderApp({ client: client() });
-    await screen.findByRole('heading', { level: 1, name: 'XRPL Core Reference' });
+    await screen.findByRole('heading', { level: 1, name: 'XRPLD C++ Reference' });
     await user.keyboard('/');
     const input = screen.getByRole('combobox', { name: 'Search the reference' });
     expect(input).toHaveFocus();

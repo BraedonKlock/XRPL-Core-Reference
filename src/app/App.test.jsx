@@ -26,8 +26,8 @@ function fixtureClient(options) {
 describe('application with the rippled fixture dataset', () => {
   it('shows the documented revision on the overview page', async () => {
     renderApp({ client: fixtureClient() });
-    expect(await screen.findByRole('heading', { level: 1, name: 'XRPL Core Reference' })).toBeInTheDocument();
-    const homeLink = screen.getByRole('link', { name: /^XRPL Core Reference/ });
+    expect(await screen.findByRole('heading', { level: 1, name: 'XRPLD C++ Reference' })).toBeInTheDocument();
+    const homeLink = screen.getByRole('link', { name: /^XRPLD C\+\+ Reference/ });
     expect(homeLink).toHaveAttribute('href', '/');
     expect(homeLink.querySelector('img')).toHaveAttribute('src', expect.stringMatching(/images\.png$/));
     expect(screen.getByRole('link', { name: COMMIT })).toHaveAttribute(

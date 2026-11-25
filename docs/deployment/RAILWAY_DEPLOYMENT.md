@@ -1,6 +1,6 @@
 # Deploying to Railway
 
-XRPL Core Reference is a static site. On Railway it runs as one service: Railpack builds it with Vite, and a small, dependency-free Node server (`scripts/deployment/serve.js`) serves `dist/`. There is no backend, database, scheduled job or secret.
+XRPLD C++ Reference is a static site. On Railway it runs as one service: Railpack builds it with Vite, and a small, dependency-free Node server (`scripts/deployment/serve.js`) serves `dist/`. There is no backend, database, scheduled job or secret.
 
 Deployments are entirely manual. Railway is **not** connected to GitHub, so pushing code never changes the website. The website changes only when you run `npm run deploy:railway` and type `deploy` to confirm.
 
@@ -79,7 +79,7 @@ npm run deploy:railway
 
 - `--check` runs every step except the upload. Use it whenever you like; it never contacts Railway.
 - The deploy run prints the commit, the documented rippled commit and the number of files, shows `railway status`, and asks you to type `deploy`. Anything else cancels without uploading.
-- It streams Railway's build log and exits when the build finishes. The Railway dashboard shows the deployment with the message `XRPL Core Reference <commit> (rippled <commit>)`.
+- It streams Railway's build log and exits when the build finishes. The Railway dashboard shows the deployment with the message `XRPLD C++ Reference <commit> (rippled <commit>)`.
 
 Only committed, pushed files can be deployed. Uncommitted edits, untracked files, `.env` files and anything gitignored never leave your machine.
 
@@ -207,7 +207,7 @@ Replace `<domain>` with your Railway domain.
 | The service starts Vite or `start-local.sh`                          | A custom start command overrides `railpack.json`. Clear it in the service settings.                                                                    |
 | The service crashes with "PORT must be an integer"                   | A `PORT` variable was set by hand. Delete it and let Railway provide it.                                                                               |
 | The domain shows "Application failed to respond"                     | The domain targets the wrong port. Use the port from the deploy log line `serving … on 0.0.0.0:<port>`.                                                |
-| Deep links return 404                                                | A different server is running. The deploy log must show `XRPL Core Reference: serving …`.                                                              |
+| Deep links return 404                                                | A different server is running. The deploy log must show `XRPLD C++ Reference: serving …`.                                                              |
 | Assets or data request `/XRPL-Core-Reference/...`                    | The site was built with the GitHub Pages base path. Railway must run `npm run build`, not `npm run build:pages`.                                       |
 | The page loads without styles, or the console reports CSP violations | `dist/index.html` and the running server are from different builds. Redeploy so that both come from the same build.                                    |
 | The upload is rejected as too large                                  | Railway's upload limit was exceeded. The upload is about 40 MB before compression; check the size the deploy script prints.                            |

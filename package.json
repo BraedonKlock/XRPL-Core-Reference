@@ -2,7 +2,7 @@
   "name": "xrpl-core-reference",
   "version": "0.1.0",
   "private": true,
-  "description": "Explore the XRP Ledger's C++ Core. A community-maintained reference for the XRPLF/rippled implementation.",
+  "description": "Explore the C++ internals of rippled, the XRP Ledger's core server implementation. An unofficial, independently maintained reference.",
   "license": "MIT",
   "type": "module",
   "engines": {

@@ -158,5 +158,5 @@ read -r -p "Type '${CONFIRMATION_WORD}' to upload commit ${commit:0:12} to this 
 [[ "$answer" == "$CONFIRMATION_WORD" ]] || fail "not confirmed. Nothing was uploaded."
 
 step "Uploading to Railway"
-railway up "$site" --path-as-root --ci --message "XRPL Core Reference ${commit:0:12} (rippled ${dataset_sha:0:12})"
+railway up "$site" --path-as-root --ci --message "XRPLD C++ Reference ${commit:0:12} (rippled ${dataset_sha:0:12})"
 printf '\nUpload finished. Verify the site using docs/deployment/RAILWAY_DEPLOYMENT.md.\n'

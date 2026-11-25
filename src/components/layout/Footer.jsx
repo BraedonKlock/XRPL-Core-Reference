@@ -16,8 +16,8 @@ export function Footer({ source, generatedAt, upstreamLicenseUrl }) {
         , generated {new Date(generatedAt).toISOString().slice(0, 10)}.
       </p>
       <p>
-        A community-maintained project, not affiliated with or endorsed by the XRPL Foundation. Documentation
-        content is derived from rippled and distributed under the{' '}
+        An unofficial, independently maintained reference, not affiliated with or endorsed by the XRPL
+        Foundation or Ripple. Documentation content is derived from rippled and distributed under the{' '}
         <a className="inline-link" href={upstreamLicenseUrl} rel="noreferrer">
           rippled ISC License
         </a>

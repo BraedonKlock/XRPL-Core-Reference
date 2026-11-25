@@ -1,6 +1,6 @@
 # Architecture
 
-XRPL Core Reference has two independently maintainable parts:
+XRPLD C++ Reference has two independently maintainable parts:
 
 1. **The documentation extraction engine** (`scripts/documentation/`). It runs at build time, pins a rippled commit, runs Doxygen, and turns the output into a validated, versioned JSON dataset.
 2. **The React documentation browser** (`src/`). It is a static single-page application that consumes only that dataset.

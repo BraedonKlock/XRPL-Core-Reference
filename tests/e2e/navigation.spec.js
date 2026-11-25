@@ -16,13 +16,13 @@ async function openNavigationIfCollapsed(page) {
 test('overview identifies the documented develop commit', async ({ page, request }) => {
   const commitSha = await currentCommitSha(request);
   await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1, name: 'XRPL Core Reference' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: 'XRPLD C++ Reference' })).toBeVisible();
   await expect(page.getByRole('link', { name: commitSha })).toHaveAttribute(
     'href',
     `https://github.com/XRPLF/rippled/commit/${commitSha}`,
   );
-  await expect(page).toHaveTitle('XRPL Core Reference');
-  const logo = page.getByRole('link', { name: 'XRPL Core Reference' }).locator('img');
+  await expect(page).toHaveTitle('XRPLD C++ Reference');
+  const logo = page.getByRole('link', { name: 'XRPLD C++ Reference' }).locator('img');
   await expect(logo).toBeVisible();
   expect(
     await logo.evaluate((image) => image.naturalWidth === image.naturalHeight && image.naturalWidth > 0),
@@ -53,7 +53,7 @@ test('browse from the namespace tree to a class and back', async ({ page, reques
   await page.goBack();
   await expect(page.getByRole('heading', { level: 1, name: 'ApplyContext' })).toBeVisible();
   await page.goBack();
-  await expect(page.getByRole('heading', { level: 1, name: 'XRPL Core Reference' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: 'XRPLD C++ Reference' })).toBeVisible();
 });
 
 test('deep links reveal the symbol in the navigation tree', async ({ page }) => {
