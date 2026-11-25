@@ -1,0 +1,1137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1BaseUInt" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::BaseUInt</compoundname>
+    <includes local="no">xrpl/basics/base_uint.h</includes>
+    <innerclass refid="structxrpl_1_1BaseUInt_1_1VoidHelper" prot="private">xrpl::BaseUInt::VoidHelper</innerclass>
+    <templateparamlist>
+      <param>
+        <type>std::size_t</type>
+        <declname>Bits</declname>
+        <defname>Bits</defname>
+      </param>
+      <param>
+        <type>class Tag</type>
+        <defval>void</defval>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classxrpl_1_1BaseUInt_1a974758b71c02e3b887790fad3bc54ad1" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>ParseResult</name>
+        <qualifiedname>xrpl::BaseUInt::ParseResult</qualifiedname>
+        <enumvalue id="classxrpl_1_1BaseUInt_1a974758b71c02e3b887790fad3bc54ad1a26b63f278101527e06a5547719568bb5" prot="private">
+          <name>Okay</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxrpl_1_1BaseUInt_1a974758b71c02e3b887790fad3bc54ad1abb705c9e1ba6abeb0821874237e2ec07" prot="private">
+          <name>BadLength</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxrpl_1_1BaseUInt_1a974758b71c02e3b887790fad3bc54ad1a8fb49cb6983f800d0a977ece1f81c150" prot="private">
+          <name>BadChar</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="187" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="187" bodyend="191"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1a054cf19a2b200317ff2a1c0aae9af367" prot="public" static="no">
+        <type>std::size_t</type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::size_type = std::size_t</definition>
+        <argsstring></argsstring>
+        <name>size_type</name>
+        <qualifiedname>xrpl::BaseUInt::size_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="103" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1a1eac8f7c79428e46cf7094d654f6eaf7" prot="public" static="no">
+        <type>std::ptrdiff_t</type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::difference_type = std::ptrdiff_t</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <qualifiedname>xrpl::BaseUInt::difference_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="104" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1a0751f3d33f5c4af4758e76638fc8c226" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::value_type = unsigned char</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>xrpl::BaseUInt::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="105" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1a06124e65eb401eceb68b9316ad80d532" prot="public" static="no">
+        <type><ref refid="classxrpl_1_1BaseUInt_1a0751f3d33f5c4af4758e76638fc8c226" kindref="member">value_type</ref> *</type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::pointer = value_type*</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <qualifiedname>xrpl::BaseUInt::pointer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="106" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1a8bc1deb4c5917ef8754c21194e18c683" prot="public" static="no">
+        <type><ref refid="classxrpl_1_1BaseUInt_1a0751f3d33f5c4af4758e76638fc8c226" kindref="member">value_type</ref> &amp;</type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::reference = value_type&amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <qualifiedname>xrpl::BaseUInt::reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="107" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1a478082ca45659020b60efe23b4e5f3e3" prot="public" static="no">
+        <type><ref refid="classxrpl_1_1BaseUInt_1a0751f3d33f5c4af4758e76638fc8c226" kindref="member">value_type</ref> const  *</type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::const_pointer = value_type const*</definition>
+        <argsstring></argsstring>
+        <name>const_pointer</name>
+        <qualifiedname>xrpl::BaseUInt::const_pointer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="108" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1addcb0856d15ebd164ec1e9b2feb39efa" prot="public" static="no">
+        <type><ref refid="classxrpl_1_1BaseUInt_1a0751f3d33f5c4af4758e76638fc8c226" kindref="member">value_type</ref> const  &amp;</type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::const_reference = value_type const&amp;</definition>
+        <argsstring></argsstring>
+        <name>const_reference</name>
+        <qualifiedname>xrpl::BaseUInt::const_reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="109" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1af7dbad88a1babd3ddf31564f529c094a" prot="public" static="no">
+        <type><ref refid="classxrpl_1_1BaseUInt_1a06124e65eb401eceb68b9316ad80d532" kindref="member">pointer</ref></type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::iterator = pointer</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <qualifiedname>xrpl::BaseUInt::iterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="110" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1aadaf6846c9298c99c0cd68037587e5f0" prot="public" static="no">
+        <type><ref refid="classxrpl_1_1BaseUInt_1a478082ca45659020b60efe23b4e5f3e3" kindref="member">const_pointer</ref></type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::const_iterator = const_pointer</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <qualifiedname>xrpl::BaseUInt::const_iterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="111" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1a07653110ece8a33a5612f7fed808517f" prot="public" static="no">
+        <type>std::reverse_iterator&lt; <ref refid="classxrpl_1_1BaseUInt_1af7dbad88a1babd3ddf31564f529c094a" kindref="member">iterator</ref> &gt;</type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::reverse_iterator = std::reverse_iterator&lt;iterator&gt;</definition>
+        <argsstring></argsstring>
+        <name>reverse_iterator</name>
+        <qualifiedname>xrpl::BaseUInt::reverse_iterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="112" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1a541613cba7c90f5d058e66cf14a9dd87" prot="public" static="no">
+        <type>std::reverse_iterator&lt; <ref refid="classxrpl_1_1BaseUInt_1aadaf6846c9298c99c0cd68037587e5f0" kindref="member">const_iterator</ref> &gt;</type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::const_reverse_iterator = std::reverse_iterator&lt;const_iterator&gt;</definition>
+        <argsstring></argsstring>
+        <name>const_reverse_iterator</name>
+        <qualifiedname>xrpl::BaseUInt::const_reverse_iterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="113" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1a9e93f2631f314e750b70fd63ca19c401" prot="public" static="no">
+        <type>Tag</type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::TagType = Tag</definition>
+        <argsstring></argsstring>
+        <name>TagType</name>
+        <qualifiedname>xrpl::BaseUInt::TagType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="114" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1BaseUInt_1aa9d24ccfaa35477ab720a464a33caa4b" prot="public" static="no">
+        <type>HardenedHash&lt;&gt;</type>
+        <definition>using xrpl::BaseUInt&lt; Bits, Tag &gt;::hasher = HardenedHash&lt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>hasher</name>
+        <qualifiedname>xrpl::BaseUInt::hasher</qualifiedname>
+        <briefdescription>
+<para>Value hashing function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The seed prevents crafted inputs from causing degenerate parent containers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="163" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1BaseUInt_1a88d75697947fc0dae2d70e41fcf2bcbc" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::BaseUInt&lt; Bits, Tag &gt;::kWidth</definition>
+        <argsstring></argsstring>
+        <name>kWidth</name>
+        <qualifiedname>xrpl::BaseUInt::kWidth</qualifiedname>
+        <initializer>= Bits / 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="87" column="34" bodyfile="include/xrpl/basics/base_uint.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1BaseUInt_1a9831f5493e0484eda598735f79cf8596" prot="private" static="no" mutable="no">
+        <type>std::array&lt; std::uint32_t, <ref refid="classxrpl_1_1BaseUInt_1a88d75697947fc0dae2d70e41fcf2bcbc" kindref="member">kWidth</ref> &gt;</type>
+        <definition>std::array&lt;std::uint32_t, kWidth&gt; xrpl::BaseUInt&lt; Bits, Tag &gt;::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <qualifiedname>xrpl::BaseUInt::data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="92" column="16" bodyfile="include/xrpl/basics/base_uint.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1BaseUInt_1ac749844e1e86ec05ad68dff2531b706b" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::BaseUInt&lt; Bits, Tag &gt;::kBytes</definition>
+        <argsstring></argsstring>
+        <name>kBytes</name>
+        <qualifiedname>xrpl::BaseUInt::kBytes</qualifiedname>
+        <initializer>= Bits / 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="100" column="34" bodyfile="include/xrpl/basics/base_uint.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1aa3242b3c98b7218db5a08e7bbb9aa07c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1a06124e65eb401eceb68b9316ad80d532" kindref="member">pointer</ref></type>
+        <definition>pointer xrpl::BaseUInt&lt; Bits, Tag &gt;::data</definition>
+        <argsstring>()</argsstring>
+        <name>data</name>
+        <qualifiedname>xrpl::BaseUInt::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="117" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a8097452e849f3f15e1bd2759772c052c" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1a478082ca45659020b60efe23b4e5f3e3" kindref="member">const_pointer</ref></type>
+        <definition>const_pointer xrpl::BaseUInt&lt; Bits, Tag &gt;::data</definition>
+        <argsstring>() const</argsstring>
+        <name>data</name>
+        <qualifiedname>xrpl::BaseUInt::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="122" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1ace0a5114e13934dd7ea33655b5565bcd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1af7dbad88a1babd3ddf31564f529c094a" kindref="member">iterator</ref></type>
+        <definition>iterator xrpl::BaseUInt&lt; Bits, Tag &gt;::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <qualifiedname>xrpl::BaseUInt::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="128" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a80b67139658121f04207f5a2172910b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1af7dbad88a1babd3ddf31564f529c094a" kindref="member">iterator</ref></type>
+        <definition>iterator xrpl::BaseUInt&lt; Bits, Tag &gt;::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <qualifiedname>xrpl::BaseUInt::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="133" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a4ddceebd80f5f905fb5e38624e72423a" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aadaf6846c9298c99c0cd68037587e5f0" kindref="member">const_iterator</ref></type>
+        <definition>const_iterator xrpl::BaseUInt&lt; Bits, Tag &gt;::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <qualifiedname>xrpl::BaseUInt::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="138" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1ac75f8ad206823d659aac064294223d63" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aadaf6846c9298c99c0cd68037587e5f0" kindref="member">const_iterator</ref></type>
+        <definition>const_iterator xrpl::BaseUInt&lt; Bits, Tag &gt;::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <qualifiedname>xrpl::BaseUInt::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="143" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1af7d2db4a9cdf61a9cd42fbcdb1093bb0" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aadaf6846c9298c99c0cd68037587e5f0" kindref="member">const_iterator</ref></type>
+        <definition>const_iterator xrpl::BaseUInt&lt; Bits, Tag &gt;::cbegin</definition>
+        <argsstring>() const</argsstring>
+        <name>cbegin</name>
+        <qualifiedname>xrpl::BaseUInt::cbegin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="148" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a22df1756a4ec20ea93f6470fd0a759ea" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aadaf6846c9298c99c0cd68037587e5f0" kindref="member">const_iterator</ref></type>
+        <definition>const_iterator xrpl::BaseUInt&lt; Bits, Tag &gt;::cend</definition>
+        <argsstring>() const</argsstring>
+        <name>cend</name>
+        <qualifiedname>xrpl::BaseUInt::cend</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="153" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1abba08e5f4dd5d76bde40d0884c12d627" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>xrpl::BaseUInt&lt; Bits, Tag &gt;::BaseUInt</definition>
+        <argsstring>()</argsstring>
+        <name>BaseUInt</name>
+        <qualifiedname>xrpl::BaseUInt::BaseUInt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="266" column="15" bodyfile="include/xrpl/basics/base_uint.h" bodystart="266" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1aa87ef54da278b1f557774c0857096030" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>xrpl::BaseUInt&lt; Bits, Tag &gt;::BaseUInt</definition>
+        <argsstring>(beast::Zero)</argsstring>
+        <name>BaseUInt</name>
+        <qualifiedname>xrpl::BaseUInt::BaseUInt</qualifiedname>
+        <param>
+          <type>beast::Zero</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="270" column="15" bodyfile="include/xrpl/basics/base_uint.h" bodystart="270" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a0d6d432fe2914e2a9b82cede24fb8f91" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::BaseUInt&lt; Bits, Tag &gt;::BaseUInt</definition>
+        <argsstring>(std::uint64_t b)</argsstring>
+        <name>BaseUInt</name>
+        <qualifiedname>xrpl::BaseUInt::BaseUInt</qualifiedname>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="274" column="14" bodyfile="include/xrpl/basics/base_uint.h" bodystart="274" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a33a55fc5084b15682fa80bcc9d868489" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" noexceptexpression="false" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>xrpl::BaseUInt&lt; Bits, Tag &gt;::BaseUInt</definition>
+        <argsstring>(std::string_view sv)</argsstring>
+        <name>BaseUInt</name>
+        <qualifiedname>xrpl::BaseUInt::BaseUInt</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>sv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="282" column="24" bodyfile="include/xrpl/basics/base_uint.h" bodystart="282" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a7b5b753ced2260a5fbaaac705d33d33c" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Container</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>xrpl::BaseUInt&lt; Bits, Tag &gt;::BaseUInt</definition>
+        <argsstring>(Container const &amp;c)</argsstring>
+        <name>BaseUInt</name>
+        <qualifiedname>xrpl::BaseUInt::BaseUInt</qualifiedname>
+        <param>
+          <type>Container const &amp;</type>
+          <declname>c</declname>
+        </param>
+    <requiresclause>( <ref refid="structxrpl_1_1detail_1_1IsContiguousContainer" kindref="compound">detail::IsContiguousContainer</ref>&lt;Container&gt;::value &amp;&amp; std::is_trivially_copyable_v&lt;typename Container::value_type&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="288" column="14" bodyfile="include/xrpl/basics/base_uint.h" bodystart="288" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1aa38e3db5e4337f99a7947296e0fc97fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Container</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> &amp;</type>
+        <definition>BaseUInt &amp; xrpl::BaseUInt&lt; Bits, Tag &gt;::operator=</definition>
+        <argsstring>(Container const &amp;c)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::BaseUInt::operator=</qualifiedname>
+        <param>
+          <type>Container const &amp;</type>
+          <declname>c</declname>
+        </param>
+    <requiresclause>( <ref refid="structxrpl_1_1detail_1_1IsContiguousContainer" kindref="compound">detail::IsContiguousContainer</ref>&lt;Container&gt;::value &amp;&amp; std::is_trivially_copyable_v&lt;typename Container::value_type&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="320" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="320" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a3d1b80f43bf7399ad3b872ae5b9f0019" prot="public" static="no" nodiscard="yes" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int xrpl::BaseUInt&lt; Bits, Tag &gt;::signum</definition>
+        <argsstring>() const</argsstring>
+        <name>signum</name>
+        <qualifiedname>xrpl::BaseUInt::signum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="355" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="355" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a05d95d544e715b128fad73d0103a4699" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::BaseUInt&lt; Bits, Tag &gt;::operator!</definition>
+        <argsstring>() const</argsstring>
+        <name>operator!</name>
+        <qualifiedname>xrpl::BaseUInt::operator!</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="367" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="367" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1ac60dee1a147fce9e4c07454965f2f04e" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref></type>
+        <definition>BaseUInt xrpl::BaseUInt&lt; Bits, Tag &gt;::operator~</definition>
+        <argsstring>() const</argsstring>
+        <name>operator~</name>
+        <qualifiedname>xrpl::BaseUInt::operator~</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="373" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="373" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1acacb9d21d36014bf93c6e51cf248a2f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> &amp;</type>
+        <definition>BaseUInt &amp; xrpl::BaseUInt&lt; Bits, Tag &gt;::operator=</definition>
+        <argsstring>(std::uint64_t uHost)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::BaseUInt::operator=</qualifiedname>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>uHost</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="384" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="384" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1ab725b4e5f527042eb0d7ecc3aee5db16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> &amp;</type>
+        <definition>BaseUInt &amp; xrpl::BaseUInt&lt; Bits, Tag &gt;::operator^=</definition>
+        <argsstring>(BaseUInt const &amp;b)</argsstring>
+        <name>operator^=</name>
+        <qualifiedname>xrpl::BaseUInt::operator^=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="402" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="402" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a35e451a1b4bda1b19bc62a1d33b6ee23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> &amp;</type>
+        <definition>BaseUInt &amp; xrpl::BaseUInt&lt; Bits, Tag &gt;::operator&amp;=</definition>
+        <argsstring>(BaseUInt const &amp;b)</argsstring>
+        <name>operator&amp;=</name>
+        <qualifiedname>xrpl::BaseUInt::operator&amp;=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="411" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="411" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a785ae324a6d1046e16b32bba93004f5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> &amp;</type>
+        <definition>BaseUInt &amp; xrpl::BaseUInt&lt; Bits, Tag &gt;::operator|=</definition>
+        <argsstring>(BaseUInt const &amp;b)</argsstring>
+        <name>operator|=</name>
+        <qualifiedname>xrpl::BaseUInt::operator|=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="420" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="420" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a264355e07350fd453d34888f3c2220ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> &amp;</type>
+        <definition>BaseUInt &amp; xrpl::BaseUInt&lt; Bits, Tag &gt;::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <qualifiedname>xrpl::BaseUInt::operator++</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="429" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="429" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a0cfc7241a0213a9993f11ab9d2c03060" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref></type>
+        <definition>BaseUInt xrpl::BaseUInt&lt; Bits, Tag &gt;::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <qualifiedname>xrpl::BaseUInt::operator++</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="443" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="443" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a56f322934e2299a91400e647dc65f420" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> &amp;</type>
+        <definition>BaseUInt &amp; xrpl::BaseUInt&lt; Bits, Tag &gt;::operator--</definition>
+        <argsstring>()</argsstring>
+        <name>operator--</name>
+        <qualifiedname>xrpl::BaseUInt::operator--</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="453" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="453" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1adaaaf699f1be59925f11218361326915" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref></type>
+        <definition>BaseUInt xrpl::BaseUInt&lt; Bits, Tag &gt;::operator--</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator--</name>
+        <qualifiedname>xrpl::BaseUInt::operator--</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="468" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="468" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1aae638f883263d36d97d40b349e7013e2" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref></type>
+        <definition>BaseUInt xrpl::BaseUInt&lt; Bits, Tag &gt;::next</definition>
+        <argsstring>() const</argsstring>
+        <name>next</name>
+        <qualifiedname>xrpl::BaseUInt::next</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="478" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="478" bodyend="482"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1af41b621a1ea5b4825ce72f549b3bd7e0" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref></type>
+        <definition>BaseUInt xrpl::BaseUInt&lt; Bits, Tag &gt;::prev</definition>
+        <argsstring>() const</argsstring>
+        <name>prev</name>
+        <qualifiedname>xrpl::BaseUInt::prev</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="485" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="485" bodyend="489"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a3ea6bcef6e194a843301e0f29b5c8125" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> &amp;</type>
+        <definition>BaseUInt &amp; xrpl::BaseUInt&lt; Bits, Tag &gt;::operator+=</definition>
+        <argsstring>(BaseUInt const &amp;b)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>xrpl::BaseUInt::operator+=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="492" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="492" bodyend="506"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1af6378733b44cb4e1e18f63414c34810a" prot="public" static="no" nodiscard="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::BaseUInt&lt; Bits, Tag &gt;::parseHex</definition>
+        <argsstring>(std::string_view sv)</argsstring>
+        <name>parseHex</name>
+        <qualifiedname>xrpl::BaseUInt::parseHex</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>sv</declname>
+        </param>
+        <briefdescription>
+<para>Parse a hex string into a base_uint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The input must be precisely <computeroutput>2 * bytes</computeroutput> hexadecimal characters long, with one exception: the value &apos;0&apos;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string of hexadecimal characters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the input was parsed properly; false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="526" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="526" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a412943ed68eb390c89e051db49c1944a" prot="public" static="no" nodiscard="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::BaseUInt&lt; Bits, Tag &gt;::parseHex</definition>
+        <argsstring>(char const *str)</argsstring>
+        <name>parseHex</name>
+        <qualifiedname>xrpl::BaseUInt::parseHex</qualifiedname>
+        <param>
+          <type>char const *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="537" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="537" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a3bad5c6d21087f72970d1ea5b4843045" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::BaseUInt&lt; Bits, Tag &gt;::parseHex</definition>
+        <argsstring>(std::string const &amp;str)</argsstring>
+        <name>parseHex</name>
+        <qualifiedname>xrpl::BaseUInt::parseHex</qualifiedname>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="543" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="543" bodyend="546"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a91502a92b467dfd06cc3694971996e9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref>&lt; Bits, Tag &gt; &amp;</type>
+        <definition>BaseUInt&lt; Bits, Tag &gt; &amp; xrpl::BaseUInt&lt; Bits, Tag &gt;::operator=</definition>
+        <argsstring>(beast::Zero)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::BaseUInt::operator=</qualifiedname>
+        <param>
+          <type>beast::Zero</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="555" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="555" bodyend="559"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a514e6d8b31a2e3e8d3269bc98977ce75" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::BaseUInt&lt; Bits, Tag &gt;::isZero</definition>
+        <argsstring>() const</argsstring>
+        <name>isZero</name>
+        <qualifiedname>xrpl::BaseUInt::isZero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="563" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="563" bodyend="566"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a5e356d63b36dab9c11e5638efdc49ba0" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::BaseUInt&lt; Bits, Tag &gt;::isNonZero</definition>
+        <argsstring>() const</argsstring>
+        <name>isNonZero</name>
+        <qualifiedname>xrpl::BaseUInt::isNonZero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="568" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="568" bodyend="571"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a2d91784e25951a3eb4164f15bbe58b54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::BaseUInt&lt; Bits, Tag &gt;::zero</definition>
+        <argsstring>()</argsstring>
+        <name>zero</name>
+        <qualifiedname>xrpl::BaseUInt::zero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="573" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="573" bodyend="576"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" prot="private" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::BaseUInt&lt; Bits, Tag &gt;::BaseUInt</definition>
+        <argsstring>(void const *data, VoidHelper)</argsstring>
+        <name>BaseUInt</name>
+        <qualifiedname>xrpl::BaseUInt::BaseUInt</qualifiedname>
+        <param>
+          <type>void const *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="structxrpl_1_1BaseUInt_1_1VoidHelper" kindref="compound">VoidHelper</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="181" column="14" bodyfile="include/xrpl/basics/base_uint.h" bodystart="181" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a5d55aa16292da34e025da56d7bcc0bd6" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::expected&lt; decltype(<ref refid="classxrpl_1_1BaseUInt_1a9831f5493e0484eda598735f79cf8596" kindref="member">data_</ref>), <ref refid="classxrpl_1_1BaseUInt_1a974758b71c02e3b887790fad3bc54ad1" kindref="member">ParseResult</ref> &gt;</type>
+        <definition>std::expected&lt; decltype(data_), ParseResult &gt; xrpl::BaseUInt&lt; Bits, Tag &gt;::parseFromStringView</definition>
+        <argsstring>(std::string_view sv) noexcept</argsstring>
+        <name>parseFromStringView</name>
+        <qualifiedname>xrpl::BaseUInt::parseFromStringView</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>sv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="194" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="194" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a52751b275e3323a71f00f323aa1ef899" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexceptexpression="false" virt="non-virtual">
+        <type>decltype(<ref refid="classxrpl_1_1BaseUInt_1a9831f5493e0484eda598735f79cf8596" kindref="member">data_</ref>)</type>
+        <definition>decltype(data_) xrpl::BaseUInt&lt; Bits, Tag &gt;::parseFromStringViewThrows</definition>
+        <argsstring>(std::string_view sv)</argsstring>
+        <name>parseFromStringViewThrows</name>
+        <qualifiedname>xrpl::BaseUInt::parseFromStringViewThrows</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>sv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="252" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="252" bodyend="263"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a16dd7501031c01eafa9bc00d175bce87" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Container</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref></type>
+        <definition>static BaseUInt xrpl::BaseUInt&lt; Bits, Tag &gt;::fromRaw</definition>
+        <argsstring>(Container const &amp;c)</argsstring>
+        <name>fromRaw</name>
+        <qualifiedname>xrpl::BaseUInt::fromRaw</qualifiedname>
+        <param>
+          <type>Container const &amp;</type>
+          <declname>c</declname>
+        </param>
+    <requiresclause>( <ref refid="structxrpl_1_1detail_1_1IsContiguousContainer" kindref="compound">detail::IsContiguousContainer</ref>&lt;Container&gt;::value &amp;&amp; std::is_trivially_copyable_v&lt;typename Container::value_type&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="303" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="303" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1a1f3448b2c99eb1f7d2d90260127e6575" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref></type>
+        <definition>static BaseUInt xrpl::BaseUInt&lt; Bits, Tag &gt;::fromVoid</definition>
+        <argsstring>(void const *data)</argsstring>
+        <name>fromVoid</name>
+        <qualifiedname>xrpl::BaseUInt::fromVoid</qualifiedname>
+        <param>
+          <type>void const *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="340" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="340" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1ac755c2200f4ee1d8b9a8de65633b770d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>std::optional&lt; <ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> &gt;</type>
+        <definition>static std::optional&lt; BaseUInt &gt; xrpl::BaseUInt&lt; Bits, Tag &gt;::fromVoidChecked</definition>
+        <argsstring>(T const &amp;from)</argsstring>
+        <name>fromVoidChecked</name>
+        <qualifiedname>xrpl::BaseUInt::fromVoidChecked</qualifiedname>
+        <param>
+          <type>T const &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="347" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="347" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1BaseUInt_1acf1ab02d6f45ac3404421a6942cd886b" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static constexpr std::size_t xrpl::BaseUInt&lt; Bits, Tag &gt;::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <qualifiedname>xrpl::BaseUInt::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="549" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="549" bodyend="552"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classxrpl_1_1BaseUInt_1aabb4c87507edfd5b641cc8f0e574cc75" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Hasher</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hash_append</definition>
+        <argsstring>(Hasher &amp;h, BaseUInt const &amp;a) noexcept</argsstring>
+        <name>hash_append</name>
+        <qualifiedname>xrpl::BaseUInt::hash_append</qualifiedname>
+        <param>
+          <type>Hasher &amp;</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" kindref="member">BaseUInt</ref> const &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="510" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="510" bodyend="514"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Integers of any length that is a multiple of 32-bits. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>This class stores its values internally in big-endian form and that internal representation is part of the binary protocol of the XRP Ledger and cannot be changed arbitrarily without causing breakage.</para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bits this integer should have; must be at least 64 and a multiple of 32. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An arbitrary type that functions as a tag and allows the instantiation of &quot;distinct&quot; types that the same number of bits. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::array&lt; std::uint32_t, kWidth &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::BaseUInt&lt; Bits, Tag &gt;</label>
+        <link refid="classxrpl_1_1BaseUInt"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/basics/base_uint.h" line="81" column="1" bodyfile="include/xrpl/basics/base_uint.h" bodystart="82" bodyend="577"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1BaseUInt_1aaaf8ce8edaaf8cbdff4580a6c7bd5187" prot="private" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>BaseUInt</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1abba08e5f4dd5d76bde40d0884c12d627" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>BaseUInt</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1aa87ef54da278b1f557774c0857096030" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>BaseUInt</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a0d6d432fe2914e2a9b82cede24fb8f91" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>BaseUInt</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a33a55fc5084b15682fa80bcc9d868489" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>BaseUInt</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a7b5b753ced2260a5fbaaac705d33d33c" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>BaseUInt</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1ace0a5114e13934dd7ea33655b5565bcd" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>begin</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a4ddceebd80f5f905fb5e38624e72423a" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>begin</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1af7d2db4a9cdf61a9cd42fbcdb1093bb0" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>cbegin</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a22df1756a4ec20ea93f6470fd0a759ea" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>cend</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1aadaf6846c9298c99c0cd68037587e5f0" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>const_iterator</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a478082ca45659020b60efe23b4e5f3e3" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>const_pointer</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1addcb0856d15ebd164ec1e9b2feb39efa" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>const_reference</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a541613cba7c90f5d058e66cf14a9dd87" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>const_reverse_iterator</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1aa3242b3c98b7218db5a08e7bbb9aa07c" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>data</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a8097452e849f3f15e1bd2759772c052c" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>data</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a9831f5493e0484eda598735f79cf8596" prot="private" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>data_</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a1eac8f7c79428e46cf7094d654f6eaf7" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>difference_type</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a80b67139658121f04207f5a2172910b5" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>end</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1ac75f8ad206823d659aac064294223d63" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>end</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a16dd7501031c01eafa9bc00d175bce87" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>fromRaw</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a1f3448b2c99eb1f7d2d90260127e6575" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>fromVoid</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1ac755c2200f4ee1d8b9a8de65633b770d" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>fromVoidChecked</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1aabb4c87507edfd5b641cc8f0e574cc75" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>hash_append</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1aa9d24ccfaa35477ab720a464a33caa4b" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>hasher</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a5e356d63b36dab9c11e5638efdc49ba0" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>isNonZero</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a514e6d8b31a2e3e8d3269bc98977ce75" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>isZero</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1af7dbad88a1babd3ddf31564f529c094a" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>iterator</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1ac749844e1e86ec05ad68dff2531b706b" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>kBytes</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a88d75697947fc0dae2d70e41fcf2bcbc" prot="private" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>kWidth</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1aae638f883263d36d97d40b349e7013e2" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>next</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a05d95d544e715b128fad73d0103a4699" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator!</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a35e451a1b4bda1b19bc62a1d33b6ee23" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator&amp;=</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a264355e07350fd453d34888f3c2220ae" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator++</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a0cfc7241a0213a9993f11ab9d2c03060" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator++</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a3ea6bcef6e194a843301e0f29b5c8125" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator+=</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a56f322934e2299a91400e647dc65f420" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator--</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1adaaaf699f1be59925f11218361326915" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator--</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1aa38e3db5e4337f99a7947296e0fc97fe" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1acacb9d21d36014bf93c6e51cf248a2f6" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a91502a92b467dfd06cc3694971996e9e" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1ab725b4e5f527042eb0d7ecc3aee5db16" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator^=</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a785ae324a6d1046e16b32bba93004f5c" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator|=</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1ac60dee1a147fce9e4c07454965f2f04e" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>operator~</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a5d55aa16292da34e025da56d7bcc0bd6" prot="private" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>parseFromStringView</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a52751b275e3323a71f00f323aa1ef899" prot="private" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>parseFromStringViewThrows</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1af6378733b44cb4e1e18f63414c34810a" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>parseHex</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a412943ed68eb390c89e051db49c1944a" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>parseHex</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a3bad5c6d21087f72970d1ea5b4843045" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>parseHex</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a974758b71c02e3b887790fad3bc54ad1" prot="private" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>ParseResult</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a06124e65eb401eceb68b9316ad80d532" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>pointer</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1af41b621a1ea5b4825ce72f549b3bd7e0" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>prev</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a8bc1deb4c5917ef8754c21194e18c683" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>reference</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a07653110ece8a33a5612f7fed808517f" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>reverse_iterator</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a3d1b80f43bf7399ad3b872ae5b9f0019" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>signum</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1acf1ab02d6f45ac3404421a6942cd886b" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>size</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a054cf19a2b200317ff2a1c0aae9af367" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>size_type</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a9e93f2631f314e750b70fd63ca19c401" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>TagType</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a0751f3d33f5c4af4758e76638fc8c226" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>value_type</name></member>
+      <member refid="classxrpl_1_1BaseUInt_1a2d91784e25951a3eb4164f15bbe58b54" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt</scope><name>zero</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

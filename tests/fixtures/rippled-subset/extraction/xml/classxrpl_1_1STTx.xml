@@ -1,0 +1,991 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1STTx" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>xrpl::STTx</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">STObject</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">CountedObject&lt; STTx &gt;</basecompoundref>
+    <includes local="no">xrpl/protocol/STTx.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1STTx_1a56b669bb61a3ac86db6a44fd6782ffce" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref></type>
+        <definition>UInt256 xrpl::STTx::tid_</definition>
+        <argsstring></argsstring>
+        <name>tid_</name>
+        <qualifiedname>xrpl::STTx::tid_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="44" column="13" bodyfile="include/xrpl/protocol/STTx.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1STTx_1ad6c6bdfdf82bb3e09a23c15f01ba1ca8" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacexrpl_1a2302c0748b98cd689ea7eea653eda396" kindref="member">TxType</ref></type>
+        <definition>TxType xrpl::STTx::txType_</definition>
+        <argsstring></argsstring>
+        <name>txType_</name>
+        <qualifiedname>xrpl::STTx::txType_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="45" column="12" bodyfile="include/xrpl/protocol/STTx.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1STTx_1a1d6fa0bf40a3841746406ec898c9347f" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; std::vector&lt; std::shared_ptr&lt; <ref refid="classxrpl_1_1STTx_1a7534669fe2647b07c3ecfb944d5ab986" kindref="member">STTx</ref> const  &gt; &gt; &gt;</type>
+        <definition>std::optional&lt;std::vector&lt;std::shared_ptr&lt;STTx const&gt; &gt; &gt; xrpl::STTx::batchTxns_</definition>
+        <argsstring></argsstring>
+        <name>batchTxns_</name>
+        <qualifiedname>xrpl::STTx::batchTxns_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="221" column="19" bodyfile="include/xrpl/protocol/STTx.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1STTx_1a4b72b30c385aa359f14d7aba0d026b57" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::STTx::kMinMultiSigners</definition>
+        <argsstring></argsstring>
+        <name>kMinMultiSigners</name>
+        <qualifiedname>xrpl::STTx::kMinMultiSigners</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="48" column="34" bodyfile="include/xrpl/protocol/STTx.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1STTx_1a818922a653b0a8d48f5139ff194cee18" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::STTx::kMaxMultiSigners</definition>
+        <argsstring></argsstring>
+        <name>kMaxMultiSigners</name>
+        <qualifiedname>xrpl::STTx::kMaxMultiSigners</qualifiedname>
+        <initializer>= 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="49" column="34" bodyfile="include/xrpl/protocol/STTx.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classxrpl_1_1STTx_1a5e49bd8b743617d1af92ffed7ac6b665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class detail::STVar</definition>
+        <argsstring></argsstring>
+        <name>detail::STVar</name>
+        <qualifiedname>xrpl::STTx::STVar</qualifiedname>
+        <param>
+          <type>detail::STVar</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="220" column="18" bodyfile="include/xrpl/protocol/STTx.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a7534669fe2647b07c3ecfb944d5ab986" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STTx::STTx</definition>
+        <argsstring>()=delete</argsstring>
+        <name>STTx</name>
+        <qualifiedname>xrpl::STTx::STTx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="51" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a3074e495e6e554bdab23769e28a3cccf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STTx::STTx</definition>
+        <argsstring>(STTx const &amp;other)=default</argsstring>
+        <name>STTx</name>
+        <qualifiedname>xrpl::STTx::STTx</qualifiedname>
+        <param>
+          <type>STTx const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="52" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a1e6cbec4254b1bd7610d674bc4ca1ec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1STTx_1a7534669fe2647b07c3ecfb944d5ab986" kindref="member">STTx</ref> &amp;</type>
+        <definition>STTx &amp; xrpl::STTx::operator=</definition>
+        <argsstring>(STTx const &amp;other)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::STTx::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1STTx_1a7534669fe2647b07c3ecfb944d5ab986" kindref="member">STTx</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="54" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1af8ab5519b3ef9325af3d3e0e930499ab" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STTx::STTx</definition>
+        <argsstring>(SerialIter &amp;sit)</argsstring>
+        <name>STTx</name>
+        <qualifiedname>xrpl::STTx::STTx</qualifiedname>
+        <param>
+          <type>SerialIter &amp;</type>
+          <declname>sit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="56" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a0fa69bd1e4bc4d59acd7bcf93790be63" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STTx::STTx</definition>
+        <argsstring>(SerialIter &amp;&amp;sit)</argsstring>
+        <name>STTx</name>
+        <qualifiedname>xrpl::STTx::STTx</qualifiedname>
+        <param>
+          <type>SerialIter &amp;&amp;</type>
+          <declname>sit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="57" column="14" bodyfile="include/xrpl/protocol/STTx.h" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1ac8cb4c721a4721325160526da2445db9" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STTx::STTx</definition>
+        <argsstring>(STObject &amp;&amp;object)</argsstring>
+        <name>STTx</name>
+        <qualifiedname>xrpl::STTx::STTx</qualifiedname>
+        <param>
+          <type>STObject &amp;&amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="58" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1ab5c46d24505b21370da256248de0ae39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STTx::STTx</definition>
+        <argsstring>(TxType type, std::function&lt; void(STObject &amp;)&gt; assembler)</argsstring>
+        <name>STTx</name>
+        <qualifiedname>xrpl::STTx::STTx</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a2302c0748b98cd689ea7eea653eda396" kindref="member">TxType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(STObject &amp;)&gt;</type>
+          <declname>assembler</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a transaction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The returned transaction will have the specified type and any fields that the callback function adds to the object that&apos;s passed in. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="67" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1ae5162bd1933200ef4506063201fd8e6d" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacexrpl_1a9a934f459db38bf14dbca9b2adb6f07f" kindref="member">SerializedTypeID</ref></type>
+        <definition>SerializedTypeID xrpl::STTx::getSType</definition>
+        <argsstring>() const override</argsstring>
+        <name>getSType</name>
+        <qualifiedname>xrpl::STTx::getSType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="71" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a031b7740eba069d39005067024549a06" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xrpl::STTx::getFullText</definition>
+        <argsstring>() const override</argsstring>
+        <name>getFullText</name>
+        <qualifiedname>xrpl::STTx::getFullText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="74" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a08db17f0f4935ca1716fafbe37a15a9d" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Blob</type>
+        <definition>Blob xrpl::STTx::getSignature</definition>
+        <argsstring>() const</argsstring>
+        <name>getSignature</name>
+        <qualifiedname>xrpl::STTx::getSignature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="81" column="5" bodyfile="include/xrpl/protocol/STTx.h" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1ad145b7ad5a121a8af3d2577f5ace599a" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref></type>
+        <definition>UInt256 xrpl::STTx::getSigningHash</definition>
+        <argsstring>() const</argsstring>
+        <name>getSigningHash</name>
+        <qualifiedname>xrpl::STTx::getSigningHash</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="87" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1ab8735bb586c722dab610c4eec85b1d40" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacexrpl_1a2302c0748b98cd689ea7eea653eda396" kindref="member">TxType</ref></type>
+        <definition>TxType xrpl::STTx::getTxnType</definition>
+        <argsstring>() const</argsstring>
+        <name>getTxnType</name>
+        <qualifiedname>xrpl::STTx::getTxnType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="90" column="5" bodyfile="include/xrpl/protocol/STTx.h" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1acabbb2e47752b1329add562d62b23396" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Blob</type>
+        <definition>Blob xrpl::STTx::getSigningPubKey</definition>
+        <argsstring>() const</argsstring>
+        <name>getSigningPubKey</name>
+        <qualifiedname>xrpl::STTx::getSigningPubKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="93" column="5" bodyfile="include/xrpl/protocol/STTx.h" bodystart="256" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a52d1fe86e7f115f600973b0a69210e37" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SeqProxy</type>
+        <definition>SeqProxy xrpl::STTx::getSeqProxy</definition>
+        <argsstring>() const</argsstring>
+        <name>getSeqProxy</name>
+        <qualifiedname>xrpl::STTx::getSeqProxy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="96" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1ae7139e35560113ba0fa52af5e2d46fd1" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::container::flat_set&lt; AccountID &gt;</type>
+        <definition>boost::container::flat_set&lt; AccountID &gt; xrpl::STTx::getMentionedAccounts</definition>
+        <argsstring>() const</argsstring>
+        <name>getMentionedAccounts</name>
+        <qualifiedname>xrpl::STTx::getMentionedAccounts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="99" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1abc7fb9d05536368b7396d5880b68f7fa" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref></type>
+        <definition>UInt256 xrpl::STTx::getTransactionID</definition>
+        <argsstring>() const</argsstring>
+        <name>getTransactionID</name>
+        <qualifiedname>xrpl::STTx::getTransactionID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="102" column="5" bodyfile="include/xrpl/protocol/STTx.h" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1aded019abbbf762acfb512120501ea36c" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>json::Value</type>
+        <definition>json::Value xrpl::STTx::getJson</definition>
+        <argsstring>(JsonOptions options) const override</argsstring>
+        <name>getJson</name>
+        <qualifiedname>xrpl::STTx::getJson</qualifiedname>
+        <param>
+          <type>JsonOptions</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="105" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a617409abc9283588de7f7f03aa7c14ba" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>json::Value</type>
+        <definition>json::Value xrpl::STTx::getJson</definition>
+        <argsstring>(JsonOptions options, bool binary) const</argsstring>
+        <name>getJson</name>
+        <qualifiedname>xrpl::STTx::getJson</qualifiedname>
+        <param>
+          <type>JsonOptions</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>binary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="108" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a7025542d1abf76d6e8ef65e1c5857617" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::STTx::sign</definition>
+        <argsstring>(PublicKey const &amp;publicKey, SecretKey const &amp;secretKey)</argsstring>
+        <name>sign</name>
+        <qualifiedname>xrpl::STTx::sign</qualifiedname>
+        <param>
+          <type>PublicKey const &amp;</type>
+          <declname>publicKey</declname>
+        </param>
+        <param>
+          <type>SecretKey const &amp;</type>
+          <declname>secretKey</declname>
+        </param>
+        <briefdescription>
+<para>Sign the transaction as its account. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>publicKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The public key for signing. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>secretKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The secret key for signing. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="117" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a8a8d003dc25c8a819d12eeb3429695eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::STTx::sign</definition>
+        <argsstring>(PublicKey const &amp;publicKey, SecretKey const &amp;secretKey, SignatureRole role, Rules const &amp;rules)</argsstring>
+        <name>sign</name>
+        <qualifiedname>xrpl::STTx::sign</qualifiedname>
+        <param>
+          <type>PublicKey const &amp;</type>
+          <declname>publicKey</declname>
+        </param>
+        <param>
+          <type>SecretKey const &amp;</type>
+          <declname>secretKey</declname>
+        </param>
+        <param>
+          <type>SignatureRole</type>
+          <declname>role</declname>
+        </param>
+        <param>
+          <type>Rules const &amp;</type>
+          <declname>rules</declname>
+        </param>
+        <briefdescription>
+<para>Sign the transaction in one of its signature fields. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The signature is bound to the role that made it, so it cannot be moved into another role.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>publicKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The public key for signing. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>secretKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The secret key for signing. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The role signing the transaction. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rules</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current ledger rules. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="131" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a648ac221369012bb991403e8cc28d5b3" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::expected&lt; void, std::string &gt;</type>
+        <definition>std::expected&lt; void, std::string &gt; xrpl::STTx::checkSign</definition>
+        <argsstring>(Rules const &amp;rules) const</argsstring>
+        <name>checkSign</name>
+        <qualifiedname>xrpl::STTx::checkSign</qualifiedname>
+        <param>
+          <type>Rules const &amp;</type>
+          <declname>rules</declname>
+        </param>
+        <briefdescription>
+<para>Check the signature. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rules</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current ledger rules. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if valid signature. If invalid, the error message string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="144" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1afd1a8f06fe56ad666e85cfbe5f381727" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::expected&lt; void, std::string &gt;</type>
+        <definition>std::expected&lt; void, std::string &gt; xrpl::STTx::checkBatchSign</definition>
+        <argsstring>() const</argsstring>
+        <name>checkBatchSign</name>
+        <qualifiedname>xrpl::STTx::checkBatchSign</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="147" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a15fa842808076e0308fc341d41074bb3" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xrpl::STTx::getMetaSQL</definition>
+        <argsstring>(std::uint32_t inLedger, std::string const &amp;escapedMetaData) const</argsstring>
+        <name>getMetaSQL</name>
+        <qualifiedname>xrpl::STTx::getMetaSQL</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>inLedger</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>escapedMetaData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="154" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a692facba40bed8dd68a308d2ddf82812" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xrpl::STTx::getMetaSQL</definition>
+        <argsstring>(Serializer rawTxn, std::uint32_t inLedger, TxnSql status, std::string const &amp;escapedMetaData) const</argsstring>
+        <name>getMetaSQL</name>
+        <qualifiedname>xrpl::STTx::getMetaSQL</qualifiedname>
+        <param>
+          <type>Serializer</type>
+          <declname>rawTxn</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>inLedger</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a720901359feebc4b1e434da9b7c10d50" kindref="member">TxnSql</ref></type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>escapedMetaData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="157" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1ae14bb2403f0ff43250308bf07df2793a" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> &gt;</type>
+        <definition>std::vector&lt; UInt256 &gt; xrpl::STTx::getBatchTransactionIDs</definition>
+        <argsstring>() const</argsstring>
+        <name>getBatchTransactionIDs</name>
+        <qualifiedname>xrpl::STTx::getBatchTransactionIDs</qualifiedname>
+        <briefdescription>
+<para>The IDs of the inner transactions of a Batch. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="167" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a48ae2095747ca278aa9be18a903c65b4" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classxrpl_1_1STTx_1a7534669fe2647b07c3ecfb944d5ab986" kindref="member">STTx</ref> const &gt; &gt; const &amp;</type>
+        <definition>std::vector&lt; std::shared_ptr&lt; STTx const  &gt; &gt; const  &amp; xrpl::STTx::getBatchTransactions</definition>
+        <argsstring>() const</argsstring>
+        <name>getBatchTransactions</name>
+        <qualifiedname>xrpl::STTx::getBatchTransactions</qualifiedname>
+        <briefdescription>
+<para>The inner transactions of a Batch, built and validated at construction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Always seated for Batch <ref refid="classxrpl_1_1STTx" kindref="compound">STTx</ref> instances (construction throws if oversized). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="174" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1ae24b643781f54a1d13172deb56cd2fed" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>AccountID</type>
+        <definition>AccountID xrpl::STTx::getInitiator</definition>
+        <argsstring>() const</argsstring>
+        <name>getInitiator</name>
+        <qualifiedname>xrpl::STTx::getInitiator</qualifiedname>
+        <briefdescription>
+<para>The account responsible for the authorization: the delegate when sfDelegate is present, otherwise the account. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="181" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1abd84f435c267df8ce9785de975ae7d99" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>AccountID</type>
+        <definition>AccountID xrpl::STTx::getFeePayerID</definition>
+        <argsstring>() const</argsstring>
+        <name>getFeePayerID</name>
+        <qualifiedname>xrpl::STTx::getFeePayerID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="184" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a113bf22ced17b0a7bfe2971c258b3833" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Blob</type>
+        <definition>static Blob xrpl::STTx::getSignature</definition>
+        <argsstring>(STObject const &amp;sigObject)</argsstring>
+        <name>getSignature</name>
+        <qualifiedname>xrpl::STTx::getSignature</qualifiedname>
+        <param>
+          <type>STObject const &amp;</type>
+          <declname>sigObject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="78" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a489fbfca029f47cff94f8702acc7d06d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string const &amp;</type>
+        <definition>static std::string const  &amp; xrpl::STTx::getMetaSQLInsertReplaceHeader</definition>
+        <argsstring>()</argsstring>
+        <name>getMetaSQLInsertReplaceHeader</name>
+        <qualifiedname>xrpl::STTx::getMetaSQLInsertReplaceHeader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="151" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a88a41e7244d0165cfeb190fbf8a7cb68" prot="private" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::expected&lt; void, std::string &gt;</type>
+        <definition>std::expected&lt; void, std::string &gt; xrpl::STTx::checkSign</definition>
+        <argsstring>(Rules const &amp;rules, STObject const &amp;sigObject, SignatureRole role) const</argsstring>
+        <name>checkSign</name>
+        <qualifiedname>xrpl::STTx::checkSign</qualifiedname>
+        <param>
+          <type>Rules const &amp;</type>
+          <declname>rules</declname>
+        </param>
+        <param>
+          <type>STObject const &amp;</type>
+          <declname>sigObject</declname>
+        </param>
+        <param>
+          <type>SignatureRole</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+<para>Check the signature. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rules</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current ledger rules. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sigObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to object that contains the signature fields. Will be *this more often than not. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The role that made the signature in sigObject. Determines the signing prefix, which binds the signature to that role. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if valid signature. If invalid, the error message string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="198" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a6be33a9059fe8f3255a6c2d7e990358a" prot="private" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::expected&lt; void, std::string &gt;</type>
+        <definition>std::expected&lt; void, std::string &gt; xrpl::STTx::checkSingleSign</definition>
+        <argsstring>(STObject const &amp;sigObject, HashPrefix prefix) const</argsstring>
+        <name>checkSingleSign</name>
+        <qualifiedname>xrpl::STTx::checkSingleSign</qualifiedname>
+        <param>
+          <type>STObject const &amp;</type>
+          <declname>sigObject</declname>
+        </param>
+        <param>
+          <type>HashPrefix</type>
+          <declname>prefix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="201" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1af66478f1c4317e87b81112292ec93ce6" prot="private" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::expected&lt; void, std::string &gt;</type>
+        <definition>std::expected&lt; void, std::string &gt; xrpl::STTx::checkMultiSign</definition>
+        <argsstring>(STObject const &amp;sigObject, HashPrefix prefix) const</argsstring>
+        <name>checkMultiSign</name>
+        <qualifiedname>xrpl::STTx::checkMultiSign</qualifiedname>
+        <param>
+          <type>STObject const &amp;</type>
+          <declname>sigObject</declname>
+        </param>
+        <param>
+          <type>HashPrefix</type>
+          <declname>prefix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="204" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a5b1e0a0e53b156f50a5817e0cf609bd3" prot="private" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::expected&lt; void, std::string &gt;</type>
+        <definition>std::expected&lt; void, std::string &gt; xrpl::STTx::checkBatchSingleSign</definition>
+        <argsstring>(STObject const &amp;batchSigner, std::vector&lt; UInt256 &gt; const &amp;txIds) const</argsstring>
+        <name>checkBatchSingleSign</name>
+        <qualifiedname>xrpl::STTx::checkBatchSingleSign</qualifiedname>
+        <param>
+          <type>STObject const &amp;</type>
+          <declname>batchSigner</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> &gt; const &amp;</type>
+          <declname>txIds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="207" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a6e7b2d860c0997d78e3a2958aa2ec095" prot="private" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::expected&lt; void, std::string &gt;</type>
+        <definition>std::expected&lt; void, std::string &gt; xrpl::STTx::checkBatchMultiSign</definition>
+        <argsstring>(STObject const &amp;batchSigner, std::vector&lt; UInt256 &gt; const &amp;txIds) const</argsstring>
+        <name>checkBatchMultiSign</name>
+        <qualifiedname>xrpl::STTx::checkBatchMultiSign</qualifiedname>
+        <param>
+          <type>STObject const &amp;</type>
+          <declname>batchSigner</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> &gt; const &amp;</type>
+          <declname>txIds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="210" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a92b9f7b9bab36e7cccfdebf20144c2a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::STTx::buildBatchTxns</definition>
+        <argsstring>()</argsstring>
+        <name>buildBatchTxns</name>
+        <qualifiedname>xrpl::STTx::buildBatchTxns</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="213" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a72101448356ad14a4fdb9d451a0eb0a5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>STBase *</type>
+        <definition>STBase * xrpl::STTx::copy</definition>
+        <argsstring>(std::size_t n, void *buf) const override</argsstring>
+        <name>copy</name>
+        <qualifiedname>xrpl::STTx::copy</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="216" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STTx_1a05cb70081e6b122b990ae48fc04bff0d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>STBase *</type>
+        <definition>STBase * xrpl::STTx::move</definition>
+        <argsstring>(std::size_t n, void *buf) override</argsstring>
+        <name>move</name>
+        <qualifiedname>xrpl::STTx::move</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STTx.h" line="218" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>CountedObject&lt; STTx &gt;</label>
+      </node>
+      <node id="2">
+        <label>STObject</label>
+      </node>
+      <node id="1">
+        <label>xrpl::STTx</label>
+        <link refid="classxrpl_1_1STTx"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>CountedObject&lt; STTx &gt;</label>
+      </node>
+      <node id="2">
+        <label>STObject</label>
+      </node>
+      <node id="4">
+        <label>xrpl::BaseUInt&lt; 256 &gt;</label>
+        <link refid="classxrpl_1_1BaseUInt"/>
+      </node>
+      <node id="1">
+        <label>xrpl::STTx</label>
+        <link refid="classxrpl_1_1STTx"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>tid_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/protocol/STTx.h" line="42" column="1" bodyfile="include/xrpl/protocol/STTx.h" bodystart="43" bodyend="222"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1STTx_1a1d6fa0bf40a3841746406ec898c9347f" prot="private" virt="non-virtual"><scope>xrpl::STTx</scope><name>batchTxns_</name></member>
+      <member refid="classxrpl_1_1STTx_1a92b9f7b9bab36e7cccfdebf20144c2a0" prot="private" virt="non-virtual"><scope>xrpl::STTx</scope><name>buildBatchTxns</name></member>
+      <member refid="classxrpl_1_1STTx_1a6e7b2d860c0997d78e3a2958aa2ec095" prot="private" virt="non-virtual"><scope>xrpl::STTx</scope><name>checkBatchMultiSign</name></member>
+      <member refid="classxrpl_1_1STTx_1afd1a8f06fe56ad666e85cfbe5f381727" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>checkBatchSign</name></member>
+      <member refid="classxrpl_1_1STTx_1a5b1e0a0e53b156f50a5817e0cf609bd3" prot="private" virt="non-virtual"><scope>xrpl::STTx</scope><name>checkBatchSingleSign</name></member>
+      <member refid="classxrpl_1_1STTx_1af66478f1c4317e87b81112292ec93ce6" prot="private" virt="non-virtual"><scope>xrpl::STTx</scope><name>checkMultiSign</name></member>
+      <member refid="classxrpl_1_1STTx_1a648ac221369012bb991403e8cc28d5b3" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>checkSign</name></member>
+      <member refid="classxrpl_1_1STTx_1a88a41e7244d0165cfeb190fbf8a7cb68" prot="private" virt="non-virtual"><scope>xrpl::STTx</scope><name>checkSign</name></member>
+      <member refid="classxrpl_1_1STTx_1a6be33a9059fe8f3255a6c2d7e990358a" prot="private" virt="non-virtual"><scope>xrpl::STTx</scope><name>checkSingleSign</name></member>
+      <member refid="classxrpl_1_1STTx_1a72101448356ad14a4fdb9d451a0eb0a5" prot="private" virt="non-virtual"><scope>xrpl::STTx</scope><name>copy</name></member>
+      <member refid="classxrpl_1_1STTx_1a5e49bd8b743617d1af92ffed7ac6b665" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>detail::STVar</name></member>
+      <member refid="classxrpl_1_1STTx_1ae14bb2403f0ff43250308bf07df2793a" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getBatchTransactionIDs</name></member>
+      <member refid="classxrpl_1_1STTx_1a48ae2095747ca278aa9be18a903c65b4" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getBatchTransactions</name></member>
+      <member refid="classxrpl_1_1STTx_1abd84f435c267df8ce9785de975ae7d99" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getFeePayerID</name></member>
+      <member refid="classxrpl_1_1STTx_1a031b7740eba069d39005067024549a06" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getFullText</name></member>
+      <member refid="classxrpl_1_1STTx_1ae24b643781f54a1d13172deb56cd2fed" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getInitiator</name></member>
+      <member refid="classxrpl_1_1STTx_1aded019abbbf762acfb512120501ea36c" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getJson</name></member>
+      <member refid="classxrpl_1_1STTx_1a617409abc9283588de7f7f03aa7c14ba" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getJson</name></member>
+      <member refid="classxrpl_1_1STTx_1ae7139e35560113ba0fa52af5e2d46fd1" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getMentionedAccounts</name></member>
+      <member refid="classxrpl_1_1STTx_1a15fa842808076e0308fc341d41074bb3" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getMetaSQL</name></member>
+      <member refid="classxrpl_1_1STTx_1a692facba40bed8dd68a308d2ddf82812" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getMetaSQL</name></member>
+      <member refid="classxrpl_1_1STTx_1a489fbfca029f47cff94f8702acc7d06d" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getMetaSQLInsertReplaceHeader</name></member>
+      <member refid="classxrpl_1_1STTx_1a52d1fe86e7f115f600973b0a69210e37" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getSeqProxy</name></member>
+      <member refid="classxrpl_1_1STTx_1a113bf22ced17b0a7bfe2971c258b3833" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getSignature</name></member>
+      <member refid="classxrpl_1_1STTx_1a08db17f0f4935ca1716fafbe37a15a9d" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getSignature</name></member>
+      <member refid="classxrpl_1_1STTx_1ad145b7ad5a121a8af3d2577f5ace599a" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getSigningHash</name></member>
+      <member refid="classxrpl_1_1STTx_1acabbb2e47752b1329add562d62b23396" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getSigningPubKey</name></member>
+      <member refid="classxrpl_1_1STTx_1ae5162bd1933200ef4506063201fd8e6d" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getSType</name></member>
+      <member refid="classxrpl_1_1STTx_1abc7fb9d05536368b7396d5880b68f7fa" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getTransactionID</name></member>
+      <member refid="classxrpl_1_1STTx_1ab8735bb586c722dab610c4eec85b1d40" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>getTxnType</name></member>
+      <member refid="classxrpl_1_1STTx_1a818922a653b0a8d48f5139ff194cee18" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>kMaxMultiSigners</name></member>
+      <member refid="classxrpl_1_1STTx_1a4b72b30c385aa359f14d7aba0d026b57" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>kMinMultiSigners</name></member>
+      <member refid="classxrpl_1_1STTx_1a05cb70081e6b122b990ae48fc04bff0d" prot="private" virt="non-virtual"><scope>xrpl::STTx</scope><name>move</name></member>
+      <member refid="classxrpl_1_1STTx_1a1e6cbec4254b1bd7610d674bc4ca1ec4" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1STTx_1a7025542d1abf76d6e8ef65e1c5857617" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>sign</name></member>
+      <member refid="classxrpl_1_1STTx_1a8a8d003dc25c8a819d12eeb3429695eb" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>sign</name></member>
+      <member refid="classxrpl_1_1STTx_1a7534669fe2647b07c3ecfb944d5ab986" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>STTx</name></member>
+      <member refid="classxrpl_1_1STTx_1a3074e495e6e554bdab23769e28a3cccf" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>STTx</name></member>
+      <member refid="classxrpl_1_1STTx_1af8ab5519b3ef9325af3d3e0e930499ab" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>STTx</name></member>
+      <member refid="classxrpl_1_1STTx_1a0fa69bd1e4bc4d59acd7bcf93790be63" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>STTx</name></member>
+      <member refid="classxrpl_1_1STTx_1ac8cb4c721a4721325160526da2445db9" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>STTx</name></member>
+      <member refid="classxrpl_1_1STTx_1ab5c46d24505b21370da256248de0ae39" prot="public" virt="non-virtual"><scope>xrpl::STTx</scope><name>STTx</name></member>
+      <member refid="classxrpl_1_1STTx_1a56b669bb61a3ac86db6a44fd6782ffce" prot="private" virt="non-virtual"><scope>xrpl::STTx</scope><name>tid_</name></member>
+      <member refid="classxrpl_1_1STTx_1ad6c6bdfdf82bb3e09a23c15f01ba1ca8" prot="private" virt="non-virtual"><scope>xrpl::STTx</scope><name>txType_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

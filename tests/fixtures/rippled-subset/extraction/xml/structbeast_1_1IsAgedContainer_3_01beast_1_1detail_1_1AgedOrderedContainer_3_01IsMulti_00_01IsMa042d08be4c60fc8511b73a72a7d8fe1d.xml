@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structbeast_1_1IsAgedContainer_3_01beast_1_1detail_1_1AgedOrderedContainer_3_01IsMulti_00_01IsMa042d08be4c60fc8511b73a72a7d8fe1d" kind="struct" language="C++" prot="public">
+    <compoundname>beast::IsAgedContainer&lt; beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::true_type</basecompoundref>
+    <includes local="no">xrpl/beast/container/detail/aged_ordered_container.h</includes>
+    <templateparamlist>
+      <param>
+        <type>bool</type>
+        <declname>IsMulti</declname>
+        <defname>IsMulti</defname>
+      </param>
+      <param>
+        <type>bool</type>
+        <declname>IsMap</declname>
+        <defname>IsMap</defname>
+      </param>
+      <param>
+        <type>class Key</type>
+      </param>
+      <param>
+        <type>class T</type>
+      </param>
+      <param>
+        <type>class Clock</type>
+      </param>
+      <param>
+        <type>class Compare</type>
+      </param>
+      <param>
+        <type>class Allocator</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structbeast_1_1IsAgedContainer_3_01beast_1_1detail_1_1AgedOrderedContainer_3_01IsMulti_00_01IsMa042d08be4c60fc8511b73a72a7d8fe1d_1a37bbdfea5a46dee50466898453161282" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>beast::IsAgedContainer&lt; beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &gt;::IsAgedContainer</definition>
+        <argsstring>()=default</argsstring>
+        <name>IsAgedContainer</name>
+        <qualifiedname>beast::IsAgedContainer&lt; beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &gt;::IsAgedContainer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="1765" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>beast::IsAgedContainer&lt; beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &gt;</label>
+        <link refid="structbeast_1_1IsAgedContainer_3_01beast_1_1detail_1_1AgedOrderedContainer_3_01IsMulti_00_01IsMa042d08be4c60fc8511b73a72a7d8fe1d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::true_type</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>beast::IsAgedContainer&lt; beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &gt;</label>
+        <link refid="structbeast_1_1IsAgedContainer_3_01beast_1_1detail_1_1AgedOrderedContainer_3_01IsMulti_00_01IsMa042d08be4c60fc8511b73a72a7d8fe1d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::true_type</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="1761" column="1" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="1764" bodyend="1766"/>
+    <listofallmembers>
+      <member refid="structbeast_1_1IsAgedContainer_3_01beast_1_1detail_1_1AgedOrderedContainer_3_01IsMulti_00_01IsMa042d08be4c60fc8511b73a72a7d8fe1d_1a37bbdfea5a46dee50466898453161282" prot="public" virt="non-virtual"><scope>beast::IsAgedContainer&lt; beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &gt;</scope><name>IsAgedContainer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

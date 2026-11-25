@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="ReadView_8h" kind="file" language="C++">
+    <compoundname>ReadView.h</compoundname>
+    <includes refid="base__uint_8h" local="no">xrpl/basics/base_uint.h</includes>
+    <includes local="no">xrpl/basics/chrono.h</includes>
+    <includes local="no">xrpl/beast/hash/uhash.h</includes>
+    <includes local="no">xrpl/beast/utility/instrumentation.h</includes>
+    <includes local="no">xrpl/ledger/OwnerCounts.h</includes>
+    <includes local="no">xrpl/ledger/detail/ReadViewFwdRange.h</includes>
+    <includes local="no">xrpl/protocol/AccountID.h</includes>
+    <includes local="no">xrpl/protocol/Fees.h</includes>
+    <includes local="no">xrpl/protocol/Issue.h</includes>
+    <includes local="no">xrpl/protocol/Keylet.h</includes>
+    <includes local="no">xrpl/protocol/LedgerHeader.h</includes>
+    <includes local="no">xrpl/protocol/MPTIssue.h</includes>
+    <includes local="no">xrpl/protocol/Protocol.h</includes>
+    <includes local="no">xrpl/protocol/Rules.h</includes>
+    <includes refid="SField_8h" local="no">xrpl/protocol/SField.h</includes>
+    <includes local="no">xrpl/protocol/STAmount.h</includes>
+    <includes local="no">xrpl/protocol/STLedgerEntry.h</includes>
+    <includes local="no">xrpl/protocol/STObject.h</includes>
+    <includes refid="STTx_8h" local="no">xrpl/protocol/STTx.h</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">optional</includes>
+    <includes local="no">unordered_set</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">xrpl/ledger/detail/ReadViewFwdRange.ipp</includes>
+    <includedby refid="ApplyView_8h" local="no">include/xrpl/ledger/ApplyView.h</includedby>
+    <includedby refid="OpenView_8h" local="no">include/xrpl/ledger/OpenView.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/xrpl/ledger/ReadView.h</label>
+        <link refid="ReadView_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>cstdint</label>
+      </node>
+      <node id="19">
+        <label>memory</label>
+      </node>
+      <node id="20">
+        <label>optional</label>
+      </node>
+      <node id="21">
+        <label>unordered_set</label>
+      </node>
+      <node id="22">
+        <label>utility</label>
+      </node>
+      <node id="2">
+        <label>xrpl/basics/chrono.h</label>
+      </node>
+      <node id="3">
+        <label>xrpl/beast/hash/uhash.h</label>
+      </node>
+      <node id="4">
+        <label>xrpl/beast/utility/instrumentation.h</label>
+      </node>
+      <node id="5">
+        <label>xrpl/ledger/OwnerCounts.h</label>
+      </node>
+      <node id="6">
+        <label>xrpl/ledger/detail/ReadViewFwdRange.h</label>
+      </node>
+      <node id="23">
+        <label>xrpl/ledger/detail/ReadViewFwdRange.ipp</label>
+      </node>
+      <node id="7">
+        <label>xrpl/protocol/AccountID.h</label>
+      </node>
+      <node id="8">
+        <label>xrpl/protocol/Fees.h</label>
+      </node>
+      <node id="9">
+        <label>xrpl/protocol/Issue.h</label>
+      </node>
+      <node id="10">
+        <label>xrpl/protocol/Keylet.h</label>
+      </node>
+      <node id="11">
+        <label>xrpl/protocol/LedgerHeader.h</label>
+      </node>
+      <node id="12">
+        <label>xrpl/protocol/MPTIssue.h</label>
+      </node>
+      <node id="13">
+        <label>xrpl/protocol/Protocol.h</label>
+      </node>
+      <node id="14">
+        <label>xrpl/protocol/Rules.h</label>
+      </node>
+      <node id="15">
+        <label>xrpl/protocol/STAmount.h</label>
+      </node>
+      <node id="16">
+        <label>xrpl/protocol/STLedgerEntry.h</label>
+      </node>
+      <node id="17">
+        <label>xrpl/protocol/STObject.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classxrpl_1_1ReadView" prot="public">xrpl::ReadView</innerclass>
+    <innerclass refid="structxrpl_1_1ReadView_1_1SlesType" prot="public">xrpl::ReadView::SlesType</innerclass>
+    <innerclass refid="structxrpl_1_1ReadView_1_1TxsType" prot="public">xrpl::ReadView::TxsType</innerclass>
+    <innerclass refid="classxrpl_1_1DigestAwareReadView" prot="public">xrpl::DigestAwareReadView</innerclass>
+    <innernamespace refid="namespacexrpl">xrpl</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/ledger/ReadView.h"/>
+  </compounddef>
+</doxygen>

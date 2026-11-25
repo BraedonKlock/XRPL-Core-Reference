@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="namespacexrpl_1_1nft" kind="namespace" language="C++">
+    <compoundname>xrpl::nft</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacexrpl_1_1nft_1af7fff4194ca6c2345cf1e6a306f951d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structxrpl_1_1Rate" kindref="compound">Rate</ref></type>
+        <definition>Rate xrpl::nft::transferFeeAsRate</definition>
+        <argsstring>(std::uint16_t fee)</argsstring>
+        <name>transferFeeAsRate</name>
+        <qualifiedname>xrpl::nft::transferFeeAsRate</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>fee</declname>
+        </param>
+        <briefdescription>
+<para>Given a transfer fee (in basis points) convert it to a transfer rate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/Rate2.cpp" line="26" column="1" bodyfile="src/libxrpl/protocol/Rate2.cpp" bodystart="26" bodyend="29" declfile="include/xrpl/protocol/Rate.h" declline="73" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/protocol/Rate.h" line="68" column="1"/>
+  </compounddef>
+</doxygen>

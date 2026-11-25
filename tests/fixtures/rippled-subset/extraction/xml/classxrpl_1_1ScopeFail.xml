@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1ScopeFail" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::ScopeFail</compoundname>
+    <includes local="no">xrpl/basics/scope.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class EF</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1ScopeFail_1acf01c82c0df5c832eb5164fbb7ddf612" prot="private" static="no" mutable="no">
+        <type>EF</type>
+        <definition>EF xrpl::ScopeFail&lt; EF &gt;::exitFunction_</definition>
+        <argsstring></argsstring>
+        <name>exitFunction_</name>
+        <qualifiedname>xrpl::ScopeFail::exitFunction_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="70" column="8" bodyfile="include/xrpl/basics/scope.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ScopeFail_1ac6580fc151be3383135aed63c81e972c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xrpl::ScopeFail&lt; EF &gt;::executeOnDestruction_</definition>
+        <argsstring></argsstring>
+        <name>executeOnDestruction_</name>
+        <qualifiedname>xrpl::ScopeFail::executeOnDestruction_</qualifiedname>
+        <initializer>{true}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="71" column="10" bodyfile="include/xrpl/basics/scope.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ScopeFail_1a22a4d9fc6c0e338e56b9e72d85aa3b1a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xrpl::ScopeFail&lt; EF &gt;::uncaughtOnCreation_</definition>
+        <argsstring></argsstring>
+        <name>uncaughtOnCreation_</name>
+        <qualifiedname>xrpl::ScopeFail::uncaughtOnCreation_</qualifiedname>
+        <initializer>{std::uncaught_exceptions()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="72" column="9" bodyfile="include/xrpl/basics/scope.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1ScopeFail_1a82dac90e01671a096eaa066760121d8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ScopeFail&lt; EF &gt;::~ScopeFail</definition>
+        <argsstring>()</argsstring>
+        <name>~ScopeFail</name>
+        <qualifiedname>xrpl::ScopeFail::~ScopeFail</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="75" column="5" bodyfile="include/xrpl/basics/scope.h" bodystart="75" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeFail_1ab0a72b5621a307ede6b04277a88a1d0a" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" noexceptexpression="std::is_nothrow_move_constructible_v&lt; EF &gt;||std::is_nothrow_copy_constructible_v&lt; EF &gt;" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ScopeFail&lt; EF &gt;::ScopeFail</definition>
+        <argsstring>(ScopeFail &amp;&amp;rhs)</argsstring>
+        <name>ScopeFail</name>
+        <qualifiedname>xrpl::ScopeFail::ScopeFail</qualifiedname>
+        <param>
+          <type>ScopeFail &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="81" column="5" bodyfile="include/xrpl/basics/scope.h" bodystart="81" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeFail_1a11faaab1baa914b5f56fae88d85b9fdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1ScopeFail_1ab0a72b5621a307ede6b04277a88a1d0a" kindref="member">ScopeFail</ref> &amp;</type>
+        <definition>ScopeFail &amp; xrpl::ScopeFail&lt; EF &gt;::operator=</definition>
+        <argsstring>(ScopeFail &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::ScopeFail::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ScopeFail_1ab0a72b5621a307ede6b04277a88a1d0a" kindref="member">ScopeFail</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="91" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeFail_1a60a14c1ceac39f7b72ec3f2579c9a65b" prot="public" static="no" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class EFP</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>xrpl::ScopeFail&lt; EF &gt;::ScopeFail</definition>
+        <argsstring>(EFP &amp;&amp;f) noexcept</argsstring>
+        <name>ScopeFail</name>
+        <qualifiedname>xrpl::ScopeFail::ScopeFail</qualifiedname>
+        <param>
+          <type>EFP &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+    <requiresclause>( !std::is_same_v&lt;std::remove_cv_t&lt;EFP&gt;, ScopeFail&gt; &amp;&amp; std::is_constructible_v&lt;EF, EFP&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="94" column="14" bodyfile="include/xrpl/basics/scope.h" bodystart="94" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeFail_1af121352345f13bb40a212b5b504b5ec7" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::ScopeFail&lt; EF &gt;::release</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>release</name>
+        <qualifiedname>xrpl::ScopeFail::release</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="103" column="5" bodyfile="include/xrpl/basics/scope.h" bodystart="103" bodyend="106"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/basics/scope.h" line="68" column="1" bodyfile="include/xrpl/basics/scope.h" bodystart="69" bodyend="107"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1ScopeFail_1ac6580fc151be3383135aed63c81e972c" prot="private" virt="non-virtual"><scope>xrpl::ScopeFail</scope><name>executeOnDestruction_</name></member>
+      <member refid="classxrpl_1_1ScopeFail_1acf01c82c0df5c832eb5164fbb7ddf612" prot="private" virt="non-virtual"><scope>xrpl::ScopeFail</scope><name>exitFunction_</name></member>
+      <member refid="classxrpl_1_1ScopeFail_1a11faaab1baa914b5f56fae88d85b9fdb" prot="public" virt="non-virtual"><scope>xrpl::ScopeFail</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1ScopeFail_1af121352345f13bb40a212b5b504b5ec7" prot="public" virt="non-virtual"><scope>xrpl::ScopeFail</scope><name>release</name></member>
+      <member refid="classxrpl_1_1ScopeFail_1ab0a72b5621a307ede6b04277a88a1d0a" prot="public" virt="non-virtual"><scope>xrpl::ScopeFail</scope><name>ScopeFail</name></member>
+      <member refid="classxrpl_1_1ScopeFail_1a60a14c1ceac39f7b72ec3f2579c9a65b" prot="public" virt="non-virtual"><scope>xrpl::ScopeFail</scope><name>ScopeFail</name></member>
+      <member refid="classxrpl_1_1ScopeFail_1a22a4d9fc6c0e338e56b9e72d85aa3b1a" prot="private" virt="non-virtual"><scope>xrpl::ScopeFail</scope><name>uncaughtOnCreation_</name></member>
+      <member refid="classxrpl_1_1ScopeFail_1a82dac90e01671a096eaa066760121d8c" prot="public" virt="non-virtual"><scope>xrpl::ScopeFail</scope><name>~ScopeFail</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

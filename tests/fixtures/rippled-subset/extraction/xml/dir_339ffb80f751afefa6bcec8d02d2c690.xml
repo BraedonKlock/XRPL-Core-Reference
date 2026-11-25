@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_339ffb80f751afefa6bcec8d02d2c690" kind="dir">
+    <compoundname>include/xrpl/tx</compoundname>
+    <innerfile refid="ApplyContext_8h">ApplyContext.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/tx/"/>
+  </compounddef>
+</doxygen>

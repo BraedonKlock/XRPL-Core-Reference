@@ -1,0 +1,678 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1ReadView" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>xrpl::ReadView</compoundname>
+    <derivedcompoundref refid="classxrpl_1_1ApplyView" prot="public" virt="non-virtual">xrpl::ApplyView</derivedcompoundref>
+    <derivedcompoundref refid="classxrpl_1_1DigestAwareReadView" prot="public" virt="non-virtual">xrpl::DigestAwareReadView</derivedcompoundref>
+    <derivedcompoundref refid="classxrpl_1_1OpenView" prot="public" virt="non-virtual">xrpl::OpenView</derivedcompoundref>
+    <includes local="no">xrpl/ledger/ReadView.h</includes>
+    <innerclass refid="structxrpl_1_1ReadView_1_1SlesType" prot="public">xrpl::ReadView::SlesType</innerclass>
+    <innerclass refid="structxrpl_1_1ReadView_1_1TxsType" prot="public">xrpl::ReadView::TxsType</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classxrpl_1_1ReadView_1acdf20e7573ec1f6fd1729b3471c7d381" prot="public" static="no">
+        <type>std::pair&lt; std::shared_ptr&lt; <ref refid="classxrpl_1_1STTx" kindref="compound">STTx</ref> const  &gt;, std::shared_ptr&lt; STObject const  &gt; &gt;</type>
+        <definition>using xrpl::ReadView::TxType = std::pair&lt;std::shared_ptr&lt;STTx const&gt;, std::shared_ptr&lt;STObject const&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>TxType</name>
+        <qualifiedname>xrpl::ReadView::TxType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="43" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1ReadView_1a6722acde83b5ecd55013e18b3616c6e1" prot="public" static="no">
+        <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref></type>
+        <definition>using xrpl::ReadView::key_type = UInt256</definition>
+        <argsstring></argsstring>
+        <name>key_type</name>
+        <qualifiedname>xrpl::ReadView::key_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="45" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1ReadView_1aeca9ff90207765d22e6bcb4bbc9dc698" prot="public" static="no">
+        <type>SLE::const_pointer</type>
+        <definition>using xrpl::ReadView::mapped_type = SLE::const_pointer</definition>
+        <argsstring></argsstring>
+        <name>mapped_type</name>
+        <qualifiedname>xrpl::ReadView::mapped_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="47" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1ReadView_1a8ca83a34e95a8dc05010601800df8195" prot="public" static="no" mutable="no">
+        <type><ref refid="structxrpl_1_1ReadView_1_1SlesType" kindref="compound">SlesType</ref></type>
+        <definition>SlesType xrpl::ReadView::sles</definition>
+        <argsstring></argsstring>
+        <name>sles</name>
+        <qualifiedname>xrpl::ReadView::sles</qualifiedname>
+        <briefdescription>
+<para>Iterable range of ledger state items. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Visiting each state entry in the ledger can become quite expensive as the ledger grows. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="267" column="14" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ReadView_1a2643bfdd150165cf226ec00458e4ca51" prot="public" static="no" mutable="no">
+        <type><ref refid="structxrpl_1_1ReadView_1_1TxsType" kindref="compound">TxsType</ref></type>
+        <definition>TxsType xrpl::ReadView::txs</definition>
+        <argsstring></argsstring>
+        <name>txs</name>
+        <qualifiedname>xrpl::ReadView::txs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="270" column="13" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a0a2324f4d1fd7633de80db5a6a09f1c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual xrpl::ReadView::~ReadView</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ReadView</name>
+        <qualifiedname>xrpl::ReadView::~ReadView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="71" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a01b363feb917dd58603630b9c70799aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1ReadView_1a025a8816966f80cc1ef7e72a8f854bfb" kindref="member">ReadView</ref> &amp;</type>
+        <definition>ReadView &amp; xrpl::ReadView::operator=</definition>
+        <argsstring>(ReadView &amp;&amp;other)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::ReadView::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ReadView_1a025a8816966f80cc1ef7e72a8f854bfb" kindref="member">ReadView</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="74" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a59f9b0a60fbf2e058ed4463fd809d372" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1ReadView_1a025a8816966f80cc1ef7e72a8f854bfb" kindref="member">ReadView</ref> &amp;</type>
+        <definition>ReadView &amp; xrpl::ReadView::operator=</definition>
+        <argsstring>(ReadView const &amp;other)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::ReadView::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ReadView_1a025a8816966f80cc1ef7e72a8f854bfb" kindref="member">ReadView</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="76" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a025a8816966f80cc1ef7e72a8f854bfb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ReadView::ReadView</definition>
+        <argsstring>()</argsstring>
+        <name>ReadView</name>
+        <qualifiedname>xrpl::ReadView::ReadView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="78" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a429424e14538bee6ed4f96990b5a0fa5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ReadView::ReadView</definition>
+        <argsstring>(ReadView const &amp;other)</argsstring>
+        <name>ReadView</name>
+        <qualifiedname>xrpl::ReadView::ReadView</qualifiedname>
+        <param>
+          <type>ReadView const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="82" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a49aa650289af2c98585d3a55201ba76d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ReadView::ReadView</definition>
+        <argsstring>(ReadView &amp;&amp;other)</argsstring>
+        <name>ReadView</name>
+        <qualifiedname>xrpl::ReadView::ReadView</qualifiedname>
+        <param>
+          <type>ReadView &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="86" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="86" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a4e362d6b90af8923eb355796ea55a238" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>LedgerHeader const &amp;</type>
+        <definition>virtual LedgerHeader const  &amp; xrpl::ReadView::header</definition>
+        <argsstring>() const =0</argsstring>
+        <name>header</name>
+        <qualifiedname>xrpl::ReadView::header</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1add63e98665611760dfaca2753e2fd329">header</reimplementedby>
+        <briefdescription>
+<para>Returns information about the ledger. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="94" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a83cb10826bca857750014cabeb2b6e5f" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool xrpl::ReadView::open</definition>
+        <argsstring>() const =0</argsstring>
+        <name>open</name>
+        <qualifiedname>xrpl::ReadView::open</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1a9970ee35ff07796b8cb18ea1db257271">open</reimplementedby>
+        <briefdescription>
+<para>Returns true if this reflects an open ledger. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="100" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a0796f54cc244f05d8d97e0cbd9f53efe" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>NetClock::time_point</type>
+        <definition>NetClock::time_point xrpl::ReadView::parentCloseTime</definition>
+        <argsstring>() const</argsstring>
+        <name>parentCloseTime</name>
+        <qualifiedname>xrpl::ReadView::parentCloseTime</qualifiedname>
+        <briefdescription>
+<para>Returns the close time of the previous ledger. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="106" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a8e369714ce4db1696fbc454f01c8cc3d" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>LedgerIndex</type>
+        <definition>LedgerIndex xrpl::ReadView::seq</definition>
+        <argsstring>() const</argsstring>
+        <name>seq</name>
+        <qualifiedname>xrpl::ReadView::seq</qualifiedname>
+        <briefdescription>
+<para>Returns the sequence number of the base ledger. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="115" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a20d7f51b59533a515ae27f5aee73f656" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>Fees const &amp;</type>
+        <definition>virtual Fees const  &amp; xrpl::ReadView::fees</definition>
+        <argsstring>() const =0</argsstring>
+        <name>fees</name>
+        <qualifiedname>xrpl::ReadView::fees</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1a480d5b251fdfab193bf9d8d5cffed50e">fees</reimplementedby>
+        <briefdescription>
+<para>Returns the fees for the base ledger. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="124" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a0733c550dedfa5cf52eec24bdfb21de4" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>Rules const &amp;</type>
+        <definition>virtual Rules const  &amp; xrpl::ReadView::rules</definition>
+        <argsstring>() const =0</argsstring>
+        <name>rules</name>
+        <qualifiedname>xrpl::ReadView::rules</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1ae3df865c5f901521da343833fda83b88">rules</reimplementedby>
+        <briefdescription>
+<para>Returns the tx processing rules. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="130" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a2a0264a7f5664d8673f2d3cceda1b120" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool xrpl::ReadView::exists</definition>
+        <argsstring>(Keylet const &amp;k) const =0</argsstring>
+        <name>exists</name>
+        <qualifiedname>xrpl::ReadView::exists</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1ae805d6b5c2e4702c998ff579d6165221">exists</reimplementedby>
+        <param>
+          <type>Keylet const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Determine if a state item exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This can be more efficient than calling read.</para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if a SLE is associated with the specified key. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="141" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1acdb1bbc006dc50ae95d5d5925a2b76ce" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::optional&lt; <ref refid="classxrpl_1_1ReadView_1a6722acde83b5ecd55013e18b3616c6e1" kindref="member">key_type</ref> &gt;</type>
+        <definition>virtual std::optional&lt; key_type &gt; xrpl::ReadView::succ</definition>
+        <argsstring>(key_type const &amp;key, std::optional&lt; key_type &gt; const &amp;last=std::nullopt) const =0</argsstring>
+        <name>succ</name>
+        <qualifiedname>xrpl::ReadView::succ</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1afb515e27b0815577629f56cf8f5f6ab5">succ</reimplementedby>
+        <param>
+          <type><ref refid="classxrpl_1_1ReadView_1a6722acde83b5ecd55013e18b3616c6e1" kindref="member">key_type</ref> const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; <ref refid="classxrpl_1_1ReadView_1a6722acde83b5ecd55013e18b3616c6e1" kindref="member">key_type</ref> &gt; const &amp;</type>
+          <declname>last</declname>
+          <defval>std::nullopt</defval>
+        </param>
+        <briefdescription>
+<para>Return the key of the next state item. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This returns the key of the first state item whose key is greater than the specified key. If no such key is present, std::nullopt is returned.</para>
+<para>If <computeroutput>last</computeroutput> is engaged, returns std::nullopt when the key returned would be outside the open interval (key, last). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="155" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a34a212795c00cc27743dc4f1e6f42b05" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>SLE::const_pointer</type>
+        <definition>virtual SLE::const_pointer xrpl::ReadView::read</definition>
+        <argsstring>(Keylet const &amp;k) const =0</argsstring>
+        <name>read</name>
+        <qualifiedname>xrpl::ReadView::read</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1aae2629aaf965a7c1890748adf8ad0582">read</reimplementedby>
+        <param>
+          <type>Keylet const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Return the state item associated with a key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Effects: If the key exists, gives the caller ownership of the non-modifiable corresponding SLE.</para>
+<para><simplesect kind="note"><para>While the returned SLE is <computeroutput>const</computeroutput> from the perspective of the caller, it can be changed by other callers through raw operations.</para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>nullptr</computeroutput> if the key is not present or if the type does not match. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="172" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1aeecb3c46312a438c6d3782d546a3f7f0" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>STAmount</type>
+        <definition>virtual STAmount xrpl::ReadView::balanceHookIOU</definition>
+        <argsstring>(AccountID const &amp;account, AccountID const &amp;issuer, STAmount const &amp;amount) const</argsstring>
+        <name>balanceHookIOU</name>
+        <qualifiedname>xrpl::ReadView::balanceHookIOU</qualifiedname>
+        <param>
+          <type>AccountID const &amp;</type>
+          <declname>account</declname>
+        </param>
+        <param>
+          <type>AccountID const &amp;</type>
+          <declname>issuer</declname>
+        </param>
+        <param>
+          <type>STAmount const &amp;</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="180" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="180" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a2d9a1a19f2b5b3ac7b20c4a245a85261" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>STAmount</type>
+        <definition>virtual STAmount xrpl::ReadView::balanceHookMPT</definition>
+        <argsstring>(AccountID const &amp;account, MPTIssue const &amp;issue, std::int64_t amount) const</argsstring>
+        <name>balanceHookMPT</name>
+        <qualifiedname>xrpl::ReadView::balanceHookMPT</qualifiedname>
+        <param>
+          <type>AccountID const &amp;</type>
+          <declname>account</declname>
+        </param>
+        <param>
+          <type>MPTIssue const &amp;</type>
+          <declname>issue</declname>
+        </param>
+        <param>
+          <type>std::int64_t</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="190" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1ae1f6fec00e04553a99b817f6502b6311" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>STAmount</type>
+        <definition>virtual STAmount xrpl::ReadView::balanceHookSelfIssueMPT</definition>
+        <argsstring>(MPTIssue const &amp;issue, std::int64_t amount) const</argsstring>
+        <name>balanceHookSelfIssueMPT</name>
+        <qualifiedname>xrpl::ReadView::balanceHookSelfIssueMPT</qualifiedname>
+        <param>
+          <type>MPTIssue const &amp;</type>
+          <declname>issue</declname>
+        </param>
+        <param>
+          <type>std::int64_t</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="200" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="200" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a48ba2df50830a7172dbb2c85830c6023" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>OwnerCounts</type>
+        <definition>virtual OwnerCounts xrpl::ReadView::ownerCountHook</definition>
+        <argsstring>(AccountID const &amp;account, OwnerCounts const &amp;count) const</argsstring>
+        <name>ownerCountHook</name>
+        <qualifiedname>xrpl::ReadView::ownerCountHook</qualifiedname>
+        <param>
+          <type>AccountID const &amp;</type>
+          <declname>account</declname>
+        </param>
+        <param>
+          <type>OwnerCounts const &amp;</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="211" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="211" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1ac786c670b86ae6598870ace3fca75b5a" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; SlesType::IterBase &gt;</type>
+        <definition>virtual std::unique_ptr&lt; SlesType::IterBase &gt; xrpl::ReadView::slesBegin</definition>
+        <argsstring>() const =0</argsstring>
+        <name>slesBegin</name>
+        <qualifiedname>xrpl::ReadView::slesBegin</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1abec3d598384a3485b3843fd3bdaa0ac6">slesBegin</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="218" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1ade3b88b054a5fd44f269692e252e2827" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; SlesType::IterBase &gt;</type>
+        <definition>virtual std::unique_ptr&lt; SlesType::IterBase &gt; xrpl::ReadView::slesEnd</definition>
+        <argsstring>() const =0</argsstring>
+        <name>slesEnd</name>
+        <qualifiedname>xrpl::ReadView::slesEnd</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1a6e5a41640abcd08c67083fc919d20b2c">slesEnd</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="222" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1af63e841f66e6e7b8d173964aabc0340d" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; SlesType::IterBase &gt;</type>
+        <definition>virtual std::unique_ptr&lt; SlesType::IterBase &gt; xrpl::ReadView::slesUpperBound</definition>
+        <argsstring>(key_type const &amp;key) const =0</argsstring>
+        <name>slesUpperBound</name>
+        <qualifiedname>xrpl::ReadView::slesUpperBound</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1acad64239fb457627824d92e51a1f4dd3">slesUpperBound</reimplementedby>
+        <param>
+          <type><ref refid="classxrpl_1_1ReadView_1a6722acde83b5ecd55013e18b3616c6e1" kindref="member">key_type</ref> const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="226" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a2750f745ca322900e1bd2212b55a5942" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; TxsType::IterBase &gt;</type>
+        <definition>virtual std::unique_ptr&lt; TxsType::IterBase &gt; xrpl::ReadView::txsBegin</definition>
+        <argsstring>() const =0</argsstring>
+        <name>txsBegin</name>
+        <qualifiedname>xrpl::ReadView::txsBegin</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1a922dc976d79a0f3dfb112922afd5c8a3">txsBegin</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="230" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a42e47c573352e787ccbb946d4a7ae133" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; TxsType::IterBase &gt;</type>
+        <definition>virtual std::unique_ptr&lt; TxsType::IterBase &gt; xrpl::ReadView::txsEnd</definition>
+        <argsstring>() const =0</argsstring>
+        <name>txsEnd</name>
+        <qualifiedname>xrpl::ReadView::txsEnd</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1ae1f01d2188065df4af15c8b56d3117fd">txsEnd</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="234" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1a6988b056cf20deaba5189a0501abcb8d" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool xrpl::ReadView::txExists</definition>
+        <argsstring>(key_type const &amp;key) const =0</argsstring>
+        <name>txExists</name>
+        <qualifiedname>xrpl::ReadView::txExists</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1a8a52535f8caddf24f13deac5a3e6540f">txExists</reimplementedby>
+        <param>
+          <type><ref refid="classxrpl_1_1ReadView_1a6722acde83b5ecd55013e18b3616c6e1" kindref="member">key_type</ref> const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Returns <computeroutput>true</computeroutput> if a tx exists in the tx map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A tx exists in the map if it is part of the base ledger, or if it is a newly inserted tx. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="243" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ReadView_1ab6b1bbc97e6cbf18246dfa2452d8e285" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classxrpl_1_1ReadView_1acdf20e7573ec1f6fd1729b3471c7d381" kindref="member">TxType</ref></type>
+        <definition>virtual TxType xrpl::ReadView::txRead</definition>
+        <argsstring>(key_type const &amp;key) const =0</argsstring>
+        <name>txRead</name>
+        <qualifiedname>xrpl::ReadView::txRead</qualifiedname>
+        <reimplementedby refid="classxrpl_1_1OpenView_1a291368ad9283133fe54cf52ff6c0dc49">txRead</reimplementedby>
+        <param>
+          <type><ref refid="classxrpl_1_1ReadView_1a6722acde83b5ecd55013e18b3616c6e1" kindref="member">key_type</ref> const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Read a transaction from the tx map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the view represents an open ledger, the metadata object will be empty.</para>
+<para><simplesect kind="return"><para>A pair of nullptr if the key is not found in the tx map. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="255" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A view into a ledger. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This interface provides read access to state and transaction items. There is no checkpointing or calculation of metadata. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>xrpl::ApplyView</label>
+        <link refid="classxrpl_1_1ApplyView"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>xrpl::DigestAwareReadView</label>
+        <link refid="classxrpl_1_1DigestAwareReadView"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>xrpl::OpenView</label>
+        <link refid="classxrpl_1_1OpenView"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>xrpl::ReadView</label>
+        <link refid="classxrpl_1_1ReadView"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>detail::ReadViewFwdRange&lt; SLE::const_pointer &gt;</label>
+      </node>
+      <node id="5">
+        <label>detail::ReadViewFwdRange&lt; TxType &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::ReadView</label>
+        <link refid="classxrpl_1_1ReadView"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>sles</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>txs</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xrpl::ReadView::SlesType</label>
+        <link refid="structxrpl_1_1ReadView_1_1SlesType"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>xrpl::ReadView::TxsType</label>
+        <link refid="structxrpl_1_1ReadView_1_1TxsType"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/ledger/ReadView.h" line="40" column="1" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="41" bodyend="271"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1ReadView_1aeecb3c46312a438c6d3782d546a3f7f0" prot="public" virt="virtual"><scope>xrpl::ReadView</scope><name>balanceHookIOU</name></member>
+      <member refid="classxrpl_1_1ReadView_1a2d9a1a19f2b5b3ac7b20c4a245a85261" prot="public" virt="virtual"><scope>xrpl::ReadView</scope><name>balanceHookMPT</name></member>
+      <member refid="classxrpl_1_1ReadView_1ae1f6fec00e04553a99b817f6502b6311" prot="public" virt="virtual"><scope>xrpl::ReadView</scope><name>balanceHookSelfIssueMPT</name></member>
+      <member refid="classxrpl_1_1ReadView_1a2a0264a7f5664d8673f2d3cceda1b120" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>exists</name></member>
+      <member refid="classxrpl_1_1ReadView_1a20d7f51b59533a515ae27f5aee73f656" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>fees</name></member>
+      <member refid="classxrpl_1_1ReadView_1a4e362d6b90af8923eb355796ea55a238" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>header</name></member>
+      <member refid="classxrpl_1_1ReadView_1a6722acde83b5ecd55013e18b3616c6e1" prot="public" virt="non-virtual"><scope>xrpl::ReadView</scope><name>key_type</name></member>
+      <member refid="classxrpl_1_1ReadView_1aeca9ff90207765d22e6bcb4bbc9dc698" prot="public" virt="non-virtual"><scope>xrpl::ReadView</scope><name>mapped_type</name></member>
+      <member refid="classxrpl_1_1ReadView_1a83cb10826bca857750014cabeb2b6e5f" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>open</name></member>
+      <member refid="classxrpl_1_1ReadView_1a01b363feb917dd58603630b9c70799aa" prot="public" virt="non-virtual"><scope>xrpl::ReadView</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1ReadView_1a59f9b0a60fbf2e058ed4463fd809d372" prot="public" virt="non-virtual"><scope>xrpl::ReadView</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1ReadView_1a48ba2df50830a7172dbb2c85830c6023" prot="public" virt="virtual"><scope>xrpl::ReadView</scope><name>ownerCountHook</name></member>
+      <member refid="classxrpl_1_1ReadView_1a0796f54cc244f05d8d97e0cbd9f53efe" prot="public" virt="non-virtual"><scope>xrpl::ReadView</scope><name>parentCloseTime</name></member>
+      <member refid="classxrpl_1_1ReadView_1a34a212795c00cc27743dc4f1e6f42b05" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>read</name></member>
+      <member refid="classxrpl_1_1ReadView_1a025a8816966f80cc1ef7e72a8f854bfb" prot="public" virt="non-virtual"><scope>xrpl::ReadView</scope><name>ReadView</name></member>
+      <member refid="classxrpl_1_1ReadView_1a429424e14538bee6ed4f96990b5a0fa5" prot="public" virt="non-virtual"><scope>xrpl::ReadView</scope><name>ReadView</name></member>
+      <member refid="classxrpl_1_1ReadView_1a49aa650289af2c98585d3a55201ba76d" prot="public" virt="non-virtual"><scope>xrpl::ReadView</scope><name>ReadView</name></member>
+      <member refid="classxrpl_1_1ReadView_1a0733c550dedfa5cf52eec24bdfb21de4" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>rules</name></member>
+      <member refid="classxrpl_1_1ReadView_1a8e369714ce4db1696fbc454f01c8cc3d" prot="public" virt="non-virtual"><scope>xrpl::ReadView</scope><name>seq</name></member>
+      <member refid="classxrpl_1_1ReadView_1a8ca83a34e95a8dc05010601800df8195" prot="public" virt="non-virtual"><scope>xrpl::ReadView</scope><name>sles</name></member>
+      <member refid="classxrpl_1_1ReadView_1ac786c670b86ae6598870ace3fca75b5a" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>slesBegin</name></member>
+      <member refid="classxrpl_1_1ReadView_1ade3b88b054a5fd44f269692e252e2827" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>slesEnd</name></member>
+      <member refid="classxrpl_1_1ReadView_1af63e841f66e6e7b8d173964aabc0340d" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>slesUpperBound</name></member>
+      <member refid="classxrpl_1_1ReadView_1acdb1bbc006dc50ae95d5d5925a2b76ce" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>succ</name></member>
+      <member refid="classxrpl_1_1ReadView_1a6988b056cf20deaba5189a0501abcb8d" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>txExists</name></member>
+      <member refid="classxrpl_1_1ReadView_1ab6b1bbc97e6cbf18246dfa2452d8e285" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>txRead</name></member>
+      <member refid="classxrpl_1_1ReadView_1a2643bfdd150165cf226ec00458e4ca51" prot="public" virt="non-virtual"><scope>xrpl::ReadView</scope><name>txs</name></member>
+      <member refid="classxrpl_1_1ReadView_1a2750f745ca322900e1bd2212b55a5942" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>txsBegin</name></member>
+      <member refid="classxrpl_1_1ReadView_1a42e47c573352e787ccbb946d4a7ae133" prot="public" virt="pure-virtual"><scope>xrpl::ReadView</scope><name>txsEnd</name></member>
+      <member refid="classxrpl_1_1ReadView_1acdf20e7573ec1f6fd1729b3471c7d381" prot="public" virt="non-virtual"><scope>xrpl::ReadView</scope><name>TxType</name></member>
+      <member refid="classxrpl_1_1ReadView_1a0a2324f4d1fd7633de80db5a6a09f1c1" prot="public" virt="virtual"><scope>xrpl::ReadView</scope><name>~ReadView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

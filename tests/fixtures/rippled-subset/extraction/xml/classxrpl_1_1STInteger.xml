@@ -1,0 +1,507 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1STInteger" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::STInteger</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">STBase</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">CountedObject&lt; STInteger&lt; Integer &gt; &gt;</basecompoundref>
+    <includes local="no">xrpl/protocol/STInteger.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Integer</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classxrpl_1_1STInteger_1a3acdbc025da7c6058b85c519eb4a2752" prot="public" static="no">
+        <type>Integer</type>
+        <definition>using xrpl::STInteger&lt; Integer &gt;::value_type = Integer</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>xrpl::STInteger::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="20" column="5" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1STInteger_1a70301f7f71126956cadfd39f524da084" prot="private" static="no" mutable="no">
+        <type>Integer</type>
+        <definition>Integer xrpl::STInteger&lt; Integer &gt;::value_</definition>
+        <argsstring></argsstring>
+        <name>value_</name>
+        <qualifiedname>xrpl::STInteger::value_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="23" column="13" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classxrpl_1_1STInteger_1a56e35235b38a9a930a8b53f34fa0dafd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class xrpl::detail::STVar</definition>
+        <argsstring></argsstring>
+        <name>xrpl::detail::STVar</name>
+        <qualifiedname>xrpl::STInteger::STVar</qualifiedname>
+        <param>
+          <type>xrpl::detail::STVar</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="64" column="18" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1ac048a699a1911a2447c4da1009327b25" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STInteger&lt; Integer &gt;::STInteger</definition>
+        <argsstring>(Integer v)</argsstring>
+        <name>STInteger</name>
+        <qualifiedname>xrpl::STInteger::STInteger</qualifiedname>
+        <param>
+          <type>Integer</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="26" column="14" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a38311112e5ecad1f5f770fd54a609dcd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STInteger&lt; Integer &gt;::STInteger</definition>
+        <argsstring>(SField const &amp;n, Integer v=0)</argsstring>
+        <name>STInteger</name>
+        <qualifiedname>xrpl::STInteger::STInteger</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SField" kindref="compound">SField</ref> const &amp;</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>v</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="27" column="5" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="80" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a3bf4a95910840103f7a406587280ab16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STInteger&lt; Integer &gt;::STInteger</definition>
+        <argsstring>(SerialIter &amp;sit, SField const &amp;name)</argsstring>
+        <name>STInteger</name>
+        <qualifiedname>xrpl::STInteger::STInteger</qualifiedname>
+        <param>
+          <type>SerialIter &amp;</type>
+          <declname>sit</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SField" kindref="compound">SField</ref> const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a08912206f9aab398bb45ba4092b29e3a" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacexrpl_1a9a934f459db38bf14dbca9b2adb6f07f" kindref="member">SerializedTypeID</ref></type>
+        <definition>SerializedTypeID xrpl::STInteger&lt; Integer &gt;::getSType</definition>
+        <argsstring>() const override</argsstring>
+        <name>getSType</name>
+        <qualifiedname>xrpl::STInteger::getSType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="31" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a64de6014d6a22a22f591c7e1b03d152b" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>json::Value</type>
+        <definition>json::Value xrpl::STInteger&lt; Integer &gt;::getJson</definition>
+        <argsstring>(JsonOptions) const override</argsstring>
+        <name>getJson</name>
+        <qualifiedname>xrpl::STInteger::getJson</qualifiedname>
+        <param>
+          <type>JsonOptions</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="33" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1ad42af5ec9b2b45b2384ac9e73b03147b" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xrpl::STInteger&lt; Integer &gt;::getText</definition>
+        <argsstring>() const override</argsstring>
+        <name>getText</name>
+        <qualifiedname>xrpl::STInteger::getText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a20fc1bca7dac4a1782f9bca4ee387ceb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::STInteger&lt; Integer &gt;::add</definition>
+        <argsstring>(Serializer &amp;s) const override</argsstring>
+        <name>add</name>
+        <qualifiedname>xrpl::STInteger::add</qualifiedname>
+        <param>
+          <type>Serializer &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="39" column="5" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="100" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1aecb73ec90c666461d0bbee3efe46008c" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::STInteger&lt; Integer &gt;::isDefault</definition>
+        <argsstring>() const override</argsstring>
+        <name>isDefault</name>
+        <qualifiedname>xrpl::STInteger::isDefault</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="42" column="5" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a9aeb1edff81e92993fc1dc270546c95a" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::STInteger&lt; Integer &gt;::isEquivalent</definition>
+        <argsstring>(STBase const &amp;t) const override</argsstring>
+        <name>isEquivalent</name>
+        <qualifiedname>xrpl::STInteger::isEquivalent</qualifiedname>
+        <param>
+          <type>STBase const &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="45" column="5" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="116" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a538a44f2afe4fffd6d6a995632751094" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1STInteger_1ac048a699a1911a2447c4da1009327b25" kindref="member">STInteger</ref> &amp;</type>
+        <definition>STInteger&lt; Integer &gt; &amp; xrpl::STInteger&lt; Integer &gt;::operator=</definition>
+        <argsstring>(value_type const &amp;v)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::STInteger::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1STInteger_1a3acdbc025da7c6058b85c519eb4a2752" kindref="member">value_type</ref> const &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="48" column="5" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="124" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a02b3921c5de99ab2fae85dcf66ffc3da" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1STInteger_1a3acdbc025da7c6058b85c519eb4a2752" kindref="member">value_type</ref></type>
+        <definition>STInteger&lt; Integer &gt;::value_type xrpl::STInteger&lt; Integer &gt;::value</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>value</name>
+        <qualifiedname>xrpl::STInteger::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="51" column="5" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a599bd48e5a8e9a381877c70139d77445" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::STInteger&lt; Integer &gt;::setValue</definition>
+        <argsstring>(Integer v)</argsstring>
+        <name>setValue</name>
+        <qualifiedname>xrpl::STInteger::setValue</qualifiedname>
+        <param>
+          <type>Integer</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="54" column="5" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a9935be660bb1d84ad6daa4bab34e1a11" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STInteger&lt; Integer &gt;::operator Integer</definition>
+        <argsstring>() const</argsstring>
+        <name>operator Integer</name>
+        <qualifiedname>xrpl::STInteger::operator Integer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="56" column="5" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a0cf6413133f1259c89250ebd11abc66a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STInteger&lt; unsignedchar &gt;::STInteger</definition>
+        <argsstring>(SerialIter &amp;sit, SField const &amp;name)</argsstring>
+        <name>STInteger</name>
+        <qualifiedname>xrpl::STInteger::STInteger</qualifiedname>
+        <param>
+          <type>SerialIter &amp;</type>
+          <declname>sit</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SField" kindref="compound">SField</ref> const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/STInteger.cpp" line="24" column="11" bodyfile="src/libxrpl/protocol/STInteger.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1af406c249de6118eb04e3b0ef24048609" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STInteger&lt; std::uint16_t &gt;::STInteger</definition>
+        <argsstring>(SerialIter &amp;sit, SField const &amp;name)</argsstring>
+        <name>STInteger</name>
+        <qualifiedname>xrpl::STInteger::STInteger</qualifiedname>
+        <param>
+          <type>SerialIter &amp;</type>
+          <declname>sit</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SField" kindref="compound">SField</ref> const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/STInteger.cpp" line="77" column="11" bodyfile="src/libxrpl/protocol/STInteger.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1acbc912f6a4d8756cb1d63a1f9c71e130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STInteger&lt; std::uint32_t &gt;::STInteger</definition>
+        <argsstring>(SerialIter &amp;sit, SField const &amp;name)</argsstring>
+        <name>STInteger</name>
+        <qualifiedname>xrpl::STInteger::STInteger</qualifiedname>
+        <param>
+          <type>SerialIter &amp;</type>
+          <declname>sit</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SField" kindref="compound">SField</ref> const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/STInteger.cpp" line="138" column="11" bodyfile="src/libxrpl/protocol/STInteger.cpp" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1aea795d38c991c13676e938a17472d6a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STInteger&lt; std::uint64_t &gt;::STInteger</definition>
+        <argsstring>(SerialIter &amp;sit, SField const &amp;name)</argsstring>
+        <name>STInteger</name>
+        <qualifiedname>xrpl::STInteger::STInteger</qualifiedname>
+        <param>
+          <type>SerialIter &amp;</type>
+          <declname>sit</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SField" kindref="compound">SField</ref> const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/STInteger.cpp" line="180" column="11" bodyfile="src/libxrpl/protocol/STInteger.cpp" bodystart="180" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a1d54f262358be749baccfbe5f917f205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::STInteger&lt; std::int32_t &gt;::STInteger</definition>
+        <argsstring>(SerialIter &amp;sit, SField const &amp;name)</argsstring>
+        <name>STInteger</name>
+        <qualifiedname>xrpl::STInteger::STInteger</qualifiedname>
+        <param>
+          <type>SerialIter &amp;</type>
+          <declname>sit</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SField" kindref="compound">SField</ref> const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/STInteger.cpp" line="223" column="11" bodyfile="src/libxrpl/protocol/STInteger.cpp" bodystart="223" bodyend="226"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a55f28ee8a2c03bcc989ac1aa6891aa4e" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>STBase *</type>
+        <definition>STBase * xrpl::STInteger&lt; Integer &gt;::copy</definition>
+        <argsstring>(std::size_t n, void *buf) const override</argsstring>
+        <name>copy</name>
+        <qualifiedname>xrpl::STInteger::copy</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="60" column="5" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1STInteger_1a365e0b1b0449a06847f6d5cd179aeb8e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>STBase *</type>
+        <definition>STBase * xrpl::STInteger&lt; Integer &gt;::move</definition>
+        <argsstring>(std::size_t n, void *buf) override</argsstring>
+        <name>move</name>
+        <qualifiedname>xrpl::STInteger::move</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/STInteger.h" line="62" column="5" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="93" bodyend="96"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>CountedObject&lt; STInteger&lt; Integer &gt; &gt;</label>
+      </node>
+      <node id="2">
+        <label>STBase</label>
+      </node>
+      <node id="1">
+        <label>xrpl::STInteger&lt; Integer &gt;</label>
+        <link refid="classxrpl_1_1STInteger"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>CountedObject&lt; STInteger&lt; Integer &gt; &gt;</label>
+      </node>
+      <node id="2">
+        <label>STBase</label>
+      </node>
+      <node id="1">
+        <label>xrpl::STInteger&lt; Integer &gt;</label>
+        <link refid="classxrpl_1_1STInteger"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/protocol/STInteger.h" line="17" column="1" bodyfile="include/xrpl/protocol/STInteger.h" bodystart="18" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1STInteger_1a20fc1bca7dac4a1782f9bca4ee387ceb" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>add</name></member>
+      <member refid="classxrpl_1_1STInteger_1a55f28ee8a2c03bcc989ac1aa6891aa4e" prot="private" virt="non-virtual"><scope>xrpl::STInteger</scope><name>copy</name></member>
+      <member refid="classxrpl_1_1STInteger_1a64de6014d6a22a22f591c7e1b03d152b" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>getJson</name></member>
+      <member refid="classxrpl_1_1STInteger_1a08912206f9aab398bb45ba4092b29e3a" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>getSType</name></member>
+      <member refid="classxrpl_1_1STInteger_1ad42af5ec9b2b45b2384ac9e73b03147b" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>getText</name></member>
+      <member refid="classxrpl_1_1STInteger_1aecb73ec90c666461d0bbee3efe46008c" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>isDefault</name></member>
+      <member refid="classxrpl_1_1STInteger_1a9aeb1edff81e92993fc1dc270546c95a" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>isEquivalent</name></member>
+      <member refid="classxrpl_1_1STInteger_1a365e0b1b0449a06847f6d5cd179aeb8e" prot="private" virt="non-virtual"><scope>xrpl::STInteger</scope><name>move</name></member>
+      <member refid="classxrpl_1_1STInteger_1a9935be660bb1d84ad6daa4bab34e1a11" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>operator Integer</name></member>
+      <member refid="classxrpl_1_1STInteger_1a538a44f2afe4fffd6d6a995632751094" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1STInteger_1a599bd48e5a8e9a381877c70139d77445" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>setValue</name></member>
+      <member refid="classxrpl_1_1STInteger_1ac048a699a1911a2447c4da1009327b25" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>STInteger</name></member>
+      <member refid="classxrpl_1_1STInteger_1a38311112e5ecad1f5f770fd54a609dcd" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>STInteger</name></member>
+      <member refid="classxrpl_1_1STInteger_1a3bf4a95910840103f7a406587280ab16" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>STInteger</name></member>
+      <member refid="classxrpl_1_1STInteger_1a0cf6413133f1259c89250ebd11abc66a" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>STInteger</name></member>
+      <member refid="classxrpl_1_1STInteger_1af406c249de6118eb04e3b0ef24048609" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>STInteger</name></member>
+      <member refid="classxrpl_1_1STInteger_1acbc912f6a4d8756cb1d63a1f9c71e130" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>STInteger</name></member>
+      <member refid="classxrpl_1_1STInteger_1aea795d38c991c13676e938a17472d6a3" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>STInteger</name></member>
+      <member refid="classxrpl_1_1STInteger_1a1d54f262358be749baccfbe5f917f205" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>STInteger</name></member>
+      <member refid="classxrpl_1_1STInteger_1a02b3921c5de99ab2fae85dcf66ffc3da" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>value</name></member>
+      <member refid="classxrpl_1_1STInteger_1a70301f7f71126956cadfd39f524da084" prot="private" virt="non-virtual"><scope>xrpl::STInteger</scope><name>value_</name></member>
+      <member refid="classxrpl_1_1STInteger_1a3acdbc025da7c6058b85c519eb4a2752" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>value_type</name></member>
+      <member refid="classxrpl_1_1STInteger_1a56e35235b38a9a930a8b53f34fa0dafd" prot="public" virt="non-virtual"><scope>xrpl::STInteger</scope><name>xrpl::detail::STVar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

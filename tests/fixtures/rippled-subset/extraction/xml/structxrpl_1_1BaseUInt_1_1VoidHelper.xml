@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1BaseUInt_1_1VoidHelper" kind="struct" language="C++" prot="private">
+    <compoundname>xrpl::BaseUInt::VoidHelper</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structxrpl_1_1BaseUInt_1_1VoidHelper_1ac823cfc1ae25dca5609f6da7f5683945" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::BaseUInt&lt; Bits, Tag &gt;::VoidHelper::VoidHelper</definition>
+        <argsstring>()=default</argsstring>
+        <name>VoidHelper</name>
+        <qualifiedname>xrpl::BaseUInt::VoidHelper::VoidHelper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="178" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Construct from a raw pointer. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The buffer pointed to by <computeroutput><ref refid="classxrpl_1_1BaseUInt_1aa3242b3c98b7218db5a08e7bbb9aa07c" kindref="member">data</ref></computeroutput> must be at least Bits/8 bytes.</para>
+<para><simplesect kind="note"><para>the structure is used to disambiguate this from the std::uint64_t constructor: something like base_uint(0) is ambiguous. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/xrpl/basics/base_uint.h" line="176" column="5" bodyfile="include/xrpl/basics/base_uint.h" bodystart="177" bodyend="179"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1BaseUInt_1_1VoidHelper_1ac823cfc1ae25dca5609f6da7f5683945" prot="public" virt="non-virtual"><scope>xrpl::BaseUInt::VoidHelper</scope><name>VoidHelper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

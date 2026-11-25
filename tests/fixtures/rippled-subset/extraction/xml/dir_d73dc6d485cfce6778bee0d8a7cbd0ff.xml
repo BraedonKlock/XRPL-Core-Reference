@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_d73dc6d485cfce6778bee0d8a7cbd0ff" kind="dir">
+    <compoundname>include/xrpl/beast/container</compoundname>
+    <innerdir refid="dir_684d49507229e0822b95a00c580529cf">include/xrpl/beast/container/detail</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/beast/container/"/>
+  </compounddef>
+</doxygen>

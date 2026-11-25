@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1ScopeSuccess" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::ScopeSuccess</compoundname>
+    <includes local="no">xrpl/basics/scope.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class EF</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1ScopeSuccess_1a63274580a01d1635eb3ae063880aac64" prot="private" static="no" mutable="no">
+        <type>EF</type>
+        <definition>EF xrpl::ScopeSuccess&lt; EF &gt;::exitFunction_</definition>
+        <argsstring></argsstring>
+        <name>exitFunction_</name>
+        <qualifiedname>xrpl::ScopeSuccess::exitFunction_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="115" column="8" bodyfile="include/xrpl/basics/scope.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ScopeSuccess_1a926401bc107119ea348f5f76664d66c1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xrpl::ScopeSuccess&lt; EF &gt;::executeOnDestruction_</definition>
+        <argsstring></argsstring>
+        <name>executeOnDestruction_</name>
+        <qualifiedname>xrpl::ScopeSuccess::executeOnDestruction_</qualifiedname>
+        <initializer>{true}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="116" column="10" bodyfile="include/xrpl/basics/scope.h" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ScopeSuccess_1ae9cd6752c4638a609dfb807154d875ef" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xrpl::ScopeSuccess&lt; EF &gt;::uncaughtOnCreation_</definition>
+        <argsstring></argsstring>
+        <name>uncaughtOnCreation_</name>
+        <qualifiedname>xrpl::ScopeSuccess::uncaughtOnCreation_</qualifiedname>
+        <initializer>{std::uncaught_exceptions()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="117" column="9" bodyfile="include/xrpl/basics/scope.h" bodystart="117" bodyend="117"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1ScopeSuccess_1ac1d7e6ba32b111071cc1777ec6b3cf87" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" noexceptexpression="noexcept(exitFunction_())" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ScopeSuccess&lt; EF &gt;::~ScopeSuccess</definition>
+        <argsstring>()</argsstring>
+        <name>~ScopeSuccess</name>
+        <qualifiedname>xrpl::ScopeSuccess::~ScopeSuccess</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="120" column="5" bodyfile="include/xrpl/basics/scope.h" bodystart="120" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeSuccess_1aef7ee57f81d87229355c10565be66e62" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" noexceptexpression="std::is_nothrow_move_constructible_v&lt; EF &gt;||std::is_nothrow_copy_constructible_v&lt; EF &gt;" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ScopeSuccess&lt; EF &gt;::ScopeSuccess</definition>
+        <argsstring>(ScopeSuccess &amp;&amp;rhs)</argsstring>
+        <name>ScopeSuccess</name>
+        <qualifiedname>xrpl::ScopeSuccess::ScopeSuccess</qualifiedname>
+        <param>
+          <type>ScopeSuccess &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="126" column="5" bodyfile="include/xrpl/basics/scope.h" bodystart="126" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeSuccess_1a371a06b110f182de5d6f73ccd4613c8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1ScopeSuccess_1aef7ee57f81d87229355c10565be66e62" kindref="member">ScopeSuccess</ref> &amp;</type>
+        <definition>ScopeSuccess &amp; xrpl::ScopeSuccess&lt; EF &gt;::operator=</definition>
+        <argsstring>(ScopeSuccess &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::ScopeSuccess::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ScopeSuccess_1aef7ee57f81d87229355c10565be66e62" kindref="member">ScopeSuccess</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="136" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeSuccess_1a5d0dd0207ccda96681a2fd561f32ad90" prot="public" static="no" const="no" explicit="yes" inline="yes" noexcept="yes" noexceptexpression="std::is_nothrow_constructible_v&lt; EF, EFP &gt;||std::is_nothrow_constructible_v&lt; EF, EFP &amp; &gt;" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class EFP</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>xrpl::ScopeSuccess&lt; EF &gt;::ScopeSuccess</definition>
+        <argsstring>(EFP &amp;&amp;f)</argsstring>
+        <name>ScopeSuccess</name>
+        <qualifiedname>xrpl::ScopeSuccess::ScopeSuccess</qualifiedname>
+        <param>
+          <type>EFP &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+    <requiresclause>( !std::is_same_v&lt;std::remove_cv_t&lt;EFP&gt;, ScopeSuccess&gt; &amp;&amp; std::is_constructible_v&lt;EF, EFP&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="139" column="14" bodyfile="include/xrpl/basics/scope.h" bodystart="139" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeSuccess_1a6fd86d2e4adaf3e4b2cac3d2400451c1" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::ScopeSuccess&lt; EF &gt;::release</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>release</name>
+        <qualifiedname>xrpl::ScopeSuccess::release</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="149" column="5" bodyfile="include/xrpl/basics/scope.h" bodystart="149" bodyend="152"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/basics/scope.h" line="113" column="1" bodyfile="include/xrpl/basics/scope.h" bodystart="114" bodyend="153"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1ScopeSuccess_1a926401bc107119ea348f5f76664d66c1" prot="private" virt="non-virtual"><scope>xrpl::ScopeSuccess</scope><name>executeOnDestruction_</name></member>
+      <member refid="classxrpl_1_1ScopeSuccess_1a63274580a01d1635eb3ae063880aac64" prot="private" virt="non-virtual"><scope>xrpl::ScopeSuccess</scope><name>exitFunction_</name></member>
+      <member refid="classxrpl_1_1ScopeSuccess_1a371a06b110f182de5d6f73ccd4613c8e" prot="public" virt="non-virtual"><scope>xrpl::ScopeSuccess</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1ScopeSuccess_1a6fd86d2e4adaf3e4b2cac3d2400451c1" prot="public" virt="non-virtual"><scope>xrpl::ScopeSuccess</scope><name>release</name></member>
+      <member refid="classxrpl_1_1ScopeSuccess_1aef7ee57f81d87229355c10565be66e62" prot="public" virt="non-virtual"><scope>xrpl::ScopeSuccess</scope><name>ScopeSuccess</name></member>
+      <member refid="classxrpl_1_1ScopeSuccess_1a5d0dd0207ccda96681a2fd561f32ad90" prot="public" virt="non-virtual"><scope>xrpl::ScopeSuccess</scope><name>ScopeSuccess</name></member>
+      <member refid="classxrpl_1_1ScopeSuccess_1ae9cd6752c4638a609dfb807154d875ef" prot="private" virt="non-virtual"><scope>xrpl::ScopeSuccess</scope><name>uncaughtOnCreation_</name></member>
+      <member refid="classxrpl_1_1ScopeSuccess_1ac1d7e6ba32b111071cc1777ec6b3cf87" prot="public" virt="non-virtual"><scope>xrpl::ScopeSuccess</scope><name>~ScopeSuccess</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1SHAMap_1_1MissingNodes" kind="struct" language="C++" prot="private">
+    <compoundname>xrpl::SHAMap::MissingNodes</compoundname>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a0884e483f6f5ad640bc93f414a973365" prot="public" static="no">
+        <type>std::tuple&lt; SHAMapInnerNode *, SHAMapNodeID, unsigned int, unsigned int, bool &gt;</type>
+        <definition>using xrpl::SHAMap::MissingNodes::StackEntry = std::tuple&lt;
+           SHAMapInnerNode*,  
+           SHAMapNodeID,      
+           unsigned int,      
+           unsigned int,      
+           bool&gt;</definition>
+        <argsstring></argsstring>
+        <name>StackEntry</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::StackEntry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="836" column="9" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="836" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a2176859a1fc8ab55584568487a7c07b5" prot="public" static="no">
+        <type>std::tuple&lt; SHAMapInnerNode *, SHAMapNodeID, unsigned int, SHAMapTreeNodePtr &gt;</type>
+        <definition>using xrpl::SHAMap::MissingNodes::DeferredNode = std::tuple&lt;
+           SHAMapInnerNode*,    
+           SHAMapNodeID,        
+           unsigned int,        
+           SHAMapTreeNodePtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>DeferredNode</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::DeferredNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="851" column="9" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="851" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a9caf1c12b2c8e94c2d0b11f92d877ae2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xrpl::SHAMap::MissingNodes::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="826" column="13" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="826" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a9afe9b0670ca855403b1c36a09c96907" prot="public" static="no" mutable="no">
+        <type>SHAMapSyncFilter const  *</type>
+        <definition>SHAMapSyncFilter const* xrpl::SHAMap::MissingNodes::filter</definition>
+        <argsstring></argsstring>
+        <name>filter</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::filter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="827" column="32" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="827" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a224761b8ed1c760e96e394f52dd9caab" prot="public" static="no" mutable="no">
+        <type>int const</type>
+        <definition>int const xrpl::SHAMap::MissingNodes::maxDefer</definition>
+        <argsstring></argsstring>
+        <name>maxDefer</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::maxDefer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="828" column="19" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="828" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a800a9cb5920585a005278099b2d74c5b" prot="public" static="no" mutable="no">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t xrpl::SHAMap::MissingNodes::generation</definition>
+        <argsstring></argsstring>
+        <name>generation</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::generation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="829" column="23" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="829" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a0c04f9bbc3fa7d122e1fc4dc46f137fd" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; SHAMapNodeID, <ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;SHAMapNodeID, UInt256&gt; &gt; xrpl::SHAMap::MissingNodes::missingNodes</definition>
+        <argsstring></argsstring>
+        <name>missingNodes</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::missingNodes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="832" column="21" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="832" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a1f567eafacc2e57497644847fe97d473" prot="public" static="no" mutable="no">
+        <type>std::set&lt; SHAMapHash &gt;</type>
+        <definition>std::set&lt;SHAMapHash&gt; xrpl::SHAMap::MissingNodes::missingHashes</definition>
+        <argsstring></argsstring>
+        <name>missingHashes</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::missingHashes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="833" column="18" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="833" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMap_1_1MissingNodes_1ae47678d25896a1e6c3b3a9765a387308" prot="public" static="no" mutable="no">
+        <type>std::stack&lt; <ref refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a0884e483f6f5ad640bc93f414a973365" kindref="member">StackEntry</ref>, std::deque&lt; <ref refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a0884e483f6f5ad640bc93f414a973365" kindref="member">StackEntry</ref> &gt; &gt;</type>
+        <definition>std::stack&lt;StackEntry, std::deque&lt;StackEntry&gt; &gt; xrpl::SHAMap::MissingNodes::stack</definition>
+        <argsstring></argsstring>
+        <name>stack</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::stack</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="848" column="20" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="848" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a640d680bf583bb8e42dc8b1151f1605d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xrpl::SHAMap::MissingNodes::deferred</definition>
+        <argsstring></argsstring>
+        <name>deferred</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::deferred</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="857" column="13" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="857" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a046d9b9647efc6d82aa8e64aab6d956b" prot="public" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex xrpl::SHAMap::MissingNodes::deferLock</definition>
+        <argsstring></argsstring>
+        <name>deferLock</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::deferLock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="858" column="20" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="858" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMap_1_1MissingNodes_1afee7990b5bb33849a30f2458f04b6bfe" prot="public" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable xrpl::SHAMap::MissingNodes::deferCondVar</definition>
+        <argsstring></argsstring>
+        <name>deferCondVar</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::deferCondVar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="859" column="33" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="859" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a4007690880aa631da6f9712b44e2e99e" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a2176859a1fc8ab55584568487a7c07b5" kindref="member">DeferredNode</ref> &gt;</type>
+        <definition>std::vector&lt;DeferredNode&gt; xrpl::SHAMap::MissingNodes::finishedReads</definition>
+        <argsstring></argsstring>
+        <name>finishedReads</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::finishedReads</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="860" column="21" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="860" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMap_1_1MissingNodes_1ab3c1362f87411b6b17672a2bb2d57897" prot="public" static="no" mutable="no">
+        <type>std::map&lt; SHAMapInnerNode *, SHAMapNodeID &gt;</type>
+        <definition>std::map&lt;SHAMapInnerNode*, SHAMapNodeID&gt; xrpl::SHAMap::MissingNodes::resumes</definition>
+        <argsstring></argsstring>
+        <name>resumes</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::resumes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="864" column="18" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="864" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a35c811f809cbba5f22ce8439949a4fe5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::MissingNodes::MissingNodes</definition>
+        <argsstring>()=delete</argsstring>
+        <name>MissingNodes</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::MissingNodes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="820" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a89fcd3063206adb0907ebbf571f5f32f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::MissingNodes::MissingNodes</definition>
+        <argsstring>(MissingNodes const &amp;)=delete</argsstring>
+        <name>MissingNodes</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::MissingNodes</qualifiedname>
+        <param>
+          <type>MissingNodes const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="821" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a450b54ef1e83385ed6475b496c6ea3bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a35c811f809cbba5f22ce8439949a4fe5" kindref="member">MissingNodes</ref> &amp;</type>
+        <definition>MissingNodes &amp; xrpl::SHAMap::MissingNodes::operator=</definition>
+        <argsstring>(MissingNodes const &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::operator=</qualifiedname>
+        <param>
+          <type><ref refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a35c811f809cbba5f22ce8439949a4fe5" kindref="member">MissingNodes</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="823" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structxrpl_1_1SHAMap_1_1MissingNodes_1a7cd46bf9fd7c3f746688eccb0fd3ae41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::MissingNodes::MissingNodes</definition>
+        <argsstring>(int max, SHAMapSyncFilter const *filter, int maxDefer, std::uint32_t generation)</argsstring>
+        <name>MissingNodes</name>
+        <qualifiedname>xrpl::SHAMap::MissingNodes::MissingNodes</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>SHAMapSyncFilter const *</type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxDefer</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>generation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="866" column="9" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="866" bodyend="875"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="9">
+        <label>std::map&lt; SHAMapInnerNode *, SHAMapNodeID &gt;</label>
+      </node>
+      <node id="7">
+        <label>std::mutex</label>
+      </node>
+      <node id="3">
+        <label>std::pair&lt; SHAMapNodeID, xrpl::BaseUInt&lt; 256 &gt; &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>second_type</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::set&lt; SHAMapHash &gt;</label>
+      </node>
+      <node id="6">
+        <label>std::stack&lt; StackEntry, std::deque&lt; StackEntry &gt; &gt;</label>
+      </node>
+      <node id="8">
+        <label>std::vector&lt; DeferredNode &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; std::pair&lt; SHAMapNodeID, xrpl::BaseUInt&lt; 256 &gt; &gt; &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>xrpl::BaseUInt&lt; 256 &gt;</label>
+        <link refid="classxrpl_1_1BaseUInt"/>
+      </node>
+      <node id="1">
+        <label>xrpl::SHAMap::MissingNodes</label>
+        <link refid="structxrpl_1_1SHAMap_1_1MissingNodes"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>missingNodes</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>missingHashes</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>stack</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>deferLock</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>finishedReads</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>resumes</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/shamap/SHAMap.h" line="818" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="819" bodyend="876"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1afee7990b5bb33849a30f2458f04b6bfe" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>deferCondVar</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a046d9b9647efc6d82aa8e64aab6d956b" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>deferLock</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a640d680bf583bb8e42dc8b1151f1605d" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>deferred</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a2176859a1fc8ab55584568487a7c07b5" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>DeferredNode</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a9afe9b0670ca855403b1c36a09c96907" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>filter</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a4007690880aa631da6f9712b44e2e99e" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>finishedReads</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a800a9cb5920585a005278099b2d74c5b" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>generation</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a9caf1c12b2c8e94c2d0b11f92d877ae2" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>max</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a224761b8ed1c760e96e394f52dd9caab" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>maxDefer</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a1f567eafacc2e57497644847fe97d473" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>missingHashes</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a35c811f809cbba5f22ce8439949a4fe5" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>MissingNodes</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a89fcd3063206adb0907ebbf571f5f32f" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>MissingNodes</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a7cd46bf9fd7c3f746688eccb0fd3ae41" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>MissingNodes</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a0c04f9bbc3fa7d122e1fc4dc46f137fd" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>missingNodes</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a450b54ef1e83385ed6475b496c6ea3bd" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>operator=</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1ab3c1362f87411b6b17672a2bb2d57897" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>resumes</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1ae47678d25896a1e6c3b3a9765a387308" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>stack</name></member>
+      <member refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a0884e483f6f5ad640bc93f414a973365" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::MissingNodes</scope><name>StackEntry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

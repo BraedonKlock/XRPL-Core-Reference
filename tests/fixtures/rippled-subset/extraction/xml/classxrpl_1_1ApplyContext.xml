@@ -1,0 +1,605 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1ApplyContext" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::ApplyContext</compoundname>
+    <includes local="no">xrpl/tx/ApplyContext.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1ApplyContext_1a5f4cf14ec5d901306368bf0a8bb0e77c" prot="public" static="no" mutable="no">
+        <type>std::reference_wrapper&lt; ServiceRegistry &gt;</type>
+        <definition>std::reference_wrapper&lt;ServiceRegistry&gt; xrpl::ApplyContext::registry</definition>
+        <argsstring></argsstring>
+        <name>registry</name>
+        <qualifiedname>xrpl::ApplyContext::registry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="61" column="28" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ApplyContext_1a12176434ecde09cea7688f6bdf95c17f" prot="public" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1STTx" kindref="compound">STTx</ref> const  &amp;</type>
+        <definition>STTx const&amp; xrpl::ApplyContext::tx</definition>
+        <argsstring></argsstring>
+        <name>tx</name>
+        <qualifiedname>xrpl::ApplyContext::tx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="62" column="16" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ApplyContext_1ad147d86d914dfa8704b2cb7dcbe90690" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacexrpl_1acf451206d0976d03db8b01fb83fd3730" kindref="member">TER</ref> const</type>
+        <definition>TER const xrpl::ApplyContext::preclaimResult</definition>
+        <argsstring></argsstring>
+        <name>preclaimResult</name>
+        <qualifiedname>xrpl::ApplyContext::preclaimResult</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="63" column="15" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ApplyContext_1a350b22443576ff5489e4575a0e08ee06" prot="public" static="no" mutable="no">
+        <type>XRPAmount const</type>
+        <definition>XRPAmount const xrpl::ApplyContext::baseFee</definition>
+        <argsstring></argsstring>
+        <name>baseFee</name>
+        <qualifiedname>xrpl::ApplyContext::baseFee</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="64" column="21" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ApplyContext_1a8c94af858a6bf4acf07ebecb3282e6fd" prot="public" static="no" mutable="no">
+        <type>beast::Journal const</type>
+        <definition>beast::Journal const xrpl::ApplyContext::journal</definition>
+        <argsstring></argsstring>
+        <name>journal</name>
+        <qualifiedname>xrpl::ApplyContext::journal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="65" column="26" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1ApplyContext_1a23b1af78187b19bb957947fa5bc636f7" prot="private" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1OpenView" kindref="compound">OpenView</ref> &amp;</type>
+        <definition>OpenView&amp; xrpl::ApplyContext::base_</definition>
+        <argsstring></argsstring>
+        <name>base_</name>
+        <qualifiedname>xrpl::ApplyContext::base_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="150" column="14" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ApplyContext_1a647b1cb429f5e2ab7f557a3b3be56d6a" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacexrpl_1abd040209899a4fb5e9c298f9156a074e" kindref="member">ApplyFlags</ref></type>
+        <definition>ApplyFlags xrpl::ApplyContext::flags_</definition>
+        <argsstring></argsstring>
+        <name>flags_</name>
+        <qualifiedname>xrpl::ApplyContext::flags_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="151" column="16" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ApplyContext_1a7effd7762deb178c132bae9921d65a95" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; ApplyViewImpl &gt;</type>
+        <definition>std::optional&lt;ApplyViewImpl&gt; xrpl::ApplyContext::view_</definition>
+        <argsstring></argsstring>
+        <name>view_</name>
+        <qualifiedname>xrpl::ApplyContext::view_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="155" column="19" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ApplyContext_1ada79f2f04b1c2f3b0c85b65d1accb09f" prot="private" static="no" mutable="no">
+        <type>std::reference_wrapper&lt; ApplyViewImpl &gt;</type>
+        <definition>std::reference_wrapper&lt;ApplyViewImpl&gt; xrpl::ApplyContext::viewRef_</definition>
+        <argsstring></argsstring>
+        <name>viewRef_</name>
+        <qualifiedname>xrpl::ApplyContext::viewRef_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="156" column="28" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ApplyContext_1a686bfdf80be7f676f43c640b8339ee2d" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; <ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const  &gt;</type>
+        <definition>std::optional&lt;UInt256 const&gt; xrpl::ApplyContext::parentBatchId_</definition>
+        <argsstring></argsstring>
+        <name>parentBatchId_</name>
+        <qualifiedname>xrpl::ApplyContext::parentBatchId_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="159" column="19" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a453c494358f6deb5931e41506fdecfe8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ApplyContext::ApplyContext</definition>
+        <argsstring>(ServiceRegistry &amp;registry, OpenView &amp;base, std::optional&lt; UInt256 const &gt; const &amp;parentBatchId, STTx const &amp;tx, TER preclaimResult, XRPAmount baseFee, ApplyFlags flags, beast::Journal journal=beast::Journal{beast::Journal::getNullSink()})</argsstring>
+        <name>ApplyContext</name>
+        <qualifiedname>xrpl::ApplyContext::ApplyContext</qualifiedname>
+        <param>
+          <type>ServiceRegistry &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1OpenView" kindref="compound">OpenView</ref> &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; <ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &gt; const &amp;</type>
+          <declname>parentBatchId</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1STTx" kindref="compound">STTx</ref> const &amp;</type>
+          <declname>tx</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1acf451206d0976d03db8b01fb83fd3730" kindref="member">TER</ref></type>
+          <declname>preclaimResult</declname>
+        </param>
+        <param>
+          <type>XRPAmount</type>
+          <declname>baseFee</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1abd040209899a4fb5e9c298f9156a074e" kindref="member">ApplyFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>beast::Journal</type>
+          <declname>journal</declname>
+          <defval>beast::Journal{beast::Journal::getNullSink()}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="30" column="14" bodyfile="src/libxrpl/tx/ApplyContext.cpp" bodystart="22" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1acbefcad0fe7551cc7d73a1e768f12603" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ApplyContext::ApplyContext</definition>
+        <argsstring>(ServiceRegistry &amp;registry, OpenView &amp;base, STTx const &amp;tx, TER preclaimResult, XRPAmount baseFee, ApplyFlags flags, beast::Journal journal=beast::Journal{beast::Journal::getNullSink()})</argsstring>
+        <name>ApplyContext</name>
+        <qualifiedname>xrpl::ApplyContext::ApplyContext</qualifiedname>
+        <param>
+          <type>ServiceRegistry &amp;</type>
+          <declname>registry</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1OpenView" kindref="compound">OpenView</ref> &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1STTx" kindref="compound">STTx</ref> const &amp;</type>
+          <declname>tx</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1acf451206d0976d03db8b01fb83fd3730" kindref="member">TER</ref></type>
+          <declname>preclaimResult</declname>
+        </param>
+        <param>
+          <type>XRPAmount</type>
+          <declname>baseFee</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1abd040209899a4fb5e9c298f9156a074e" kindref="member">ApplyFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>beast::Journal</type>
+          <declname>journal</declname>
+          <defval>beast::Journal{beast::Journal::getNullSink()}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="44" column="14" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="44" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a623c69b084e5436862dbc8ec490407c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ApplyContext::ApplyContext</definition>
+        <argsstring>(ApplyContext const &amp;)=delete</argsstring>
+        <name>ApplyContext</name>
+        <qualifiedname>xrpl::ApplyContext::ApplyContext</qualifiedname>
+        <param>
+          <type>ApplyContext const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="58" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a6d7a5d9df02f849b27646a93e4b4c498" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ApplyContext::ApplyContext</definition>
+        <argsstring>(ApplyContext &amp;&amp;)=delete</argsstring>
+        <name>ApplyContext</name>
+        <qualifiedname>xrpl::ApplyContext::ApplyContext</qualifiedname>
+        <param>
+          <type>ApplyContext &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="59" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1abe2b777c2a1d0bb50a10b424d6a01d66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1ApplyView" kindref="compound">ApplyView</ref> &amp;</type>
+        <definition>ApplyView &amp; xrpl::ApplyContext::view</definition>
+        <argsstring>()</argsstring>
+        <name>view</name>
+        <qualifiedname>xrpl::ApplyContext::view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="68" column="5" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a9626b1e9fdf5183e0471dd93023c752d" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1ApplyView" kindref="compound">ApplyView</ref> const &amp;</type>
+        <definition>ApplyView const  &amp; xrpl::ApplyContext::view</definition>
+        <argsstring>() const</argsstring>
+        <name>view</name>
+        <qualifiedname>xrpl::ApplyContext::view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="74" column="5" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a9768025e8de1b6ee0a10621e35c31ca2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>RawView &amp;</type>
+        <definition>RawView &amp; xrpl::ApplyContext::rawView</definition>
+        <argsstring>()</argsstring>
+        <name>rawView</name>
+        <qualifiedname>xrpl::ApplyContext::rawView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="81" column="5" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a421c6e6e445869dec1822f48ec4e51be" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacexrpl_1abd040209899a4fb5e9c298f9156a074e" kindref="member">ApplyFlags</ref> const &amp;</type>
+        <definition>ApplyFlags const  &amp; xrpl::ApplyContext::flags</definition>
+        <argsstring>() const</argsstring>
+        <name>flags</name>
+        <qualifiedname>xrpl::ApplyContext::flags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="87" column="5" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a66fdbfcb3decdbd51fcede9f178962b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::ApplyContext::deliver</definition>
+        <argsstring>(STAmount const &amp;amount)</argsstring>
+        <name>deliver</name>
+        <qualifiedname>xrpl::ApplyContext::deliver</qualifiedname>
+        <param>
+          <type>STAmount const &amp;</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Sets the DeliveredAmount field in the metadata. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="96" column="5" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a520571b608399aa419a1ee25995f8087" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::ApplyContext::discard</definition>
+        <argsstring>()</argsstring>
+        <name>discard</name>
+        <qualifiedname>xrpl::ApplyContext::discard</qualifiedname>
+        <briefdescription>
+<para>Discard changes and start fresh. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="105" column="5" bodyfile="src/libxrpl/tx/ApplyContext.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a774c0f965bd18b05caf4349956b6ff01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; TxMeta &gt;</type>
+        <definition>std::optional&lt; TxMeta &gt; xrpl::ApplyContext::apply</definition>
+        <argsstring>(TER)</argsstring>
+        <name>apply</name>
+        <qualifiedname>xrpl::ApplyContext::apply</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1acf451206d0976d03db8b01fb83fd3730" kindref="member">TER</ref></type>
+          <defname>ter</defname>
+        </param>
+        <briefdescription>
+<para>Apply the transaction result to the base. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="110" column="19" bodyfile="src/libxrpl/tx/ApplyContext.cpp" bodystart="53" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a0ce43337273d07fefa4f0aad9d3d6212" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::ApplyContext::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <qualifiedname>xrpl::ApplyContext::size</qualifiedname>
+        <briefdescription>
+<para>Get the number of unapplied changes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="116" column="5" bodyfile="src/libxrpl/tx/ApplyContext.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a943d452650e12929f83e7d388b49e5bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::ApplyContext::visit</definition>
+        <argsstring>(std::function&lt; void(UInt256 const &amp;key, bool isDelete, SLE::ConstRef before, SLE::ConstRef after)&gt; const &amp;func)</argsstring>
+        <name>visit</name>
+        <qualifiedname>xrpl::ApplyContext::visit</qualifiedname>
+        <param>
+          <type>std::function&lt; void(<ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;key, bool isDelete, SLE::ConstRef before, SLE::ConstRef after)&gt; const &amp;</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+<para>Visit unapplied changes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="122" column="5" bodyfile="src/libxrpl/tx/ApplyContext.cpp" bodystart="73" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a289e02c3da22baa3560c829c464f4be0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::ApplyContext::destroyXRP</definition>
+        <argsstring>(XRPAmount const &amp;fee)</argsstring>
+        <name>destroyXRP</name>
+        <qualifiedname>xrpl::ApplyContext::destroyXRP</qualifiedname>
+        <param>
+          <type>XRPAmount const &amp;</type>
+          <declname>fee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="130" column="5" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a40fef8d213a30b83447572e3c538b8ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::ApplyContext::addOrderBook</definition>
+        <argsstring>(Book const &amp;book)</argsstring>
+        <name>addOrderBook</name>
+        <qualifiedname>xrpl::ApplyContext::addOrderBook</qualifiedname>
+        <param>
+          <type>Book const &amp;</type>
+          <declname>book</declname>
+        </param>
+        <briefdescription>
+<para>Registers a newly-created order book directory with the shared, process-wide OrderBookDB, unless this transaction is being applied under TapDryRun. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="141" column="5" bodyfile="src/libxrpl/tx/ApplyContext.cpp" bodystart="60" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ApplyContext_1a3ad901b5b13557188074b67a10f9379a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxrpl_1_1ApplyViewContext" kindref="compound">ApplyViewContext</ref></type>
+        <definition>ApplyViewContext xrpl::ApplyContext::getApplyViewContext</definition>
+        <argsstring>()</argsstring>
+        <name>getApplyViewContext</name>
+        <qualifiedname>xrpl::ApplyContext::getApplyViewContext</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/tx/ApplyContext.h" line="144" column="5" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="144" bodyend="147"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>State information when applying a tx. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>CountedObject&lt; STTx &gt;</label>
+      </node>
+      <node id="3">
+        <label>STObject</label>
+      </node>
+      <node id="13">
+        <label>TxsRawView</label>
+      </node>
+      <node id="10">
+        <label>detail::ReadViewFwdRange&lt; SLE::const_pointer &gt;</label>
+      </node>
+      <node id="12">
+        <label>detail::ReadViewFwdRange&lt; TxType &gt;</label>
+      </node>
+      <node id="15">
+        <label>std::map&lt; key_type, TxData, std::less&lt;&gt;, boost::container::pmr::polymorphic_allocator&lt; std::pair&lt; key_type const, TxData &gt; &gt; &gt;</label>
+      </node>
+      <node id="16">
+        <label>std::shared_ptr&lt; void const &gt;</label>
+      </node>
+      <node id="14">
+        <label>std::unique_ptr&lt; boost::container::pmr::monotonic_buffer_resource &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::ApplyContext</label>
+        <link refid="classxrpl_1_1ApplyContext"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>tx</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>preclaimResult</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>base_</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>xrpl::BaseUInt&lt; 256 &gt;</label>
+        <link refid="classxrpl_1_1BaseUInt"/>
+      </node>
+      <node id="7">
+        <label>xrpl::OpenView</label>
+        <link refid="classxrpl_1_1OpenView"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>monotonicResource_</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>txs_</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>base_</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>hold_</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>xrpl::ReadView</label>
+        <link refid="classxrpl_1_1ReadView"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>sles</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>txs</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>xrpl::ReadView::SlesType</label>
+        <link refid="structxrpl_1_1ReadView_1_1SlesType"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>xrpl::ReadView::TxsType</label>
+        <link refid="structxrpl_1_1ReadView_1_1TxsType"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xrpl::STTx</label>
+        <link refid="classxrpl_1_1STTx"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>tid_</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>xrpl::TERSubset&lt; CanCvtToTER &gt;</label>
+        <link refid="classxrpl_1_1TERSubset"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/tx/ApplyContext.h" line="27" column="1" bodyfile="include/xrpl/tx/ApplyContext.h" bodystart="28" bodyend="160"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1ApplyContext_1a40fef8d213a30b83447572e3c538b8ca" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>addOrderBook</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a774c0f965bd18b05caf4349956b6ff01" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>apply</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a453c494358f6deb5931e41506fdecfe8" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>ApplyContext</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1acbefcad0fe7551cc7d73a1e768f12603" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>ApplyContext</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a623c69b084e5436862dbc8ec490407c8" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>ApplyContext</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a6d7a5d9df02f849b27646a93e4b4c498" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>ApplyContext</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a23b1af78187b19bb957947fa5bc636f7" prot="private" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>base_</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a350b22443576ff5489e4575a0e08ee06" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>baseFee</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a66fdbfcb3decdbd51fcede9f178962b3" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>deliver</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a289e02c3da22baa3560c829c464f4be0" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>destroyXRP</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a520571b608399aa419a1ee25995f8087" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>discard</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a421c6e6e445869dec1822f48ec4e51be" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>flags</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a647b1cb429f5e2ab7f557a3b3be56d6a" prot="private" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>flags_</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a3ad901b5b13557188074b67a10f9379a" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>getApplyViewContext</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a8c94af858a6bf4acf07ebecb3282e6fd" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>journal</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a686bfdf80be7f676f43c640b8339ee2d" prot="private" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>parentBatchId_</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1ad147d86d914dfa8704b2cb7dcbe90690" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>preclaimResult</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a9768025e8de1b6ee0a10621e35c31ca2" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>rawView</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a5f4cf14ec5d901306368bf0a8bb0e77c" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>registry</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a0ce43337273d07fefa4f0aad9d3d6212" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>size</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a12176434ecde09cea7688f6bdf95c17f" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>tx</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1abe2b777c2a1d0bb50a10b424d6a01d66" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>view</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a9626b1e9fdf5183e0471dd93023c752d" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>view</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a7effd7762deb178c132bae9921d65a95" prot="private" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>view_</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1ada79f2f04b1c2f3b0c85b65d1accb09f" prot="private" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>viewRef_</name></member>
+      <member refid="classxrpl_1_1ApplyContext_1a943d452650e12929f83e7d388b49e5bd" prot="public" virt="non-virtual"><scope>xrpl::ApplyContext</scope><name>visit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

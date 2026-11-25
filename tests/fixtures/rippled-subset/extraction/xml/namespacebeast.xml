@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="namespacebeast" kind="namespace" language="C++">
+    <compoundname>beast</compoundname>
+    <innerclass refid="structbeast_1_1IsAgedContainer_3_01beast_1_1detail_1_1AgedOrderedContainer_3_01IsMulti_00_01IsMa042d08be4c60fc8511b73a72a7d8fe1d" prot="public">beast::IsAgedContainer&lt; beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &gt;</innerclass>
+    <innerclass refid="structbeast_1_1IsUniquelyRepresented_3_01xrpl_1_1BaseUInt_3_01Bits_00_01Tag_01_4_01_4" prot="public">beast::IsUniquelyRepresented&lt; xrpl::BaseUInt&lt; Bits, Tag &gt; &gt;</innerclass>
+    <innernamespace refid="namespacebeast_1_1detail">beast::detail</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacebeast_1afb0f9ca1f8ca0c3afc4ef18ad8749a80" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>IsMulti</declname>
+            <defname>IsMulti</defname>
+          </param>
+          <param>
+            <type>bool</type>
+            <declname>IsMap</declname>
+            <defname>IsMap</defname>
+          </param>
+          <param>
+            <type>class Key</type>
+          </param>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class Clock</type>
+          </param>
+          <param>
+            <type>class Compare</type>
+          </param>
+          <param>
+            <type>class Allocator</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void beast::swap</definition>
+        <argsstring>(beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &amp;lhs, beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &amp;rhs) noexcept</argsstring>
+        <name>swap</name>
+        <qualifiedname>beast::swap</qualifiedname>
+        <param>
+          <type><ref refid="classbeast_1_1detail_1_1AgedOrderedContainer" kindref="compound">beast::detail::AgedOrderedContainer</ref>&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classbeast_1_1detail_1_1AgedOrderedContainer" kindref="compound">beast::detail::AgedOrderedContainer</ref>&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="1772" column="1" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="1772" bodyend="1778"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacebeast_1ac290c5a400996f938c7eb0b0fe7d1a57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>IsMulti</declname>
+            <defname>IsMulti</defname>
+          </param>
+          <param>
+            <type>bool</type>
+            <declname>IsMap</declname>
+            <defname>IsMap</defname>
+          </param>
+          <param>
+            <type>class Key</type>
+          </param>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class Clock</type>
+          </param>
+          <param>
+            <type>class Compare</type>
+          </param>
+          <param>
+            <type>class Allocator</type>
+          </param>
+          <param>
+            <type>class Rep</type>
+          </param>
+          <param>
+            <type>class Period</type>
+          </param>
+        </templateparamlist>
+        <type>std::size_t</type>
+        <definition>std::size_t beast::expire</definition>
+        <argsstring>(detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &amp;c, std::chrono::duration&lt; Rep, Period &gt; const &amp;age)</argsstring>
+        <name>expire</name>
+        <qualifiedname>beast::expire</qualifiedname>
+        <param>
+          <type><ref refid="classbeast_1_1detail_1_1AgedOrderedContainer" kindref="compound">detail::AgedOrderedContainer</ref>&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>std::chrono::duration&lt; Rep, Period &gt; const &amp;</type>
+          <declname>age</declname>
+        </param>
+        <briefdescription>
+<para>Expire aged container items past the specified age. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="1794" column="1" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="1794" bodyend="1807"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/basics/base_uint.h" line="698" column="1"/>
+  </compounddef>
+</doxygen>

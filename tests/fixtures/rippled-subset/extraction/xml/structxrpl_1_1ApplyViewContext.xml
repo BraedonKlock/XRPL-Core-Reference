@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1ApplyViewContext" kind="struct" language="C++" prot="public">
+    <compoundname>xrpl::ApplyViewContext</compoundname>
+    <includes local="no">xrpl/ledger/ApplyView.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxrpl_1_1ApplyViewContext_1a754f470d172d2079572c49fa7feaf9f4" prot="public" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1ApplyView" kindref="compound">ApplyView</ref> &amp;</type>
+        <definition>ApplyView&amp; xrpl::ApplyViewContext::view</definition>
+        <argsstring></argsstring>
+        <name>view</name>
+        <qualifiedname>xrpl::ApplyViewContext::view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ApplyView.h" line="452" column="15" bodyfile="include/xrpl/ledger/ApplyView.h" bodystart="452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1ApplyViewContext_1ad020f90d198e510a609dff8ca133f152" prot="public" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1STTx" kindref="compound">STTx</ref> const  &amp;</type>
+        <definition>STTx const&amp; xrpl::ApplyViewContext::tx</definition>
+        <argsstring></argsstring>
+        <name>tx</name>
+        <qualifiedname>xrpl::ApplyViewContext::tx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ApplyView.h" line="453" column="16" bodyfile="include/xrpl/ledger/ApplyView.h" bodystart="453" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Bundles the mutable ledger view and the transaction being applied. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Passed together to avoid threading two separate parameters through every helper that needs both the view (for state reads/writes) and the transaction (for field inspection and metadata).</para>
+<para>Both members are non-owning references; the caller is responsible for ensuring that the referenced objects outlive the <ref refid="structxrpl_1_1ApplyViewContext" kindref="compound">ApplyViewContext</ref>.</para>
+<para>TODO: replace with <ref refid="classxrpl_1_1ApplyContext" kindref="compound">ApplyContext</ref> after it&apos;s untangled with xrpl/tx </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10">
+        <label>CountedObject&lt; STTx &gt;</label>
+      </node>
+      <node id="9">
+        <label>STObject</label>
+      </node>
+      <node id="5">
+        <label>detail::ReadViewFwdRange&lt; SLE::const_pointer &gt;</label>
+      </node>
+      <node id="7">
+        <label>detail::ReadViewFwdRange&lt; TxType &gt;</label>
+      </node>
+      <node id="2">
+        <label>xrpl::ApplyView</label>
+        <link refid="classxrpl_1_1ApplyView"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>xrpl::ApplyViewContext</label>
+        <link refid="structxrpl_1_1ApplyViewContext"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>view</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>tx</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>xrpl::BaseUInt&lt; 256 &gt;</label>
+        <link refid="classxrpl_1_1BaseUInt"/>
+      </node>
+      <node id="3">
+        <label>xrpl::ReadView</label>
+        <link refid="classxrpl_1_1ReadView"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>sles</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>txs</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>xrpl::ReadView::SlesType</label>
+        <link refid="structxrpl_1_1ReadView_1_1SlesType"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>xrpl::ReadView::TxsType</label>
+        <link refid="structxrpl_1_1ReadView_1_1TxsType"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>xrpl::STTx</label>
+        <link refid="classxrpl_1_1STTx"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>tid_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/ledger/ApplyView.h" line="450" column="1" bodyfile="include/xrpl/ledger/ApplyView.h" bodystart="451" bodyend="454"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1ApplyViewContext_1ad020f90d198e510a609dff8ca133f152" prot="public" virt="non-virtual"><scope>xrpl::ApplyViewContext</scope><name>tx</name></member>
+      <member refid="structxrpl_1_1ApplyViewContext_1a754f470d172d2079572c49fa7feaf9f4" prot="public" virt="non-virtual"><scope>xrpl::ApplyViewContext</scope><name>view</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

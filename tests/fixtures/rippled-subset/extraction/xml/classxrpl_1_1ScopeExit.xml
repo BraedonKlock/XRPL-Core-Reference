@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1ScopeExit" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::ScopeExit</compoundname>
+    <includes local="no">xrpl/basics/scope.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class EF</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1ScopeExit_1a5dcf5e3d8198359b45290080efc54430" prot="private" static="no" mutable="no">
+        <type>EF</type>
+        <definition>EF xrpl::ScopeExit&lt; EF &gt;::exitFunction_</definition>
+        <argsstring></argsstring>
+        <name>exitFunction_</name>
+        <qualifiedname>xrpl::ScopeExit::exitFunction_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="27" column="8" bodyfile="include/xrpl/basics/scope.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1ScopeExit_1a31caa94d06a81ed662707178c2e17525" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xrpl::ScopeExit&lt; EF &gt;::executeOnDestruction_</definition>
+        <argsstring></argsstring>
+        <name>executeOnDestruction_</name>
+        <qualifiedname>xrpl::ScopeExit::executeOnDestruction_</qualifiedname>
+        <initializer>{true}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="28" column="10" bodyfile="include/xrpl/basics/scope.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1ScopeExit_1a1be95499475e7daa139c3663fb26ef9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ScopeExit&lt; EF &gt;::~ScopeExit</definition>
+        <argsstring>()</argsstring>
+        <name>~ScopeExit</name>
+        <qualifiedname>xrpl::ScopeExit::~ScopeExit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="31" column="5" bodyfile="include/xrpl/basics/scope.h" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeExit_1a87a85f0d9d4517041680b5c1664da931" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" noexceptexpression="std::is_nothrow_move_constructible_v&lt; EF &gt;||std::is_nothrow_copy_constructible_v&lt; EF &gt;" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ScopeExit&lt; EF &gt;::ScopeExit</definition>
+        <argsstring>(ScopeExit &amp;&amp;rhs)</argsstring>
+        <name>ScopeExit</name>
+        <qualifiedname>xrpl::ScopeExit::ScopeExit</qualifiedname>
+        <param>
+          <type>ScopeExit &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="37" column="5" bodyfile="include/xrpl/basics/scope.h" bodystart="37" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeExit_1acba967aa84366ddbc76412cb8418963d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1ScopeExit_1a87a85f0d9d4517041680b5c1664da931" kindref="member">ScopeExit</ref> &amp;</type>
+        <definition>ScopeExit &amp; xrpl::ScopeExit&lt; EF &gt;::operator=</definition>
+        <argsstring>(ScopeExit &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::ScopeExit::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ScopeExit_1a87a85f0d9d4517041680b5c1664da931" kindref="member">ScopeExit</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="46" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeExit_1aaed426145ba4d7f02bc2bac0b7839e63" prot="public" static="no" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class EFP</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>xrpl::ScopeExit&lt; EF &gt;::ScopeExit</definition>
+        <argsstring>(EFP &amp;&amp;f) noexcept</argsstring>
+        <name>ScopeExit</name>
+        <qualifiedname>xrpl::ScopeExit::ScopeExit</qualifiedname>
+        <param>
+          <type>EFP &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+    <requiresclause>( !std::is_same_v&lt;std::remove_cv_t&lt;EFP&gt;, ScopeExit&gt; &amp;&amp; std::is_constructible_v&lt;EF, EFP&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="49" column="14" bodyfile="include/xrpl/basics/scope.h" bodystart="49" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeExit_1a8412485d6cfbcd6a4aa26a55e03d9127" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::ScopeExit&lt; EF &gt;::release</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>release</name>
+        <qualifiedname>xrpl::ScopeExit::release</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="58" column="5" bodyfile="include/xrpl/basics/scope.h" bodystart="58" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/basics/scope.h" line="25" column="1" bodyfile="include/xrpl/basics/scope.h" bodystart="26" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1ScopeExit_1a31caa94d06a81ed662707178c2e17525" prot="private" virt="non-virtual"><scope>xrpl::ScopeExit</scope><name>executeOnDestruction_</name></member>
+      <member refid="classxrpl_1_1ScopeExit_1a5dcf5e3d8198359b45290080efc54430" prot="private" virt="non-virtual"><scope>xrpl::ScopeExit</scope><name>exitFunction_</name></member>
+      <member refid="classxrpl_1_1ScopeExit_1acba967aa84366ddbc76412cb8418963d" prot="public" virt="non-virtual"><scope>xrpl::ScopeExit</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1ScopeExit_1a8412485d6cfbcd6a4aa26a55e03d9127" prot="public" virt="non-virtual"><scope>xrpl::ScopeExit</scope><name>release</name></member>
+      <member refid="classxrpl_1_1ScopeExit_1a87a85f0d9d4517041680b5c1664da931" prot="public" virt="non-virtual"><scope>xrpl::ScopeExit</scope><name>ScopeExit</name></member>
+      <member refid="classxrpl_1_1ScopeExit_1aaed426145ba4d7f02bc2bac0b7839e63" prot="public" virt="non-virtual"><scope>xrpl::ScopeExit</scope><name>ScopeExit</name></member>
+      <member refid="classxrpl_1_1ScopeExit_1a1be95499475e7daa139c3663fb26ef9d" prot="public" virt="non-virtual"><scope>xrpl::ScopeExit</scope><name>~ScopeExit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

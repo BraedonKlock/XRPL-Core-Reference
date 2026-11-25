@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="SField_8cpp" kind="file" language="C++">
+    <compoundname>SField.cpp</compoundname>
+    <includes refid="SField_8h" local="no">xrpl/protocol/SField.h</includes>
+    <includes local="no">xrpl/beast/utility/instrumentation.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">xrpl/protocol/detail/sfields.macro</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/libxrpl/protocol/SField.cpp</label>
+        <link refid="SField_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>unordered_map</label>
+      </node>
+      <node id="2">
+        <label>xrpl/beast/utility/instrumentation.h</label>
+      </node>
+      <node id="5">
+        <label>xrpl/protocol/detail/sfields.macro</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structxrpl_1_1SField_1_1PrivateAccessTagT" prot="public">xrpl::SField::PrivateAccessTagT</innerclass>
+    <innernamespace refid="namespacexrpl">xrpl</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="SField_8cpp_1aaebb2f3c605e3a24d0fd272ffbb1662d" prot="public" static="no">
+        <name>UNTYPED_SFIELD</name>
+        <param><defname>sfName</defname></param>
+        <param><defname>stiSuffix</defname></param>
+        <param><defname>fieldValue</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>SField const sfName(                                   \
+    access, STI_##stiSuffix, fieldValue, std::string_view(#sfName).substr(2).data(), ##__VA_ARGS__);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/SField.cpp" line="40" column="9" bodyfile="src/libxrpl/protocol/SField.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="define" id="SField_8cpp_1a72efc103638e95532360ecaec8f7d76b" prot="public" static="no">
+        <name>TYPED_SFIELD</name>
+        <param><defname>sfName</defname></param>
+        <param><defname>stiSuffix</defname></param>
+        <param><defname>fieldValue</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>SF_##stiSuffix const sfName(                         \
+    access, STI_##stiSuffix, fieldValue, std::string_view(#sfName).substr(2).data(), ##__VA_ARGS__);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/SField.cpp" line="43" column="9" bodyfile="src/libxrpl/protocol/SField.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/libxrpl/protocol/SField.cpp"/>
+  </compounddef>
+</doxygen>

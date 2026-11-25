@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="jss_8h" kind="file" language="C++">
+    <compoundname>jss.h</compoundname>
+    <includes local="no">xrpl/json/json_value.h</includes>
+    <includes local="no">xrpl/protocol/detail/transactions.macro</includes>
+    <includes local="no">xrpl/protocol/detail/ledger_entries.macro</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>include/xrpl/protocol/jss.h</label>
+        <link refid="jss_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xrpl/json/json_value.h</label>
+      </node>
+      <node id="4">
+        <label>xrpl/protocol/detail/ledger_entries.macro</label>
+      </node>
+      <node id="3">
+        <label>xrpl/protocol/detail/transactions.macro</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacexrpl">xrpl</innernamespace>
+    <innernamespace refid="namespacexrpl_1_1jss">xrpl::jss</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="jss_8h_1ad336b02f3901cab3fe6ac257aaab049a" prot="public" static="no">
+        <name>JSS</name>
+        <param><defname>x</defname></param>
+        <initializer>constexpr ::json::StaticString x(#x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/jss.h" line="10" column="9" bodyfile="include/xrpl/protocol/jss.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jss_8h_1a4c62188887357d00479ed5d267260d33" prot="public" static="no">
+        <name>TRANSACTION</name>
+        <param><defname>tag</defname></param>
+        <param><defname>value</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>JSS(name);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/jss.h" line="702" column="9" bodyfile="include/xrpl/protocol/jss.h" bodystart="702" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jss_8h_1acafb967b51a7296043c9d58eb6924f11" prot="public" static="no">
+        <name>LEDGER_ENTRY</name>
+        <param><defname>tag</defname></param>
+        <param><defname>value</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>rpcName</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>JSS(name);                                       \
+JSS(rpcName);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/jss.h" line="714" column="9" bodyfile="include/xrpl/protocol/jss.h" bodystart="714" bodyend="716"/>
+      </memberdef>
+      <memberdef kind="define" id="jss_8h_1a888c4a037fb52abcac2d7b1701aaff20" prot="public" static="no">
+        <name>LEDGER_ENTRY_DUPLICATE</name>
+        <param><defname>tag</defname></param>
+        <param><defname>value</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>rpcName</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>JSS(rpcName);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/jss.h" line="718" column="9" bodyfile="include/xrpl/protocol/jss.h" bodystart="718" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/protocol/jss.h"/>
+  </compounddef>
+</doxygen>

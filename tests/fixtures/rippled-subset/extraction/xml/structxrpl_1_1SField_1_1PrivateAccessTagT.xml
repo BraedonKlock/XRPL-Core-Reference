@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1SField_1_1PrivateAccessTagT" kind="struct" language="C++" prot="public">
+    <compoundname>xrpl::SField::PrivateAccessTagT</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structxrpl_1_1SField_1_1PrivateAccessTagT_1a4882b3938f2645b6dfeb5a1aa84a8987" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SField::PrivateAccessTagT::PrivateAccessTagT</definition>
+        <argsstring>()=default</argsstring>
+        <name>PrivateAccessTagT</name>
+        <qualifiedname>xrpl::SField::PrivateAccessTagT::PrivateAccessTagT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/SField.cpp" line="19" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/libxrpl/protocol/SField.cpp" line="17" column="1" bodyfile="src/libxrpl/protocol/SField.cpp" bodystart="18" bodyend="20"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1SField_1_1PrivateAccessTagT_1a4882b3938f2645b6dfeb5a1aa84a8987" prot="public" virt="non-virtual"><scope>xrpl::SField::PrivateAccessTagT</scope><name>PrivateAccessTagT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

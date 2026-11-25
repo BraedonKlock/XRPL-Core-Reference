@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_0103a8ad82dcc2c51f5cde661b4b5cb7" kind="dir">
+    <compoundname>include/xrpl</compoundname>
+    <innerdir refid="dir_f534ca90a4985f34ab325acfbcd39b84">include/xrpl/basics</innerdir>
+    <innerdir refid="dir_31b47b71b675f5c4d1b67be42516b2a9">include/xrpl/beast</innerdir>
+    <innerdir refid="dir_d20b9b5f62cbbaba73191ffa58f3530f">include/xrpl/consensus</innerdir>
+    <innerdir refid="dir_f732c880ba22363365bbd638a4cc259a">include/xrpl/ledger</innerdir>
+    <innerdir refid="dir_8d04e3c0b58cad28d7755ed462d1b6c0">include/xrpl/protocol</innerdir>
+    <innerdir refid="dir_292da32077129148230df7f03daa34af">include/xrpl/shamap</innerdir>
+    <innerdir refid="dir_339ffb80f751afefa6bcec8d02d2c690">include/xrpl/tx</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/"/>
+  </compounddef>
+</doxygen>

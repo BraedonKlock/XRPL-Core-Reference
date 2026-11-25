@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare" kind="class" language="C++" prot="private">
+    <compoundname>beast::detail::AgedOrderedContainer::KeyValueCompare</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Compare</basecompoundref>
+    <derivedcompoundref refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1ConfigT" prot="private" virt="non-virtual">beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::ConfigT</derivedcompoundref>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1af4956f9ac6368a773cc307bfa27e69be" prot="public" static="no">
+        <type>Key</type>
+        <definition>using beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::KeyValueCompare::FirstArgument = Key</definition>
+        <argsstring></argsstring>
+        <name>FirstArgument</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::KeyValueCompare::FirstArgument</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="159" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1a1345df45d64d1c7d732c176356ae6a81" prot="public" static="no">
+        <type><ref refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element" kindref="compound">Element</ref></type>
+        <definition>using beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::KeyValueCompare::SecondArgument = Element</definition>
+        <argsstring></argsstring>
+        <name>SecondArgument</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::KeyValueCompare::SecondArgument</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="160" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1a891764b47527899c06f110e123c65123" prot="public" static="no">
+        <type>bool</type>
+        <definition>using beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::KeyValueCompare::result_type = bool</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::KeyValueCompare::result_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="161" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1aaf1da59f1f602d2f6b57a00b27063944" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::KeyValueCompare::KeyValueCompare</definition>
+        <argsstring>()=default</argsstring>
+        <name>KeyValueCompare</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::KeyValueCompare::KeyValueCompare</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="163" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1a712ee298b04ec267501b9cf128b5aef4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::KeyValueCompare::KeyValueCompare</definition>
+        <argsstring>(Compare const &amp;compare)</argsstring>
+        <name>KeyValueCompare</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::KeyValueCompare::KeyValueCompare</qualifiedname>
+        <param>
+          <type>Compare const &amp;</type>
+          <declname>compare</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="165" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="165" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1a8060d4deb8fd81298c8bc0a3b3d4f23f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::KeyValueCompare::operator()</definition>
+        <argsstring>(Key const &amp;k, Element const &amp;e) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::KeyValueCompare::operator()</qualifiedname>
+        <param>
+          <type>Key const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element" kindref="compound">Element</ref> const &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="170" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1af7bee788b37692675f9c367f38bb35ed" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::KeyValueCompare::operator()</definition>
+        <argsstring>(Element const &amp;e, Key const &amp;k) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::KeyValueCompare::operator()</qualifiedname>
+        <param>
+          <type><ref refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element" kindref="compound">Element</ref> const &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>Key const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="176" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="176" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1ab4b8e1c14de9a635f731aa0871a7f7c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::KeyValueCompare::operator()</definition>
+        <argsstring>(Element const &amp;x, Element const &amp;y) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::KeyValueCompare::operator()</qualifiedname>
+        <param>
+          <type><ref refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element" kindref="compound">Element</ref> const &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element" kindref="compound">Element</ref> const &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="182" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="182" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1a592d38ec29ce05b4022d725d1682e509" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Compare &amp;</type>
+        <definition>Compare &amp; beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::KeyValueCompare::compare</definition>
+        <argsstring>()</argsstring>
+        <name>compare</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::KeyValueCompare::compare</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="188" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1af9d69660bde7e6dbd3dc286dbcfaf3cc" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Compare const &amp;</type>
+        <definition>Compare const  &amp; beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::KeyValueCompare::compare</definition>
+        <argsstring>() const</argsstring>
+        <name>compare</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::KeyValueCompare::compare</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="194" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="194" bodyend="197"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Compare</label>
+      </node>
+      <node id="3">
+        <label>beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::ConfigT</label>
+        <link refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1ConfigT"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::KeyValueCompare</label>
+        <link refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Compare</label>
+      </node>
+      <node id="1">
+        <label>beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::KeyValueCompare</label>
+        <link refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="156" column="5" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="157" bodyend="198"/>
+    <listofallmembers>
+      <member refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1a592d38ec29ce05b4022d725d1682e509" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::KeyValueCompare</scope><name>compare</name></member>
+      <member refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1af9d69660bde7e6dbd3dc286dbcfaf3cc" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::KeyValueCompare</scope><name>compare</name></member>
+      <member refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1af4956f9ac6368a773cc307bfa27e69be" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::KeyValueCompare</scope><name>FirstArgument</name></member>
+      <member refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1aaf1da59f1f602d2f6b57a00b27063944" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::KeyValueCompare</scope><name>KeyValueCompare</name></member>
+      <member refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1a712ee298b04ec267501b9cf128b5aef4" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::KeyValueCompare</scope><name>KeyValueCompare</name></member>
+      <member refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1a8060d4deb8fd81298c8bc0a3b3d4f23f" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::KeyValueCompare</scope><name>operator()</name></member>
+      <member refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1af7bee788b37692675f9c367f38bb35ed" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::KeyValueCompare</scope><name>operator()</name></member>
+      <member refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1ab4b8e1c14de9a635f731aa0871a7f7c4" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::KeyValueCompare</scope><name>operator()</name></member>
+      <member refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1a891764b47527899c06f110e123c65123" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::KeyValueCompare</scope><name>result_type</name></member>
+      <member refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare_1a1345df45d64d1c7d732c176356ae6a81" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::KeyValueCompare</scope><name>SecondArgument</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

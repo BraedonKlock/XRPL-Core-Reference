@@ -1,0 +1,26 @@
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  overflow-wrap: anywhere;
+}
+
+.breadcrumbs li + li::before {
+  content: '/';
+  color: var(--color-text-subtle);
+}
+
+.current {
+  color: var(--color-text);
+}

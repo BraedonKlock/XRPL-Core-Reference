@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_90ffdbabf412cfdffe6b2193e0ce938a" kind="dir">
+    <compoundname>src/libxrpl</compoundname>
+    <innerdir refid="dir_4cb643486f27a568a0d40f174f670f35">src/libxrpl/protocol</innerdir>
+    <innerdir refid="dir_b334cb01e56e98850f5876a8e97756b6">src/libxrpl/tx</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/libxrpl/"/>
+  </compounddef>
+</doxygen>

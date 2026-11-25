@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1ValidationParms" kind="struct" language="C++" prot="public">
+    <compoundname>xrpl::ValidationParms</compoundname>
+    <includes local="no">xrpl/consensus/Validations.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxrpl_1_1ValidationParms_1ac7f942df23ee8f95f9aa7fb27e18fe25" prot="public" static="no" mutable="no">
+        <type>std::chrono::seconds</type>
+        <definition>std::chrono::seconds xrpl::ValidationParms::validationCurrentWall</definition>
+        <argsstring></argsstring>
+        <name>validationCurrentWall</name>
+        <qualifiedname>xrpl::ValidationParms::validationCurrentWall</qualifiedname>
+        <initializer>= std::chrono::minutes{5}</initializer>
+        <briefdescription>
+<para>The number of seconds a validation remains current after its ledger&apos;s close time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a safety to protect against very old validations and the time it takes to adjust the close time accuracy window. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="46" column="26" bodyfile="include/xrpl/consensus/Validations.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1ValidationParms_1a0d38e3018aa3b77a3a403e3cb03abe7d" prot="public" static="no" mutable="no">
+        <type>std::chrono::seconds</type>
+        <definition>std::chrono::seconds xrpl::ValidationParms::validationCurrentLocal</definition>
+        <argsstring></argsstring>
+        <name>validationCurrentLocal</name>
+        <qualifiedname>xrpl::ValidationParms::validationCurrentLocal</qualifiedname>
+        <initializer>= std::chrono::minutes{3}</initializer>
+        <briefdescription>
+<para>Duration a validation remains current after first observed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of seconds a validation remains current after the time we first saw it. This provides faster recovery in very rare cases where the number of validations produced by the network is lower than normal </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="55" column="26" bodyfile="include/xrpl/consensus/Validations.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1ValidationParms_1a04a273e865dfc117bd28f57339a7d010" prot="public" static="no" mutable="no">
+        <type>std::chrono::seconds</type>
+        <definition>std::chrono::seconds xrpl::ValidationParms::validationCurrentEarly</definition>
+        <argsstring></argsstring>
+        <name>validationCurrentEarly</name>
+        <qualifiedname>xrpl::ValidationParms::validationCurrentEarly</qualifiedname>
+        <initializer>= std::chrono::minutes{3}</initializer>
+        <briefdescription>
+<para>Duration pre-close in which validations are acceptable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of seconds before a close time that we consider a validation acceptable. This protects against extreme clock errors </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="63" column="26" bodyfile="include/xrpl/consensus/Validations.h" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1ValidationParms_1a32464a9c8407c4d9da047468e59ffac7" prot="public" static="no" mutable="no">
+        <type>std::chrono::seconds</type>
+        <definition>std::chrono::seconds xrpl::ValidationParms::validationSetExpires</definition>
+        <argsstring></argsstring>
+        <name>validationSetExpires</name>
+        <qualifiedname>xrpl::ValidationParms::validationSetExpires</qualifiedname>
+        <initializer>= std::chrono::minutes{10}</initializer>
+        <briefdescription>
+<para>Duration a set of validations for a given ledger hash remain valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of seconds before a set of validations for a given ledger hash can expire. This keeps validations for recent ledgers available for a reasonable interval. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="72" column="26" bodyfile="include/xrpl/consensus/Validations.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1ValidationParms_1a712605f3c7abd1c1158fbeefee933fc6" prot="public" static="no" mutable="no">
+        <type>std::chrono::seconds</type>
+        <definition>std::chrono::seconds xrpl::ValidationParms::validationFRESHNESS</definition>
+        <argsstring></argsstring>
+        <name>validationFRESHNESS</name>
+        <qualifiedname>xrpl::ValidationParms::validationFRESHNESS</qualifiedname>
+        <initializer>= std::chrono::seconds{20}</initializer>
+        <briefdescription>
+<para>How long we consider a validation fresh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of seconds since a validation has been seen for it to be considered to accurately represent a live proposer&apos;s most recent validation. This value should be sufficiently higher than ledgerMAX_CONSENSUS such that validators who are waiting for laggards are not considered offline. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="83" column="26" bodyfile="include/xrpl/consensus/Validations.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structxrpl_1_1ValidationParms_1a5782a78df7ff1bf825648610d8add1a2" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ValidationParms::ValidationParms</definition>
+        <argsstring>()=default</argsstring>
+        <name>ValidationParms</name>
+        <qualifiedname>xrpl::ValidationParms::ValidationParms</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="37" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Timing parameters to control validation staleness and expiration. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>These are protocol level parameters that should not be changed without careful consideration. They are <emphasis>not</emphasis> implemented as static constexpr to allow simulation code to test alternate parameter settings. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/xrpl/consensus/Validations.h" line="35" column="1" bodyfile="include/xrpl/consensus/Validations.h" bodystart="36" bodyend="84"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1ValidationParms_1a04a273e865dfc117bd28f57339a7d010" prot="public" virt="non-virtual"><scope>xrpl::ValidationParms</scope><name>validationCurrentEarly</name></member>
+      <member refid="structxrpl_1_1ValidationParms_1a0d38e3018aa3b77a3a403e3cb03abe7d" prot="public" virt="non-virtual"><scope>xrpl::ValidationParms</scope><name>validationCurrentLocal</name></member>
+      <member refid="structxrpl_1_1ValidationParms_1ac7f942df23ee8f95f9aa7fb27e18fe25" prot="public" virt="non-virtual"><scope>xrpl::ValidationParms</scope><name>validationCurrentWall</name></member>
+      <member refid="structxrpl_1_1ValidationParms_1a712605f3c7abd1c1158fbeefee933fc6" prot="public" virt="non-virtual"><scope>xrpl::ValidationParms</scope><name>validationFRESHNESS</name></member>
+      <member refid="structxrpl_1_1ValidationParms_1a5782a78df7ff1bf825648610d8add1a2" prot="public" virt="non-virtual"><scope>xrpl::ValidationParms</scope><name>ValidationParms</name></member>
+      <member refid="structxrpl_1_1ValidationParms_1a32464a9c8407c4d9da047468e59ffac7" prot="public" virt="non-virtual"><scope>xrpl::ValidationParms</scope><name>validationSetExpires</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

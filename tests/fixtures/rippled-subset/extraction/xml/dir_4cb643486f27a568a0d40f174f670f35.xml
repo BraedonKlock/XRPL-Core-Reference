@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_4cb643486f27a568a0d40f174f670f35" kind="dir">
+    <compoundname>src/libxrpl/protocol</compoundname>
+    <innerfile refid="Feature_8cpp">Feature.cpp</innerfile>
+    <innerfile refid="Rate2_8cpp">Rate2.cpp</innerfile>
+    <innerfile refid="SField_8cpp">SField.cpp</innerfile>
+    <innerfile refid="STInteger_8cpp">STInteger.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/libxrpl/protocol/"/>
+  </compounddef>
+</doxygen>

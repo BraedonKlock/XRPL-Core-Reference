@@ -1,0 +1,1470 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1Validations" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::Validations</compoundname>
+    <includes local="no">xrpl/consensus/Validations.h</includes>
+    <innerclass refid="structxrpl_1_1Validations_1_1KeepRange" prot="private">xrpl::Validations::KeepRange</innerclass>
+    <templateparamlist>
+      <param>
+        <type>class Adaptor</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classxrpl_1_1Validations_1a5680f3fb6edf32795c8913662bbcafbb" prot="private" static="no">
+        <type>Adaptor::Mutex</type>
+        <definition>using xrpl::Validations&lt; Adaptor &gt;::Mutex = Adaptor::Mutex</definition>
+        <argsstring></argsstring>
+        <name>Mutex</name>
+        <qualifiedname>xrpl::Validations::Mutex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="300" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" prot="private" static="no">
+        <type>Adaptor::Validation</type>
+        <definition>using xrpl::Validations&lt; Adaptor &gt;::Validation = Adaptor::Validation</definition>
+        <argsstring></argsstring>
+        <name>Validation</name>
+        <qualifiedname>xrpl::Validations::Validation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="301" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1Validations_1af9a5c4c391def0668372fa59abff31ff" prot="private" static="no">
+        <type>Adaptor::Ledger</type>
+        <definition>using xrpl::Validations&lt; Adaptor &gt;::Ledger = Adaptor::Ledger</definition>
+        <argsstring></argsstring>
+        <name>Ledger</name>
+        <qualifiedname>xrpl::Validations::Ledger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="302" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" prot="private" static="no">
+        <type>Ledger::ID</type>
+        <definition>using xrpl::Validations&lt; Adaptor &gt;::ID = Ledger::ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <qualifiedname>xrpl::Validations::ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="303" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" prot="private" static="no">
+        <type>Ledger::Seq</type>
+        <definition>using xrpl::Validations&lt; Adaptor &gt;::Seq = Ledger::Seq</definition>
+        <argsstring></argsstring>
+        <name>Seq</name>
+        <qualifiedname>xrpl::Validations::Seq</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="304" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" prot="private" static="no">
+        <type>Validation::NodeID</type>
+        <definition>using xrpl::Validations&lt; Adaptor &gt;::NodeID = Validation::NodeID</definition>
+        <argsstring></argsstring>
+        <name>NodeID</name>
+        <qualifiedname>xrpl::Validations::NodeID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="305" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1Validations_1af43db3dfe176e9b43a1d131154eea16b" prot="private" static="no">
+        <type>Validation::NodeKey</type>
+        <definition>using xrpl::Validations&lt; Adaptor &gt;::NodeKey = Validation::NodeKey</definition>
+        <argsstring></argsstring>
+        <name>NodeKey</name>
+        <qualifiedname>xrpl::Validations::NodeKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="306" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1Validations_1ad6c3e0bae064e562166d37ae83f8583b" prot="private" static="no">
+        <type>std::decay_t&lt; std::invoke_result_t&lt; decltype(&amp;Validation::unwrap), <ref refid="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" kindref="member">Validation</ref> &gt; &gt;</type>
+        <definition>using xrpl::Validations&lt; Adaptor &gt;::WrappedValidationType = 
+std::decay_t&lt;std::invoke_result_t&lt;decltype(&amp;Validation::unwrap), Validation&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>WrappedValidationType</name>
+        <qualifiedname>xrpl::Validations::WrappedValidationType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="308" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="308" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1Validations_1a1a1d270c194a89c91141d4251d53dd2c" prot="private" static="no" mutable="yes">
+        <type><ref refid="classxrpl_1_1Validations_1a5680f3fb6edf32795c8913662bbcafbb" kindref="member">Mutex</ref></type>
+        <definition>Mutex xrpl::Validations&lt; Adaptor &gt;::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <qualifiedname>xrpl::Validations::mutex_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="312" column="19" bodyfile="include/xrpl/consensus/Validations.h" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1Validations_1a2fde885f878fd5b7b31c371d95506ca2" prot="private" static="no" mutable="no">
+        <type>HashMap&lt; <ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref>, <ref refid="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" kindref="member">Validation</ref> &gt;</type>
+        <definition>HashMap&lt;NodeID, Validation&gt; xrpl::Validations&lt; Adaptor &gt;::current_</definition>
+        <argsstring></argsstring>
+        <name>current_</name>
+        <qualifiedname>xrpl::Validations::current_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="315" column="13" bodyfile="include/xrpl/consensus/Validations.h" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1Validations_1a7113ba1233b28e5d0f7285de0406a38b" prot="private" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1SeqEnforcer" kindref="compound">SeqEnforcer</ref>&lt; <ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref> &gt;</type>
+        <definition>SeqEnforcer&lt;Seq&gt; xrpl::Validations&lt; Adaptor &gt;::localSeqEnforcer_</definition>
+        <argsstring></argsstring>
+        <name>localSeqEnforcer_</name>
+        <qualifiedname>xrpl::Validations::localSeqEnforcer_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="318" column="17" bodyfile="include/xrpl/consensus/Validations.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1Validations_1a1b456f427665eda9c7ba6b2e2e38ca20" prot="private" static="no" mutable="no">
+        <type>HashMap&lt; <ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref>, <ref refid="classxrpl_1_1SeqEnforcer" kindref="compound">SeqEnforcer</ref>&lt; <ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref> &gt; &gt;</type>
+        <definition>HashMap&lt;NodeID, SeqEnforcer&lt;Seq&gt; &gt; xrpl::Validations&lt; Adaptor &gt;::seqEnforcers_</definition>
+        <argsstring></argsstring>
+        <name>seqEnforcers_</name>
+        <qualifiedname>xrpl::Validations::seqEnforcers_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="321" column="13" bodyfile="include/xrpl/consensus/Validations.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1Validations_1aaf5ba5a90137abe29b790785ef28075a" prot="private" static="no" mutable="no">
+        <type>beast::AgedUnorderedMap&lt; <ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref>, HashMap&lt; <ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref>, <ref refid="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" kindref="member">Validation</ref> &gt;, std::chrono::steady_clock, beast::Uhash&lt;&gt; &gt;</type>
+        <definition>beast:: AgedUnorderedMap&lt;ID, HashMap&lt;NodeID, Validation&gt;, std::chrono::steady_clock, beast::Uhash&lt;&gt; &gt; xrpl::Validations&lt; Adaptor &gt;::byLedger_</definition>
+        <argsstring></argsstring>
+        <name>byLedger_</name>
+        <qualifiedname>xrpl::Validations::byLedger_</qualifiedname>
+        <briefdescription>
+<para><ref refid="classxrpl_1_1Validations" kindref="compound">Validations</ref> from listed nodes, indexed by ledger id (partial and full). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="328" column="13" bodyfile="include/xrpl/consensus/Validations.h" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1Validations_1a6fc175abcb52b6f7d1f4a2c0c57ecbbb" prot="private" static="no" mutable="no">
+        <type>beast::AgedUnorderedMap&lt; <ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref>, HashMap&lt; <ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref>, <ref refid="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" kindref="member">Validation</ref> &gt;, std::chrono::steady_clock, beast::Uhash&lt;&gt; &gt;</type>
+        <definition>beast::AgedUnorderedMap&lt; Seq, HashMap&lt;NodeID, Validation&gt;, std::chrono::steady_clock, beast::Uhash&lt;&gt; &gt; xrpl::Validations&lt; Adaptor &gt;::bySequence_</definition>
+        <argsstring></argsstring>
+        <name>bySequence_</name>
+        <qualifiedname>xrpl::Validations::bySequence_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="336" column="9" bodyfile="include/xrpl/consensus/Validations.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1Validations_1ae2832f3b6511e0f658a7143e4f6f469a" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; <ref refid="structxrpl_1_1Validations_1_1KeepRange" kindref="compound">KeepRange</ref> &gt;</type>
+        <definition>std::optional&lt;KeepRange&gt; xrpl::Validations&lt; Adaptor &gt;::toKeep_</definition>
+        <argsstring></argsstring>
+        <name>toKeep_</name>
+        <qualifiedname>xrpl::Validations::toKeep_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="344" column="19" bodyfile="include/xrpl/consensus/Validations.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1Validations_1a134769abea8cb708b8ff7d0ab2970b7f" prot="private" static="no" mutable="no">
+        <type>LedgerTrie&lt; <ref refid="classxrpl_1_1Validations_1af9a5c4c391def0668372fa59abff31ff" kindref="member">Ledger</ref> &gt;</type>
+        <definition>LedgerTrie&lt;Ledger&gt; xrpl::Validations&lt; Adaptor &gt;::trie_</definition>
+        <argsstring></argsstring>
+        <name>trie_</name>
+        <qualifiedname>xrpl::Validations::trie_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="347" column="16" bodyfile="include/xrpl/consensus/Validations.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1Validations_1a15a0e5709536bd042c17bd5bc8ba69c2" prot="private" static="no" mutable="no">
+        <type>HashMap&lt; <ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref>, <ref refid="classxrpl_1_1Validations_1af9a5c4c391def0668372fa59abff31ff" kindref="member">Ledger</ref> &gt;</type>
+        <definition>HashMap&lt;NodeID, Ledger&gt; xrpl::Validations&lt; Adaptor &gt;::lastLedger_</definition>
+        <argsstring></argsstring>
+        <name>lastLedger_</name>
+        <qualifiedname>xrpl::Validations::lastLedger_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="351" column="13" bodyfile="include/xrpl/consensus/Validations.h" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1Validations_1a22b4ae85fc9c6e12f4d66cfe136f8b95" prot="private" static="no" mutable="no">
+        <type>HashMap&lt; std::pair&lt; <ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref>, <ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref> &gt;, HashSet&lt; <ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref> &gt; &gt;</type>
+        <definition>HashMap&lt;std::pair&lt;Seq, ID&gt;, HashSet&lt;NodeID&gt; &gt; xrpl::Validations&lt; Adaptor &gt;::acquiring_</definition>
+        <argsstring></argsstring>
+        <name>acquiring_</name>
+        <qualifiedname>xrpl::Validations::acquiring_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="354" column="13" bodyfile="include/xrpl/consensus/Validations.h" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1Validations_1abab56c987de0163c667254f0111fd4f8" prot="private" static="no" mutable="no">
+        <type><ref refid="structxrpl_1_1ValidationParms" kindref="compound">ValidationParms</ref> const</type>
+        <definition>ValidationParms const xrpl::Validations&lt; Adaptor &gt;::parms_</definition>
+        <argsstring></argsstring>
+        <name>parms_</name>
+        <qualifiedname>xrpl::Validations::parms_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="357" column="27" bodyfile="include/xrpl/consensus/Validations.h" bodystart="357" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1Validations_1af37184b4977e6004b88b8a4f822da12f" prot="private" static="no" mutable="no">
+        <type>Adaptor</type>
+        <definition>Adaptor xrpl::Validations&lt; Adaptor &gt;::adaptor_</definition>
+        <argsstring></argsstring>
+        <name>adaptor_</name>
+        <qualifiedname>xrpl::Validations::adaptor_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="361" column="13" bodyfile="include/xrpl/consensus/Validations.h" bodystart="361" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxrpl_1_1Validations_1adebe2dbb03bab015ccb8a4d7573836ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::Validations&lt; Adaptor &gt;::removeTrie</definition>
+        <argsstring>(std::scoped_lock&lt; Mutex &gt; const &amp;, NodeID const &amp;nodeID, Validation const &amp;val)</argsstring>
+        <name>removeTrie</name>
+        <qualifiedname>xrpl::Validations::removeTrie</qualifiedname>
+        <param>
+          <type>std::scoped_lock&lt; <ref refid="classxrpl_1_1Validations_1a5680f3fb6edf32795c8913662bbcafbb" kindref="member">Mutex</ref> &gt; const &amp;</type>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref> const &amp;</type>
+          <declname>nodeID</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" kindref="member">Validation</ref> const &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="366" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="366" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a4fd50e4c665aca8d34b0dcd6a7a93bb4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::Validations&lt; Adaptor &gt;::checkAcquired</definition>
+        <argsstring>(std::scoped_lock&lt; Mutex &gt; const &amp;lock)</argsstring>
+        <name>checkAcquired</name>
+        <qualifiedname>xrpl::Validations::checkAcquired</qualifiedname>
+        <param>
+          <type>std::scoped_lock&lt; <ref refid="classxrpl_1_1Validations_1a5680f3fb6edf32795c8913662bbcafbb" kindref="member">Mutex</ref> &gt; const &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="389" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="389" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a00094436c686c7e3fc51562704eb5169" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::Validations&lt; Adaptor &gt;::updateTrie</definition>
+        <argsstring>(std::scoped_lock&lt; Mutex &gt; const &amp;, NodeID const &amp;nodeID, Ledger ledger)</argsstring>
+        <name>updateTrie</name>
+        <qualifiedname>xrpl::Validations::updateTrie</qualifiedname>
+        <param>
+          <type>std::scoped_lock&lt; <ref refid="classxrpl_1_1Validations_1a5680f3fb6edf32795c8913662bbcafbb" kindref="member">Mutex</ref> &gt; const &amp;</type>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref> const &amp;</type>
+          <declname>nodeID</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1af9a5c4c391def0668372fa59abff31ff" kindref="member">Ledger</ref></type>
+          <declname>ledger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="409" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="409" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a8a4b98147405f10322b325fc8699ba91" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::Validations&lt; Adaptor &gt;::updateTrie</definition>
+        <argsstring>(std::scoped_lock&lt; Mutex &gt; const &amp;lock, NodeID const &amp;nodeID, Validation const &amp;val, std::optional&lt; std::pair&lt; Seq, ID &gt; &gt; prior)</argsstring>
+        <name>updateTrie</name>
+        <qualifiedname>xrpl::Validations::updateTrie</qualifiedname>
+        <param>
+          <type>std::scoped_lock&lt; <ref refid="classxrpl_1_1Validations_1a5680f3fb6edf32795c8913662bbcafbb" kindref="member">Mutex</ref> &gt; const &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref> const &amp;</type>
+          <declname>nodeID</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" kindref="member">Validation</ref> const &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; std::pair&lt; <ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref>, <ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref> &gt; &gt;</type>
+          <declname>prior</declname>
+        </param>
+        <briefdescription>
+<para>Process a new validation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Process a new trusted validation from a validator. This will be reflected only after the validated ledger is successfully acquired by the local node. In the interim, the prior validated ledger from this node remains.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Existing lock of mutex_ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nodeID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node identifier of the validating node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The trusted validation issued by the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prior</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If not none, the last current validated ledger <ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref>,<ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref> of key </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="435" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="435" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1aacbc3468ecf343da8d9de847dda73016" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class F</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto xrpl::Validations&lt; Adaptor &gt;::withTrie</definition>
+        <argsstring>(std::scoped_lock&lt; Mutex &gt; const &amp;lock, F &amp;&amp;f)</argsstring>
+        <name>withTrie</name>
+        <qualifiedname>xrpl::Validations::withTrie</qualifiedname>
+        <param>
+          <type>std::scoped_lock&lt; <ref refid="classxrpl_1_1Validations_1a5680f3fb6edf32795c8913662bbcafbb" kindref="member">Mutex</ref> &gt; const &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Use the trie for a calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Accessing the trie through this helper ensures acquiring validations are checked and any stale validations are flushed from the trie.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Existing lock of mutex_ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Invocable with signature (LedgerTrie&lt;Ledger&gt; &amp;)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>The invocable <computeroutput>f</computeroutput> is expected to be a simple transformation of its arguments and will be called with mutex_ under lock. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="490" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="490" bodyend="496"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1ae86f7684b2919c74444e9c1e37bca85e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Pre</type>
+          </param>
+          <param>
+            <type>class F</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void xrpl::Validations&lt; Adaptor &gt;::byLedger</definition>
+        <argsstring>(std::scoped_lock&lt; Mutex &gt; const &amp;, ID const &amp;ledgerID, Pre &amp;&amp;pre, F &amp;&amp;f)</argsstring>
+        <name>byLedger</name>
+        <qualifiedname>xrpl::Validations::byLedger</qualifiedname>
+        <param>
+          <type>std::scoped_lock&lt; <ref refid="classxrpl_1_1Validations_1a5680f3fb6edf32795c8913662bbcafbb" kindref="member">Mutex</ref> &gt; const &amp;</type>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref> const &amp;</type>
+          <declname>ledgerID</declname>
+        </param>
+        <param>
+          <type>Pre &amp;&amp;</type>
+          <declname>pre</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Iterate current validations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterate current validations, flushing any which are stale.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Existing lock of mutex_ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Invocable with signature (std::size_t) called prior to looping. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Invocable with signature (<ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref> const &amp;, <ref refid="classxrpl_1_1Validations" kindref="compound">Validations</ref> const &amp;) for each current validation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The invocable <computeroutput>pre</computeroutput> is called <emphasis>prior</emphasis> to checking for staleness and reflects an upper-bound on the number of calls to <computeroutput>f. @warning The invocable </computeroutput>f` is expected to be a simple transformation of its arguments and will be called with mutex_ under lock. */</para>
+</simplesect>
+template &lt;class Pre, class F&gt; void current(std::scoped_lock&lt;Mutex&gt; const&amp; lock, Pre&amp;&amp; pre, F&amp;&amp; f) { NetClock::time_point const t = adaptor_.now(); pre(current_.size()); auto it = current_.begin(); while (it != current_.end()) { Check for staleness if (!isCurrent(parms_, t, it-&gt;second.signTime(), it-&gt;second.seenTime())) { removeTrie(lock, it-&gt;first, it-&gt;second); it = current_.erase(it); } else { auto const cit = typename decltype(current_)::const_iterator{it}; contains a live record f(cit-&gt;first, cit-&gt;second); ++it; } } }</para>
+<para>/** Iterate the set of validations associated with a given ledger id</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Existing lock on mutex_ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ledgerID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the ledger </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Invocable with signature(std::size_t) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Invocable with signature (<ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref> const &amp;, <ref refid="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" kindref="member">Validation</ref> const &amp;)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The invocable <computeroutput>pre</computeroutput> is called prior to iterating validations. The argument is the number of times <computeroutput>f</computeroutput> will be called. </para>
+</simplesect>
+<simplesect kind="warning"><para>The invocable f is expected to be a simple transformation of its arguments and will be called with mutex_ under lock. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="555" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="555" bodyend="566"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1Validations_1adee410ea6e9793ce6b9e6cd6fc1391b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>xrpl::Validations&lt; Adaptor &gt;::Validations</definition>
+        <argsstring>(ValidationParms const &amp;p, beast::AbstractClock&lt; std::chrono::steady_clock &gt; &amp;c, Ts &amp;&amp;... ts)</argsstring>
+        <name>Validations</name>
+        <qualifiedname>xrpl::Validations::Validations</qualifiedname>
+        <param>
+          <type><ref refid="structxrpl_1_1ValidationParms" kindref="compound">ValidationParms</ref> const &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>beast::AbstractClock&lt; std::chrono::steady_clock &gt; &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structxrpl_1_1ValidationParms" kindref="compound">ValidationParms</ref> to control staleness/expiration of validations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Clock to use for expiring validations stored by ledger </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameters for constructing Adaptor instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="577" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="577" bodyend="583"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a5c53682eaf1b437da4cd67d5134d0906" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Adaptor const &amp;</type>
+        <definition>Adaptor const  &amp; xrpl::Validations&lt; Adaptor &gt;::adaptor</definition>
+        <argsstring>() const</argsstring>
+        <name>adaptor</name>
+        <qualifiedname>xrpl::Validations::adaptor</qualifiedname>
+        <briefdescription>
+<para>Return the adaptor instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="589" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="589" bodyend="592"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a38e2ddb1d57b65d55c7d78c1037a9e6f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxrpl_1_1ValidationParms" kindref="compound">ValidationParms</ref> const &amp;</type>
+        <definition>ValidationParms const  &amp; xrpl::Validations&lt; Adaptor &gt;::parms</definition>
+        <argsstring>() const</argsstring>
+        <name>parms</name>
+        <qualifiedname>xrpl::Validations::parms</qualifiedname>
+        <briefdescription>
+<para>Return the validation timing parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="598" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="598" bodyend="601"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a106162a1b961ae29c13cca83bdb12988" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::Validations&lt; Adaptor &gt;::canValidateSeq</definition>
+        <argsstring>(Seq const s)</argsstring>
+        <name>canValidateSeq</name>
+        <qualifiedname>xrpl::Validations::canValidateSeq</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref> const</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Return whether the local node can issue a validation for the given sequence number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number of the ledger the node wants to validate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether the validation satisfies the invariant, updating the largest sequence number seen accordingly </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="612" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="612" bodyend="616"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a2a8b8aca1ef992bab3e1193b7bc80932" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacexrpl_1a75da7d88563def930b866cd64dd96f06" kindref="member">ValStatus</ref></type>
+        <definition>ValStatus xrpl::Validations&lt; Adaptor &gt;::add</definition>
+        <argsstring>(NodeID const &amp;nodeID, Validation const &amp;val)</argsstring>
+        <name>add</name>
+        <qualifiedname>xrpl::Validations::add</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref> const &amp;</type>
+          <declname>nodeID</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" kindref="member">Validation</ref> const &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Add a new validation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempt to add a new validation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identity of the node issuing this validation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The validation to store </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The outcome </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="628" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="628" bodyend="711"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1aa0412c329f6d8a96aa96e0426fdadb0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::Validations&lt; Adaptor &gt;::setSeqToKeep</definition>
+        <argsstring>(Seq const &amp;low, Seq const &amp;high)</argsstring>
+        <name>setSeqToKeep</name>
+        <qualifiedname>xrpl::Validations::setSeqToKeep</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref> const &amp;</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref> const &amp;</type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+<para>Set the range [low, high) of validations to keep from expire. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>low</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the lower sequence number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>high</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the higher sequence number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>high must be greater than low </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="720" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="720" bodyend="725"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a1017b938e44e13ff7f1f385838fea231" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::Validations&lt; Adaptor &gt;::expire</definition>
+        <argsstring>(beast::Journal const &amp;j)</argsstring>
+        <name>expire</name>
+        <qualifiedname>xrpl::Validations::expire</qualifiedname>
+        <param>
+          <type>beast::Journal const &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Expire old validation sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove validation sets that were accessed more than validationSET_EXPIRES ago and were not asked to keep. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="734" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="734" bodyend="781"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a7762ef3a37e21a5a463395bc415bf39d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::Validations&lt; Adaptor &gt;::trustChanged</definition>
+        <argsstring>(HashSet&lt; NodeID &gt; const &amp;added, HashSet&lt; NodeID &gt; const &amp;removed)</argsstring>
+        <name>trustChanged</name>
+        <qualifiedname>xrpl::Validations::trustChanged</qualifiedname>
+        <param>
+          <type>HashSet&lt; <ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref> &gt; const &amp;</type>
+          <declname>added</declname>
+        </param>
+        <param>
+          <type>HashSet&lt; <ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref> &gt; const &amp;</type>
+          <declname>removed</declname>
+        </param>
+        <briefdescription>
+<para>Update trust status of validations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the trusted status of known validations to account for nodes that have been added or removed from the UNL. This also updates the trie to ensure only currently trusted nodes&apos; validations are used.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>added</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifiers of nodes that are now trusted </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>removed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifiers of nodes that are no longer trusted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="794" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="794" bodyend="827"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1ad42c3c27c1e5d907c9ca2ce4cd6a64e7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>json::Value</type>
+        <definition>json::Value xrpl::Validations&lt; Adaptor &gt;::getJsonTrie</definition>
+        <argsstring>() const</argsstring>
+        <name>getJsonTrie</name>
+        <qualifiedname>xrpl::Validations::getJsonTrie</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="830" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="830" bodyend="834"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a8d3ba3303cc97a3483a61378b1a77e12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::optional&lt; std::pair&lt; <ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref>, <ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref> &gt; &gt;</type>
+        <definition>std::optional&lt; std::pair&lt; Seq, ID &gt; &gt; xrpl::Validations&lt; Adaptor &gt;::getPreferred</definition>
+        <argsstring>(Ledger const &amp;curr)</argsstring>
+        <name>getPreferred</name>
+        <qualifiedname>xrpl::Validations::getPreferred</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1af9a5c4c391def0668372fa59abff31ff" kindref="member">Ledger</ref> const &amp;</type>
+          <declname>curr</declname>
+        </param>
+        <briefdescription>
+<para>Return the sequence number and <ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref> of the preferred working ledger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A ledger is preferred if it has more support amongst trusted validators and is <emphasis>not</emphasis> an ancestor of the current working ledger; otherwise it remains the current working ledger.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>curr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The local node&apos;s current working ledger</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sequence and id of the preferred working ledger, or std::nullopt if no trusted validations are available to determine the preferred ledger. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="850" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="850" bodyend="891"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1aec91c2ac4d22785ba949d39d1f9e987f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref></type>
+        <definition>ID xrpl::Validations&lt; Adaptor &gt;::getPreferred</definition>
+        <argsstring>(Ledger const &amp;curr, Seq minValidSeq)</argsstring>
+        <name>getPreferred</name>
+        <qualifiedname>xrpl::Validations::getPreferred</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1af9a5c4c391def0668372fa59abff31ff" kindref="member">Ledger</ref> const &amp;</type>
+          <declname>curr</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref></type>
+          <declname>minValidSeq</declname>
+        </param>
+        <briefdescription>
+<para>Get the <ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref> of the preferred working ledger that exceeds a minimum valid ledger sequence number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>curr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current working ledger </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minValidSeq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum allowed sequence number</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref> Of the preferred ledger, or curr if the preferred ledger is not valid </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="904" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="904" bodyend="910"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a2c50c7b29bf667a54b1ebcf35dffdca0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref></type>
+        <definition>ID xrpl::Validations&lt; Adaptor &gt;::getPreferredLCL</definition>
+        <argsstring>(Ledger const &amp;lcl, Seq minSeq, HashMap&lt; ID, std::uint32_t &gt; const &amp;peerCounts)</argsstring>
+        <name>getPreferredLCL</name>
+        <qualifiedname>xrpl::Validations::getPreferredLCL</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1af9a5c4c391def0668372fa59abff31ff" kindref="member">Ledger</ref> const &amp;</type>
+          <declname>lcl</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref></type>
+          <declname>minSeq</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; <ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref>, std::uint32_t &gt; const &amp;</type>
+          <declname>peerCounts</declname>
+        </param>
+        <briefdescription>
+<para>Determine the preferred last closed ledger for the next consensus round. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Called before starting the next round of ledger consensus to determine the preferred working ledger. Uses the dominant peerCount ledger if no trusted validations are available.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lcl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Last closed ledger by this node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minSeq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum allowed sequence number of the trusted preferred ledger </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>peerCounts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map from ledger ids to count of peers with that as the last closed ledger </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The preferred last closed ledger <ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref></para>
+</simplesect>
+<simplesect kind="note"><para>The minSeq does not apply to the peerCounts, since this function does not know their sequence number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="930" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="930" bodyend="949"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a08d33264a5cfc04a9d2dbbb91b08ef7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::Validations&lt; Adaptor &gt;::getNodesAfter</definition>
+        <argsstring>(Ledger const &amp;ledger, ID const &amp;ledgerID)</argsstring>
+        <name>getNodesAfter</name>
+        <qualifiedname>xrpl::Validations::getNodesAfter</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1af9a5c4c391def0668372fa59abff31ff" kindref="member">Ledger</ref> const &amp;</type>
+          <declname>ledger</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref> const &amp;</type>
+          <declname>ledgerID</declname>
+        </param>
+        <briefdescription>
+<para>Count the number of current trusted validators working on a ledger after the specified one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ledger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The working ledger </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ledgerID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The preferred ledger </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of current trusted validators working on a descendant of the preferred ledger</para>
+</simplesect>
+<simplesect kind="note"><para>If ledger.id() != ledgerID, only counts immediate child ledgers of ledgerID </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="964" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="964" bodyend="981"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a9aefff1cef8b7dba48005c56e2a539b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classxrpl_1_1Validations_1ad6c3e0bae064e562166d37ae83f8583b" kindref="member">WrappedValidationType</ref> &gt;</type>
+        <definition>std::vector&lt; WrappedValidationType &gt; xrpl::Validations&lt; Adaptor &gt;::currentTrusted</definition>
+        <argsstring>()</argsstring>
+        <name>currentTrusted</name>
+        <qualifiedname>xrpl::Validations::currentTrusted</qualifiedname>
+        <briefdescription>
+<para>Get the currently trusted full validations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector of validations from currently trusted validators </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="989" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="989" bodyend="1001"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a4b09981ad4ca1777633cf6eb2213eff6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashSet&lt; <ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref> &gt;</type>
+        <definition>HashSet&lt; NodeID &gt; xrpl::Validations&lt; Adaptor &gt;::getCurrentNodeIDs</definition>
+        <argsstring>()</argsstring>
+        <name>getCurrentNodeIDs</name>
+        <qualifiedname>xrpl::Validations::getCurrentNodeIDs</qualifiedname>
+        <briefdescription>
+<para>Get the set of node ids associated with current validations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The set of node ids for active, listed validators </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="1009" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="1009" bodyend="1019"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a1cebe25f581f02eafbac737706739c65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::Validations&lt; Adaptor &gt;::numTrustedForLedger</definition>
+        <argsstring>(ID const &amp;ledgerID)</argsstring>
+        <name>numTrustedForLedger</name>
+        <qualifiedname>xrpl::Validations::numTrustedForLedger</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref> const &amp;</type>
+          <declname>ledgerID</declname>
+        </param>
+        <briefdescription>
+<para>Count the number of trusted full validations for the given ledger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ledgerID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of ledger of interest </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of trusted validations </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="1028" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="1028" bodyend="1041"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a227768fd290dc23e2b3867bb69d90a7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classxrpl_1_1Validations_1ad6c3e0bae064e562166d37ae83f8583b" kindref="member">WrappedValidationType</ref> &gt;</type>
+        <definition>std::vector&lt; WrappedValidationType &gt; xrpl::Validations&lt; Adaptor &gt;::getTrustedForLedger</definition>
+        <argsstring>(ID const &amp;ledgerID, Seq const &amp;seq)</argsstring>
+        <name>getTrustedForLedger</name>
+        <qualifiedname>xrpl::Validations::getTrustedForLedger</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref> const &amp;</type>
+          <declname>ledgerID</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref> const &amp;</type>
+          <declname>seq</declname>
+        </param>
+        <briefdescription>
+<para>Get trusted full validations for a specific ledger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ledgerID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of ledger of interest </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number of ledger of interest </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Trusted validations associated with ledger </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="1051" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="1051" bodyend="1065"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1af3b8428ea9b41969a21ea42540fba43f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::uint32_t &gt;</type>
+        <definition>std::vector&lt; std::uint32_t &gt; xrpl::Validations&lt; Adaptor &gt;::fees</definition>
+        <argsstring>(ID const &amp;ledgerID, std::uint32_t baseFee)</argsstring>
+        <name>fees</name>
+        <qualifiedname>xrpl::Validations::fees</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" kindref="member">ID</ref> const &amp;</type>
+          <declname>ledgerID</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>baseFee</declname>
+        </param>
+        <briefdescription>
+<para>Returns fees reported by trusted full validators in the given ledger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ledgerID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of ledger of interest </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baseFee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fee to report if not present in the validation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of fees </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="1075" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="1075" bodyend="1098"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a9778253ab08a5a74013232a521704708" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::Validations&lt; Adaptor &gt;::flush</definition>
+        <argsstring>()</argsstring>
+        <name>flush</name>
+        <qualifiedname>xrpl::Validations::flush</qualifiedname>
+        <briefdescription>
+<para>Flush all current validations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="1104" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="1104" bodyend="1108"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a756a68ecc19e9e7148fada82018e8ac9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::Validations&lt; Adaptor &gt;::laggards</definition>
+        <argsstring>(Seq const seq, HashSet&lt; NodeKey &gt; &amp;trustedKeys)</argsstring>
+        <name>laggards</name>
+        <qualifiedname>xrpl::Validations::laggards</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref> const</type>
+          <declname>seq</declname>
+        </param>
+        <param>
+          <type>HashSet&lt; <ref refid="classxrpl_1_1Validations_1af43db3dfe176e9b43a1d131154eea16b" kindref="member">NodeKey</ref> &gt; &amp;</type>
+          <declname>trustedKeys</declname>
+        </param>
+        <briefdescription>
+<para>Return quantity of lagging proposers, and remove online proposers for purposes of evaluating whether to pause. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Laggards are the trusted proposers whose sequence number is lower than the sequence number from which our current pending proposal is based. Proposers from whom we have not received a validation for awhile are considered offline.</para>
+<para>Note: the trusted flag is not used in this evaluation because it&apos;s made redundant by checking the list of proposers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Our current sequence number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trustedKeys</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Public keys of trusted proposers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Quantity of laggards. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="1127" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="1127" bodyend="1145"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1a86177783f0dc894d75af52faf938c0b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::Validations&lt; Adaptor &gt;::sizeOfCurrentCache</definition>
+        <argsstring>() const</argsstring>
+        <name>sizeOfCurrentCache</name>
+        <qualifiedname>xrpl::Validations::sizeOfCurrentCache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="1148" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="1148" bodyend="1152"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1ae24382dfb5985a8b6687a13eae9182d3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::Validations&lt; Adaptor &gt;::sizeOfSeqEnforcersCache</definition>
+        <argsstring>() const</argsstring>
+        <name>sizeOfSeqEnforcersCache</name>
+        <qualifiedname>xrpl::Validations::sizeOfSeqEnforcersCache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="1155" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="1155" bodyend="1159"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1ac76cc1aff015a97d30a0804290e1ef2c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::Validations&lt; Adaptor &gt;::sizeOfByLedgerCache</definition>
+        <argsstring>() const</argsstring>
+        <name>sizeOfByLedgerCache</name>
+        <qualifiedname>xrpl::Validations::sizeOfByLedgerCache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="1162" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="1162" bodyend="1166"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1Validations_1acd229afb8fcc0a1bb2b2b319b1641f61" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::Validations&lt; Adaptor &gt;::sizeOfBySequenceCache</definition>
+        <argsstring>() const</argsstring>
+        <name>sizeOfBySequenceCache</name>
+        <qualifiedname>xrpl::Validations::sizeOfBySequenceCache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="1169" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="1169" bodyend="1173"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Maintains current and recent ledger validations. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Manages storage and queries related to validations received on the network. Stores the most current validation from nodes and sets of recent validations grouped by ledger identifier.</para>
+<para>Stored validations are not necessarily from trusted nodes, so clients and implementations should take care to use <computeroutput>trusted</computeroutput> member functions or check the validation&apos;s trusted status.</para>
+<para>This class uses a generic interface to allow adapting <ref refid="classxrpl_1_1Validations" kindref="compound">Validations</ref> for specific applications. The Adaptor template implements a set of helper functions and type definitions. The code stubs below outline the interface and type requirements.</para>
+<para><simplesect kind="warning"><para>The Adaptor::MutexType is used to manage concurrent access to private members of <ref refid="classxrpl_1_1Validations" kindref="compound">Validations</ref> but does not manage any data in the Adaptor instance itself.</para>
+</simplesect>
+<programlisting><codeline><highlight class="comment">//<sp/>Conforms<sp/>to<sp/>the<sp/>Ledger<sp/>type<sp/>requirements<sp/>of<sp/>LedgerTrie</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="classxrpl_1_1Validations_1af9a5c4c391def0668372fa59abff31ff" kindref="member">Ledger</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" kindref="member">Validation</ref></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref><sp/>=<sp/>...;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classxrpl_1_1Validations_1af43db3dfe176e9b43a1d131154eea16b" kindref="member">NodeKey</ref><sp/>=<sp/>...;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ledger<sp/>ID<sp/>associated<sp/>with<sp/>this<sp/>validation</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Ledger::ID<sp/>ledgerID()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sequence<sp/>number<sp/>of<sp/>validation&apos;s<sp/>ledger<sp/>(0<sp/>means<sp/>no<sp/>sequence<sp/>number)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Ledger::Seq<sp/><ref refid="namespacexrpl_1_1jss_1ac66b631492357c3834a2a18ce34cfe38" kindref="member">seq</ref>()<sp/>const</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>the<sp/>validation<sp/>was<sp/>signed</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>NetClock::time_point<sp/>signTime()<sp/>const;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>the<sp/>validation<sp/>was<sp/>first<sp/>observed<sp/>by<sp/>this<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>NetClock::time_point<sp/>seenTime()<sp/>const;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Signing<sp/>key<sp/>of<sp/>node<sp/>that<sp/>published<sp/>the<sp/>validation</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxrpl_1_1Validations_1af43db3dfe176e9b43a1d131154eea16b" kindref="member">NodeKey</ref><sp/>key()<sp/>const;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Whether<sp/>the<sp/>publishing<sp/>node<sp/>was<sp/>trusted<sp/>at<sp/>the<sp/>time<sp/>the<sp/>validation</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>arrived</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>trusted()<sp/>const;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>validation<sp/>as<sp/>trusted</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setTrusted();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>validation<sp/>as<sp/>untrusted</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setUntrusted();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Whether<sp/>this<sp/>is<sp/>a<sp/>full<sp/>or<sp/>partial<sp/>validation</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>full()<sp/>const;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Identifier<sp/>for<sp/>this<sp/>node<sp/>that<sp/>remains<sp/>fixed<sp/>even<sp/>when<sp/>rotating</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>signing<sp/>keys</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" kindref="member">NodeID</ref><sp/>nodeID()<sp/><sp/>const;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>implementation_specific_t</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unwrap()<sp/>-&gt;<sp/>return<sp/>the<sp/>implementation-specific<sp/>type<sp/>being<sp/>wrapped</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...<sp/>implementation<sp/>specific</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">class<sp/>Adaptor</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classxrpl_1_1Validations_1a5680f3fb6edf32795c8913662bbcafbb" kindref="member">Mutex</ref><sp/>=<sp/>std::mutex;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" kindref="member">Validation</ref><sp/>=<sp/><ref refid="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" kindref="member">Validation</ref>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classxrpl_1_1Validations_1af9a5c4c391def0668372fa59abff31ff" kindref="member">Ledger</ref><sp/>=<sp/><ref refid="classxrpl_1_1Validations_1af9a5c4c391def0668372fa59abff31ff" kindref="member">Ledger</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>the<sp/>current<sp/>network<sp/>time<sp/>(used<sp/>to<sp/>determine<sp/>staleness)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>NetClock::time_point<sp/>now()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Attempt<sp/>to<sp/>acquire<sp/>a<sp/>specific<sp/>ledger.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::optional&lt;Ledger&gt;<sp/>acquire(Ledger::ID<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;<sp/>ledgerID);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...<sp/>implementation<sp/>specific</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Adaptor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provides type definitions and callbacks </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>xrpl::ValidationParms</label>
+        <link refid="structxrpl_1_1ValidationParms"/>
+      </node>
+      <node id="1">
+        <label>xrpl::Validations&lt; Adaptor &gt;</label>
+        <link refid="classxrpl_1_1Validations"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>parms_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/consensus/Validations.h" line="298" column="1" bodyfile="include/xrpl/consensus/Validations.h" bodystart="299" bodyend="1174"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1Validations_1a22b4ae85fc9c6e12f4d66cfe136f8b95" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>acquiring_</name></member>
+      <member refid="classxrpl_1_1Validations_1a5c53682eaf1b437da4cd67d5134d0906" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>adaptor</name></member>
+      <member refid="classxrpl_1_1Validations_1af37184b4977e6004b88b8a4f822da12f" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>adaptor_</name></member>
+      <member refid="classxrpl_1_1Validations_1a2a8b8aca1ef992bab3e1193b7bc80932" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>add</name></member>
+      <member refid="classxrpl_1_1Validations_1ae86f7684b2919c74444e9c1e37bca85e" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>byLedger</name></member>
+      <member refid="classxrpl_1_1Validations_1aaf5ba5a90137abe29b790785ef28075a" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>byLedger_</name></member>
+      <member refid="classxrpl_1_1Validations_1a6fc175abcb52b6f7d1f4a2c0c57ecbbb" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>bySequence_</name></member>
+      <member refid="classxrpl_1_1Validations_1a106162a1b961ae29c13cca83bdb12988" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>canValidateSeq</name></member>
+      <member refid="classxrpl_1_1Validations_1a4fd50e4c665aca8d34b0dcd6a7a93bb4" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>checkAcquired</name></member>
+      <member refid="classxrpl_1_1Validations_1a2fde885f878fd5b7b31c371d95506ca2" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>current_</name></member>
+      <member refid="classxrpl_1_1Validations_1a9aefff1cef8b7dba48005c56e2a539b8" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>currentTrusted</name></member>
+      <member refid="classxrpl_1_1Validations_1a1017b938e44e13ff7f1f385838fea231" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>expire</name></member>
+      <member refid="classxrpl_1_1Validations_1af3b8428ea9b41969a21ea42540fba43f" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>fees</name></member>
+      <member refid="classxrpl_1_1Validations_1a9778253ab08a5a74013232a521704708" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>flush</name></member>
+      <member refid="classxrpl_1_1Validations_1a4b09981ad4ca1777633cf6eb2213eff6" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>getCurrentNodeIDs</name></member>
+      <member refid="classxrpl_1_1Validations_1ad42c3c27c1e5d907c9ca2ce4cd6a64e7" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>getJsonTrie</name></member>
+      <member refid="classxrpl_1_1Validations_1a08d33264a5cfc04a9d2dbbb91b08ef7e" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>getNodesAfter</name></member>
+      <member refid="classxrpl_1_1Validations_1a8d3ba3303cc97a3483a61378b1a77e12" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>getPreferred</name></member>
+      <member refid="classxrpl_1_1Validations_1aec91c2ac4d22785ba949d39d1f9e987f" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>getPreferred</name></member>
+      <member refid="classxrpl_1_1Validations_1a2c50c7b29bf667a54b1ebcf35dffdca0" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>getPreferredLCL</name></member>
+      <member refid="classxrpl_1_1Validations_1a227768fd290dc23e2b3867bb69d90a7c" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>getTrustedForLedger</name></member>
+      <member refid="classxrpl_1_1Validations_1a4968c707e3741739a9794a3098e549a2" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>ID</name></member>
+      <member refid="classxrpl_1_1Validations_1a756a68ecc19e9e7148fada82018e8ac9" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>laggards</name></member>
+      <member refid="classxrpl_1_1Validations_1a15a0e5709536bd042c17bd5bc8ba69c2" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>lastLedger_</name></member>
+      <member refid="classxrpl_1_1Validations_1af9a5c4c391def0668372fa59abff31ff" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>Ledger</name></member>
+      <member refid="classxrpl_1_1Validations_1a7113ba1233b28e5d0f7285de0406a38b" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>localSeqEnforcer_</name></member>
+      <member refid="classxrpl_1_1Validations_1a5680f3fb6edf32795c8913662bbcafbb" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>Mutex</name></member>
+      <member refid="classxrpl_1_1Validations_1a1a1d270c194a89c91141d4251d53dd2c" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>mutex_</name></member>
+      <member refid="classxrpl_1_1Validations_1aeb7889d8e1450455ba314261ce31d61e" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>NodeID</name></member>
+      <member refid="classxrpl_1_1Validations_1af43db3dfe176e9b43a1d131154eea16b" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>NodeKey</name></member>
+      <member refid="classxrpl_1_1Validations_1a1cebe25f581f02eafbac737706739c65" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>numTrustedForLedger</name></member>
+      <member refid="classxrpl_1_1Validations_1a38e2ddb1d57b65d55c7d78c1037a9e6f" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>parms</name></member>
+      <member refid="classxrpl_1_1Validations_1abab56c987de0163c667254f0111fd4f8" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>parms_</name></member>
+      <member refid="classxrpl_1_1Validations_1adebe2dbb03bab015ccb8a4d7573836ee" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>removeTrie</name></member>
+      <member refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>Seq</name></member>
+      <member refid="classxrpl_1_1Validations_1a1b456f427665eda9c7ba6b2e2e38ca20" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>seqEnforcers_</name></member>
+      <member refid="classxrpl_1_1Validations_1aa0412c329f6d8a96aa96e0426fdadb0d" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>setSeqToKeep</name></member>
+      <member refid="classxrpl_1_1Validations_1ac76cc1aff015a97d30a0804290e1ef2c" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>sizeOfByLedgerCache</name></member>
+      <member refid="classxrpl_1_1Validations_1acd229afb8fcc0a1bb2b2b319b1641f61" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>sizeOfBySequenceCache</name></member>
+      <member refid="classxrpl_1_1Validations_1a86177783f0dc894d75af52faf938c0b7" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>sizeOfCurrentCache</name></member>
+      <member refid="classxrpl_1_1Validations_1ae24382dfb5985a8b6687a13eae9182d3" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>sizeOfSeqEnforcersCache</name></member>
+      <member refid="classxrpl_1_1Validations_1ae2832f3b6511e0f658a7143e4f6f469a" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>toKeep_</name></member>
+      <member refid="classxrpl_1_1Validations_1a134769abea8cb708b8ff7d0ab2970b7f" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>trie_</name></member>
+      <member refid="classxrpl_1_1Validations_1a7762ef3a37e21a5a463395bc415bf39d" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>trustChanged</name></member>
+      <member refid="classxrpl_1_1Validations_1a00094436c686c7e3fc51562704eb5169" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>updateTrie</name></member>
+      <member refid="classxrpl_1_1Validations_1a8a4b98147405f10322b325fc8699ba91" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>updateTrie</name></member>
+      <member refid="classxrpl_1_1Validations_1acbfba494536ead236a2ee4c4dddc4f77" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>Validation</name></member>
+      <member refid="classxrpl_1_1Validations_1adee410ea6e9793ce6b9e6cd6fc1391b9" prot="public" virt="non-virtual"><scope>xrpl::Validations</scope><name>Validations</name></member>
+      <member refid="classxrpl_1_1Validations_1aacbc3468ecf343da8d9de847dda73016" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>withTrie</name></member>
+      <member refid="classxrpl_1_1Validations_1ad6c3e0bae064e562166d37ae83f8583b" prot="private" virt="non-virtual"><scope>xrpl::Validations</scope><name>WrappedValidationType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

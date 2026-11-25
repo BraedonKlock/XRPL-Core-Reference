@@ -1,0 +1,9 @@
+node_modules/
+.cache/
+coverage/
+dist/
+public/data/
+tests/fixtures/
+package-lock.json
+playwright-report/
+test-results/

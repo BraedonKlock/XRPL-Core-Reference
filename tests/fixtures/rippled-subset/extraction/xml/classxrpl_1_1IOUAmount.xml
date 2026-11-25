@@ -1,0 +1,462 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1IOUAmount" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::IOUAmount</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">boost::totally_ordered&lt; IOUAmount &gt;</basecompoundref>
+    <basecompoundref prot="private" virt="non-virtual">boost::additive&lt; IOUAmount &gt;</basecompoundref>
+    <includes local="no">xrpl/protocol/IOUAmount.h</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classxrpl_1_1IOUAmount_1a4fba7de823ea21ee7bd21aacd7ee0965" prot="private" static="no">
+        <type>std::int64_t</type>
+        <definition>using xrpl::IOUAmount::MantissaType = std::int64_t</definition>
+        <argsstring></argsstring>
+        <name>MantissaType</name>
+        <qualifiedname>xrpl::IOUAmount::MantissaType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="28" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1IOUAmount_1accf38e0086cd09f1eeb2aa6628733edb" prot="private" static="no">
+        <type>int</type>
+        <definition>using xrpl::IOUAmount::ExponentType = int</definition>
+        <argsstring></argsstring>
+        <name>ExponentType</name>
+        <qualifiedname>xrpl::IOUAmount::ExponentType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="29" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1IOUAmount_1a481a12a415ed2ee3f1c6969cf4dea918" prot="private" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1IOUAmount_1a4fba7de823ea21ee7bd21aacd7ee0965" kindref="member">MantissaType</ref></type>
+        <definition>MantissaType xrpl::IOUAmount::mantissa_</definition>
+        <argsstring></argsstring>
+        <name>mantissa_</name>
+        <qualifiedname>xrpl::IOUAmount::mantissa_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="30" column="18" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1IOUAmount_1a7c6a310e865175496704dea276cbf592" prot="private" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1IOUAmount_1accf38e0086cd09f1eeb2aa6628733edb" kindref="member">ExponentType</ref></type>
+        <definition>ExponentType xrpl::IOUAmount::exponent_</definition>
+        <argsstring></argsstring>
+        <name>exponent_</name>
+        <qualifiedname>xrpl::IOUAmount::exponent_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="31" column="18" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1ae95ed78449b2f85e50c8679605ade31f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::IOUAmount::normalize</definition>
+        <argsstring>()</argsstring>
+        <name>normalize</name>
+        <qualifiedname>xrpl::IOUAmount::normalize</qualifiedname>
+        <briefdescription>
+<para>Adjusts the mantissa and exponent to the proper range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This can throw if the amount cannot be normalized, or is larger than the largest value that can be represented as an IOU amount. Amounts that are too small to be represented normalize to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="41" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a3f3b52f99b877ea272120365163b8f21" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" kindref="member">IOUAmount</ref></type>
+        <definition>static IOUAmount xrpl::IOUAmount::fromNumber</definition>
+        <argsstring>(Number const &amp;number)</argsstring>
+        <name>fromNumber</name>
+        <qualifiedname>xrpl::IOUAmount::fromNumber</qualifiedname>
+        <param>
+          <type>Number const &amp;</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="44" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::IOUAmount::IOUAmount</definition>
+        <argsstring>()=default</argsstring>
+        <name>IOUAmount</name>
+        <qualifiedname>xrpl::IOUAmount::IOUAmount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="47" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a3158880e6e6a8a4640445467cd2e80dc" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::IOUAmount::IOUAmount</definition>
+        <argsstring>(Number const &amp;other)</argsstring>
+        <name>IOUAmount</name>
+        <qualifiedname>xrpl::IOUAmount::IOUAmount</qualifiedname>
+        <param>
+          <type>Number const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="48" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a50562d6c8c255a5cdeca776d2f13231c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::IOUAmount::IOUAmount</definition>
+        <argsstring>(beast::Zero)</argsstring>
+        <name>IOUAmount</name>
+        <qualifiedname>xrpl::IOUAmount::IOUAmount</qualifiedname>
+        <param>
+          <type>beast::Zero</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="49" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a0ab7ad6d73f882505ce8feaec2a1a707" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::IOUAmount::IOUAmount</definition>
+        <argsstring>(MantissaType mantissa, ExponentType exponent)</argsstring>
+        <name>IOUAmount</name>
+        <qualifiedname>xrpl::IOUAmount::IOUAmount</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1IOUAmount_1a4fba7de823ea21ee7bd21aacd7ee0965" kindref="member">MantissaType</ref></type>
+          <declname>mantissa</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1IOUAmount_1accf38e0086cd09f1eeb2aa6628733edb" kindref="member">ExponentType</ref></type>
+          <declname>exponent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="50" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="104" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a7e89ea970f2575a3397ec3d42306997f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" kindref="member">IOUAmount</ref> &amp;</type>
+        <definition>IOUAmount &amp; xrpl::IOUAmount::operator=</definition>
+        <argsstring>(beast::Zero)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::IOUAmount::operator=</qualifiedname>
+        <param>
+          <type>beast::Zero</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="52" column="15" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="111" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1ab336085e266707c18d73a3d616198137" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::IOUAmount::operator Number</definition>
+        <argsstring>() const</argsstring>
+        <name>operator Number</name>
+        <qualifiedname>xrpl::IOUAmount::operator Number</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="54" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a06a7bf3cd608665347f01565d3a2ff4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" kindref="member">IOUAmount</ref> &amp;</type>
+        <definition>IOUAmount &amp; xrpl::IOUAmount::operator+=</definition>
+        <argsstring>(IOUAmount const &amp;other)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>xrpl::IOUAmount::operator+=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" kindref="member">IOUAmount</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="57" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1afd40a947d735545b63defada31bf9224" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" kindref="member">IOUAmount</ref> &amp;</type>
+        <definition>IOUAmount &amp; xrpl::IOUAmount::operator-=</definition>
+        <argsstring>(IOUAmount const &amp;other)</argsstring>
+        <name>operator-=</name>
+        <qualifiedname>xrpl::IOUAmount::operator-=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" kindref="member">IOUAmount</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="60" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="127" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a9c0d53a8ea4d9c14e3c2837e4b80b0af" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" kindref="member">IOUAmount</ref></type>
+        <definition>IOUAmount xrpl::IOUAmount::operator-</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-</name>
+        <qualifiedname>xrpl::IOUAmount::operator-</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="63" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a562d8a230e8b37458dcbecb9cf192424" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::IOUAmount::operator==</definition>
+        <argsstring>(IOUAmount const &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>xrpl::IOUAmount::operator==</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" kindref="member">IOUAmount</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="66" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="140" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a7707f8dd85257f32fbf06eb2ff8a3c05" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::IOUAmount::operator&lt;</definition>
+        <argsstring>(IOUAmount const &amp;other) const</argsstring>
+        <name>operator&lt;</name>
+        <qualifiedname>xrpl::IOUAmount::operator&lt;</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" kindref="member">IOUAmount</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="68" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a2b88a361afbb37e891895d8fa3ceaa9e" prot="public" static="no" const="yes" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::IOUAmount::operator bool</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>operator bool</name>
+        <qualifiedname>xrpl::IOUAmount::operator bool</qualifiedname>
+        <briefdescription>
+<para>Returns true if the amount is not zero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="75" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1aa380db8bd5ba4e70d90e58f1d2c9d7d8" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int xrpl::IOUAmount::signum</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>signum</name>
+        <qualifiedname>xrpl::IOUAmount::signum</qualifiedname>
+        <briefdescription>
+<para>Return the sign of the amount. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="81" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="158" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a976eca02060a86f846614a883a432440" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1IOUAmount_1accf38e0086cd09f1eeb2aa6628733edb" kindref="member">ExponentType</ref></type>
+        <definition>IOUAmount::ExponentType xrpl::IOUAmount::exponent</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>exponent</name>
+        <qualifiedname>xrpl::IOUAmount::exponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="84" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="166" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1a80d7f4b590507344d5fa5a95a687b247" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1IOUAmount_1a4fba7de823ea21ee7bd21aacd7ee0965" kindref="member">MantissaType</ref></type>
+        <definition>IOUAmount::MantissaType xrpl::IOUAmount::mantissa</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>mantissa</name>
+        <qualifiedname>xrpl::IOUAmount::mantissa</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="87" column="5" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="172" bodyend="175"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classxrpl_1_1IOUAmount_1aa56f5c4c36b0e3ba060f4582a5cc91b6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" kindref="member">IOUAmount</ref></type>
+        <definition>static IOUAmount xrpl::IOUAmount::minPositiveAmount</definition>
+        <argsstring>()</argsstring>
+        <name>minPositiveAmount</name>
+        <qualifiedname>xrpl::IOUAmount::minPositiveAmount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="90" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classxrpl_1_1IOUAmount_1a3033468f777067c56a5c49d0523fdd18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, IOUAmount const &amp;x)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>xrpl::IOUAmount::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" kindref="member">IOUAmount</ref> const &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/IOUAmount.h" line="92" column="12" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="93" bodyend="96"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Floating point representation of amounts with high dynamic range. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Amounts are stored as a normalized signed mantissa and an exponent. The range of the normalized exponent is [-96,80] and the range of the absolute value of the normalized mantissa is [1000000000000000, 9999999999999999].</para>
+<para>Arithmetic operations can throw std::overflow_error during normalization if the amount exceeds the largest representable amount, but underflows will silently truncate to zero. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>boost::additive&lt; IOUAmount &gt;</label>
+      </node>
+      <node id="2">
+        <label>boost::totally_ordered&lt; IOUAmount &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::IOUAmount</label>
+        <link refid="classxrpl_1_1IOUAmount"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>boost::additive&lt; IOUAmount &gt;</label>
+      </node>
+      <node id="2">
+        <label>boost::totally_ordered&lt; IOUAmount &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::IOUAmount</label>
+        <link refid="classxrpl_1_1IOUAmount"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/protocol/IOUAmount.h" line="25" column="1" bodyfile="include/xrpl/protocol/IOUAmount.h" bodystart="26" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1IOUAmount_1a976eca02060a86f846614a883a432440" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>exponent</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a7c6a310e865175496704dea276cbf592" prot="private" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>exponent_</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1accf38e0086cd09f1eeb2aa6628733edb" prot="private" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>ExponentType</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a3f3b52f99b877ea272120365163b8f21" prot="private" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>fromNumber</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a57f34713168e43c64fbc0e70b8b083c3" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>IOUAmount</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a3158880e6e6a8a4640445467cd2e80dc" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>IOUAmount</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a50562d6c8c255a5cdeca776d2f13231c" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>IOUAmount</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a0ab7ad6d73f882505ce8feaec2a1a707" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>IOUAmount</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a80d7f4b590507344d5fa5a95a687b247" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>mantissa</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a481a12a415ed2ee3f1c6969cf4dea918" prot="private" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>mantissa_</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a4fba7de823ea21ee7bd21aacd7ee0965" prot="private" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>MantissaType</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1aa56f5c4c36b0e3ba060f4582a5cc91b6" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>minPositiveAmount</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1ae95ed78449b2f85e50c8679605ade31f" prot="private" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>normalize</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a2b88a361afbb37e891895d8fa3ceaa9e" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>operator bool</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1ab336085e266707c18d73a3d616198137" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>operator Number</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a06a7bf3cd608665347f01565d3a2ff4d" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>operator+=</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a9c0d53a8ea4d9c14e3c2837e4b80b0af" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>operator-</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1afd40a947d735545b63defada31bf9224" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>operator-=</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a7707f8dd85257f32fbf06eb2ff8a3c05" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>operator&lt;</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a3033468f777067c56a5c49d0523fdd18" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a7e89ea970f2575a3397ec3d42306997f" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1a562d8a230e8b37458dcbecb9cf192424" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>operator==</name></member>
+      <member refid="classxrpl_1_1IOUAmount_1aa380db8bd5ba4e70d90e58f1d2c9d7d8" prot="public" virt="non-virtual"><scope>xrpl::IOUAmount</scope><name>signum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

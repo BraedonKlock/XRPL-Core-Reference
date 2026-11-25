@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1ReadView_1_1TxsType" kind="struct" language="C++" prot="public">
+    <compoundname>xrpl::ReadView::TxsType</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">detail::ReadViewFwdRange&lt; TxType &gt;</basecompoundref>
+    <includes local="no">xrpl/ledger/ReadView.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structxrpl_1_1ReadView_1_1TxsType_1ad4d938f72701f5eb9e0911379183f6c2" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ReadView::TxsType::TxsType</definition>
+        <argsstring>(ReadView const &amp;view)</argsstring>
+        <name>TxsType</name>
+        <qualifiedname>xrpl::ReadView::TxsType::TxsType</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ReadView_1a025a8816966f80cc1ef7e72a8f854bfb" kindref="member">ReadView</ref> const &amp;</type>
+          <declname>view</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="62" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structxrpl_1_1ReadView_1_1TxsType_1a020970ef9510275785f3f38a17bd9c4d" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::ReadView::TxsType::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <qualifiedname>xrpl::ReadView::TxsType::empty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="64" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structxrpl_1_1ReadView_1_1TxsType_1ac6b93281546a682be464625462d7f97e" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Iterator</type>
+        <definition>Iterator xrpl::ReadView::TxsType::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <qualifiedname>xrpl::ReadView::TxsType::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="66" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structxrpl_1_1ReadView_1_1TxsType_1af939e53671a0427d7eac77c0e5518935" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Iterator</type>
+        <definition>Iterator xrpl::ReadView::TxsType::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <qualifiedname>xrpl::ReadView::TxsType::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="68" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>detail::ReadViewFwdRange&lt; TxType &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::ReadView::TxsType</label>
+        <link refid="structxrpl_1_1ReadView_1_1TxsType"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>detail::ReadViewFwdRange&lt; TxType &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::ReadView::TxsType</label>
+        <link refid="structxrpl_1_1ReadView_1_1TxsType"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/ledger/ReadView.h" line="60" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="61" bodyend="69"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1ReadView_1_1TxsType_1ac6b93281546a682be464625462d7f97e" prot="public" virt="non-virtual"><scope>xrpl::ReadView::TxsType</scope><name>begin</name></member>
+      <member refid="structxrpl_1_1ReadView_1_1TxsType_1a020970ef9510275785f3f38a17bd9c4d" prot="public" virt="non-virtual"><scope>xrpl::ReadView::TxsType</scope><name>empty</name></member>
+      <member refid="structxrpl_1_1ReadView_1_1TxsType_1af939e53671a0427d7eac77c0e5518935" prot="public" virt="non-virtual"><scope>xrpl::ReadView::TxsType</scope><name>end</name></member>
+      <member refid="structxrpl_1_1ReadView_1_1TxsType_1ad4d938f72701f5eb9e0911379183f6c2" prot="public" virt="non-virtual"><scope>xrpl::ReadView::TxsType</scope><name>TxsType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

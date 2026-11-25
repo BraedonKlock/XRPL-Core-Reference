@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="namespacebeast_1_1detail" kind="namespace" language="C++">
+    <compoundname>beast::detail</compoundname>
+    <innerclass refid="structbeast_1_1detail_1_1IsBoostReverseIterator" prot="public">beast::detail::IsBoostReverseIterator</innerclass>
+    <innerclass refid="structbeast_1_1detail_1_1IsBoostReverseIterator_3_01boost_1_1intrusive_1_1reverse__iterator_3_01It_01_4_01_4" prot="public">beast::detail::IsBoostReverseIterator&lt; boost::intrusive::reverse_iterator&lt; It &gt; &gt;</innerclass>
+    <innerclass refid="classbeast_1_1detail_1_1AgedOrderedContainer" prot="public">beast::detail::AgedOrderedContainer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="26" column="1"/>
+  </compounddef>
+</doxygen>

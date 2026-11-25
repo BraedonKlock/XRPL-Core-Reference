@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="base__uint_8h" kind="file" language="C++">
+    <compoundname>base_uint.h</compoundname>
+    <includes local="no">xrpl/basics/Slice.h</includes>
+    <includes refid="contract_8h" local="no">xrpl/basics/contract.h</includes>
+    <includes local="no">xrpl/basics/hardened_hash.h</includes>
+    <includes local="no">xrpl/basics/partitioned_unordered_map.h</includes>
+    <includes local="no">xrpl/basics/strHex.h</includes>
+    <includes local="no">xrpl/beast/hash/hash_append.h</includes>
+    <includes local="no">xrpl/beast/utility/Zero.h</includes>
+    <includes local="no">xrpl/beast/utility/instrumentation.h</includes>
+    <includes local="no">boost/endian/conversion.hpp</includes>
+    <includes local="no">boost/functional/hash.hpp</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">array</includes>
+    <includes local="no">compare</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">expected</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">optional</includes>
+    <includes local="no">ostream</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">string</includes>
+    <includes local="no">string_view</includes>
+    <includes local="no">type_traits</includes>
+    <includedby refid="ApplyView_8h" local="no">include/xrpl/ledger/ApplyView.h</includedby>
+    <includedby refid="OpenView_8h" local="no">include/xrpl/ledger/OpenView.h</includedby>
+    <includedby refid="ReadView_8h" local="no">include/xrpl/ledger/ReadView.h</includedby>
+    <includedby refid="Feature_8h" local="no">include/xrpl/protocol/Feature.h</includedby>
+    <includedby refid="STTx_8h" local="no">include/xrpl/protocol/STTx.h</includedby>
+    <includedby refid="SHAMap_8h" local="no">include/xrpl/shamap/SHAMap.h</includedby>
+    <includedby refid="ApplyContext_8h" local="no">include/xrpl/tx/ApplyContext.h</includedby>
+    <includedby refid="Feature_8cpp" local="no">src/libxrpl/protocol/Feature.cpp</includedby>
+    <includedby refid="ApplyContext_8cpp" local="no">src/libxrpl/tx/ApplyContext.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/xrpl/basics/base_uint.h</label>
+        <link refid="base__uint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>algorithm</label>
+      </node>
+      <node id="12">
+        <label>array</label>
+      </node>
+      <node id="9">
+        <label>boost/endian/conversion.hpp</label>
+      </node>
+      <node id="10">
+        <label>boost/functional/hash.hpp</label>
+      </node>
+      <node id="13">
+        <label>compare</label>
+      </node>
+      <node id="14">
+        <label>cstddef</label>
+      </node>
+      <node id="15">
+        <label>cstdint</label>
+      </node>
+      <node id="16">
+        <label>cstring</label>
+      </node>
+      <node id="17">
+        <label>expected</label>
+      </node>
+      <node id="18">
+        <label>iterator</label>
+      </node>
+      <node id="19">
+        <label>optional</label>
+      </node>
+      <node id="20">
+        <label>ostream</label>
+      </node>
+      <node id="21">
+        <label>stdexcept</label>
+      </node>
+      <node id="22">
+        <label>string</label>
+      </node>
+      <node id="23">
+        <label>string_view</label>
+      </node>
+      <node id="24">
+        <label>type_traits</label>
+      </node>
+      <node id="2">
+        <label>xrpl/basics/Slice.h</label>
+      </node>
+      <node id="3">
+        <label>xrpl/basics/hardened_hash.h</label>
+      </node>
+      <node id="4">
+        <label>xrpl/basics/partitioned_unordered_map.h</label>
+      </node>
+      <node id="5">
+        <label>xrpl/basics/strHex.h</label>
+      </node>
+      <node id="6">
+        <label>xrpl/beast/hash/hash_append.h</label>
+      </node>
+      <node id="7">
+        <label>xrpl/beast/utility/Zero.h</label>
+      </node>
+      <node id="8">
+        <label>xrpl/beast/utility/instrumentation.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structxrpl_1_1detail_1_1IsContiguousContainer" prot="public">xrpl::detail::IsContiguousContainer</innerclass>
+    <innerclass refid="structxrpl_1_1detail_1_1IsContiguousContainer_3_01Container_00_01std_1_1void__t_3_01decltype_07s5db0151d9ac3d1137f390e32dc83c291" prot="public">xrpl::detail::IsContiguousContainer&lt; Container, std::void_t&lt; decltype(std::declval&lt; Container const &gt;().size()), decltype(std::declval&lt; Container const &gt;().data()), typename Container::value_type &gt; &gt;</innerclass>
+    <innerclass refid="structxrpl_1_1detail_1_1IsContiguousContainer_3_01Slice_01_4" prot="public">xrpl::detail::IsContiguousContainer&lt; Slice &gt;</innerclass>
+    <innerclass refid="structxrpl_1_1detail_1_1AlwaysFalseT" prot="public">xrpl::detail::AlwaysFalseT</innerclass>
+    <innerclass refid="classxrpl_1_1BaseUInt" prot="public">xrpl::BaseUInt</innerclass>
+    <innerclass refid="structxrpl_1_1BaseUInt_1_1VoidHelper" prot="private">xrpl::BaseUInt::VoidHelper</innerclass>
+    <innerclass refid="structbeast_1_1IsUniquelyRepresented_3_01xrpl_1_1BaseUInt_3_01Bits_00_01Tag_01_4_01_4" prot="public">beast::IsUniquelyRepresented&lt; xrpl::BaseUInt&lt; Bits, Tag &gt; &gt;</innerclass>
+    <innernamespace refid="namespacexrpl">xrpl</innernamespace>
+    <innernamespace refid="namespacexrpl_1_1detail">xrpl::detail</innernamespace>
+    <innernamespace refid="namespacebeast">beast</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/basics/base_uint.h"/>
+  </compounddef>
+</doxygen>

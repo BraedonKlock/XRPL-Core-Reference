@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="namespacexrpl_1_1_0d341073017067111000231045366227201313104375042116" kind="namespace" language="C++">
+    <compoundname>xrpl::@341073017067111000231045366227201313104375042116</compoundname>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacexrpl_1_1_0d341073017067111000231045366227201313104375042116_1a9bf31235aeb2e9662a3fccdf2a3144aa" prot="public" static="no" strong="yes">
+        <type>bool</type>
+        <name>Supported</name>
+        <qualifiedname>xrpl::@341073017067111000231045366227201313104375042116::Supported</qualifiedname>
+        <enumvalue id="namespacexrpl_1_1_0d341073017067111000231045366227201313104375042116_1a9bf31235aeb2e9662a3fccdf2a3144aaabafd7322c6e97d25b6299b5d6fe8920b" prot="public">
+          <name>No</name>
+          <initializer>= false</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacexrpl_1_1_0d341073017067111000231045366227201313104375042116_1a9bf31235aeb2e9662a3fccdf2a3144aaa93cba07454f06a4a960172bbd6e2a435" prot="public">
+          <name>Yes</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/Feature.cpp" line="38" column="1" bodyfile="src/libxrpl/protocol/Feature.cpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/libxrpl/protocol/Feature.cpp" line="36" column="1"/>
+  </compounddef>
+</doxygen>

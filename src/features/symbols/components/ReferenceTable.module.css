@@ -1,0 +1,122 @@
+.wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.table th {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-align: left;
+}
+
+.table td {
+  padding: var(--space-2) var(--space-3);
+  vertical-align: top;
+}
+
+.table tbody tr + tr td {
+  border-top: 1px solid var(--color-border);
+}
+
+.table tbody tr:target td {
+  background: var(--color-surface-selected);
+}
+
+.table code {
+  overflow-wrap: break-word;
+}
+
+.nameColumn {
+  width: 38%;
+}
+
+.type {
+  min-width: 9rem;
+}
+
+.signature {
+  font-family: var(--font-mono);
+  overflow-wrap: break-word;
+}
+
+.type {
+  font-family: var(--font-mono);
+  overflow-wrap: break-word;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+}
+
+.tag {
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-xs);
+}
+
+.muted {
+  color: var(--color-text-subtle);
+}
+
+.anchor {
+  scroll-margin-top: calc(var(--header-height) + var(--space-4));
+}
+
+@media (max-width: 40rem) {
+  .table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table td {
+    padding: 0 var(--space-3);
+  }
+
+  .table td:first-child {
+    padding-top: var(--space-2);
+  }
+
+  .table td:last-child {
+    padding-bottom: var(--space-2);
+  }
+
+  .table td:empty {
+    display: none;
+  }
+
+  .table tbody tr + tr td {
+    border-top: 0;
+  }
+
+  .table tbody tr + tr {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .type {
+    min-width: 0;
+    color: var(--color-text-muted);
+  }
+}

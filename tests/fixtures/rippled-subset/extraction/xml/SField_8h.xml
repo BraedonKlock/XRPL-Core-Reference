@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="SField_8h" kind="file" language="C++">
+    <compoundname>SField.h</compoundname>
+    <includes local="no">xrpl/basics/safe_cast.h</includes>
+    <includes local="no">xrpl/json/json_value.h</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">xrpl/protocol/detail/sfields.macro</includes>
+    <includedby refid="ReadView_8h" local="no">include/xrpl/ledger/ReadView.h</includedby>
+    <includedby refid="STInteger_8h" local="no">include/xrpl/protocol/STInteger.h</includedby>
+    <includedby refid="STTx_8h" local="no">include/xrpl/protocol/STTx.h</includedby>
+    <includedby refid="SField_8cpp" local="no">src/libxrpl/protocol/SField.cpp</includedby>
+    <includedby refid="STInteger_8cpp" local="no">src/libxrpl/protocol/STInteger.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/xrpl/protocol/SField.h</label>
+        <link refid="SField_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>unordered_map</label>
+      </node>
+      <node id="2">
+        <label>xrpl/basics/safe_cast.h</label>
+      </node>
+      <node id="3">
+        <label>xrpl/json/json_value.h</label>
+      </node>
+      <node id="8">
+        <label>xrpl/protocol/detail/sfields.macro</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classxrpl_1_1SField" prot="public">xrpl::SField</innerclass>
+    <innerclass refid="structxrpl_1_1TypedField" prot="public">xrpl::TypedField</innerclass>
+    <innerclass refid="structxrpl_1_1OptionaledField" prot="public">xrpl::OptionaledField</innerclass>
+    <innernamespace refid="namespacexrpl">xrpl</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="SField_8h_1a09f33dcc5954e9e2030d6d4fc24ceb3f" prot="public" static="no">
+        <name>XMACRO</name>
+        <param><defname>STYPE</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="41" column="9" bodyfile="include/xrpl/protocol/SField.h" bodystart="41" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="define" id="SField_8h_1ac645ecd2622a7d0e4efa3f661e92144b" prot="public" static="no">
+        <name>TO_ENUM</name>
+        <param><defname>name</defname></param>
+        <param><defname>value</defname></param>
+        <initializer>name = (value),</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="88" column="9" bodyfile="include/xrpl/protocol/SField.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="SField_8h_1aace2e1459d9a3236cf55118f15a44998" prot="public" static="no">
+        <name>TO_MAP</name>
+        <param><defname>name</defname></param>
+        <param><defname>value</defname></param>
+        <initializer>{#name, value},</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="89" column="9" bodyfile="include/xrpl/protocol/SField.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="SField_8h_1aaebb2f3c605e3a24d0fd272ffbb1662d" prot="public" static="no">
+        <name>UNTYPED_SFIELD</name>
+        <param><defname>sfName</defname></param>
+        <param><defname>stiSuffix</defname></param>
+        <param><defname>fieldValue</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>extern SField const sfName;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="373" column="9" bodyfile="include/xrpl/protocol/SField.h" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="SField_8h_1a72efc103638e95532360ecaec8f7d76b" prot="public" static="no">
+        <name>TYPED_SFIELD</name>
+        <param><defname>sfName</defname></param>
+        <param><defname>stiSuffix</defname></param>
+        <param><defname>fieldValue</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>extern SF_##stiSuffix const sfName;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="374" column="9" bodyfile="include/xrpl/protocol/SField.h" bodystart="374" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/protocol/SField.h"/>
+  </compounddef>
+</doxygen>

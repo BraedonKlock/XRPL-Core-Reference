@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the XRP Ledger's C++ Core: a searchable reference for the XRPLF/rippled implementation."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>XRPL Core Reference</title>
+    <script>
+      try {
+        const storedTheme = localStorage.getItem('xcr-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isStored = storedTheme === 'light' || storedTheme === 'dark';
+        document.documentElement.dataset.theme = isStored ? storedTheme : prefersDark ? 'dark' : 'light';
+      } catch {
+        document.documentElement.dataset.theme = 'light';
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

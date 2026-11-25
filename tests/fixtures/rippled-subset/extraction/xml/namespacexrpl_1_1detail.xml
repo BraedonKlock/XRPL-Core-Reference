@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="namespacexrpl_1_1detail" kind="namespace" language="C++">
+    <compoundname>xrpl::detail</compoundname>
+    <innerclass refid="structxrpl_1_1detail_1_1IsContiguousContainer" prot="public">xrpl::detail::IsContiguousContainer</innerclass>
+    <innerclass refid="structxrpl_1_1detail_1_1IsContiguousContainer_3_01Container_00_01std_1_1void__t_3_01decltype_07s5db0151d9ac3d1137f390e32dc83c291" prot="public">xrpl::detail::IsContiguousContainer&lt; Container, std::void_t&lt; decltype(std::declval&lt; Container const &gt;().size()), decltype(std::declval&lt; Container const &gt;().data()), typename Container::value_type &gt; &gt;</innerclass>
+    <innerclass refid="structxrpl_1_1detail_1_1IsContiguousContainer_3_01Slice_01_4" prot="public">xrpl::detail::IsContiguousContainer&lt; Slice &gt;</innerclass>
+    <innerclass refid="structxrpl_1_1detail_1_1AlwaysFalseT" prot="public">xrpl::detail::AlwaysFalseT</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacexrpl_1_1detail_1a8c47c7feea3fb0fe80dfd85f4b7c963d" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::detail::kNumFeatures</definition>
+        <argsstring></argsstring>
+        <name>kNumFeatures</name>
+        <qualifiedname>xrpl::detail::kNumFeatures</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="143" column="30" bodyfile="include/xrpl/protocol/Feature.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacexrpl_1_1detail_1a6fb78239955cb102365caf8c7ad35436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; std::string, <ref refid="namespacexrpl_1a3d02416a71398d8466f19a6515c944fe" kindref="member">VoteBehavior</ref> &gt; const &amp;</type>
+        <definition>std::map&lt; std::string, VoteBehavior &gt; const  &amp; xrpl::detail::supportedAmendments</definition>
+        <argsstring>()</argsstring>
+        <name>supportedAmendments</name>
+        <qualifiedname>xrpl::detail::supportedAmendments</qualifiedname>
+        <briefdescription>
+<para>Amendments that this server supports and the default voting behavior. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Amendments that this server supports.</para>
+<para>Whether they are enabled depends on the Rules defined in the validated ledger </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="319" column="1" bodyfile="src/libxrpl/protocol/Feature.cpp" bodystart="343" bodyend="346" declfile="include/xrpl/protocol/Feature.h" declline="319" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacexrpl_1_1detail_1a3d9ddb8a3ecdca22abb1b8e20ee4bb80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::detail::numDownVotedAmendments</definition>
+        <argsstring>()</argsstring>
+        <name>numDownVotedAmendments</name>
+        <qualifiedname>xrpl::detail::numDownVotedAmendments</qualifiedname>
+        <briefdescription>
+<para>Amendments that this server won&apos;t vote for by default. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is only used in unit tests. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="327" column="1" bodyfile="src/libxrpl/protocol/Feature.cpp" bodystart="352" bodyend="355" declfile="include/xrpl/protocol/Feature.h" declline="327" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacexrpl_1_1detail_1aacbb2b39b64e0610f24a83812105e005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::detail::numUpVotedAmendments</definition>
+        <argsstring>()</argsstring>
+        <name>numUpVotedAmendments</name>
+        <qualifiedname>xrpl::detail::numUpVotedAmendments</qualifiedname>
+        <briefdescription>
+<para>Amendments that this server will vote for by default. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is only used in unit tests. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="335" column="1" bodyfile="src/libxrpl/protocol/Feature.cpp" bodystart="361" bodyend="364" declfile="include/xrpl/protocol/Feature.h" declline="335" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacexrpl_1_1detail_1a76e5d4ff6a9f457ae72487721159f8b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>STAmount</type>
+        <definition>STAmount xrpl::detail::asAmount</definition>
+        <argsstring>(Rate const &amp;rate)</argsstring>
+        <name>asAmount</name>
+        <qualifiedname>xrpl::detail::asAmount</qualifiedname>
+        <param>
+          <type><ref refid="structxrpl_1_1Rate" kindref="compound">Rate</ref> const &amp;</type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/Rate2.cpp" line="17" column="1" bodyfile="src/libxrpl/protocol/Rate2.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/basics/base_uint.h" line="37" column="1"/>
+  </compounddef>
+</doxygen>

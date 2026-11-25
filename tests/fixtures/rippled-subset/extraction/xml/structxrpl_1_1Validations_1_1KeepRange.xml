@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1Validations_1_1KeepRange" kind="struct" language="C++" prot="private">
+    <compoundname>xrpl::Validations::KeepRange</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxrpl_1_1Validations_1_1KeepRange_1a0372348578c4f0be02bf02b9271c3594" prot="public" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref></type>
+        <definition>Seq xrpl::Validations&lt; Adaptor &gt;::KeepRange::low</definition>
+        <argsstring></argsstring>
+        <name>low</name>
+        <qualifiedname>xrpl::Validations::KeepRange::low</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="341" column="13" bodyfile="include/xrpl/consensus/Validations.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1Validations_1_1KeepRange_1aab23ca88ee7990e66dbeb0132ee1ceb4" prot="public" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1Validations_1ade93e4195157977552f958900acd5e72" kindref="member">Seq</ref></type>
+        <definition>Seq xrpl::Validations&lt; Adaptor &gt;::KeepRange::high</definition>
+        <argsstring></argsstring>
+        <name>high</name>
+        <qualifiedname>xrpl::Validations::KeepRange::high</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="342" column="13" bodyfile="include/xrpl/consensus/Validations.h" bodystart="342" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/consensus/Validations.h" line="339" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="340" bodyend="343"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1Validations_1_1KeepRange_1aab23ca88ee7990e66dbeb0132ee1ceb4" prot="public" virt="non-virtual"><scope>xrpl::Validations::KeepRange</scope><name>high</name></member>
+      <member refid="structxrpl_1_1Validations_1_1KeepRange_1a0372348578c4f0be02bf02b9271c3594" prot="public" virt="non-virtual"><scope>xrpl::Validations::KeepRange</scope><name>low</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

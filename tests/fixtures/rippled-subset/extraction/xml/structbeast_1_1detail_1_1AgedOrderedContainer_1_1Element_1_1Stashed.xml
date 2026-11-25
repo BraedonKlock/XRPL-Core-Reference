@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1_1Stashed" kind="struct" language="C++" prot="public">
+    <compoundname>beast::detail::AgedOrderedContainer::Element::Stashed</compoundname>
+    <includes local="no">xrpl/beast/container/detail/aged_ordered_container.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1_1Stashed_1ad91f620ab31065092755efc655c1d4a0" prot="public" static="no">
+        <type><ref refid="classbeast_1_1detail_1_1AgedOrderedContainer_1a6ec13884893ba1dba24a69f699f674f3" kindref="member">AgedOrderedContainer::value_type</ref></type>
+        <definition>using beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::Element::Stashed::value_type = AgedOrderedContainer::value_type</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::Element::Stashed::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="103" column="13" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1_1Stashed_1af57cd314ea6cf85ed47360c03b43f1e3" prot="public" static="no">
+        <type><ref refid="classbeast_1_1detail_1_1AgedOrderedContainer_1a6a89b884733e79217cd3be2eb0279df0" kindref="member">AgedOrderedContainer::time_point</ref></type>
+        <definition>using beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::Element::Stashed::time_point = AgedOrderedContainer::time_point</definition>
+        <argsstring></argsstring>
+        <name>time_point</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::Element::Stashed::time_point</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="104" column="13" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1_1Stashed_1af75911a6f342416f1625ebf5d355aa06" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::Element::Stashed::Stashed</definition>
+        <argsstring>()=default</argsstring>
+        <name>Stashed</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::Element::Stashed::Stashed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="101" column="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="99" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="100" bodyend="105"/>
+    <listofallmembers>
+      <member refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1_1Stashed_1af75911a6f342416f1625ebf5d355aa06" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::Element::Stashed</scope><name>Stashed</name></member>
+      <member refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1_1Stashed_1af57cd314ea6cf85ed47360c03b43f1e3" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::Element::Stashed</scope><name>time_point</name></member>
+      <member refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1_1Stashed_1ad91f620ab31065092755efc655c1d4a0" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::Element::Stashed</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

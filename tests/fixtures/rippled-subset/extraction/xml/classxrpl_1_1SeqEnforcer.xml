@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1SeqEnforcer" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::SeqEnforcer</compoundname>
+    <includes local="no">xrpl/consensus/Validations.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class Seq</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classxrpl_1_1SeqEnforcer_1a10f7c0ba6924ab87e21b9392b7abd5b3" prot="private" static="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>using xrpl::SeqEnforcer&lt; Seq &gt;::time_point = std::chrono::steady_clock::time_point</definition>
+        <argsstring></argsstring>
+        <name>time_point</name>
+        <qualifiedname>xrpl::SeqEnforcer::time_point</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="96" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1SeqEnforcer_1a26c226631b46c69256f05fba9b14cda3" prot="private" static="no" mutable="no">
+        <type>Seq</type>
+        <definition>Seq xrpl::SeqEnforcer&lt; Seq &gt;::seq_</definition>
+        <argsstring></argsstring>
+        <name>seq_</name>
+        <qualifiedname>xrpl::SeqEnforcer::seq_</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="97" column="9" bodyfile="include/xrpl/consensus/Validations.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SeqEnforcer_1ad9c683dbd63f3e628a33aee060ca8efb" prot="private" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1SeqEnforcer_1a10f7c0ba6924ab87e21b9392b7abd5b3" kindref="member">time_point</ref></type>
+        <definition>time_point xrpl::SeqEnforcer&lt; Seq &gt;::when_</definition>
+        <argsstring></argsstring>
+        <name>when_</name>
+        <qualifiedname>xrpl::SeqEnforcer::when_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="98" column="16" bodyfile="include/xrpl/consensus/Validations.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1SeqEnforcer_1a3bf0ab40740a81a88ce1c92ebd439eea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SeqEnforcer&lt; Seq &gt;::operator()</definition>
+        <argsstring>(time_point now, Seq s, ValidationParms const &amp;p)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>xrpl::SeqEnforcer::operator()</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SeqEnforcer_1a10f7c0ba6924ab87e21b9392b7abd5b3" kindref="member">time_point</ref></type>
+          <declname>now</declname>
+        </param>
+        <param>
+          <type>Seq</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="structxrpl_1_1ValidationParms" kindref="compound">ValidationParms</ref> const &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Try advancing the largest observed validation ledger sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Try setting the largest validation sequence observed, but return false if it violates the invariant that a validation must be larger than all unexpired validation sequence numbers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>now</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current time </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number we want to validate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Validation parameters</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether the validation satisfies the invariant </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="115" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="115" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SeqEnforcer_1ab86f31bfd4afce3db73ae8f4addec61e" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Seq</type>
+        <definition>Seq xrpl::SeqEnforcer&lt; Seq &gt;::largest</definition>
+        <argsstring>() const</argsstring>
+        <name>largest</name>
+        <qualifiedname>xrpl::SeqEnforcer::largest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/consensus/Validations.h" line="127" column="5" bodyfile="include/xrpl/consensus/Validations.h" bodystart="127" bodyend="130"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Enforce validation increasing sequence requirement. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Helper class for enforcing that a validation must be larger than all unexpired validation sequence numbers previously issued by the validator tracked by the instance of this class. </para>
+    </detaileddescription>
+    <location file="include/xrpl/consensus/Validations.h" line="94" column="1" bodyfile="include/xrpl/consensus/Validations.h" bodystart="95" bodyend="131"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1SeqEnforcer_1ab86f31bfd4afce3db73ae8f4addec61e" prot="public" virt="non-virtual"><scope>xrpl::SeqEnforcer</scope><name>largest</name></member>
+      <member refid="classxrpl_1_1SeqEnforcer_1a3bf0ab40740a81a88ce1c92ebd439eea" prot="public" virt="non-virtual"><scope>xrpl::SeqEnforcer</scope><name>operator()</name></member>
+      <member refid="classxrpl_1_1SeqEnforcer_1a26c226631b46c69256f05fba9b14cda3" prot="private" virt="non-virtual"><scope>xrpl::SeqEnforcer</scope><name>seq_</name></member>
+      <member refid="classxrpl_1_1SeqEnforcer_1a10f7c0ba6924ab87e21b9392b7abd5b3" prot="private" virt="non-virtual"><scope>xrpl::SeqEnforcer</scope><name>time_point</name></member>
+      <member refid="classxrpl_1_1SeqEnforcer_1ad9c683dbd63f3e628a33aee060ca8efb" prot="private" virt="non-virtual"><scope>xrpl::SeqEnforcer</scope><name>when_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

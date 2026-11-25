@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1DigestAwareReadView" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>xrpl::DigestAwareReadView</compoundname>
+    <basecompoundref refid="classxrpl_1_1ReadView" prot="public" virt="non-virtual">xrpl::ReadView</basecompoundref>
+    <includes local="no">xrpl/ledger/ReadView.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classxrpl_1_1DigestAwareReadView_1aa73951ec8d9b4f267aa7f6be2ab3d9ce" prot="public" static="no">
+        <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref></type>
+        <definition>using xrpl::DigestAwareReadView::DigestType = UInt256</definition>
+        <argsstring></argsstring>
+        <name>DigestType</name>
+        <qualifiedname>xrpl::DigestAwareReadView::DigestType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="281" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1DigestAwareReadView_1aae5475b0f2b248cb77324ebdc8bc6da1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::DigestAwareReadView::DigestAwareReadView</definition>
+        <argsstring>()=default</argsstring>
+        <name>DigestAwareReadView</name>
+        <qualifiedname>xrpl::DigestAwareReadView::DigestAwareReadView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="283" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1DigestAwareReadView_1a7cbfc4bd91199fad7b81f9e406e1cc6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::DigestAwareReadView::DigestAwareReadView</definition>
+        <argsstring>(DigestAwareReadView const &amp;)=default</argsstring>
+        <name>DigestAwareReadView</name>
+        <qualifiedname>xrpl::DigestAwareReadView::DigestAwareReadView</qualifiedname>
+        <param>
+          <type>DigestAwareReadView const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="284" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1DigestAwareReadView_1a91a6976419246ea4a8ece70abbf1d2f8" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::optional&lt; <ref refid="classxrpl_1_1DigestAwareReadView_1aa73951ec8d9b4f267aa7f6be2ab3d9ce" kindref="member">DigestType</ref> &gt;</type>
+        <definition>virtual std::optional&lt; DigestType &gt; xrpl::DigestAwareReadView::digest</definition>
+        <argsstring>(key_type const &amp;key) const =0</argsstring>
+        <name>digest</name>
+        <qualifiedname>xrpl::DigestAwareReadView::digest</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ReadView_1a6722acde83b5ecd55013e18b3616c6e1" kindref="member">key_type</ref> const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Return the digest associated with the key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::nullopt if the item does not exist. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="292" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classxrpl_1_1ReadView" kindref="compound">ReadView</ref> that associates keys with digests. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>xrpl::DigestAwareReadView</label>
+        <link refid="classxrpl_1_1DigestAwareReadView"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xrpl::ReadView</label>
+        <link refid="classxrpl_1_1ReadView"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>detail::ReadViewFwdRange&lt; SLE::const_pointer &gt;</label>
+      </node>
+      <node id="6">
+        <label>detail::ReadViewFwdRange&lt; TxType &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::DigestAwareReadView</label>
+        <link refid="classxrpl_1_1DigestAwareReadView"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xrpl::ReadView</label>
+        <link refid="classxrpl_1_1ReadView"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>sles</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>txs</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>xrpl::ReadView::SlesType</label>
+        <link refid="structxrpl_1_1ReadView_1_1SlesType"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>xrpl::ReadView::TxsType</label>
+        <link refid="structxrpl_1_1ReadView_1_1TxsType"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/ledger/ReadView.h" line="278" column="1" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="279" bodyend="293"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1ReadView_1aeecb3c46312a438c6d3782d546a3f7f0" prot="public" virt="virtual"><scope>xrpl::DigestAwareReadView</scope><name>balanceHookIOU</name></member>
+      <member refid="classxrpl_1_1ReadView_1a2d9a1a19f2b5b3ac7b20c4a245a85261" prot="public" virt="virtual"><scope>xrpl::DigestAwareReadView</scope><name>balanceHookMPT</name></member>
+      <member refid="classxrpl_1_1ReadView_1ae1f6fec00e04553a99b817f6502b6311" prot="public" virt="virtual"><scope>xrpl::DigestAwareReadView</scope><name>balanceHookSelfIssueMPT</name></member>
+      <member refid="classxrpl_1_1DigestAwareReadView_1a91a6976419246ea4a8ece70abbf1d2f8" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>digest</name></member>
+      <member refid="classxrpl_1_1DigestAwareReadView_1aae5475b0f2b248cb77324ebdc8bc6da1" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>DigestAwareReadView</name></member>
+      <member refid="classxrpl_1_1DigestAwareReadView_1a7cbfc4bd91199fad7b81f9e406e1cc6b" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>DigestAwareReadView</name></member>
+      <member refid="classxrpl_1_1DigestAwareReadView_1aa73951ec8d9b4f267aa7f6be2ab3d9ce" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>DigestType</name></member>
+      <member refid="classxrpl_1_1ReadView_1a2a0264a7f5664d8673f2d3cceda1b120" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>exists</name></member>
+      <member refid="classxrpl_1_1ReadView_1a20d7f51b59533a515ae27f5aee73f656" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>fees</name></member>
+      <member refid="classxrpl_1_1ReadView_1a4e362d6b90af8923eb355796ea55a238" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>header</name></member>
+      <member refid="classxrpl_1_1ReadView_1a6722acde83b5ecd55013e18b3616c6e1" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>key_type</name></member>
+      <member refid="classxrpl_1_1ReadView_1aeca9ff90207765d22e6bcb4bbc9dc698" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>mapped_type</name></member>
+      <member refid="classxrpl_1_1ReadView_1a83cb10826bca857750014cabeb2b6e5f" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>open</name></member>
+      <member refid="classxrpl_1_1ReadView_1a01b363feb917dd58603630b9c70799aa" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1ReadView_1a59f9b0a60fbf2e058ed4463fd809d372" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1ReadView_1a48ba2df50830a7172dbb2c85830c6023" prot="public" virt="virtual"><scope>xrpl::DigestAwareReadView</scope><name>ownerCountHook</name></member>
+      <member refid="classxrpl_1_1ReadView_1a0796f54cc244f05d8d97e0cbd9f53efe" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>parentCloseTime</name></member>
+      <member refid="classxrpl_1_1ReadView_1a34a212795c00cc27743dc4f1e6f42b05" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>read</name></member>
+      <member refid="classxrpl_1_1ReadView_1a025a8816966f80cc1ef7e72a8f854bfb" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>ReadView</name></member>
+      <member refid="classxrpl_1_1ReadView_1a429424e14538bee6ed4f96990b5a0fa5" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>ReadView</name></member>
+      <member refid="classxrpl_1_1ReadView_1a49aa650289af2c98585d3a55201ba76d" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>ReadView</name></member>
+      <member refid="classxrpl_1_1ReadView_1a0733c550dedfa5cf52eec24bdfb21de4" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>rules</name></member>
+      <member refid="classxrpl_1_1ReadView_1a8e369714ce4db1696fbc454f01c8cc3d" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>seq</name></member>
+      <member refid="classxrpl_1_1ReadView_1a8ca83a34e95a8dc05010601800df8195" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>sles</name></member>
+      <member refid="classxrpl_1_1ReadView_1ac786c670b86ae6598870ace3fca75b5a" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>slesBegin</name></member>
+      <member refid="classxrpl_1_1ReadView_1ade3b88b054a5fd44f269692e252e2827" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>slesEnd</name></member>
+      <member refid="classxrpl_1_1ReadView_1af63e841f66e6e7b8d173964aabc0340d" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>slesUpperBound</name></member>
+      <member refid="classxrpl_1_1ReadView_1acdb1bbc006dc50ae95d5d5925a2b76ce" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>succ</name></member>
+      <member refid="classxrpl_1_1ReadView_1a6988b056cf20deaba5189a0501abcb8d" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>txExists</name></member>
+      <member refid="classxrpl_1_1ReadView_1ab6b1bbc97e6cbf18246dfa2452d8e285" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>txRead</name></member>
+      <member refid="classxrpl_1_1ReadView_1a2643bfdd150165cf226ec00458e4ca51" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>txs</name></member>
+      <member refid="classxrpl_1_1ReadView_1a2750f745ca322900e1bd2212b55a5942" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>txsBegin</name></member>
+      <member refid="classxrpl_1_1ReadView_1a42e47c573352e787ccbb946d4a7ae133" prot="public" virt="pure-virtual"><scope>xrpl::DigestAwareReadView</scope><name>txsEnd</name></member>
+      <member refid="classxrpl_1_1ReadView_1acdf20e7573ec1f6fd1729b3471c7d381" prot="public" virt="non-virtual"><scope>xrpl::DigestAwareReadView</scope><name>TxType</name></member>
+      <member refid="classxrpl_1_1ReadView_1a0a2324f4d1fd7633de80db5a6a09f1c1" prot="public" virt="virtual"><scope>xrpl::DigestAwareReadView</scope><name>~ReadView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

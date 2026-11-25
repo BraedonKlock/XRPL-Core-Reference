@@ -1,0 +1,25 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, var(--content-max-width));
+  gap: var(--space-6);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.contents {
+  display: none;
+}
+
+@media (min-width: 90rem) {
+  .withContents {
+    grid-template-columns: minmax(0, var(--content-max-width)) 13rem;
+  }
+
+  .contents {
+    display: block;
+  }
+}

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="TxFormats_8h" kind="file" language="C++">
+    <compoundname>TxFormats.h</compoundname>
+    <includes local="no">xrpl/protocol/KnownFormats.h</includes>
+    <includes local="no">xrpl/protocol/SOTemplate.h</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">xrpl/protocol/detail/transactions.macro</includes>
+    <includedby refid="STTx_8h" local="no">include/xrpl/protocol/STTx.h</includedby>
+    <includedby refid="STInteger_8cpp" local="no">src/libxrpl/protocol/STInteger.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/xrpl/protocol/TxFormats.h</label>
+        <link refid="TxFormats_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>xrpl/protocol/KnownFormats.h</label>
+      </node>
+      <node id="3">
+        <label>xrpl/protocol/SOTemplate.h</label>
+      </node>
+      <node id="6">
+        <label>xrpl/protocol/detail/transactions.macro</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classxrpl_1_1TxFormats" prot="public">xrpl::TxFormats</innerclass>
+    <innernamespace refid="namespacexrpl">xrpl</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="TxFormats_8h_1a3cdf3a1e7def345111f094839eb23aa9" prot="public" static="no">
+        <name>TRANSACTION</name>
+        <param><defname>tag</defname></param>
+        <param><defname>value</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>tag = value,</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TxFormats.h" line="50" column="9" bodyfile="include/xrpl/protocol/TxFormats.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/protocol/TxFormats.h"/>
+  </compounddef>
+</doxygen>

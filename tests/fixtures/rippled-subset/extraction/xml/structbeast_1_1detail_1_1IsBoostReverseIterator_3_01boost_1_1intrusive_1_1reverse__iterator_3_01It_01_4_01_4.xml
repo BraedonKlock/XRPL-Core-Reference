@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structbeast_1_1detail_1_1IsBoostReverseIterator_3_01boost_1_1intrusive_1_1reverse__iterator_3_01It_01_4_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>beast::detail::IsBoostReverseIterator&lt; boost::intrusive::reverse_iterator&lt; It &gt; &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::false_type</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::true_type</basecompoundref>
+    <includes local="no">xrpl/beast/container/detail/aged_ordered_container.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class It</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structbeast_1_1detail_1_1IsBoostReverseIterator_3_01boost_1_1intrusive_1_1reverse__iterator_3_01It_01_4_01_4_1a291f529dccce1ff91a4d54920bf599fe" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>beast::detail::IsBoostReverseIterator&lt; boost::intrusive::reverse_iterator&lt; It &gt; &gt;::IsBoostReverseIterator</definition>
+        <argsstring>()=default</argsstring>
+        <name>IsBoostReverseIterator</name>
+        <qualifiedname>beast::detail::IsBoostReverseIterator&lt; boost::intrusive::reverse_iterator&lt; It &gt; &gt;::IsBoostReverseIterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="39" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>beast::detail::IsBoostReverseIterator&lt; boost::intrusive::reverse_iterator&lt; It &gt; &gt;</label>
+        <link refid="structbeast_1_1detail_1_1IsBoostReverseIterator_3_01boost_1_1intrusive_1_1reverse__iterator_3_01It_01_4_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::false_type</label>
+      </node>
+      <node id="3">
+        <label>std::true_type</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>beast::detail::IsBoostReverseIterator&lt; boost::intrusive::reverse_iterator&lt; It &gt; &gt;</label>
+        <link refid="structbeast_1_1detail_1_1IsBoostReverseIterator_3_01boost_1_1intrusive_1_1reverse__iterator_3_01It_01_4_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::false_type</label>
+      </node>
+      <node id="3">
+        <label>std::true_type</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="37" column="1" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="38" bodyend="40"/>
+    <listofallmembers>
+      <member refid="structbeast_1_1detail_1_1IsBoostReverseIterator_3_01boost_1_1intrusive_1_1reverse__iterator_3_01It_01_4_01_4_1a291f529dccce1ff91a4d54920bf599fe" prot="public" virt="non-virtual"><scope>beast::detail::IsBoostReverseIterator&lt; boost::intrusive::reverse_iterator&lt; It &gt; &gt;</scope><name>IsBoostReverseIterator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="Feature_8h" kind="file" language="C++">
+    <compoundname>Feature.h</compoundname>
+    <includes refid="base__uint_8h" local="no">xrpl/basics/base_uint.h</includes>
+    <includes local="no">xrpl/beast/utility/instrumentation.h</includes>
+    <includes local="no">boost/container/flat_map.hpp</includes>
+    <includes local="no">bitset</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">map</includes>
+    <includes local="no">optional</includes>
+    <includes local="no">string</includes>
+    <includes local="no">xrpl/protocol/detail/features.macro</includes>
+    <includedby refid="Feature_8cpp" local="no">src/libxrpl/protocol/Feature.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/xrpl/protocol/Feature.h</label>
+        <link refid="Feature_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>bitset</label>
+      </node>
+      <node id="3">
+        <label>boost/container/flat_map.hpp</label>
+      </node>
+      <node id="5">
+        <label>cstddef</label>
+      </node>
+      <node id="6">
+        <label>map</label>
+      </node>
+      <node id="7">
+        <label>optional</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>xrpl/beast/utility/instrumentation.h</label>
+      </node>
+      <node id="9">
+        <label>xrpl/protocol/detail/features.macro</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classxrpl_1_1FeatureBitset" prot="public">xrpl::FeatureBitset</innerclass>
+    <innernamespace refid="namespacexrpl">xrpl</innernamespace>
+    <innernamespace refid="namespacexrpl_1_1detail">xrpl::detail</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="Feature_8h_1acf9e1dd519de25bd29c07ea7243401c1" prot="public" static="no">
+        <name>XRPL_FEATURE</name>
+        <param><defname>name</defname></param>
+        <param><defname>supported</defname></param>
+        <param><defname>vote</defname></param>
+        <initializer>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="133" column="9" bodyfile="include/xrpl/protocol/Feature.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="Feature_8h_1a9c32b3c3595afc031ae0b98f9d4b9876" prot="public" static="no">
+        <name>XRPL_FIX</name>
+        <param><defname>name</defname></param>
+        <param><defname>supported</defname></param>
+        <param><defname>vote</defname></param>
+        <initializer>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="134" column="9" bodyfile="include/xrpl/protocol/Feature.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="Feature_8h_1adcff49e47ce7acf2379a36fd529f82fb" prot="public" static="no">
+        <name>XRPL_RETIRE_FEATURE</name>
+        <param><defname>name</defname></param>
+        <initializer>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="135" column="9" bodyfile="include/xrpl/protocol/Feature.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="Feature_8h_1a6f00ce52f2646420868a9872c85ca494" prot="public" static="no">
+        <name>XRPL_RETIRE_FIX</name>
+        <param><defname>name</defname></param>
+        <initializer>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="136" column="9" bodyfile="include/xrpl/protocol/Feature.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="Feature_8h_1a68ff5adbf1406470caee2cd846c64f53" prot="public" static="no">
+        <name>XRPL_FEATURE</name>
+        <param><defname>name</defname></param>
+        <param><defname>supported</defname></param>
+        <param><defname>vote</defname></param>
+        <initializer>extern UInt256 const feature##name;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="401" column="9" bodyfile="include/xrpl/protocol/Feature.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="Feature_8h_1a8a8960fb78ddcf3c923e29e8f1cd7f38" prot="public" static="no">
+        <name>XRPL_FIX</name>
+        <param><defname>name</defname></param>
+        <param><defname>supported</defname></param>
+        <param><defname>vote</defname></param>
+        <initializer>extern UInt256 const fix##name;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="402" column="9" bodyfile="include/xrpl/protocol/Feature.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="Feature_8h_1aa9c9b51ffbd10732ecd16b4347858277" prot="public" static="no">
+        <name>XRPL_RETIRE_FEATURE</name>
+        <param><defname>name</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="403" column="9" bodyfile="include/xrpl/protocol/Feature.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="Feature_8h_1a0e7f28de4c594f7e046c72cb63f28a4a" prot="public" static="no">
+        <name>XRPL_RETIRE_FIX</name>
+        <param><defname>name</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="404" column="9" bodyfile="include/xrpl/protocol/Feature.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/protocol/Feature.h"/>
+  </compounddef>
+</doxygen>

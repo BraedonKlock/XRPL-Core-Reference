@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1ScopeUnlock" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::ScopeUnlock</compoundname>
+    <includes local="no">xrpl/basics/scope.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class Mutex</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1ScopeUnlock_1aa8f7f65e706971b9e5cac640449e3acb" prot="private" static="no" mutable="no">
+        <type>std::unique_lock&lt; Mutex &gt; *</type>
+        <definition>std::unique_lock&lt;Mutex&gt;* xrpl::ScopeUnlock&lt; Mutex &gt;::plock_</definition>
+        <argsstring></argsstring>
+        <name>plock_</name>
+        <qualifiedname>xrpl::ScopeUnlock::plock_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="198" column="22" bodyfile="include/xrpl/basics/scope.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1ScopeUnlock_1aff170e76cb9d81278c333bb73b3fcaf0" prot="public" static="no" const="no" explicit="yes" inline="yes" noexcept="yes" noexceptexpression="true" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ScopeUnlock&lt; Mutex &gt;::ScopeUnlock</definition>
+        <argsstring>(std::unique_lock&lt; Mutex &gt; &amp;lock)</argsstring>
+        <name>ScopeUnlock</name>
+        <qualifiedname>xrpl::ScopeUnlock::ScopeUnlock</qualifiedname>
+        <param>
+          <type>std::unique_lock&lt; Mutex &gt; &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="201" column="14" bodyfile="include/xrpl/basics/scope.h" bodystart="201" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeUnlock_1ab987203b01955f796b60676d6ad2a29e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ScopeUnlock&lt; Mutex &gt;::ScopeUnlock</definition>
+        <argsstring>(ScopeUnlock const &amp;)=delete</argsstring>
+        <name>ScopeUnlock</name>
+        <qualifiedname>xrpl::ScopeUnlock::ScopeUnlock</qualifiedname>
+        <param>
+          <type>ScopeUnlock const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="208" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeUnlock_1a888e41b30935315c2caeb57c56592e04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1ScopeUnlock_1aff170e76cb9d81278c333bb73b3fcaf0" kindref="member">ScopeUnlock</ref> &amp;</type>
+        <definition>ScopeUnlock &amp; xrpl::ScopeUnlock&lt; Mutex &gt;::operator=</definition>
+        <argsstring>(ScopeUnlock const &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::ScopeUnlock::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ScopeUnlock_1aff170e76cb9d81278c333bb73b3fcaf0" kindref="member">ScopeUnlock</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="210" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1ScopeUnlock_1a601eee195f96b93a56145bbb1af0975e" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" noexceptexpression="true" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ScopeUnlock&lt; Mutex &gt;::~ScopeUnlock</definition>
+        <argsstring>()</argsstring>
+        <name>~ScopeUnlock</name>
+        <qualifiedname>xrpl::ScopeUnlock::~ScopeUnlock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/scope.h" line="212" column="5" bodyfile="include/xrpl/basics/scope.h" bodystart="212" bodyend="215"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Automatically unlocks and re-locks a unique_lock object. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the reverse of a std::unique_lock object - instead of locking the mutex for the lifetime of this object, it unlocks it.</para>
+<para>Make sure you don&apos;t try to unlock mutexes that aren&apos;t actually locked!</para>
+<para>This is essentially a less-versatile boost::reverse_lock.</para>
+<para>e.g. <programlisting><codeline><highlight class="normal">std::mutex<sp/>mut;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_lock<sp/>myScopedLock{mut};</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>mut<sp/>is<sp/>now<sp/>locked</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...<sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>some<sp/>stuff<sp/>with<sp/>it<sp/><ref refid="namespacexrpl_1_1jss_1a777e5d66ef9703d23efa767aa32275b7" kindref="member">locked</ref><sp/>..</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(xyz)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>some<sp/>stuff<sp/>with<sp/>it<sp/><ref refid="namespacexrpl_1_1jss_1a777e5d66ef9703d23efa767aa32275b7" kindref="member">locked</ref><sp/>..</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scope_unlock<sp/>unlocker{myScopedLock};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>mut<sp/>is<sp/>now<sp/>unlocked<sp/>for<sp/>the<sp/>remainder<sp/>of<sp/>this<sp/>block,</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>re-locked<sp/>at<sp/>the<sp/>end.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...do<sp/>some<sp/>stuff<sp/>with<sp/>it<sp/>unlocked<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/></highlight><highlight class="comment">//<sp/>mut<sp/>gets<sp/>locked<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>mut<sp/>gets<sp/>unlocked<sp/>here</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::unique_lock&lt; Mutex &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::ScopeUnlock&lt; Mutex &gt;</label>
+        <link refid="classxrpl_1_1ScopeUnlock"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>plock_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/basics/scope.h" line="196" column="1" bodyfile="include/xrpl/basics/scope.h" bodystart="197" bodyend="216"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1ScopeUnlock_1a888e41b30935315c2caeb57c56592e04" prot="public" virt="non-virtual"><scope>xrpl::ScopeUnlock</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1ScopeUnlock_1aa8f7f65e706971b9e5cac640449e3acb" prot="private" virt="non-virtual"><scope>xrpl::ScopeUnlock</scope><name>plock_</name></member>
+      <member refid="classxrpl_1_1ScopeUnlock_1aff170e76cb9d81278c333bb73b3fcaf0" prot="public" virt="non-virtual"><scope>xrpl::ScopeUnlock</scope><name>ScopeUnlock</name></member>
+      <member refid="classxrpl_1_1ScopeUnlock_1ab987203b01955f796b60676d6ad2a29e" prot="public" virt="non-virtual"><scope>xrpl::ScopeUnlock</scope><name>ScopeUnlock</name></member>
+      <member refid="classxrpl_1_1ScopeUnlock_1a601eee195f96b93a56145bbb1af0975e" prot="public" virt="non-virtual"><scope>xrpl::ScopeUnlock</scope><name>~ScopeUnlock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

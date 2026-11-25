@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="STTx_8h" kind="file" language="C++">
+    <compoundname>STTx.h</compoundname>
+    <includes local="no">xrpl/basics/Blob.h</includes>
+    <includes local="no">xrpl/basics/CountedObject.h</includes>
+    <includes refid="base__uint_8h" local="no">xrpl/basics/base_uint.h</includes>
+    <includes local="no">xrpl/json/json_value.h</includes>
+    <includes local="no">xrpl/protocol/AccountID.h</includes>
+    <includes local="no">xrpl/protocol/HashPrefix.h</includes>
+    <includes local="no">xrpl/protocol/PublicKey.h</includes>
+    <includes local="no">xrpl/protocol/Rules.h</includes>
+    <includes refid="SField_8h" local="no">xrpl/protocol/SField.h</includes>
+    <includes local="no">xrpl/protocol/STBase.h</includes>
+    <includes local="no">xrpl/protocol/STObject.h</includes>
+    <includes local="no">xrpl/protocol/SecretKey.h</includes>
+    <includes local="no">xrpl/protocol/SeqProxy.h</includes>
+    <includes local="no">xrpl/protocol/Serializer.h</includes>
+    <includes local="no">xrpl/protocol/Sign.h</includes>
+    <includes refid="TxFormats_8h" local="no">xrpl/protocol/TxFormats.h</includes>
+    <includes local="no">boost/container/flat_set.hpp</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">expected</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">optional</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="ApplyView_8h" local="no">include/xrpl/ledger/ApplyView.h</includedby>
+    <includedby refid="ReadView_8h" local="no">include/xrpl/ledger/ReadView.h</includedby>
+    <includedby refid="ApplyContext_8h" local="no">include/xrpl/tx/ApplyContext.h</includedby>
+    <includedby refid="ApplyContext_8cpp" local="no">src/libxrpl/tx/ApplyContext.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/xrpl/protocol/STTx.h</label>
+        <link refid="STTx_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>boost/container/flat_set.hpp</label>
+      </node>
+      <node id="16">
+        <label>cstddef</label>
+      </node>
+      <node id="17">
+        <label>cstdint</label>
+      </node>
+      <node id="18">
+        <label>expected</label>
+      </node>
+      <node id="19">
+        <label>functional</label>
+      </node>
+      <node id="20">
+        <label>memory</label>
+      </node>
+      <node id="21">
+        <label>optional</label>
+      </node>
+      <node id="22">
+        <label>string</label>
+      </node>
+      <node id="23">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>xrpl/basics/Blob.h</label>
+      </node>
+      <node id="3">
+        <label>xrpl/basics/CountedObject.h</label>
+      </node>
+      <node id="4">
+        <label>xrpl/json/json_value.h</label>
+      </node>
+      <node id="5">
+        <label>xrpl/protocol/AccountID.h</label>
+      </node>
+      <node id="6">
+        <label>xrpl/protocol/HashPrefix.h</label>
+      </node>
+      <node id="7">
+        <label>xrpl/protocol/PublicKey.h</label>
+      </node>
+      <node id="8">
+        <label>xrpl/protocol/Rules.h</label>
+      </node>
+      <node id="9">
+        <label>xrpl/protocol/STBase.h</label>
+      </node>
+      <node id="10">
+        <label>xrpl/protocol/STObject.h</label>
+      </node>
+      <node id="11">
+        <label>xrpl/protocol/SecretKey.h</label>
+      </node>
+      <node id="12">
+        <label>xrpl/protocol/SeqProxy.h</label>
+      </node>
+      <node id="13">
+        <label>xrpl/protocol/Serializer.h</label>
+      </node>
+      <node id="14">
+        <label>xrpl/protocol/Sign.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classxrpl_1_1STTx" prot="public">xrpl::STTx</innerclass>
+    <innernamespace refid="namespacexrpl">xrpl</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/protocol/STTx.h"/>
+  </compounddef>
+</doxygen>

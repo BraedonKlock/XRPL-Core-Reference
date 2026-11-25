@@ -1,0 +1,1092 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1SField" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::SField</compoundname>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STInteger&lt; std::uint8_t &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STInteger&lt; std::uint16_t &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STInteger&lt; std::uint32_t &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STInteger&lt; std::uint64_t &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STBitString&lt; 96 &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STBitString&lt; 128 &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STBitString&lt; 160 &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STBitString&lt; 192 &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STBitString&lt; 256 &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STBitString&lt; 384 &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STBitString&lt; 512 &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STInteger&lt; std::int32_t &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STInteger&lt; std::int64_t &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STAccount &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STAmount &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STIssue &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STCurrency &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STNumber &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STBlob &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; STVector256 &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structxrpl_1_1TypedField" prot="public" virt="non-virtual">xrpl::TypedField&lt; T &gt;</derivedcompoundref>
+    <includes local="no">xrpl/protocol/SField.h</includes>
+    <innerclass refid="structxrpl_1_1SField_1_1PrivateAccessTagT" prot="public">xrpl::SField::PrivateAccessTagT</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classxrpl_1_1SField_1aeca7616e54f17ecd56042bf721573843" prot="public" static="no" strong="yes">
+        <type>unsigned char</type>
+        <name>IsSigning</name>
+        <qualifiedname>xrpl::SField::IsSigning</qualifiedname>
+        <enumvalue id="classxrpl_1_1SField_1aeca7616e54f17ecd56042bf721573843abafd7322c6e97d25b6299b5d6fe8920b" prot="public">
+          <name>No</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxrpl_1_1SField_1aeca7616e54f17ecd56042bf721573843a93cba07454f06a4a960172bbd6e2a435" prot="public">
+          <name>Yes</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="148" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="148" bodyend="148"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a8f272ee3b29b60d3d9990c99632042e6" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>auto</type>
+        <definition>auto xrpl::SField::kSmdNever</definition>
+        <argsstring></argsstring>
+        <name>kSmdNever</name>
+        <qualifiedname>xrpl::SField::kSmdNever</qualifiedname>
+        <initializer>= 0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="133" column="27" bodyfile="include/xrpl/protocol/SField.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a1ed18be2b5446dd066871a785675f2b6" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>auto</type>
+        <definition>auto xrpl::SField::kSmdChangeOrig</definition>
+        <argsstring></argsstring>
+        <name>kSmdChangeOrig</name>
+        <qualifiedname>xrpl::SField::kSmdChangeOrig</qualifiedname>
+        <initializer>= 0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="134" column="27" bodyfile="include/xrpl/protocol/SField.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1aaa951044940b2ab0242e90ed3c63d006" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>auto</type>
+        <definition>auto xrpl::SField::kSmdChangeNew</definition>
+        <argsstring></argsstring>
+        <name>kSmdChangeNew</name>
+        <qualifiedname>xrpl::SField::kSmdChangeNew</qualifiedname>
+        <initializer>= 0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="135" column="27" bodyfile="include/xrpl/protocol/SField.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a521918fbb200d0896219e8a610cf5661" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>auto</type>
+        <definition>auto xrpl::SField::kSmdDeleteFinal</definition>
+        <argsstring></argsstring>
+        <name>kSmdDeleteFinal</name>
+        <qualifiedname>xrpl::SField::kSmdDeleteFinal</qualifiedname>
+        <initializer>= 0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="136" column="27" bodyfile="include/xrpl/protocol/SField.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a5ad40fb402fb56c48a38e5ba5b6e16fd" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>auto</type>
+        <definition>auto xrpl::SField::kSmdCreate</definition>
+        <argsstring></argsstring>
+        <name>kSmdCreate</name>
+        <qualifiedname>xrpl::SField::kSmdCreate</qualifiedname>
+        <initializer>= 0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="137" column="27" bodyfile="include/xrpl/protocol/SField.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a7313b6e2e40c00f052c327ca61320fdc" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>auto</type>
+        <definition>auto xrpl::SField::kSmdAlways</definition>
+        <argsstring></argsstring>
+        <name>kSmdAlways</name>
+        <qualifiedname>xrpl::SField::kSmdAlways</qualifiedname>
+        <initializer>= 0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="138" column="27" bodyfile="include/xrpl/protocol/SField.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1af5a33d902f93ae6c8ddb0ec19b91fe32" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>auto</type>
+        <definition>auto xrpl::SField::kSmdBaseTen</definition>
+        <argsstring></argsstring>
+        <name>kSmdBaseTen</name>
+        <qualifiedname>xrpl::SField::kSmdBaseTen</qualifiedname>
+        <initializer>= 0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="139" column="27" bodyfile="include/xrpl/protocol/SField.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1ad7ef97d6a2209a0b8f5af850869dbf40" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>auto</type>
+        <definition>auto xrpl::SField::kSmdPseudoAccount</definition>
+        <argsstring></argsstring>
+        <name>kSmdPseudoAccount</name>
+        <qualifiedname>xrpl::SField::kSmdPseudoAccount</qualifiedname>
+        <initializer>= 0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="140" column="27" bodyfile="include/xrpl/protocol/SField.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a3817bf34c96b8cf22afa2fb1f96024a5" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>auto</type>
+        <definition>auto xrpl::SField::kSmdNeedsAsset</definition>
+        <argsstring></argsstring>
+        <name>kSmdNeedsAsset</name>
+        <qualifiedname>xrpl::SField::kSmdNeedsAsset</qualifiedname>
+        <initializer>= 0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="142" column="27" bodyfile="include/xrpl/protocol/SField.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a9b413989f7aa850cbee732eeec9a8d73" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>auto</type>
+        <definition>auto xrpl::SField::kSmdDefault</definition>
+        <argsstring></argsstring>
+        <name>kSmdDefault</name>
+        <qualifiedname>xrpl::SField::kSmdDefault</qualifiedname>
+        <initializer>                              =
+<ref refid="classxrpl_1_1SField_1a1ed18be2b5446dd066871a785675f2b6" kindref="member">kSmdChangeOrig</ref> | <ref refid="classxrpl_1_1SField_1aaa951044940b2ab0242e90ed3c63d006" kindref="member">kSmdChangeNew</ref> | <ref refid="classxrpl_1_1SField_1a521918fbb200d0896219e8a610cf5661" kindref="member">kSmdDeleteFinal</ref> | <ref refid="classxrpl_1_1SField_1a5ad40fb402fb56c48a38e5ba5b6e16fd" kindref="member">kSmdCreate</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="145" column="27" bodyfile="include/xrpl/protocol/SField.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a4db7a22b8e3d6a0ad1070f047bca5b6b" prot="public" static="yes" mutable="no">
+        <type><ref refid="classxrpl_1_1SField_1aeca7616e54f17ecd56042bf721573843" kindref="member">IsSigning</ref> const</type>
+        <definition>SField::IsSigning const xrpl::SField::kNotSigning</definition>
+        <argsstring></argsstring>
+        <name>kNotSigning</name>
+        <qualifiedname>xrpl::SField::kNotSigning</qualifiedname>
+        <initializer>= <ref refid="classxrpl_1_1SField_1aeca7616e54f17ecd56042bf721573843abafd7322c6e97d25b6299b5d6fe8920b" kindref="member">IsSigning::No</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="149" column="28" bodyfile="include/xrpl/protocol/SField.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a501cfe0932d99f1c389cfaa098ba5310" prot="public" static="no" mutable="no">
+        <type>int const</type>
+        <definition>int const xrpl::SField::fieldCodeMem</definition>
+        <argsstring></argsstring>
+        <name>fieldCodeMem</name>
+        <qualifiedname>xrpl::SField::fieldCodeMem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="151" column="15" bodyfile="include/xrpl/protocol/SField.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1aa6586240eb3f8c27a950f43c5ae6c01f" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacexrpl_1a9a934f459db38bf14dbca9b2adb6f07f" kindref="member">SerializedTypeID</ref> const</type>
+        <definition>SerializedTypeID const xrpl::SField::fieldType</definition>
+        <argsstring></argsstring>
+        <name>fieldType</name>
+        <qualifiedname>xrpl::SField::fieldType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="152" column="28" bodyfile="include/xrpl/protocol/SField.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a10cac9dc08e88c352314fe7fe4fad9fb" prot="public" static="no" mutable="no">
+        <type>int const</type>
+        <definition>int const xrpl::SField::fieldValue</definition>
+        <argsstring></argsstring>
+        <name>fieldValue</name>
+        <qualifiedname>xrpl::SField::fieldValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="153" column="15" bodyfile="include/xrpl/protocol/SField.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a70d13c579cea2b3f0a269139b337d083" prot="public" static="no" mutable="no">
+        <type>std::string const</type>
+        <definition>std::string const xrpl::SField::fieldName</definition>
+        <argsstring></argsstring>
+        <name>fieldName</name>
+        <qualifiedname>xrpl::SField::fieldName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="154" column="23" bodyfile="include/xrpl/protocol/SField.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a6228d998c8abc912ef07ba7f544c1450" prot="public" static="no" mutable="no">
+        <type>int const</type>
+        <definition>int const xrpl::SField::fieldMeta</definition>
+        <argsstring></argsstring>
+        <name>fieldMeta</name>
+        <qualifiedname>xrpl::SField::fieldMeta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="155" column="15" bodyfile="include/xrpl/protocol/SField.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a88c021bba34831a4c76b0c519ee284d8" prot="public" static="no" mutable="no">
+        <type>int const</type>
+        <definition>int const xrpl::SField::fieldNum</definition>
+        <argsstring></argsstring>
+        <name>fieldNum</name>
+        <qualifiedname>xrpl::SField::fieldNum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="156" column="15" bodyfile="include/xrpl/protocol/SField.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1afd10c76433e736e08fcd5bcae185ab67" prot="public" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1SField_1aeca7616e54f17ecd56042bf721573843" kindref="member">IsSigning</ref> const</type>
+        <definition>IsSigning const xrpl::SField::signingField</definition>
+        <argsstring></argsstring>
+        <name>signingField</name>
+        <qualifiedname>xrpl::SField::signingField</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="157" column="21" bodyfile="include/xrpl/protocol/SField.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a91992fcade5560b9a9d1d738ab809deb" prot="public" static="no" mutable="no">
+        <type>json::StaticString const</type>
+        <definition>json::StaticString const xrpl::SField::jsonName</definition>
+        <argsstring></argsstring>
+        <name>jsonName</name>
+        <qualifiedname>xrpl::SField::jsonName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="158" column="30" bodyfile="include/xrpl/protocol/SField.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a431cdfdcf8df31c4da1da5c0d4118b2a" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int xrpl::SField::num</definition>
+        <argsstring></argsstring>
+        <name>num</name>
+        <qualifiedname>xrpl::SField::num</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="297" column="16" bodyfile="include/xrpl/protocol/SField.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1aba5ac3396e31e73c3795f4e1c9d0c730" prot="private" static="yes" mutable="no">
+        <type>std::unordered_map&lt; int, <ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> const  * &gt;</type>
+        <definition>std::unordered_map&lt; int, SField const  * &gt; xrpl::SField::knownCodeToField</definition>
+        <argsstring></argsstring>
+        <name>knownCodeToField</name>
+        <qualifiedname>xrpl::SField::knownCodeToField</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="298" column="31" bodyfile="include/xrpl/protocol/SField.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SField_1a7d8fb39ffab72eb6d3078c51d9364dd3" prot="private" static="yes" mutable="no">
+        <type>std::unordered_map&lt; std::string, <ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> const  * &gt;</type>
+        <definition>std::unordered_map&lt; std::string, SField const  * &gt; xrpl::SField::knownNameToField</definition>
+        <argsstring></argsstring>
+        <name>knownNameToField</name>
+        <qualifiedname>xrpl::SField::knownNameToField</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="299" column="31" bodyfile="include/xrpl/protocol/SField.h" bodystart="299" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SField::SField</definition>
+        <argsstring>(SField const &amp;)=delete</argsstring>
+        <name>SField</name>
+        <qualifiedname>xrpl::SField::SField</qualifiedname>
+        <param>
+          <type>SField const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="160" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1a6181a617bed0ca60368089d9c8e48228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> &amp;</type>
+        <definition>SField &amp; xrpl::SField::operator=</definition>
+        <argsstring>(SField const &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::SField::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="162" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1a3d66333caa764ba4f43d7e4c531ccea9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SField::SField</definition>
+        <argsstring>(SField &amp;&amp;)=delete</argsstring>
+        <name>SField</name>
+        <qualifiedname>xrpl::SField::SField</qualifiedname>
+        <param>
+          <type>SField &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="163" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1aebb96937172ff1f3467a249e62bb5ee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> &amp;</type>
+        <definition>SField &amp; xrpl::SField::operator=</definition>
+        <argsstring>(SField &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::SField::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="165" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1a08add75b075f13f9facf05b1a8d80940" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SField::SField</definition>
+        <argsstring>(PrivateAccessTagT, SerializedTypeID tid, int fv, char const *fn, int meta=kSmdDefault, IsSigning signing=IsSigning::Yes)</argsstring>
+        <name>SField</name>
+        <qualifiedname>xrpl::SField::SField</qualifiedname>
+        <param>
+          <type><ref refid="structxrpl_1_1SField_1_1PrivateAccessTagT" kindref="compound">PrivateAccessTagT</ref></type>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a9a934f459db38bf14dbca9b2adb6f07f" kindref="member">SerializedTypeID</ref></type>
+          <declname>tid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fv</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>fn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>meta</declname>
+          <defval><ref refid="classxrpl_1_1SField_1a9b413989f7aa850cbee732eeec9a8d73" kindref="member">kSmdDefault</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SField_1aeca7616e54f17ecd56042bf721573843" kindref="member">IsSigning</ref></type>
+          <declname>signing</declname>
+          <defval><ref refid="classxrpl_1_1SField_1aeca7616e54f17ecd56042bf721573843a93cba07454f06a4a960172bbd6e2a435" kindref="member">IsSigning::Yes</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="171" column="5" bodyfile="src/libxrpl/protocol/SField.cpp" bodystart="62" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1afc42bd0ab4fe26ded8fe1a499922147a" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SField::SField</definition>
+        <argsstring>(PrivateAccessTagT, int fc, char const *fn)</argsstring>
+        <name>SField</name>
+        <qualifiedname>xrpl::SField::SField</qualifiedname>
+        <param>
+          <type><ref refid="structxrpl_1_1SField_1_1PrivateAccessTagT" kindref="compound">PrivateAccessTagT</ref></type>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="178" column="14" bodyfile="src/libxrpl/protocol/SField.cpp" bodystart="88" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1ae54d0c809bf652bae8ca4c2f4253e994" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string const &amp;</type>
+        <definition>std::string const  &amp; xrpl::SField::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <qualifiedname>xrpl::SField::getName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="197" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="197" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1a43aec62fe5e1b8f402a54fb700df6b57" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SField::hasName</definition>
+        <argsstring>() const</argsstring>
+        <name>hasName</name>
+        <qualifiedname>xrpl::SField::hasName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="203" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="203" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1abfd8c5c236d682a838c053d389ee8540" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>json::StaticString const &amp;</type>
+        <definition>json::StaticString const  &amp; xrpl::SField::getJsonName</definition>
+        <argsstring>() const</argsstring>
+        <name>getJsonName</name>
+        <qualifiedname>xrpl::SField::getJsonName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="209" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="209" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1af4354a7da10ee542ba8dd79e8d26ef66" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SField::operator json::StaticString const &amp;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator json::StaticString const &amp;</name>
+        <qualifiedname>xrpl::SField::StaticString const &amp;</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="214" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1a47e7c51ea2ad4a8f9c55f7fb3f16ae89" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SField::isInvalid</definition>
+        <argsstring>() const</argsstring>
+        <name>isInvalid</name>
+        <qualifiedname>xrpl::SField::isInvalid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="220" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="220" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1a240231e5359e54b53b4b832500445575" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SField::isUseful</definition>
+        <argsstring>() const</argsstring>
+        <name>isUseful</name>
+        <qualifiedname>xrpl::SField::isUseful</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="226" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="226" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1aa5d56b2ef4a028a261f17b1fc3483843" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SField::isBinary</definition>
+        <argsstring>() const</argsstring>
+        <name>isBinary</name>
+        <qualifiedname>xrpl::SField::isBinary</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="232" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="232" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1a81ff7bf559a9a3aec51452d8f5f6635e" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SField::isDiscardable</definition>
+        <argsstring>() const</argsstring>
+        <name>isDiscardable</name>
+        <qualifiedname>xrpl::SField::isDiscardable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="242" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="242" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1a506296ee8d29a1742067895c6e95c370" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int xrpl::SField::getCode</definition>
+        <argsstring>() const</argsstring>
+        <name>getCode</name>
+        <qualifiedname>xrpl::SField::getCode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="248" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="248" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1abb608fafe94a3056c6a8307cf0dd7814" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int xrpl::SField::getNum</definition>
+        <argsstring>() const</argsstring>
+        <name>getNum</name>
+        <qualifiedname>xrpl::SField::getNum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="253" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="253" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1abf9cd682aacfa54ebfe7a27002d8df15" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SField::shouldMeta</definition>
+        <argsstring>(int c) const</argsstring>
+        <name>shouldMeta</name>
+        <qualifiedname>xrpl::SField::shouldMeta</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="264" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="264" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1a648676e41a365111aa87d9e81c620f3f" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SField::shouldInclude</definition>
+        <argsstring>(bool withSigningField) const</argsstring>
+        <name>shouldInclude</name>
+        <qualifiedname>xrpl::SField::shouldInclude</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>withSigningField</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="270" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="270" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1aec3ebc6d103e29ab514fe8d964365d56" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SField::operator==</definition>
+        <argsstring>(SField const &amp;f) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>xrpl::SField::operator==</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> const &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="276" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="276" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1aa0bdcff76a36a0282c7b1f3fb6305151" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SField::operator!=</definition>
+        <argsstring>(SField const &amp;f) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>xrpl::SField::operator!=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> const &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="282" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="282" bodyend="285"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classxrpl_1_1SField_1a4d779d15064d08d83980ceb5116aac10" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> const &amp;</type>
+        <definition>SField const  &amp; xrpl::SField::getField</definition>
+        <argsstring>(int fieldCode)</argsstring>
+        <name>getField</name>
+        <qualifiedname>xrpl::SField::getField</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fieldCode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="181" column="5" bodyfile="src/libxrpl/protocol/SField.cpp" bodystart="108" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1adc46238b9499925259de917f96636b8a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> const &amp;</type>
+        <definition>SField const  &amp; xrpl::SField::getField</definition>
+        <argsstring>(std::string const &amp;fieldName)</argsstring>
+        <name>getField</name>
+        <qualifiedname>xrpl::SField::getField</qualifiedname>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>fieldName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="183" column="5" bodyfile="src/libxrpl/protocol/SField.cpp" bodystart="136" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1af67f4d5dc76a8ea14f8bc09dbdbbbd0b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> const &amp;</type>
+        <definition>static SField const  &amp; xrpl::SField::getField</definition>
+        <argsstring>(int type, int value)</argsstring>
+        <name>getField</name>
+        <qualifiedname>xrpl::SField::getField</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="185" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="185" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1a75e15ceb4b40c58603159ab979ced70d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> const &amp;</type>
+        <definition>static SField const  &amp; xrpl::SField::getField</definition>
+        <argsstring>(SerializedTypeID type, int value)</argsstring>
+        <name>getField</name>
+        <qualifiedname>xrpl::SField::getField</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a9a934f459db38bf14dbca9b2adb6f07f" kindref="member">SerializedTypeID</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="191" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="191" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1ae7420db3f6e4140f579db2aa26000dee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int xrpl::SField::getNumFields</definition>
+        <argsstring>()</argsstring>
+        <name>getNumFields</name>
+        <qualifiedname>xrpl::SField::getNumFields</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="258" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="258" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1ad248950c73d0ec48d34768988aafcbf4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xrpl::SField::compare</definition>
+        <argsstring>(SField const &amp;f1, SField const &amp;f2)</argsstring>
+        <name>compare</name>
+        <qualifiedname>xrpl::SField::compare</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> const &amp;</type>
+          <declname>f1</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> const &amp;</type>
+          <declname>f2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="288" column="5" bodyfile="src/libxrpl/protocol/SField.cpp" bodystart="120" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SField_1a9b11d04b28fdb0fd90a35399591514f1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unordered_map&lt; int, <ref refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" kindref="member">SField</ref> const * &gt; const &amp;</type>
+        <definition>static std::unordered_map&lt; int, SField const  * &gt; const  &amp; xrpl::SField::getKnownCodeToField</definition>
+        <argsstring>()</argsstring>
+        <name>getKnownCodeToField</name>
+        <qualifiedname>xrpl::SField::getKnownCodeToField</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="291" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="291" bodyend="294"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Identifies fields. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Fields are necessary to tag data in signed transactions so that the binary format of the transaction can be canonicalized. All SFields are created at compile time.</para>
+<para>Each <ref refid="classxrpl_1_1SField" kindref="compound">SField</ref>, once constructed, lives until program termination, and there is only one instance per fieldType/fieldValue pair which serves the entire application. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>xrpl::SField</label>
+        <link refid="classxrpl_1_1SField"/>
+      </node>
+      <node id="22">
+        <label>xrpl::TypedField&lt; T &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>xrpl::TypedField&lt; STAccount &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>xrpl::TypedField&lt; STAmount &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>xrpl::TypedField&lt; STBitString&lt; 128 &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>xrpl::TypedField&lt; STBitString&lt; 160 &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>xrpl::TypedField&lt; STBitString&lt; 192 &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>xrpl::TypedField&lt; STBitString&lt; 256 &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>xrpl::TypedField&lt; STBitString&lt; 384 &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>xrpl::TypedField&lt; STBitString&lt; 512 &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>xrpl::TypedField&lt; STBitString&lt; 96 &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>xrpl::TypedField&lt; STBlob &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>xrpl::TypedField&lt; STCurrency &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>xrpl::TypedField&lt; STInteger&lt; std::int32_t &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>xrpl::TypedField&lt; STInteger&lt; std::int64_t &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>xrpl::TypedField&lt; STInteger&lt; std::uint16_t &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>xrpl::TypedField&lt; STInteger&lt; std::uint32_t &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>xrpl::TypedField&lt; STInteger&lt; std::uint64_t &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xrpl::TypedField&lt; STInteger&lt; std::uint8_t &gt; &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>xrpl::TypedField&lt; STIssue &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>xrpl::TypedField&lt; STNumber &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>xrpl::TypedField&lt; STVector256 &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::unordered_map&lt; int, xrpl::SField const * &gt;</label>
+        <childnode refid="1" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::unordered_map&lt; std::string, xrpl::SField const * &gt;</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>keys</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>xrpl::SField</label>
+        <link refid="classxrpl_1_1SField"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>fieldName</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>knownCodeToField</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>knownNameToField</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/protocol/SField.h" line="130" column="1" bodyfile="include/xrpl/protocol/SField.h" bodystart="131" bodyend="300"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1SField_1ad248950c73d0ec48d34768988aafcbf4" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>compare</name></member>
+      <member refid="classxrpl_1_1SField_1a501cfe0932d99f1c389cfaa098ba5310" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>fieldCodeMem</name></member>
+      <member refid="classxrpl_1_1SField_1a6228d998c8abc912ef07ba7f544c1450" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>fieldMeta</name></member>
+      <member refid="classxrpl_1_1SField_1a70d13c579cea2b3f0a269139b337d083" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>fieldName</name></member>
+      <member refid="classxrpl_1_1SField_1a88c021bba34831a4c76b0c519ee284d8" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>fieldNum</name></member>
+      <member refid="classxrpl_1_1SField_1aa6586240eb3f8c27a950f43c5ae6c01f" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>fieldType</name></member>
+      <member refid="classxrpl_1_1SField_1a10cac9dc08e88c352314fe7fe4fad9fb" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>fieldValue</name></member>
+      <member refid="classxrpl_1_1SField_1a506296ee8d29a1742067895c6e95c370" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>getCode</name></member>
+      <member refid="classxrpl_1_1SField_1a4d779d15064d08d83980ceb5116aac10" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>getField</name></member>
+      <member refid="classxrpl_1_1SField_1adc46238b9499925259de917f96636b8a" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>getField</name></member>
+      <member refid="classxrpl_1_1SField_1af67f4d5dc76a8ea14f8bc09dbdbbbd0b" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>getField</name></member>
+      <member refid="classxrpl_1_1SField_1a75e15ceb4b40c58603159ab979ced70d" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>getField</name></member>
+      <member refid="classxrpl_1_1SField_1abfd8c5c236d682a838c053d389ee8540" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>getJsonName</name></member>
+      <member refid="classxrpl_1_1SField_1a9b11d04b28fdb0fd90a35399591514f1" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>getKnownCodeToField</name></member>
+      <member refid="classxrpl_1_1SField_1ae54d0c809bf652bae8ca4c2f4253e994" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>getName</name></member>
+      <member refid="classxrpl_1_1SField_1abb608fafe94a3056c6a8307cf0dd7814" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>getNum</name></member>
+      <member refid="classxrpl_1_1SField_1ae7420db3f6e4140f579db2aa26000dee" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>getNumFields</name></member>
+      <member refid="classxrpl_1_1SField_1a43aec62fe5e1b8f402a54fb700df6b57" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>hasName</name></member>
+      <member refid="classxrpl_1_1SField_1aa5d56b2ef4a028a261f17b1fc3483843" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>isBinary</name></member>
+      <member refid="classxrpl_1_1SField_1a81ff7bf559a9a3aec51452d8f5f6635e" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>isDiscardable</name></member>
+      <member refid="classxrpl_1_1SField_1a47e7c51ea2ad4a8f9c55f7fb3f16ae89" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>isInvalid</name></member>
+      <member refid="classxrpl_1_1SField_1aeca7616e54f17ecd56042bf721573843" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>IsSigning</name></member>
+      <member refid="classxrpl_1_1SField_1a240231e5359e54b53b4b832500445575" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>isUseful</name></member>
+      <member refid="classxrpl_1_1SField_1a91992fcade5560b9a9d1d738ab809deb" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>jsonName</name></member>
+      <member refid="classxrpl_1_1SField_1a4db7a22b8e3d6a0ad1070f047bca5b6b" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>kNotSigning</name></member>
+      <member refid="classxrpl_1_1SField_1aba5ac3396e31e73c3795f4e1c9d0c730" prot="private" virt="non-virtual"><scope>xrpl::SField</scope><name>knownCodeToField</name></member>
+      <member refid="classxrpl_1_1SField_1a7d8fb39ffab72eb6d3078c51d9364dd3" prot="private" virt="non-virtual"><scope>xrpl::SField</scope><name>knownNameToField</name></member>
+      <member refid="classxrpl_1_1SField_1a7313b6e2e40c00f052c327ca61320fdc" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>kSmdAlways</name></member>
+      <member refid="classxrpl_1_1SField_1af5a33d902f93ae6c8ddb0ec19b91fe32" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>kSmdBaseTen</name></member>
+      <member refid="classxrpl_1_1SField_1aaa951044940b2ab0242e90ed3c63d006" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>kSmdChangeNew</name></member>
+      <member refid="classxrpl_1_1SField_1a1ed18be2b5446dd066871a785675f2b6" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>kSmdChangeOrig</name></member>
+      <member refid="classxrpl_1_1SField_1a5ad40fb402fb56c48a38e5ba5b6e16fd" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>kSmdCreate</name></member>
+      <member refid="classxrpl_1_1SField_1a9b413989f7aa850cbee732eeec9a8d73" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>kSmdDefault</name></member>
+      <member refid="classxrpl_1_1SField_1a521918fbb200d0896219e8a610cf5661" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>kSmdDeleteFinal</name></member>
+      <member refid="classxrpl_1_1SField_1a3817bf34c96b8cf22afa2fb1f96024a5" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>kSmdNeedsAsset</name></member>
+      <member refid="classxrpl_1_1SField_1a8f272ee3b29b60d3d9990c99632042e6" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>kSmdNever</name></member>
+      <member refid="classxrpl_1_1SField_1ad7ef97d6a2209a0b8f5af850869dbf40" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>kSmdPseudoAccount</name></member>
+      <member refid="classxrpl_1_1SField_1a431cdfdcf8df31c4da1da5c0d4118b2a" prot="private" virt="non-virtual"><scope>xrpl::SField</scope><name>num</name></member>
+      <member refid="classxrpl_1_1SField_1af4354a7da10ee542ba8dd79e8d26ef66" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>operator json::StaticString const &amp;</name></member>
+      <member refid="classxrpl_1_1SField_1aa0bdcff76a36a0282c7b1f3fb6305151" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>operator!=</name></member>
+      <member refid="classxrpl_1_1SField_1a6181a617bed0ca60368089d9c8e48228" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1SField_1aebb96937172ff1f3467a249e62bb5ee5" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1SField_1aec3ebc6d103e29ab514fe8d964365d56" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>operator==</name></member>
+      <member refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>SField</name></member>
+      <member refid="classxrpl_1_1SField_1a3d66333caa764ba4f43d7e4c531ccea9" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>SField</name></member>
+      <member refid="classxrpl_1_1SField_1a08add75b075f13f9facf05b1a8d80940" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>SField</name></member>
+      <member refid="classxrpl_1_1SField_1afc42bd0ab4fe26ded8fe1a499922147a" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>SField</name></member>
+      <member refid="classxrpl_1_1SField_1a648676e41a365111aa87d9e81c620f3f" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>shouldInclude</name></member>
+      <member refid="classxrpl_1_1SField_1abf9cd682aacfa54ebfe7a27002d8df15" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>shouldMeta</name></member>
+      <member refid="classxrpl_1_1SField_1afd10c76433e736e08fcd5bcae185ab67" prot="public" virt="non-virtual"><scope>xrpl::SField</scope><name>signingField</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

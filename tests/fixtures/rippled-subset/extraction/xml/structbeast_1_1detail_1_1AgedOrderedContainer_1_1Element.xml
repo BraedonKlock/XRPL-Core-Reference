@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element" kind="struct" language="C++" prot="private">
+    <compoundname>beast::detail::AgedOrderedContainer::Element</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">boost::intrusive::set_base_hook&lt; boost::intrusive::link_mode&lt; boost::intrusive::normal_link &gt; &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">boost::intrusive::list_base_hook&lt; boost::intrusive::link_mode&lt; boost::intrusive::normal_link &gt; &gt;</basecompoundref>
+    <innerclass refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1_1Stashed" prot="public">beast::detail::AgedOrderedContainer::Element::Stashed</innerclass>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1ad2f20d9f63903f2da76c8c5a65218750" prot="public" static="no" mutable="no">
+        <type><ref refid="classbeast_1_1detail_1_1AgedOrderedContainer_1a6ec13884893ba1dba24a69f699f674f3" kindref="member">value_type</ref></type>
+        <definition>value_type beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::Element::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::Element::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="122" column="20" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1aa98ae087aaf505a9c61a2dd1fc14fc8e" prot="public" static="no" mutable="no">
+        <type><ref refid="classbeast_1_1detail_1_1AgedOrderedContainer_1a6a89b884733e79217cd3be2eb0279df0" kindref="member">time_point</ref></type>
+        <definition>time_point beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::Element::when</definition>
+        <argsstring></argsstring>
+        <name>when</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::Element::when</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="123" column="20" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1a4a4e87d9a5a444b83dfa5bc6ee763d7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::Element::Element</definition>
+        <argsstring>(time_point const &amp;when, value_type const &amp;value)</argsstring>
+        <name>Element</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::Element::Element</qualifiedname>
+        <param>
+          <type><ref refid="classbeast_1_1detail_1_1AgedOrderedContainer_1a6a89b884733e79217cd3be2eb0279df0" kindref="member">time_point</ref> const &amp;</type>
+          <declname>when</declname>
+        </param>
+        <param>
+          <type><ref refid="classbeast_1_1detail_1_1AgedOrderedContainer_1a6ec13884893ba1dba24a69f699f674f3" kindref="member">value_type</ref> const &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="107" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1a485775f0e5e5f7db3912ed01bf2d172a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::Element::Element</definition>
+        <argsstring>(time_point const &amp;when, value_type &amp;&amp;value)</argsstring>
+        <name>Element</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::Element::Element</qualifiedname>
+        <param>
+          <type><ref refid="classbeast_1_1detail_1_1AgedOrderedContainer_1a6a89b884733e79217cd3be2eb0279df0" kindref="member">time_point</ref> const &amp;</type>
+          <declname>when</declname>
+        </param>
+        <param>
+          <type><ref refid="classbeast_1_1detail_1_1AgedOrderedContainer_1a6ec13884893ba1dba24a69f699f674f3" kindref="member">value_type</ref> &amp;&amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="111" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1a1b7589c5736e308719e7e53eddadbf28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::Element::Element</definition>
+        <argsstring>(time_point const &amp;when, Args &amp;&amp;... args)</argsstring>
+        <name>Element</name>
+        <qualifiedname>beast::detail::AgedOrderedContainer::Element::Element</qualifiedname>
+        <param>
+          <type><ref refid="classbeast_1_1detail_1_1AgedOrderedContainer_1a6a89b884733e79217cd3be2eb0279df0" kindref="member">time_point</ref> const &amp;</type>
+          <declname>when</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+    <requiresclause>(std::is_constructible_v&lt;<ref refid="classbeast_1_1detail_1_1AgedOrderedContainer_1a6ec13884893ba1dba24a69f699f674f3" kindref="member">value_type</ref>, Args...&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="116" column="9" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="116" bodyend="120"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::Element</label>
+        <link refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>boost::intrusive::list_base_hook&lt; boost::intrusive::link_mode&lt; boost::intrusive::normal_link &gt; &gt;</label>
+      </node>
+      <node id="2">
+        <label>boost::intrusive::set_base_hook&lt; boost::intrusive::link_mode&lt; boost::intrusive::normal_link &gt; &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt;::Element</label>
+        <link refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>boost::intrusive::list_base_hook&lt; boost::intrusive::link_mode&lt; boost::intrusive::normal_link &gt; &gt;</label>
+      </node>
+      <node id="2">
+        <label>boost::intrusive::set_base_hook&lt; boost::intrusive::link_mode&lt; boost::intrusive::normal_link &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="92" column="5" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="96" bodyend="124"/>
+    <listofallmembers>
+      <member refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1a4a4e87d9a5a444b83dfa5bc6ee763d7e" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::Element</scope><name>Element</name></member>
+      <member refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1a485775f0e5e5f7db3912ed01bf2d172a" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::Element</scope><name>Element</name></member>
+      <member refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1a1b7589c5736e308719e7e53eddadbf28" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::Element</scope><name>Element</name></member>
+      <member refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1ad2f20d9f63903f2da76c8c5a65218750" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::Element</scope><name>value</name></member>
+      <member refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1aa98ae087aaf505a9c61a2dd1fc14fc8e" prot="public" virt="non-virtual"><scope>beast::detail::AgedOrderedContainer::Element</scope><name>when</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

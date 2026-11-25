@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="Feature" kind="page">
+    <compoundname>Feature</compoundname>
+    <title>How to add new features</title>
+    <briefdescription>
+<para>Steps required to add new features to the code: </para>
+    </briefdescription>
+    <detaileddescription>
+<para>1) Add the appropriate XRPL_FEATURE or XRPL_FIX macro definition for the feature to features.macro with the feature&apos;s name, <computeroutput>Supported::no</computeroutput>, and <computeroutput>VoteBehavior::DefaultNo</computeroutput>.</para>
+<para>2) Use the generated variable name as the parameter to <computeroutput>view.rules.enabled()</computeroutput> to control flow into new code that this feature limits. (featureName or fixName)</para>
+<para>3) If the feature development is COMPLETE, and the feature is ready to be SUPPORTED, change the macro parameter in features.macro to Supported::yes.</para>
+<para>4) In general, any newly supported amendments (<computeroutput>Supported::yes</computeroutput>) should have a <computeroutput>VoteBehavior::DefaultNo</computeroutput> indefinitely so that external governance can make the decision on when to activate it. High priority bug fixes can be an exception to this rule. In such cases, ensure the fix has been clearly communicated to the community using appropriate channels, then change the macro parameter in features.macro to <computeroutput>VoteBehavior::DefaultYes</computeroutput>. The communication process is beyond the scope of these instructions.</para>
+<para>5) If a supported feature (<computeroutput>Supported::yes</computeroutput>) was <emphasis>ever</emphasis> in a released version, it can never be changed back to <computeroutput>Supported::no</computeroutput>, because it <emphasis>may</emphasis> still become enabled at any time. This would cause newer versions of <computeroutput>xrpld</computeroutput> to become amendment blocked. Instead, to prevent newer versions from voting on the feature, use <computeroutput>VoteBehavior::Obsolete</computeroutput>. Obsolete features can not be voted for by any versions of <computeroutput>xrpld</computeroutput> built with that setting, but will still work correctly if they get enabled. If a feature remains obsolete for long enough that <emphasis>all</emphasis> clients that could vote for it are amendment blocked, the feature can be removed from the code as if it was unsupported.</para>
+<para>When a feature has been enabled for several years, the conditional code may be removed, and the feature &quot;retired&quot;. To retire a feature:</para>
+<para>1) MOVE the macro definition in features.macro to the &quot;retired features&quot; section at the end of the file, and change the macro to XRPL_RETIRE.</para>
+<para>The feature must remain registered and supported indefinitely because it may exist in the Amendments object on ledger. There is no need to vote for it because there&apos;s nothing to vote for. If the feature definition is removed completely from the code, any instances running that code will get amendment blocked. Removing the feature from the ledger is beyond the scope of these instructions. </para>
+    </detaileddescription>
+    <location file="include/xrpl/protocol/Feature.h"/>
+  </compounddef>
+</doxygen>

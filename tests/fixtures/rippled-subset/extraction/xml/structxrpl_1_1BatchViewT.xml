@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1BatchViewT" kind="struct" language="C++" prot="public">
+    <compoundname>xrpl::BatchViewT</compoundname>
+    <includes local="no">xrpl/ledger/OpenView.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structxrpl_1_1BatchViewT_1ae6214d5b20b69382c40fece6bf767a32" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>xrpl::BatchViewT::BatchViewT</definition>
+        <argsstring>()=default</argsstring>
+        <name>BatchViewT</name>
+        <qualifiedname>xrpl::BatchViewT::BatchViewT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/OpenView.h" line="48" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Batch view construction tag. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Views constructed with this tag are part of a stack of views used during batch transaction application. </para>
+    </detaileddescription>
+    <location file="include/xrpl/ledger/OpenView.h" line="46" column="17" bodyfile="include/xrpl/ledger/OpenView.h" bodystart="47" bodyend="49"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1BatchViewT_1ae6214d5b20b69382c40fece6bf767a32" prot="public" virt="non-virtual"><scope>xrpl::BatchViewT</scope><name>BatchViewT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

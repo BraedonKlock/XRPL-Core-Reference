@@ -1,0 +1,607 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1FeatureBitset" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::FeatureBitset</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">std::bitset&lt; detail::kNumFeatures &gt;</basecompoundref>
+    <includes local="no">xrpl/protocol/Feature.h</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classxrpl_1_1FeatureBitset_1a8b172d4b890351744a317ec374f189d0" prot="private" static="no">
+        <type>std::bitset&lt; <ref refid="namespacexrpl_1_1detail_1a8c47c7feea3fb0fe80dfd85f4b7c963d" kindref="member">detail::kNumFeatures</ref> &gt;</type>
+        <definition>using xrpl::FeatureBitset::Base = std::bitset&lt;detail::kNumFeatures&gt;</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>xrpl::FeatureBitset::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="197" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1a685ca72917d9ec3f253e0ca8c37cf702" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>Fs</declname>
+            <defname>Fs</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void xrpl::FeatureBitset::initFromFeatures</definition>
+        <argsstring>(UInt256 const &amp;f, Fs &amp;&amp;... fs)</argsstring>
+        <name>initFromFeatures</name>
+        <qualifiedname>xrpl::FeatureBitset::initFromFeatures</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Fs &amp;&amp;...</type>
+          <declname>fs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="201" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="201" bodyend="206"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::FeatureBitset::FeatureBitset</definition>
+        <argsstring>()=default</argsstring>
+        <name>FeatureBitset</name>
+        <qualifiedname>xrpl::FeatureBitset::FeatureBitset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="226" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1a4c123230e41d71a3a7020b86e9eafcb5" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::FeatureBitset::FeatureBitset</definition>
+        <argsstring>(Base const &amp;b)</argsstring>
+        <name>FeatureBitset</name>
+        <qualifiedname>xrpl::FeatureBitset::FeatureBitset</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a8b172d4b890351744a317ec374f189d0" kindref="member">Base</ref> const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="228" column="14" bodyfile="include/xrpl/protocol/Feature.h" bodystart="228" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1a27a66a12578bd5f25efc30c3ddbcacc8" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>Fs</declname>
+            <defname>Fs</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>xrpl::FeatureBitset::FeatureBitset</definition>
+        <argsstring>(UInt256 const &amp;f, Fs &amp;&amp;... fs)</argsstring>
+        <name>FeatureBitset</name>
+        <qualifiedname>xrpl::FeatureBitset::FeatureBitset</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Fs &amp;&amp;...</type>
+          <declname>fs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="234" column="14" bodyfile="include/xrpl/protocol/Feature.h" bodystart="234" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1a1bd289057e2b5c37b87b6ca9eb4342f9" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Col</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>xrpl::FeatureBitset::FeatureBitset</definition>
+        <argsstring>(Col const &amp;fs)</argsstring>
+        <name>FeatureBitset</name>
+        <qualifiedname>xrpl::FeatureBitset::FeatureBitset</qualifiedname>
+        <param>
+          <type>Col const &amp;</type>
+          <declname>fs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="244" column="14" bodyfile="include/xrpl/protocol/Feature.h" bodystart="244" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1a6c18a136bfda6e2180e0360f5a320611" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto xrpl::FeatureBitset::operator[]</definition>
+        <argsstring>(UInt256 const &amp;f)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>xrpl::FeatureBitset::operator[]</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="255" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1a0d50af00e2e601bf5affb6da57d04709" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto xrpl::FeatureBitset::operator[]</definition>
+        <argsstring>(UInt256 const &amp;f) const</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>xrpl::FeatureBitset::operator[]</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="261" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1ab0db48ffa083830abe08ebaadf368941" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> &amp;</type>
+        <definition>FeatureBitset &amp; xrpl::FeatureBitset::set</definition>
+        <argsstring>(UInt256 const &amp;f, bool value=true)</argsstring>
+        <name>set</name>
+        <qualifiedname>xrpl::FeatureBitset::set</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="267" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="267" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1a84b5e4995cc8ff8bcbc9fdc2d6da3f5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> &amp;</type>
+        <definition>FeatureBitset &amp; xrpl::FeatureBitset::reset</definition>
+        <argsstring>(UInt256 const &amp;f)</argsstring>
+        <name>reset</name>
+        <qualifiedname>xrpl::FeatureBitset::reset</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="274" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="274" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1ab46f3394420f5ac4511b7810479887c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> &amp;</type>
+        <definition>FeatureBitset &amp; xrpl::FeatureBitset::flip</definition>
+        <argsstring>(UInt256 const &amp;f)</argsstring>
+        <name>flip</name>
+        <qualifiedname>xrpl::FeatureBitset::flip</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="281" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="281" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1a2b872415bb5c7f11cd85c0708e4110eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> &amp;</type>
+        <definition>FeatureBitset &amp; xrpl::FeatureBitset::operator&amp;=</definition>
+        <argsstring>(FeatureBitset const &amp;rhs)</argsstring>
+        <name>operator&amp;=</name>
+        <qualifiedname>xrpl::FeatureBitset::operator&amp;=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="288" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="288" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1adea654e1da151b38bd8513915f869d29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> &amp;</type>
+        <definition>FeatureBitset &amp; xrpl::FeatureBitset::operator|=</definition>
+        <argsstring>(FeatureBitset const &amp;rhs)</argsstring>
+        <name>operator|=</name>
+        <qualifiedname>xrpl::FeatureBitset::operator|=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="295" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="295" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1FeatureBitset_1a4789ccfa08abbeed27e35a2fec811e50" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset xrpl::FeatureBitset::operator~</definition>
+        <argsstring>() const</argsstring>
+        <name>operator~</name>
+        <qualifiedname>xrpl::FeatureBitset::operator~</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="302" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="302" bodyend="305"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classxrpl_1_1FeatureBitset_1ab3284e4bf5edf953e68c7cf591e5d380" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset operator&amp;</definition>
+        <argsstring>(FeatureBitset const &amp;lhs, FeatureBitset const &amp;rhs)</argsstring>
+        <name>operator&amp;</name>
+        <qualifiedname>xrpl::FeatureBitset::operator&amp;</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="308" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="308" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1FeatureBitset_1a756d5d872474a24910538e50685ed903" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset operator&amp;</definition>
+        <argsstring>(FeatureBitset const &amp;lhs, UInt256 const &amp;rhs)</argsstring>
+        <name>operator&amp;</name>
+        <qualifiedname>xrpl::FeatureBitset::operator&amp;</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="314" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="314" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1FeatureBitset_1a4a9e7f5ac590b8daf3c557ba67f2f29a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset operator&amp;</definition>
+        <argsstring>(UInt256 const &amp;lhs, FeatureBitset const &amp;rhs)</argsstring>
+        <name>operator&amp;</name>
+        <qualifiedname>xrpl::FeatureBitset::operator&amp;</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="320" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="320" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1FeatureBitset_1a03aace1a5fc583a99c3fb5cfd106ba68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset operator|</definition>
+        <argsstring>(FeatureBitset const &amp;lhs, FeatureBitset const &amp;rhs)</argsstring>
+        <name>operator|</name>
+        <qualifiedname>xrpl::FeatureBitset::operator|</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="326" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="326" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1FeatureBitset_1af992752d0318517799828481321dfd84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset operator|</definition>
+        <argsstring>(FeatureBitset const &amp;lhs, UInt256 const &amp;rhs)</argsstring>
+        <name>operator|</name>
+        <qualifiedname>xrpl::FeatureBitset::operator|</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="332" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="332" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1FeatureBitset_1a08e7ed63f9fb0dbc740888bf376782dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset operator|</definition>
+        <argsstring>(UInt256 const &amp;lhs, FeatureBitset const &amp;rhs)</argsstring>
+        <name>operator|</name>
+        <qualifiedname>xrpl::FeatureBitset::operator|</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="338" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="338" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1FeatureBitset_1a772cc42039acf4e7cd5280299bb868cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset operator^</definition>
+        <argsstring>(FeatureBitset const &amp;lhs, FeatureBitset const &amp;rhs)</argsstring>
+        <name>operator^</name>
+        <qualifiedname>xrpl::FeatureBitset::operator^</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="344" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="344" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1FeatureBitset_1aebac7fbf62e1bac82ee394bdecb0e97a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset operator^</definition>
+        <argsstring>(FeatureBitset const &amp;lhs, UInt256 const &amp;rhs)</argsstring>
+        <name>operator^</name>
+        <qualifiedname>xrpl::FeatureBitset::operator^</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="350" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="350" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1FeatureBitset_1a0b7677b4752083d50a9a5e65a43bb115" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset operator^</definition>
+        <argsstring>(UInt256 const &amp;lhs, FeatureBitset const &amp;rhs)</argsstring>
+        <name>operator^</name>
+        <qualifiedname>xrpl::FeatureBitset::operator^</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="356" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="356" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1FeatureBitset_1ae98590d9a85688fde6e4e646d386ceff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset operator-</definition>
+        <argsstring>(FeatureBitset const &amp;lhs, FeatureBitset const &amp;rhs)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>xrpl::FeatureBitset::operator-</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="363" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="363" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1FeatureBitset_1a57adb14e481d344d9bc5d3ef092e0e0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset operator-</definition>
+        <argsstring>(FeatureBitset const &amp;lhs, UInt256 const &amp;rhs)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>xrpl::FeatureBitset::operator-</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="369" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="369" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1FeatureBitset_1ace3288c6743104fa79f558bc3abc2c45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref></type>
+        <definition>FeatureBitset operator-</definition>
+        <argsstring>(UInt256 const &amp;lhs, FeatureBitset const &amp;rhs)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>xrpl::FeatureBitset::operator-</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" kindref="member">FeatureBitset</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Feature.h" line="375" column="5" bodyfile="include/xrpl/protocol/Feature.h" bodystart="375" bodyend="378"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::bitset&lt; Bits &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::FeatureBitset</label>
+        <link refid="classxrpl_1_1FeatureBitset"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::bitset&lt; Bits &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::FeatureBitset</label>
+        <link refid="classxrpl_1_1FeatureBitset"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/protocol/Feature.h" line="195" column="1" bodyfile="include/xrpl/protocol/Feature.h" bodystart="196" bodyend="379"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1FeatureBitset_1a8b172d4b890351744a317ec374f189d0" prot="private" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>Base</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a4bbcb2551d866552046a11ea2ed03afc" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>FeatureBitset</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a4c123230e41d71a3a7020b86e9eafcb5" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>FeatureBitset</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a27a66a12578bd5f25efc30c3ddbcacc8" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>FeatureBitset</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a1bd289057e2b5c37b87b6ca9eb4342f9" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>FeatureBitset</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1ab46f3394420f5ac4511b7810479887c4" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>flip</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a685ca72917d9ec3f253e0ca8c37cf702" prot="private" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>initFromFeatures</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1ab3284e4bf5edf953e68c7cf591e5d380" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator&amp;</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a756d5d872474a24910538e50685ed903" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator&amp;</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a4a9e7f5ac590b8daf3c557ba67f2f29a" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator&amp;</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a2b872415bb5c7f11cd85c0708e4110eb" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator&amp;=</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1ae98590d9a85688fde6e4e646d386ceff" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator-</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a57adb14e481d344d9bc5d3ef092e0e0a" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator-</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1ace3288c6743104fa79f558bc3abc2c45" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator-</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a6c18a136bfda6e2180e0360f5a320611" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator[]</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a0d50af00e2e601bf5affb6da57d04709" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator[]</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a772cc42039acf4e7cd5280299bb868cf" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator^</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1aebac7fbf62e1bac82ee394bdecb0e97a" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator^</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a0b7677b4752083d50a9a5e65a43bb115" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator^</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a03aace1a5fc583a99c3fb5cfd106ba68" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator|</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1af992752d0318517799828481321dfd84" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator|</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a08e7ed63f9fb0dbc740888bf376782dd" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator|</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1adea654e1da151b38bd8513915f869d29" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator|=</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a4789ccfa08abbeed27e35a2fec811e50" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>operator~</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1a84b5e4995cc8ff8bcbc9fdc2d6da3f5e" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>reset</name></member>
+      <member refid="classxrpl_1_1FeatureBitset_1ab0db48ffa083830abe08ebaadf368941" prot="public" virt="non-virtual"><scope>xrpl::FeatureBitset</scope><name>set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

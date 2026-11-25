@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1OptionaledField" kind="struct" language="C++" prot="public">
+    <compoundname>xrpl::OptionaledField</compoundname>
+    <includes local="no">xrpl/protocol/SField.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxrpl_1_1OptionaledField_1a29bf22e8b197e1162a871bdaf101f87f" prot="public" static="no" mutable="no">
+        <type><ref refid="structxrpl_1_1TypedField" kindref="compound">TypedField</ref>&lt; T &gt; const  *</type>
+        <definition>TypedField&lt;T&gt; const* xrpl::OptionaledField&lt; T &gt;::f</definition>
+        <argsstring></argsstring>
+        <name>f</name>
+        <qualifiedname>xrpl::OptionaledField::f</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="320" column="22" bodyfile="include/xrpl/protocol/SField.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structxrpl_1_1OptionaledField_1aa5a64fce0c92676fca321766ab26a749" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::OptionaledField&lt; T &gt;::OptionaledField</definition>
+        <argsstring>(TypedField&lt; T &gt; const &amp;f)</argsstring>
+        <name>OptionaledField</name>
+        <qualifiedname>xrpl::OptionaledField::OptionaledField</qualifiedname>
+        <param>
+          <type><ref refid="structxrpl_1_1TypedField" kindref="compound">TypedField</ref>&lt; T &gt; const &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="322" column="14" bodyfile="include/xrpl/protocol/SField.h" bodystart="322" bodyend="324"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Indicate std::optional field semantics. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/protocol/SField.h" line="318" column="1" bodyfile="include/xrpl/protocol/SField.h" bodystart="319" bodyend="325"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1OptionaledField_1a29bf22e8b197e1162a871bdaf101f87f" prot="public" virt="non-virtual"><scope>xrpl::OptionaledField</scope><name>f</name></member>
+      <member refid="structxrpl_1_1OptionaledField_1aa5a64fce0c92676fca321766ab26a749" prot="public" virt="non-virtual"><scope>xrpl::OptionaledField</scope><name>OptionaledField</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

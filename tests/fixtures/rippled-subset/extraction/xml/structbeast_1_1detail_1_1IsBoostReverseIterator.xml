@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structbeast_1_1detail_1_1IsBoostReverseIterator" kind="struct" language="C++" prot="public">
+    <compoundname>beast::detail::IsBoostReverseIterator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::false_type</basecompoundref>
+    <includes local="no">xrpl/beast/container/detail/aged_ordered_container.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class It</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structbeast_1_1detail_1_1IsBoostReverseIterator_1a67bef40b8c815b8f3d3bdd11b824de19" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>beast::detail::IsBoostReverseIterator&lt; It &gt;::IsBoostReverseIterator</definition>
+        <argsstring>()=default</argsstring>
+        <name>IsBoostReverseIterator</name>
+        <qualifiedname>beast::detail::IsBoostReverseIterator::IsBoostReverseIterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="33" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>beast::detail::IsBoostReverseIterator&lt; It &gt;</label>
+        <link refid="structbeast_1_1detail_1_1IsBoostReverseIterator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::false_type</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>beast::detail::IsBoostReverseIterator&lt; It &gt;</label>
+        <link refid="structbeast_1_1detail_1_1IsBoostReverseIterator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::false_type</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/beast/container/detail/aged_ordered_container.h" line="31" column="1" bodyfile="include/xrpl/beast/container/detail/aged_ordered_container.h" bodystart="32" bodyend="34"/>
+    <listofallmembers>
+      <member refid="structbeast_1_1detail_1_1IsBoostReverseIterator_1a67bef40b8c815b8f3d3bdd11b824de19" prot="public" virt="non-virtual"><scope>beast::detail::IsBoostReverseIterator</scope><name>IsBoostReverseIterator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1TxFormats" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::TxFormats</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KnownFormats&lt; TxType, TxFormats &gt;</basecompoundref>
+    <includes local="no">xrpl/protocol/TxFormats.h</includes>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxrpl_1_1TxFormats_1a2994ed25d5bec51c9c3c2d47bebc5890" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::TxFormats::TxFormats</definition>
+        <argsstring>()</argsstring>
+        <name>TxFormats</name>
+        <qualifiedname>xrpl::TxFormats::TxFormats</qualifiedname>
+        <briefdescription>
+<para>Create the object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This will load the object with all the known transaction formats. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TxFormats.h" line="137" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classxrpl_1_1TxFormats_1a0c4f45b92cc4b3de3dee7774d2d3f6f7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1TxFormats_1a2994ed25d5bec51c9c3c2d47bebc5890" kindref="member">TxFormats</ref> const &amp;</type>
+        <definition>static TxFormats const  &amp; xrpl::TxFormats::getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <qualifiedname>xrpl::TxFormats::getInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TxFormats.h" line="141" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1TxFormats_1aba48f943761b6fa06be3e710e9611f46" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; SOElement &gt; const &amp;</type>
+        <definition>static std::vector&lt; SOElement &gt; const  &amp; xrpl::TxFormats::getCommonFields</definition>
+        <argsstring>()</argsstring>
+        <name>getCommonFields</name>
+        <qualifiedname>xrpl::TxFormats::getCommonFields</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TxFormats.h" line="144" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Manages the list of known transaction formats. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>KnownFormats&lt; TxType, TxFormats &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::TxFormats</label>
+        <link refid="classxrpl_1_1TxFormats"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>KnownFormats&lt; TxType, TxFormats &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::TxFormats</label>
+        <link refid="classxrpl_1_1TxFormats"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/protocol/TxFormats.h" line="130" column="1" bodyfile="include/xrpl/protocol/TxFormats.h" bodystart="131" bodyend="145"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1TxFormats_1aba48f943761b6fa06be3e710e9611f46" prot="public" virt="non-virtual"><scope>xrpl::TxFormats</scope><name>getCommonFields</name></member>
+      <member refid="classxrpl_1_1TxFormats_1a0c4f45b92cc4b3de3dee7774d2d3f6f7" prot="public" virt="non-virtual"><scope>xrpl::TxFormats</scope><name>getInstance</name></member>
+      <member refid="classxrpl_1_1TxFormats_1a2994ed25d5bec51c9c3c2d47bebc5890" prot="private" virt="non-virtual"><scope>xrpl::TxFormats</scope><name>TxFormats</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

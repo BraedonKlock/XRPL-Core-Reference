@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="IOUAmount_8h" kind="file" language="C++">
+    <compoundname>IOUAmount.h</compoundname>
+    <includes local="no">xrpl/basics/Number.h</includes>
+    <includes local="no">xrpl/beast/utility/Zero.h</includes>
+    <includes local="no">boost/operators.hpp</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">ostream</includes>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>include/xrpl/protocol/IOUAmount.h</label>
+        <link refid="IOUAmount_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>boost/operators.hpp</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>ostream</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>xrpl/basics/Number.h</label>
+      </node>
+      <node id="3">
+        <label>xrpl/beast/utility/Zero.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classxrpl_1_1IOUAmount" prot="public">xrpl::IOUAmount</innerclass>
+    <innernamespace refid="namespacexrpl">xrpl</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/protocol/IOUAmount.h"/>
+  </compounddef>
+</doxygen>

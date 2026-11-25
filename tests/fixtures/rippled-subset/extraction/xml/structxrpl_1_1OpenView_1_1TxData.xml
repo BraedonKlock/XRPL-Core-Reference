@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1OpenView_1_1TxData" kind="struct" language="C++" prot="private">
+    <compoundname>xrpl::OpenView::TxData</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxrpl_1_1OpenView_1_1TxData_1a045caddb21dbce80b9a8f7dc2dae3edf" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; Serializer const  &gt;</type>
+        <definition>std::shared_ptr&lt;Serializer const&gt; xrpl::OpenView::TxData::txn</definition>
+        <argsstring></argsstring>
+        <name>txn</name>
+        <qualifiedname>xrpl::OpenView::TxData::txn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/OpenView.h" line="70" column="25" bodyfile="include/xrpl/ledger/OpenView.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1OpenView_1_1TxData_1a58aba9ca976bf96a4b3420c5741828ca" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; Serializer const  &gt;</type>
+        <definition>std::shared_ptr&lt;Serializer const&gt; xrpl::OpenView::TxData::meta</definition>
+        <argsstring></argsstring>
+        <name>meta</name>
+        <qualifiedname>xrpl::OpenView::TxData::meta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/OpenView.h" line="71" column="25" bodyfile="include/xrpl/ledger/OpenView.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structxrpl_1_1OpenView_1_1TxData_1a2692ea6746f564f165315e90a6f27c84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::OpenView::TxData::TxData</definition>
+        <argsstring>(std::shared_ptr&lt; Serializer const &gt; const &amp;txn, std::shared_ptr&lt; Serializer const &gt; const &amp;meta)</argsstring>
+        <name>TxData</name>
+        <qualifiedname>xrpl::OpenView::TxData::TxData</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; Serializer const &gt; const &amp;</type>
+          <declname>txn</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; Serializer const &gt; const &amp;</type>
+          <declname>meta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/OpenView.h" line="74" column="9" bodyfile="include/xrpl/ledger/OpenView.h" bodystart="74" bodyend="79"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::shared_ptr&lt; Serializer const &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::OpenView::TxData</label>
+        <link refid="structxrpl_1_1OpenView_1_1TxData"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>meta</edgelabel>
+          <edgelabel>txn</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/ledger/OpenView.h" line="68" column="5" bodyfile="include/xrpl/ledger/OpenView.h" bodystart="69" bodyend="80"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1OpenView_1_1TxData_1a58aba9ca976bf96a4b3420c5741828ca" prot="public" virt="non-virtual"><scope>xrpl::OpenView::TxData</scope><name>meta</name></member>
+      <member refid="structxrpl_1_1OpenView_1_1TxData_1a2692ea6746f564f165315e90a6f27c84" prot="public" virt="non-virtual"><scope>xrpl::OpenView::TxData</scope><name>TxData</name></member>
+      <member refid="structxrpl_1_1OpenView_1_1TxData_1a045caddb21dbce80b9a8f7dc2dae3edf" prot="public" virt="non-virtual"><scope>xrpl::OpenView::TxData</scope><name>txn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

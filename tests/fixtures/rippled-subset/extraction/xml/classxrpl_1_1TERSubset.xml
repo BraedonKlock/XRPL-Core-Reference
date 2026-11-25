@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1TERSubset" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::TERSubset</compoundname>
+    <includes local="no">xrpl/protocol/TER.h</includes>
+    <templateparamlist>
+      <param>
+        <type>template&lt; typename &gt; class</type>
+        <declname>Trait</declname>
+        <defname>Trait</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1TERSubset_1a331418f498e93cd94385601cf47e2778" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacexrpl_1a12deb7e24fd7049e6cb0d49f4464d700" kindref="member">TERUnderlyingType</ref></type>
+        <definition>TERUnderlyingType xrpl::TERSubset&lt; Trait &gt;::code_</definition>
+        <argsstring></argsstring>
+        <name>code_</name>
+        <qualifiedname>xrpl::TERSubset::code_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="430" column="23" bodyfile="include/xrpl/protocol/TER.h" bodystart="430" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1TERSubset_1a56c65e341bc1110c9a51c9fee58c2027" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>xrpl::TERSubset&lt; Trait &gt;::TERSubset</definition>
+        <argsstring>()</argsstring>
+        <name>TERSubset</name>
+        <qualifiedname>xrpl::TERSubset::TERSubset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="434" column="15" bodyfile="include/xrpl/protocol/TER.h" bodystart="434" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1TERSubset_1a9676fce2ddfd74c8b1e1038bd1d78947" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>xrpl::TERSubset&lt; Trait &gt;::TERSubset</definition>
+        <argsstring>(TERSubset const &amp;rhs)=default</argsstring>
+        <name>TERSubset</name>
+        <qualifiedname>xrpl::TERSubset::TERSubset</qualifiedname>
+        <param>
+          <type>TERSubset const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="437" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1TERSubset_1a2c9ee3fe133ce3f12cb3ea2b204d9da4" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>xrpl::TERSubset&lt; Trait &gt;::TERSubset</definition>
+        <argsstring>(TERSubset &amp;&amp;rhs)=default</argsstring>
+        <name>TERSubset</name>
+        <qualifiedname>xrpl::TERSubset::TERSubset</qualifiedname>
+        <param>
+          <type>TERSubset &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="438" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1TERSubset_1a5b8b43dc591a495bd16c09cee5ac236d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>xrpl::TERSubset&lt; Trait &gt;::TERSubset</definition>
+        <argsstring>(T rhs)</argsstring>
+        <name>TERSubset</name>
+        <qualifiedname>xrpl::TERSubset::TERSubset</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>rhs</declname>
+        </param>
+    <requiresclause>(Trait&lt;std::remove_cvref_t&lt;T&gt;&gt;::value)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="454" column="15" bodyfile="include/xrpl/protocol/TER.h" bodystart="454" bodyend="458"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1TERSubset_1a225829d033bf0ab54d185247f0adee00" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1TERSubset_1a56c65e341bc1110c9a51c9fee58c2027" kindref="member">TERSubset</ref> &amp;</type>
+        <definition>TERSubset &amp; xrpl::TERSubset&lt; Trait &gt;::operator=</definition>
+        <argsstring>(TERSubset const &amp;rhs)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::TERSubset::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1TERSubset_1a56c65e341bc1110c9a51c9fee58c2027" kindref="member">TERSubset</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="462" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1TERSubset_1aaa58a372e684a0cfae6c5d5dca2d5683" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1TERSubset_1a56c65e341bc1110c9a51c9fee58c2027" kindref="member">TERSubset</ref> &amp;</type>
+        <definition>TERSubset &amp; xrpl::TERSubset&lt; Trait &gt;::operator=</definition>
+        <argsstring>(TERSubset &amp;&amp;rhs)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::TERSubset::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1TERSubset_1a56c65e341bc1110c9a51c9fee58c2027" kindref="member">TERSubset</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="464" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1TERSubset_1a763d5c257e243624993085bdd830a45c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classxrpl_1_1TERSubset_1a56c65e341bc1110c9a51c9fee58c2027" kindref="member">TERSubset</ref> &amp;requires(Trait&lt; T &gt;::value)</type>
+        <definition>TERSubset &amp;requires(Trait&lt; T &gt;::value) xrpl::TERSubset&lt; Trait &gt;::operator=</definition>
+        <argsstring>(T rhs)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::TERSubset::operator=</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="469" column="5" bodyfile="include/xrpl/protocol/TER.h" bodystart="469" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1TERSubset_1a7b164646745751dec0fb789ad9fedc4f" prot="public" static="no" const="yes" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::TERSubset&lt; Trait &gt;::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <qualifiedname>xrpl::TERSubset::operator bool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="478" column="5" bodyfile="include/xrpl/protocol/TER.h" bodystart="478" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1TERSubset_1af093779a198e305274cf567a8c797530" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::TERSubset&lt; Trait &gt;::operator json::Value</definition>
+        <argsstring>() const</argsstring>
+        <name>operator json::Value</name>
+        <qualifiedname>xrpl::TERSubset::Value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="485" column="5" bodyfile="include/xrpl/protocol/TER.h" bodystart="485" bodyend="488"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxrpl_1_1TERSubset_1a4afe13bf420f98d413a21d3139719836" prot="private" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>xrpl::TERSubset&lt; Trait &gt;::TERSubset</definition>
+        <argsstring>(int rhs)</argsstring>
+        <name>TERSubset</name>
+        <qualifiedname>xrpl::TERSubset::TERSubset</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="441" column="24" bodyfile="include/xrpl/protocol/TER.h" bodystart="441" bodyend="443"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classxrpl_1_1TERSubset_1a44cfaf2953bcd9379106ebfd0eba0d12" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1TERSubset_1a56c65e341bc1110c9a51c9fee58c2027" kindref="member">TERSubset</ref></type>
+        <definition>static constexpr TERSubset xrpl::TERSubset&lt; Trait &gt;::fromInt</definition>
+        <argsstring>(int from)</argsstring>
+        <name>fromInt</name>
+        <qualifiedname>xrpl::TERSubset::fromInt</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="447" column="5" bodyfile="include/xrpl/protocol/TER.h" bodystart="447" bodyend="450"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classxrpl_1_1TERSubset_1afc06d0478c96e9d831ddb581427ba7aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, TERSubset const &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>xrpl::TERSubset::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1TERSubset_1a56c65e341bc1110c9a51c9fee58c2027" kindref="member">TERSubset</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="491" column="12" bodyfile="include/xrpl/protocol/TER.h" bodystart="492" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1TERSubset_1aab2b9ff77489c297378ae92409b986d3" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacexrpl_1a12deb7e24fd7049e6cb0d49f4464d700" kindref="member">TERUnderlyingType</ref></type>
+        <definition>TERUnderlyingType TERtoInt</definition>
+        <argsstring>(TERSubset v)</argsstring>
+        <name>TERtoInt</name>
+        <qualifiedname>xrpl::TERSubset::TERtoInt</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1TERSubset_1a56c65e341bc1110c9a51c9fee58c2027" kindref="member">TERSubset</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/TER.h" line="514" column="5" bodyfile="include/xrpl/protocol/TER.h" bodystart="514" bodyend="517"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/protocol/TER.h" line="428" column="1" bodyfile="include/xrpl/protocol/TER.h" bodystart="429" bodyend="518"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1TERSubset_1a331418f498e93cd94385601cf47e2778" prot="private" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>code_</name></member>
+      <member refid="classxrpl_1_1TERSubset_1a44cfaf2953bcd9379106ebfd0eba0d12" prot="public" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>fromInt</name></member>
+      <member refid="classxrpl_1_1TERSubset_1a7b164646745751dec0fb789ad9fedc4f" prot="public" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>operator bool</name></member>
+      <member refid="classxrpl_1_1TERSubset_1af093779a198e305274cf567a8c797530" prot="public" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>operator json::Value</name></member>
+      <member refid="classxrpl_1_1TERSubset_1afc06d0478c96e9d831ddb581427ba7aa" prot="public" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classxrpl_1_1TERSubset_1a225829d033bf0ab54d185247f0adee00" prot="public" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1TERSubset_1aaa58a372e684a0cfae6c5d5dca2d5683" prot="public" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1TERSubset_1a763d5c257e243624993085bdd830a45c" prot="public" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1TERSubset_1a56c65e341bc1110c9a51c9fee58c2027" prot="public" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>TERSubset</name></member>
+      <member refid="classxrpl_1_1TERSubset_1a9676fce2ddfd74c8b1e1038bd1d78947" prot="public" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>TERSubset</name></member>
+      <member refid="classxrpl_1_1TERSubset_1a2c9ee3fe133ce3f12cb3ea2b204d9da4" prot="public" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>TERSubset</name></member>
+      <member refid="classxrpl_1_1TERSubset_1a4afe13bf420f98d413a21d3139719836" prot="private" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>TERSubset</name></member>
+      <member refid="classxrpl_1_1TERSubset_1a5b8b43dc591a495bd16c09cee5ac236d" prot="public" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>TERSubset</name></member>
+      <member refid="classxrpl_1_1TERSubset_1aab2b9ff77489c297378ae92409b986d3" prot="public" virt="non-virtual"><scope>xrpl::TERSubset</scope><name>TERtoInt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

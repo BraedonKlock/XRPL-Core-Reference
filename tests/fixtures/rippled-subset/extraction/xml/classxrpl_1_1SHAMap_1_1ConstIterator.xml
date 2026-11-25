@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1SHAMap_1_1ConstIterator" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::SHAMap::ConstIterator</compoundname>
+    <includes local="no">xrpl/shamap/SHAMap.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a850264a4ccd7827ddf99c907740b3673" prot="public" static="no">
+        <type>std::forward_iterator_tag</type>
+        <definition>using xrpl::SHAMap::ConstIterator::iterator_category = std::forward_iterator_tag</definition>
+        <argsstring></argsstring>
+        <name>iterator_category</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::iterator_category</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1017" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1017" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1SHAMap_1_1ConstIterator_1aee889bbf462cc7e8f09169b420ffa37d" prot="public" static="no">
+        <type>std::ptrdiff_t</type>
+        <definition>using xrpl::SHAMap::ConstIterator::difference_type = std::ptrdiff_t</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::difference_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1018" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1018" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1SHAMap_1_1ConstIterator_1ac4b7cbda13bfa46a0fe8947482bb5900" prot="public" static="no">
+        <type>SHAMapItem</type>
+        <definition>using xrpl::SHAMap::ConstIterator::value_type = SHAMapItem</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1019" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1019" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a4ea817bf318c208172c8d106f1733d37" prot="public" static="no">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1ac4b7cbda13bfa46a0fe8947482bb5900" kindref="member">value_type</ref> const  &amp;</type>
+        <definition>using xrpl::SHAMap::ConstIterator::reference = value_type const&amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1020" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1020" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1SHAMap_1_1ConstIterator_1aa10ec985c8e1e018854123b453212bfd" prot="public" static="no">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1ac4b7cbda13bfa46a0fe8947482bb5900" kindref="member">value_type</ref> const  *</type>
+        <definition>using xrpl::SHAMap::ConstIterator::pointer = value_type const*</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::pointer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1021" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1021" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1_1ConstIterator_1acdb5c764e3fefa80035da61b4f8a2000" prot="private" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1NodePathStack" kindref="compound">NodePathStack</ref></type>
+        <definition>NodePathStack xrpl::SHAMap::ConstIterator::stack_</definition>
+        <argsstring></argsstring>
+        <name>stack_</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::stack_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1024" column="19" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1024" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a84b97aef75db4f0795e0d1f31fba0300" prot="private" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a1ffff693669cd9c4038491d5cc4cf6f3" kindref="member">SHAMap</ref> const  *</type>
+        <definition>SHAMap const* xrpl::SHAMap::ConstIterator::map_</definition>
+        <argsstring></argsstring>
+        <name>map_</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::map_</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1025" column="18" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1025" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1_1ConstIterator_1aa345a5086d6cd6a03628fe88254c2161" prot="private" static="no" mutable="no">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1aa10ec985c8e1e018854123b453212bfd" kindref="member">pointer</ref></type>
+        <definition>pointer xrpl::SHAMap::ConstIterator::item_</definition>
+        <argsstring></argsstring>
+        <name>item_</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::item_</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1026" column="13" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1026" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a1ffff693669cd9c4038491d5cc4cf6f3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class SHAMap</definition>
+        <argsstring></argsstring>
+        <name>SHAMap</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::SHAMap</qualifiedname>
+        <param>
+          <type>SHAMap</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1054" column="18" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1054" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a807526f4e0c246d90a825b155648cb16" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(SHAMap::ConstIterator const &amp;x, SHAMap::ConstIterator const &amp;y)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::operator==</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator" kindref="compound">SHAMap::ConstIterator</ref> const &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator" kindref="compound">SHAMap::ConstIterator</ref> const &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1053" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1109" bodyend="1116"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a924a2d4783ebae9d59da887c3b69ae40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::ConstIterator::ConstIterator</definition>
+        <argsstring>()=delete</argsstring>
+        <name>ConstIterator</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::ConstIterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1029" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a1a10fc01f4fafe091131cfcd66e57657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::ConstIterator::ConstIterator</definition>
+        <argsstring>(ConstIterator const &amp;other)=default</argsstring>
+        <name>ConstIterator</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::ConstIterator</qualifiedname>
+        <param>
+          <type>ConstIterator const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1031" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a67e6635b5927d94763634d16c22dfa30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a924a2d4783ebae9d59da887c3b69ae40" kindref="member">ConstIterator</ref> &amp;</type>
+        <definition>ConstIterator &amp; xrpl::SHAMap::ConstIterator::operator=</definition>
+        <argsstring>(ConstIterator const &amp;other)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a924a2d4783ebae9d59da887c3b69ae40" kindref="member">ConstIterator</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1033" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a0a1269e4cd8eaafa781184f96b13825a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::ConstIterator::~ConstIterator</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ConstIterator</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::~ConstIterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1035" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1ConstIterator_1aca9f82f96be6d5f3e771cb7f918090a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a4ea817bf318c208172c8d106f1733d37" kindref="member">reference</ref></type>
+        <definition>SHAMap::ConstIterator::reference xrpl::SHAMap::ConstIterator::operator*</definition>
+        <argsstring>() const</argsstring>
+        <name>operator*</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::operator*</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1038" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1075" bodyend="1078"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a15905897863915ad253bacc20cb76e0d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1aa10ec985c8e1e018854123b453212bfd" kindref="member">pointer</ref></type>
+        <definition>SHAMap::ConstIterator::pointer xrpl::SHAMap::ConstIterator::operator-&gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-&gt;</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::operator-&gt;</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1040" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1081" bodyend="1084"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a8f5ed5dda204d5ef5bbffbc6e4cee70d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a924a2d4783ebae9d59da887c3b69ae40" kindref="member">ConstIterator</ref> &amp;</type>
+        <definition>SHAMap::ConstIterator &amp; xrpl::SHAMap::ConstIterator::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::operator++</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1043" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1087" bodyend="1098"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a3cf2c70c10210a19b3212169936af264" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a924a2d4783ebae9d59da887c3b69ae40" kindref="member">ConstIterator</ref></type>
+        <definition>SHAMap::ConstIterator xrpl::SHAMap::ConstIterator::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::operator++</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1045" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1101" bodyend="1106"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a8bd09dbc75bd0607be0ec2b5a26688f3" prot="private" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::ConstIterator::ConstIterator</definition>
+        <argsstring>(SHAMap const *map)</argsstring>
+        <name>ConstIterator</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::ConstIterator</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a1ffff693669cd9c4038491d5cc4cf6f3" kindref="member">SHAMap</ref> const *</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1048" column="14" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1057" bodyend="1063"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a5b42745a017ef6ffec21eb6c6961161b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::ConstIterator::ConstIterator</definition>
+        <argsstring>(SHAMap const *map, std::nullptr_t)</argsstring>
+        <name>ConstIterator</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::ConstIterator</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a1ffff693669cd9c4038491d5cc4cf6f3" kindref="member">SHAMap</ref> const *</type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>std::nullptr_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1049" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1065" bodyend="1067"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1ConstIterator_1a016d1e3890874a55a5f04f2cf6fc2970" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::ConstIterator::ConstIterator</definition>
+        <argsstring>(SHAMap const *map, pointer item, NodePathStack &amp;&amp;stack)</argsstring>
+        <name>ConstIterator</name>
+        <qualifiedname>xrpl::SHAMap::ConstIterator::ConstIterator</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a1ffff693669cd9c4038491d5cc4cf6f3" kindref="member">SHAMap</ref> const *</type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator_1aa10ec985c8e1e018854123b453212bfd" kindref="member">pointer</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1NodePathStack" kindref="compound">NodePathStack</ref> &amp;&amp;</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="1050" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1069" bodyend="1072"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>std::atomic&lt; SHAMapState &gt;</label>
+      </node>
+      <node id="8">
+        <label>std::atomic&lt; bool &gt;</label>
+      </node>
+      <node id="6">
+        <label>std::atomic&lt; std::uint32_t &gt;</label>
+      </node>
+      <node id="4">
+        <label>std::pair&lt; SHAMapTreeNodePtr, SHAMapNodeID &gt;</label>
+      </node>
+      <node id="3">
+        <label>std::stack&lt; std::pair&lt; SHAMapTreeNodePtr, SHAMapNodeID &gt; &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>xrpl::SHAMap</label>
+        <link refid="classxrpl_1_1SHAMap"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>ledgerSeq_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>state_</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>full_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>xrpl::SHAMap::ConstIterator</label>
+        <link refid="classxrpl_1_1SHAMap_1_1ConstIterator"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>stack_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>map_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xrpl::SHAMap::NodePathStack</label>
+        <link refid="classxrpl_1_1SHAMap_1_1NodePathStack"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>stack_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/shamap/SHAMap.h" line="1014" column="1" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1015" bodyend="1055"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a924a2d4783ebae9d59da887c3b69ae40" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>ConstIterator</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a1a10fc01f4fafe091131cfcd66e57657" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>ConstIterator</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a8bd09dbc75bd0607be0ec2b5a26688f3" prot="private" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>ConstIterator</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a5b42745a017ef6ffec21eb6c6961161b" prot="private" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>ConstIterator</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a016d1e3890874a55a5f04f2cf6fc2970" prot="private" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>ConstIterator</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1aee889bbf462cc7e8f09169b420ffa37d" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>difference_type</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1aa345a5086d6cd6a03628fe88254c2161" prot="private" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>item_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a850264a4ccd7827ddf99c907740b3673" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>iterator_category</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a84b97aef75db4f0795e0d1f31fba0300" prot="private" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>map_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1aca9f82f96be6d5f3e771cb7f918090a2" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>operator*</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a8f5ed5dda204d5ef5bbffbc6e4cee70d" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>operator++</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a3cf2c70c10210a19b3212169936af264" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>operator++</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a15905897863915ad253bacc20cb76e0d" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>operator-&gt;</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a67e6635b5927d94763634d16c22dfa30" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a807526f4e0c246d90a825b155648cb16" prot="private" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>operator==</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1aa10ec985c8e1e018854123b453212bfd" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>pointer</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a4ea817bf318c208172c8d106f1733d37" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>reference</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a1ffff693669cd9c4038491d5cc4cf6f3" prot="private" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>SHAMap</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1acdb5c764e3fefa80035da61b4f8a2000" prot="private" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>stack_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1ac4b7cbda13bfa46a0fe8947482bb5900" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>value_type</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1ConstIterator_1a0a1269e4cd8eaafa781184f96b13825a" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::ConstIterator</scope><name>~ConstIterator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

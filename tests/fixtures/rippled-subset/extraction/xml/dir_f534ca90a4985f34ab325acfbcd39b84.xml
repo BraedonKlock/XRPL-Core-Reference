@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_f534ca90a4985f34ab325acfbcd39b84" kind="dir">
+    <compoundname>include/xrpl/basics</compoundname>
+    <innerfile refid="base__uint_8h">base_uint.h</innerfile>
+    <innerfile refid="contract_8h">contract.h</innerfile>
+    <innerfile refid="scope_8h">scope.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/basics/"/>
+  </compounddef>
+</doxygen>

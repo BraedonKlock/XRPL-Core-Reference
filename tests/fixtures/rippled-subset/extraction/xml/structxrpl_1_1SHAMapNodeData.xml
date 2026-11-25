@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1SHAMapNodeData" kind="struct" language="C++" prot="public">
+    <compoundname>xrpl::SHAMapNodeData</compoundname>
+    <includes local="no">xrpl/shamap/SHAMap.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxrpl_1_1SHAMapNodeData_1a3d6475c54511ab5c94aeabd96a72f8f5" prot="public" static="no" mutable="no">
+        <type>SHAMapNodeID</type>
+        <definition>SHAMapNodeID xrpl::SHAMapNodeData::nodeID</definition>
+        <argsstring></argsstring>
+        <name>nodeID</name>
+        <qualifiedname>xrpl::SHAMapNodeData::nodeID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="106" column="18" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMapNodeData_1ae05b0496239d8cf076a1f33541e0434b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMapNodeData::isLeaf</definition>
+        <argsstring></argsstring>
+        <name>isLeaf</name>
+        <qualifiedname>xrpl::SHAMapNodeData::isLeaf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="110" column="10" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxrpl_1_1SHAMapNodeData_1a8e65423a1343d11c97207848d5b1df26" prot="public" static="no" mutable="no">
+        <type>Blob</type>
+        <definition>Blob xrpl::SHAMapNodeData::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>xrpl::SHAMapNodeData::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="111" column="10" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classxrpl_1_1SHAMap" kindref="compound">SHAMap</ref> is both a radix tree with a fan-out of 16 and a Merkle tree. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A radix tree is a tree with two properties:</para>
+<para><orderedlist>
+<listitem><para>The key for a node is represented by the node&apos;s position in the tree (the &quot;prefix property&quot;).</para>
+</listitem><listitem><para>A node with only one child is merged with that child (the &quot;merge property&quot;)</para>
+</listitem></orderedlist>
+</para>
+<para>These properties result in a significantly smaller memory footprint for a radix tree.</para>
+<para>A fan-out of 16 means that each node in the tree has at most 16 children. See <ulink url="https://en.wikipedia.org/wiki/Radix_tree">https://en.wikipedia.org/wiki/Radix_tree</ulink></para>
+<para>A Merkle tree is a tree where each non-leaf node is labelled with the hash of the combined labels of its children nodes.</para>
+<para>A key property of a Merkle tree is that testing for node inclusion is O(log(N)) where N is the number of nodes in the tree.</para>
+<para>See <ulink url="https://en.wikipedia.org/wiki/Merkle_tree">https://en.wikipedia.org/wiki/Merkle_tree</ulink> Holds a <ref refid="classxrpl_1_1SHAMap" kindref="compound">SHAMap</ref> node&apos;s identity, leaf status, and serialized data. Used by getNodeFat to return node data for peer synchronization. </para>
+    </detaileddescription>
+    <location file="include/xrpl/shamap/SHAMap.h" line="104" column="1" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="105" bodyend="112"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1SHAMapNodeData_1a8e65423a1343d11c97207848d5b1df26" prot="public" virt="non-virtual"><scope>xrpl::SHAMapNodeData</scope><name>data</name></member>
+      <member refid="structxrpl_1_1SHAMapNodeData_1ae05b0496239d8cf076a1f33541e0434b" prot="public" virt="non-virtual"><scope>xrpl::SHAMapNodeData</scope><name>isLeaf</name></member>
+      <member refid="structxrpl_1_1SHAMapNodeData_1a3d6475c54511ab5c94aeabd96a72f8f5" prot="public" virt="non-virtual"><scope>xrpl::SHAMapNodeData</scope><name>nodeID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

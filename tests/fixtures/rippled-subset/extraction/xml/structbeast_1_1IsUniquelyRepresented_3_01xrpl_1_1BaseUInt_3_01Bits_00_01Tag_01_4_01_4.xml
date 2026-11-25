@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structbeast_1_1IsUniquelyRepresented_3_01xrpl_1_1BaseUInt_3_01Bits_00_01Tag_01_4_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>beast::IsUniquelyRepresented&lt; xrpl::BaseUInt&lt; Bits, Tag &gt; &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::true_type</basecompoundref>
+    <includes local="no">xrpl/basics/base_uint.h</includes>
+    <templateparamlist>
+      <param>
+        <type>std::size_t</type>
+        <declname>Bits</declname>
+        <defname>Bits</defname>
+      </param>
+      <param>
+        <type>class Tag</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structbeast_1_1IsUniquelyRepresented_3_01xrpl_1_1BaseUInt_3_01Bits_00_01Tag_01_4_01_4_1a67352374c3449abe3170c66fbb7a3e69" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>beast::IsUniquelyRepresented&lt; xrpl::BaseUInt&lt; Bits, Tag &gt; &gt;::IsUniquelyRepresented</definition>
+        <argsstring>()=default</argsstring>
+        <name>IsUniquelyRepresented</name>
+        <qualifiedname>beast::IsUniquelyRepresented&lt; xrpl::BaseUInt&lt; Bits, Tag &gt; &gt;::IsUniquelyRepresented</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/basics/base_uint.h" line="703" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>beast::IsUniquelyRepresented&lt; xrpl::BaseUInt&lt; Bits, Tag &gt; &gt;</label>
+        <link refid="structbeast_1_1IsUniquelyRepresented_3_01xrpl_1_1BaseUInt_3_01Bits_00_01Tag_01_4_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::true_type</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>beast::IsUniquelyRepresented&lt; xrpl::BaseUInt&lt; Bits, Tag &gt; &gt;</label>
+        <link refid="structbeast_1_1IsUniquelyRepresented_3_01xrpl_1_1BaseUInt_3_01Bits_00_01Tag_01_4_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::true_type</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/basics/base_uint.h" line="701" column="1" bodyfile="include/xrpl/basics/base_uint.h" bodystart="702" bodyend="704"/>
+    <listofallmembers>
+      <member refid="structbeast_1_1IsUniquelyRepresented_3_01xrpl_1_1BaseUInt_3_01Bits_00_01Tag_01_4_01_4_1a67352374c3449abe3170c66fbb7a3e69" prot="public" virt="non-virtual"><scope>beast::IsUniquelyRepresented&lt; xrpl::BaseUInt&lt; Bits, Tag &gt; &gt;</scope><name>IsUniquelyRepresented</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

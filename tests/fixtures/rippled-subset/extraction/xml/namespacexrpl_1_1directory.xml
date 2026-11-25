@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="namespacexrpl_1_1directory" kind="namespace" language="C++">
+    <compoundname>xrpl::directory</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacexrpl_1_1directory_1acecae9151f8750699ef96d1c8bc8fecc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint64_t</type>
+        <definition>std::uint64_t xrpl::directory::createRoot</definition>
+        <argsstring>(ApplyView &amp;view, Keylet const &amp;directory, UInt256 const &amp;key, std::function&lt; void(SLE::Ref)&gt; const &amp;describe)</argsstring>
+        <name>createRoot</name>
+        <qualifiedname>xrpl::directory::createRoot</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ApplyView" kindref="compound">ApplyView</ref> &amp;</type>
+          <declname>view</declname>
+        </param>
+        <param>
+          <type>Keylet const &amp;</type>
+          <declname>directory</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(SLE::Ref)&gt; const &amp;</type>
+          <declname>describe</declname>
+        </param>
+        <briefdescription>
+<para>Helper functions for managing low-level directory operations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These are not part of the <ref refid="classxrpl_1_1ApplyView" kindref="compound">ApplyView</ref> interface.</para>
+<para>Don&apos;t use them unless you really, really know what you&apos;re doing. Instead use dirAdd, dirInsert, etc. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ApplyView.h" line="466" column="1" declfile="include/xrpl/ledger/ApplyView.h" declline="466" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacexrpl_1_1directory_1a5ec159c3d979c655bfeccaf2337032d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto xrpl::directory::findPreviousPage</definition>
+        <argsstring>(ApplyView &amp;view, Keylet const &amp;directory, SLE::Ref start)</argsstring>
+        <name>findPreviousPage</name>
+        <qualifiedname>xrpl::directory::findPreviousPage</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ApplyView" kindref="compound">ApplyView</ref> &amp;</type>
+          <declname>view</declname>
+        </param>
+        <param>
+          <type>Keylet const &amp;</type>
+          <declname>directory</declname>
+        </param>
+        <param>
+          <type>SLE::Ref</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ApplyView.h" line="473" column="1" declfile="include/xrpl/ledger/ApplyView.h" declline="473" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacexrpl_1_1directory_1ac400bcd05ba54a063f2c420951a403b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint64_t</type>
+        <definition>std::uint64_t xrpl::directory::insertKey</definition>
+        <argsstring>(ApplyView &amp;view, SLE::Ref node, std::uint64_t page, bool preserveOrder, STVector256 &amp;indexes, UInt256 const &amp;key)</argsstring>
+        <name>insertKey</name>
+        <qualifiedname>xrpl::directory::insertKey</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ApplyView" kindref="compound">ApplyView</ref> &amp;</type>
+          <declname>view</declname>
+        </param>
+        <param>
+          <type>SLE::Ref</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>page</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>preserveOrder</declname>
+        </param>
+        <param>
+          <type>STVector256 &amp;</type>
+          <declname>indexes</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ApplyView.h" line="476" column="1" declfile="include/xrpl/ledger/ApplyView.h" declline="476" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacexrpl_1_1directory_1a55c37b3728d554d4cb90d0be2aba10cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; std::uint64_t &gt;</type>
+        <definition>std::optional&lt; std::uint64_t &gt; xrpl::directory::insertPage</definition>
+        <argsstring>(ApplyView &amp;view, std::uint64_t page, SLE::pointer node, std::uint64_t nextPage, SLE::Ref next, UInt256 const &amp;key, Keylet const &amp;directory, std::function&lt; void(SLE::Ref)&gt; const &amp;describe)</argsstring>
+        <name>insertPage</name>
+        <qualifiedname>xrpl::directory::insertPage</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ApplyView" kindref="compound">ApplyView</ref> &amp;</type>
+          <declname>view</declname>
+        </param>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>page</declname>
+        </param>
+        <param>
+          <type>SLE::pointer</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>nextPage</declname>
+        </param>
+        <param>
+          <type>SLE::Ref</type>
+          <declname>next</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>Keylet const &amp;</type>
+          <declname>directory</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(SLE::Ref)&gt; const &amp;</type>
+          <declname>describe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ApplyView.h" line="485" column="1" declfile="include/xrpl/ledger/ApplyView.h" declline="485" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/ledger/ApplyView.h" line="456" column="1"/>
+  </compounddef>
+</doxygen>

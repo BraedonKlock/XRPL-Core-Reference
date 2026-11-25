@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="aged__ordered__container_8h" kind="file" language="C++">
+    <compoundname>aged_ordered_container.h</compoundname>
+    <includes local="no">xrpl/beast/clock/abstract_clock.h</includes>
+    <includes local="no">xrpl/beast/container/aged_container.h</includes>
+    <includes local="no">xrpl/beast/container/detail/aged_associative_container.h</includes>
+    <includes local="no">xrpl/beast/container/detail/aged_container_iterator.h</includes>
+    <includes local="no">xrpl/beast/container/detail/empty_base_optimization.h</includes>
+    <includes local="no">boost/intrusive/list.hpp</includes>
+    <includes local="no">boost/intrusive/set.hpp</includes>
+    <includes local="no">boost/version.hpp</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">initializer_list</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>include/xrpl/beast/container/detail/aged_ordered_container.h</label>
+        <link refid="aged__ordered__container_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>algorithm</label>
+      </node>
+      <node id="7">
+        <label>boost/intrusive/list.hpp</label>
+      </node>
+      <node id="8">
+        <label>boost/intrusive/set.hpp</label>
+      </node>
+      <node id="9">
+        <label>boost/version.hpp</label>
+      </node>
+      <node id="11">
+        <label>chrono</label>
+      </node>
+      <node id="12">
+        <label>cstddef</label>
+      </node>
+      <node id="13">
+        <label>cstdint</label>
+      </node>
+      <node id="14">
+        <label>functional</label>
+      </node>
+      <node id="15">
+        <label>initializer_list</label>
+      </node>
+      <node id="16">
+        <label>memory</label>
+      </node>
+      <node id="17">
+        <label>stdexcept</label>
+      </node>
+      <node id="18">
+        <label>tuple</label>
+      </node>
+      <node id="19">
+        <label>type_traits</label>
+      </node>
+      <node id="20">
+        <label>utility</label>
+      </node>
+      <node id="2">
+        <label>xrpl/beast/clock/abstract_clock.h</label>
+      </node>
+      <node id="3">
+        <label>xrpl/beast/container/aged_container.h</label>
+      </node>
+      <node id="4">
+        <label>xrpl/beast/container/detail/aged_associative_container.h</label>
+      </node>
+      <node id="5">
+        <label>xrpl/beast/container/detail/aged_container_iterator.h</label>
+      </node>
+      <node id="6">
+        <label>xrpl/beast/container/detail/empty_base_optimization.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structbeast_1_1detail_1_1IsBoostReverseIterator" prot="public">beast::detail::IsBoostReverseIterator</innerclass>
+    <innerclass refid="structbeast_1_1detail_1_1IsBoostReverseIterator_3_01boost_1_1intrusive_1_1reverse__iterator_3_01It_01_4_01_4" prot="public">beast::detail::IsBoostReverseIterator&lt; boost::intrusive::reverse_iterator&lt; It &gt; &gt;</innerclass>
+    <innerclass refid="classbeast_1_1detail_1_1AgedOrderedContainer" prot="public">beast::detail::AgedOrderedContainer</innerclass>
+    <innerclass refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element" prot="private">beast::detail::AgedOrderedContainer::Element</innerclass>
+    <innerclass refid="structbeast_1_1detail_1_1AgedOrderedContainer_1_1Element_1_1Stashed" prot="public">beast::detail::AgedOrderedContainer::Element::Stashed</innerclass>
+    <innerclass refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1PairValueCompare" prot="private">beast::detail::AgedOrderedContainer::PairValueCompare</innerclass>
+    <innerclass refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1KeyValueCompare" prot="private">beast::detail::AgedOrderedContainer::KeyValueCompare</innerclass>
+    <innerclass refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1ConfigT" prot="private">beast::detail::AgedOrderedContainer::ConfigT</innerclass>
+    <innerclass refid="classbeast_1_1detail_1_1AgedOrderedContainer_1_1ChronologicalT" prot="public">beast::detail::AgedOrderedContainer::ChronologicalT</innerclass>
+    <innerclass refid="structbeast_1_1IsAgedContainer_3_01beast_1_1detail_1_1AgedOrderedContainer_3_01IsMulti_00_01IsMa042d08be4c60fc8511b73a72a7d8fe1d" prot="public">beast::IsAgedContainer&lt; beast::detail::AgedOrderedContainer&lt; IsMulti, IsMap, Key, T, Clock, Compare, Allocator &gt; &gt;</innerclass>
+    <innernamespace refid="namespacebeast">beast</innernamespace>
+    <innernamespace refid="namespacebeast_1_1detail">beast::detail</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/beast/container/detail/aged_ordered_container.h"/>
+  </compounddef>
+</doxygen>

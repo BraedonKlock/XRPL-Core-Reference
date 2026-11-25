@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1Rate" kind="struct" language="C++" prot="public">
+    <compoundname>xrpl::Rate</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">boost::totally_ordered&lt; Rate &gt;</basecompoundref>
+    <includes local="no">xrpl/protocol/Rate.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxrpl_1_1Rate_1a6ec5042462b69ef01e253ca885f3066e" prot="public" static="no" mutable="no">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t xrpl::Rate::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>xrpl::Rate::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Rate.h" line="22" column="19" bodyfile="include/xrpl/protocol/Rate.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structxrpl_1_1Rate_1aab66fc58fd3598d0a2e42f1e294fac5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::Rate::Rate</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Rate</name>
+        <qualifiedname>xrpl::Rate::Rate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Rate.h" line="24" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structxrpl_1_1Rate_1ac9f7b7f23264a79a29829e8d82d0c620" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::Rate::Rate</definition>
+        <argsstring>(std::uint32_t rate)</argsstring>
+        <name>Rate</name>
+        <qualifiedname>xrpl::Rate::Rate</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/Rate.h" line="26" column="14" bodyfile="include/xrpl/protocol/Rate.h" bodystart="26" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a transfer rate. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Transfer rates are specified as fractions of 1 billion. For example, a transfer rate of 1% is represented as 1,010,000,000. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>boost::totally_ordered&lt; Rate &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::Rate</label>
+        <link refid="structxrpl_1_1Rate"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>boost::totally_ordered&lt; Rate &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::Rate</label>
+        <link refid="structxrpl_1_1Rate"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/protocol/Rate.h" line="20" column="1" bodyfile="include/xrpl/protocol/Rate.h" bodystart="21" bodyend="29"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1Rate_1aab66fc58fd3598d0a2e42f1e294fac5f" prot="public" virt="non-virtual"><scope>xrpl::Rate</scope><name>Rate</name></member>
+      <member refid="structxrpl_1_1Rate_1ac9f7b7f23264a79a29829e8d82d0c620" prot="public" virt="non-virtual"><scope>xrpl::Rate</scope><name>Rate</name></member>
+      <member refid="structxrpl_1_1Rate_1a6ec5042462b69ef01e253ca885f3066e" prot="public" virt="non-virtual"><scope>xrpl::Rate</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

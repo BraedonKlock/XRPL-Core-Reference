@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1OpenLedgerT" kind="struct" language="C++" prot="public">
+    <compoundname>xrpl::OpenLedgerT</compoundname>
+    <includes local="no">xrpl/ledger/OpenView.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structxrpl_1_1OpenLedgerT_1aa69ab82900da7c85fe444ab46ca36b23" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>xrpl::OpenLedgerT::OpenLedgerT</definition>
+        <argsstring>()=default</argsstring>
+        <name>OpenLedgerT</name>
+        <qualifiedname>xrpl::OpenLedgerT::OpenLedgerT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/OpenView.h" line="37" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Open ledger construction tag. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Views constructed with this tag will have the rules of open ledgers applied during transaction processing. </para>
+    </detaileddescription>
+    <location file="include/xrpl/ledger/OpenView.h" line="35" column="17" bodyfile="include/xrpl/ledger/OpenView.h" bodystart="36" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1OpenLedgerT_1aa69ab82900da7c85fe444ab46ca36b23" prot="public" virt="non-virtual"><scope>xrpl::OpenLedgerT</scope><name>OpenLedgerT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

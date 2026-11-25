@@ -1,0 +1,95 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  height: var(--header-height);
+  padding: 0 var(--space-4);
+  background: var(--color-header-background);
+  color: var(--color-header-text);
+}
+
+.brand {
+  flex: none;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  min-width: 0;
+  color: var(--color-header-text);
+}
+
+.brand:hover {
+  color: var(--color-header-text);
+  text-decoration: none;
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+}
+
+.revision {
+  overflow: hidden;
+  color: var(--color-header-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+.menuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-header-control);
+  color: var(--color-header-text);
+  cursor: pointer;
+}
+
+.menuButton:hover {
+  background: var(--color-header-control-hover);
+}
+
+@media (max-width: 60rem) {
+  .menuButton {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 75rem) {
+  .revision {
+    display: none;
+  }
+}
+
+@media (max-width: 40rem) {
+  .header {
+    gap: var(--space-2);
+    padding: 0 var(--space-2);
+  }
+
+  .title {
+    font-size: var(--font-size-md);
+  }
+}
+
+@media (max-width: 30rem) {
+  .brand {
+    display: none;
+  }
+}

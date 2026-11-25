@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="ApplyView_8h" kind="file" language="C++">
+    <compoundname>ApplyView.h</compoundname>
+    <includes refid="base__uint_8h" local="no">xrpl/basics/base_uint.h</includes>
+    <includes local="no">xrpl/basics/safe_cast.h</includes>
+    <includes local="no">xrpl/beast/utility/instrumentation.h</includes>
+    <includes local="no">xrpl/ledger/OwnerCounts.h</includes>
+    <includes refid="ReadView_8h" local="no">xrpl/ledger/ReadView.h</includes>
+    <includes local="no">xrpl/protocol/AccountID.h</includes>
+    <includes local="no">xrpl/protocol/Issue.h</includes>
+    <includes local="no">xrpl/protocol/Keylet.h</includes>
+    <includes refid="LedgerFormats_8h" local="no">xrpl/protocol/LedgerFormats.h</includes>
+    <includes local="no">xrpl/protocol/MPTIssue.h</includes>
+    <includes local="no">xrpl/protocol/STAmount.h</includes>
+    <includes local="no">xrpl/protocol/STLedgerEntry.h</includes>
+    <includes refid="STTx_8h" local="no">xrpl/protocol/STTx.h</includes>
+    <includes local="no">xrpl/protocol/STVector256.h</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">optional</includes>
+    <includes local="no">type_traits</includes>
+    <includedby refid="ApplyContext_8h" local="no">include/xrpl/tx/ApplyContext.h</includedby>
+    <includedby refid="ApplyContext_8cpp" local="no">src/libxrpl/tx/ApplyContext.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/xrpl/ledger/ApplyView.h</label>
+        <link refid="ApplyView_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>cstdint</label>
+      </node>
+      <node id="13">
+        <label>functional</label>
+      </node>
+      <node id="14">
+        <label>optional</label>
+      </node>
+      <node id="15">
+        <label>type_traits</label>
+      </node>
+      <node id="2">
+        <label>xrpl/basics/safe_cast.h</label>
+      </node>
+      <node id="3">
+        <label>xrpl/beast/utility/instrumentation.h</label>
+      </node>
+      <node id="4">
+        <label>xrpl/ledger/OwnerCounts.h</label>
+      </node>
+      <node id="5">
+        <label>xrpl/protocol/AccountID.h</label>
+      </node>
+      <node id="6">
+        <label>xrpl/protocol/Issue.h</label>
+      </node>
+      <node id="7">
+        <label>xrpl/protocol/Keylet.h</label>
+      </node>
+      <node id="8">
+        <label>xrpl/protocol/MPTIssue.h</label>
+      </node>
+      <node id="9">
+        <label>xrpl/protocol/STAmount.h</label>
+      </node>
+      <node id="10">
+        <label>xrpl/protocol/STLedgerEntry.h</label>
+      </node>
+      <node id="11">
+        <label>xrpl/protocol/STVector256.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classxrpl_1_1ApplyView" prot="public">xrpl::ApplyView</innerclass>
+    <innerclass refid="structxrpl_1_1ApplyViewContext" prot="public">xrpl::ApplyViewContext</innerclass>
+    <innernamespace refid="namespacexrpl">xrpl</innernamespace>
+    <innernamespace refid="namespacexrpl_1_1directory">xrpl::directory</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/ledger/ApplyView.h"/>
+  </compounddef>
+</doxygen>

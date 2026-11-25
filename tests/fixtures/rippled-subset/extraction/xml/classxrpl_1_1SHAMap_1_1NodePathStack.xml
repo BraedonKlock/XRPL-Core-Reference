@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1SHAMap_1_1NodePathStack" kind="class" language="C++" prot="private">
+    <compoundname>xrpl::SHAMap::NodePathStack</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1_1NodePathStack_1a3aa21aa2de60bb91ebf206b1ddeb6d46" prot="private" static="no" mutable="no">
+        <type>std::stack&lt; std::pair&lt; SHAMapTreeNodePtr, SHAMapNodeID &gt; &gt;</type>
+        <definition>std::stack&lt;std::pair&lt;SHAMapTreeNodePtr, SHAMapNodeID&gt; &gt; xrpl::SHAMap::NodePathStack::stack_</definition>
+        <argsstring></argsstring>
+        <name>stack_</name>
+        <qualifiedname>xrpl::SHAMap::NodePathStack::stack_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="624" column="20" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="624" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1NodePathStack_1a3b5ad280db22a0c2b1e79a8658987612" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::NodePathStack::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <qualifiedname>xrpl::SHAMap::NodePathStack::empty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="539" column="9" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="539" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1NodePathStack_1accdc63c3a1fb0ae8935097afe48ca350" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xrpl::SHAMap::NodePathStack::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>xrpl::SHAMap::NodePathStack::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="545" column="9" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="545" bodyend="548"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1NodePathStack_1a1e729793515aeca9558b10edc5bca61c" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; SHAMapTreeNodePtr, SHAMapNodeID &gt; const &amp;</type>
+        <definition>std::pair&lt; SHAMapTreeNodePtr, SHAMapNodeID &gt; const  &amp; xrpl::SHAMap::NodePathStack::top</definition>
+        <argsstring>() const</argsstring>
+        <name>top</name>
+        <qualifiedname>xrpl::SHAMap::NodePathStack::top</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="551" column="9" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="551" bodyend="555"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1NodePathStack_1a2ab870b9c92946fc4adba73cb9b98eb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::NodePathStack::pop</definition>
+        <argsstring>()</argsstring>
+        <name>pop</name>
+        <qualifiedname>xrpl::SHAMap::NodePathStack::pop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="558" column="9" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="558" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1NodePathStack_1af7f5be41bf2aaf20c7bf542626e33eab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::NodePathStack::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>xrpl::SHAMap::NodePathStack::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="565" column="9" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="565" bodyend="568"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1NodePathStack_1a8d47cf6ec4b6e7a147cccdd083942362" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::NodePathStack::pushRoot</definition>
+        <argsstring>(SHAMapTreeNodePtr node)</argsstring>
+        <name>pushRoot</name>
+        <qualifiedname>xrpl::SHAMap::NodePathStack::pushRoot</qualifiedname>
+        <param>
+          <type>SHAMapTreeNodePtr</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Start a path at the root of the map, whose ID is the zero-depth ID by definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="574" column="9" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="574" bodyend="578"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1NodePathStack_1a48832a6f17ea2eef45baf9abfada6867" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::NodePathStack::pushChild</definition>
+        <argsstring>(SHAMapTreeNodePtr node, unsigned int branch)</argsstring>
+        <name>pushChild</name>
+        <qualifiedname>xrpl::SHAMap::NodePathStack::pushChild</qualifiedname>
+        <param>
+          <type>SHAMapTreeNodePtr</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>branch</declname>
+        </param>
+        <briefdescription>
+<para>Extend the path to the child of the current node reached by <computeroutput>branch</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A node keeps the depth it was reached at, never a normalized kLeafDepth. Only a leaf may sit at kLeafDepth, since an inner node there would have no branch left to select. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="587" column="9" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="587" bodyend="602"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1_1NodePathStack_1ad44087068a9e9e99cc6d8108f9eb7943" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::NodePathStack::pushNode</definition>
+        <argsstring>(SHAMapTreeNodePtr node, UInt256 const &amp;target)</argsstring>
+        <name>pushNode</name>
+        <qualifiedname>xrpl::SHAMap::NodePathStack::pushNode</qualifiedname>
+        <param>
+          <type>SHAMapTreeNodePtr</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Extend the path to a node lying on the path to <computeroutput>target</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>For nodes not reached by descending a known branch: the walk tracks only the key it is heading for, or the node is newly created. Either way <computeroutput>target</computeroutput> selects the branch. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="611" column="9" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="611" bodyend="621"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A path from the root of the map down to some node, pairing each node with the ID naming its position. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The two halves of an entry must agree, and the only way to get that wrong is to compute an ID from the wrong branch. So this type does not accept an ID at all: every push takes the branch being descended and derives the ID itself, so a node and its ID cannot disagree. Reads are exposed through the same accessors a std::stack would offer. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>std::pair&lt; SHAMapTreeNodePtr, SHAMapNodeID &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::stack&lt; std::pair&lt; SHAMapTreeNodePtr, SHAMapNodeID &gt; &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>xrpl::SHAMap::NodePathStack</label>
+        <link refid="classxrpl_1_1SHAMap_1_1NodePathStack"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>stack_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/shamap/SHAMap.h" line="535" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="536" bodyend="625"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1SHAMap_1_1NodePathStack_1af7f5be41bf2aaf20c7bf542626e33eab" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::NodePathStack</scope><name>clear</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1NodePathStack_1a3b5ad280db22a0c2b1e79a8658987612" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::NodePathStack</scope><name>empty</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1NodePathStack_1a2ab870b9c92946fc4adba73cb9b98eb4" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::NodePathStack</scope><name>pop</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1NodePathStack_1a48832a6f17ea2eef45baf9abfada6867" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::NodePathStack</scope><name>pushChild</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1NodePathStack_1ad44087068a9e9e99cc6d8108f9eb7943" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::NodePathStack</scope><name>pushNode</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1NodePathStack_1a8d47cf6ec4b6e7a147cccdd083942362" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::NodePathStack</scope><name>pushRoot</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1NodePathStack_1accdc63c3a1fb0ae8935097afe48ca350" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::NodePathStack</scope><name>size</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1NodePathStack_1a3aa21aa2de60bb91ebf206b1ddeb6d46" prot="private" virt="non-virtual"><scope>xrpl::SHAMap::NodePathStack</scope><name>stack_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1_1NodePathStack_1a1e729793515aeca9558b10edc5bca61c" prot="public" virt="non-virtual"><scope>xrpl::SHAMap::NodePathStack</scope><name>top</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1TypedField" kind="struct" language="C++" prot="public">
+    <compoundname>xrpl::TypedField</compoundname>
+    <basecompoundref refid="classxrpl_1_1SField" prot="public" virt="non-virtual">xrpl::SField</basecompoundref>
+    <includes local="no">xrpl/protocol/SField.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structxrpl_1_1TypedField_1abb1cb136cda68aac132830a24b3b7fd1" prot="public" static="no">
+        <type>T</type>
+        <definition>using xrpl::TypedField&lt; T &gt;::type = T</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>xrpl::TypedField::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="308" column="5" bodyfile="include/xrpl/protocol/SField.h" bodystart="308" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structxrpl_1_1TypedField_1ab9da88ee2699aa3f8a3a819b6d806891" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>xrpl::TypedField&lt; T &gt;::TypedField</definition>
+        <argsstring>(PrivateAccessTagT pat, Args &amp;&amp;... args)</argsstring>
+        <name>TypedField</name>
+        <qualifiedname>xrpl::TypedField::TypedField</qualifiedname>
+        <param>
+          <type><ref refid="structxrpl_1_1SField_1_1PrivateAccessTagT" kindref="compound">PrivateAccessTagT</ref></type>
+          <declname>pat</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/SField.h" line="311" column="14" bodyfile="src/libxrpl/protocol/SField.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A field with a type known at compile time. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>xrpl::SField</label>
+        <link refid="classxrpl_1_1SField"/>
+      </node>
+      <node id="1">
+        <label>xrpl::TypedField&lt; T &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="3">
+        <label>std::string</label>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::unordered_map&lt; int, xrpl::SField const * &gt;</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::unordered_map&lt; std::string, xrpl::SField const * &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>keys</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xrpl::SField</label>
+        <link refid="classxrpl_1_1SField"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>fieldName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>knownCodeToField</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>knownNameToField</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>xrpl::TypedField&lt; T &gt;</label>
+        <link refid="structxrpl_1_1TypedField"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/protocol/SField.h" line="306" column="1" bodyfile="include/xrpl/protocol/SField.h" bodystart="307" bodyend="312"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1SField_1ad248950c73d0ec48d34768988aafcbf4" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>compare</name></member>
+      <member refid="classxrpl_1_1SField_1a501cfe0932d99f1c389cfaa098ba5310" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>fieldCodeMem</name></member>
+      <member refid="classxrpl_1_1SField_1a6228d998c8abc912ef07ba7f544c1450" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>fieldMeta</name></member>
+      <member refid="classxrpl_1_1SField_1a70d13c579cea2b3f0a269139b337d083" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>fieldName</name></member>
+      <member refid="classxrpl_1_1SField_1a88c021bba34831a4c76b0c519ee284d8" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>fieldNum</name></member>
+      <member refid="classxrpl_1_1SField_1aa6586240eb3f8c27a950f43c5ae6c01f" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>fieldType</name></member>
+      <member refid="classxrpl_1_1SField_1a10cac9dc08e88c352314fe7fe4fad9fb" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>fieldValue</name></member>
+      <member refid="classxrpl_1_1SField_1a506296ee8d29a1742067895c6e95c370" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>getCode</name></member>
+      <member refid="classxrpl_1_1SField_1a4d779d15064d08d83980ceb5116aac10" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>getField</name></member>
+      <member refid="classxrpl_1_1SField_1adc46238b9499925259de917f96636b8a" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>getField</name></member>
+      <member refid="classxrpl_1_1SField_1af67f4d5dc76a8ea14f8bc09dbdbbbd0b" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>getField</name></member>
+      <member refid="classxrpl_1_1SField_1a75e15ceb4b40c58603159ab979ced70d" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>getField</name></member>
+      <member refid="classxrpl_1_1SField_1abfd8c5c236d682a838c053d389ee8540" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>getJsonName</name></member>
+      <member refid="classxrpl_1_1SField_1a9b11d04b28fdb0fd90a35399591514f1" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>getKnownCodeToField</name></member>
+      <member refid="classxrpl_1_1SField_1ae54d0c809bf652bae8ca4c2f4253e994" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>getName</name></member>
+      <member refid="classxrpl_1_1SField_1abb608fafe94a3056c6a8307cf0dd7814" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>getNum</name></member>
+      <member refid="classxrpl_1_1SField_1ae7420db3f6e4140f579db2aa26000dee" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>getNumFields</name></member>
+      <member refid="classxrpl_1_1SField_1a43aec62fe5e1b8f402a54fb700df6b57" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>hasName</name></member>
+      <member refid="classxrpl_1_1SField_1aa5d56b2ef4a028a261f17b1fc3483843" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>isBinary</name></member>
+      <member refid="classxrpl_1_1SField_1a81ff7bf559a9a3aec51452d8f5f6635e" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>isDiscardable</name></member>
+      <member refid="classxrpl_1_1SField_1a47e7c51ea2ad4a8f9c55f7fb3f16ae89" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>isInvalid</name></member>
+      <member refid="classxrpl_1_1SField_1aeca7616e54f17ecd56042bf721573843" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>IsSigning</name></member>
+      <member refid="classxrpl_1_1SField_1a240231e5359e54b53b4b832500445575" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>isUseful</name></member>
+      <member refid="classxrpl_1_1SField_1a91992fcade5560b9a9d1d738ab809deb" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>jsonName</name></member>
+      <member refid="classxrpl_1_1SField_1a4db7a22b8e3d6a0ad1070f047bca5b6b" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>kNotSigning</name></member>
+      <member refid="classxrpl_1_1SField_1aba5ac3396e31e73c3795f4e1c9d0c730" prot="private" virt="non-virtual"><scope>xrpl::TypedField</scope><name>knownCodeToField</name></member>
+      <member refid="classxrpl_1_1SField_1a7d8fb39ffab72eb6d3078c51d9364dd3" prot="private" virt="non-virtual"><scope>xrpl::TypedField</scope><name>knownNameToField</name></member>
+      <member refid="classxrpl_1_1SField_1a7313b6e2e40c00f052c327ca61320fdc" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>kSmdAlways</name></member>
+      <member refid="classxrpl_1_1SField_1af5a33d902f93ae6c8ddb0ec19b91fe32" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>kSmdBaseTen</name></member>
+      <member refid="classxrpl_1_1SField_1aaa951044940b2ab0242e90ed3c63d006" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>kSmdChangeNew</name></member>
+      <member refid="classxrpl_1_1SField_1a1ed18be2b5446dd066871a785675f2b6" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>kSmdChangeOrig</name></member>
+      <member refid="classxrpl_1_1SField_1a5ad40fb402fb56c48a38e5ba5b6e16fd" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>kSmdCreate</name></member>
+      <member refid="classxrpl_1_1SField_1a9b413989f7aa850cbee732eeec9a8d73" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>kSmdDefault</name></member>
+      <member refid="classxrpl_1_1SField_1a521918fbb200d0896219e8a610cf5661" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>kSmdDeleteFinal</name></member>
+      <member refid="classxrpl_1_1SField_1a3817bf34c96b8cf22afa2fb1f96024a5" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>kSmdNeedsAsset</name></member>
+      <member refid="classxrpl_1_1SField_1a8f272ee3b29b60d3d9990c99632042e6" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>kSmdNever</name></member>
+      <member refid="classxrpl_1_1SField_1ad7ef97d6a2209a0b8f5af850869dbf40" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>kSmdPseudoAccount</name></member>
+      <member refid="classxrpl_1_1SField_1a431cdfdcf8df31c4da1da5c0d4118b2a" prot="private" virt="non-virtual"><scope>xrpl::TypedField</scope><name>num</name></member>
+      <member refid="classxrpl_1_1SField_1af4354a7da10ee542ba8dd79e8d26ef66" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>operator json::StaticString const &amp;</name></member>
+      <member refid="classxrpl_1_1SField_1aa0bdcff76a36a0282c7b1f3fb6305151" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>operator!=</name></member>
+      <member refid="classxrpl_1_1SField_1a6181a617bed0ca60368089d9c8e48228" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1SField_1aebb96937172ff1f3467a249e62bb5ee5" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1SField_1aec3ebc6d103e29ab514fe8d964365d56" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>operator==</name></member>
+      <member refid="classxrpl_1_1SField_1ae79b4d91e496230aa5eae999569f956d" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>SField</name></member>
+      <member refid="classxrpl_1_1SField_1a3d66333caa764ba4f43d7e4c531ccea9" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>SField</name></member>
+      <member refid="classxrpl_1_1SField_1a08add75b075f13f9facf05b1a8d80940" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>SField</name></member>
+      <member refid="classxrpl_1_1SField_1afc42bd0ab4fe26ded8fe1a499922147a" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>SField</name></member>
+      <member refid="classxrpl_1_1SField_1a648676e41a365111aa87d9e81c620f3f" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>shouldInclude</name></member>
+      <member refid="classxrpl_1_1SField_1abf9cd682aacfa54ebfe7a27002d8df15" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>shouldMeta</name></member>
+      <member refid="classxrpl_1_1SField_1afd10c76433e736e08fcd5bcae185ab67" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>signingField</name></member>
+      <member refid="structxrpl_1_1TypedField_1abb1cb136cda68aac132830a24b3b7fd1" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>type</name></member>
+      <member refid="structxrpl_1_1TypedField_1ab9da88ee2699aa3f8a3a819b6d806891" prot="public" virt="non-virtual"><scope>xrpl::TypedField</scope><name>TypedField</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

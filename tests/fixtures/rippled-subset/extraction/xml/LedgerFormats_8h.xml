@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="LedgerFormats_8h" kind="file" language="C++">
+    <compoundname>LedgerFormats.h</compoundname>
+    <includes local="no">xrpl/protocol/KnownFormats.h</includes>
+    <includes local="no">xrpl/protocol/SOTemplate.h</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">xrpl/protocol/detail/ledger_entries.macro</includes>
+    <includedby refid="ApplyView_8h" local="no">include/xrpl/ledger/ApplyView.h</includedby>
+    <includedby refid="STInteger_8cpp" local="no">src/libxrpl/protocol/STInteger.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/xrpl/protocol/LedgerFormats.h</label>
+        <link refid="LedgerFormats_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>utility</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>xrpl/protocol/KnownFormats.h</label>
+      </node>
+      <node id="3">
+        <label>xrpl/protocol/SOTemplate.h</label>
+      </node>
+      <node id="9">
+        <label>xrpl/protocol/detail/ledger_entries.macro</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classxrpl_1_1LedgerFormats" prot="public">xrpl::LedgerFormats</innerclass>
+    <innernamespace refid="namespacexrpl">xrpl</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="LedgerFormats_8h_1aec02bffcc5d1be36a7f8f50e1ac34485" prot="public" static="no">
+        <name>LEDGER_ENTRY</name>
+        <param><defname>tag</defname></param>
+        <param><defname>value</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>tag = value,</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/LedgerFormats.h" line="45" column="9" bodyfile="include/xrpl/protocol/LedgerFormats.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="LedgerFormats_8h_1ae4b532a93c757194ec73b6790a3e6b1f" prot="public" static="no">
+        <name>EXPAND</name>
+        <param><defname>x</defname></param>
+        <initializer>x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/detail/ledger_entries.macro" line="8" column="9" bodyfile="include/xrpl/protocol/LedgerFormats.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="LedgerFormats_8h_1adb5131fa218f4a9d38b9f8d5848e0f15" prot="public" static="no">
+        <name>LEDGER_ENTRY_DUPLICATE</name>
+        <param><defname>...</defname></param>
+        <initializer>EXPAND(LEDGER_ENTRY(__VA_ARGS__))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/detail/ledger_entries.macro" line="13" column="9" bodyfile="include/xrpl/protocol/LedgerFormats.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="LedgerFormats_8h_1aede02f10d018c839465ad24105e8b4b1" prot="public" static="no">
+        <name>XMACRO</name>
+        <param><defname>LEDGER_OBJECT</defname></param>
+        <param><defname>LSF_FLAG</defname></param>
+        <param><defname>LSF_FLAG2</defname></param>
+        <briefdescription>
+<para>Ledger object flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These flags are specified in ledger objects and modify their behavior.</para>
+<para><simplesect kind="warning"><para>Ledger object flags form part of the protocol. <bold>Changing them should be avoided because without special handling, this will result in a hard fork.</bold> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/LedgerFormats.h" line="162" column="9" bodyfile="include/xrpl/protocol/LedgerFormats.h" bodystart="162" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="define" id="LedgerFormats_8h_1afd72b254526335e788e46c9c9eec8e53" prot="public" static="no">
+        <name>TO_VALUE</name>
+        <param><defname>name</defname></param>
+        <param><defname>value</defname></param>
+        <initializer>name = (value),</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/LedgerFormats.h" line="252" column="9" bodyfile="include/xrpl/protocol/LedgerFormats.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="LedgerFormats_8h_1aefbfdeee5f4eb462082dd49b766304cc" prot="public" static="no">
+        <name>NULL_NAME</name>
+        <param><defname>name</defname></param>
+        <param><defname>values</defname></param>
+        <initializer>values</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/LedgerFormats.h" line="253" column="9" bodyfile="include/xrpl/protocol/LedgerFormats.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="LedgerFormats_8h_1a30171b856f4d3fe2f09582fc31f443d3" prot="public" static="no">
+        <name>NULL_OUTPUT</name>
+        <param><defname>name</defname></param>
+        <param><defname>value</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/LedgerFormats.h" line="254" column="9" bodyfile="include/xrpl/protocol/LedgerFormats.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="LedgerFormats_8h_1a9a4bbab1b12fe67d511583f019c50d13" prot="public" static="no">
+        <name>VALUE_TO_MAP</name>
+        <param><defname>name</defname></param>
+        <param><defname>value</defname></param>
+        <initializer>{#name, value},</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/LedgerFormats.h" line="272" column="9" bodyfile="include/xrpl/protocol/LedgerFormats.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="LedgerFormats_8h_1a1e8a9da1e56c0347832f7554f05a6535" prot="public" static="no">
+        <name>TO_MAP</name>
+        <param><defname>name</defname></param>
+        <param><defname>values</defname></param>
+        <initializer>inline LedgerFlagMap const&amp; get##name##Flags()   \
+{                                                \
+    static LedgerFlagMap const flags = {values}; \
+    return flags;                                \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/LedgerFormats.h" line="273" column="9" bodyfile="include/xrpl/protocol/LedgerFormats.h" bodystart="273" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="define" id="LedgerFormats_8h_1a51db367eea300cea7acadc0816ad45bc" prot="public" static="no">
+        <name>ALL_LEDGER_FLAGS</name>
+        <param><defname>name</defname></param>
+        <param><defname>values</defname></param>
+        <initializer>{#name, get##name##Flags()},</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/LedgerFormats.h" line="291" column="9" bodyfile="include/xrpl/protocol/LedgerFormats.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/protocol/LedgerFormats.h"/>
+  </compounddef>
+</doxygen>

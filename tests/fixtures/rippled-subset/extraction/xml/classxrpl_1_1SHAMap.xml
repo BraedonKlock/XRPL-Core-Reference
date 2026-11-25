@@ -1,0 +1,2419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1SHAMap" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::SHAMap</compoundname>
+    <includes local="no">xrpl/shamap/SHAMap.h</includes>
+    <innerclass refid="classxrpl_1_1SHAMap_1_1NodePathStack" prot="private">xrpl::SHAMap::NodePathStack</innerclass>
+    <innerclass refid="structxrpl_1_1SHAMap_1_1MissingNodes" prot="private">xrpl::SHAMap::MissingNodes</innerclass>
+    <innerclass refid="classxrpl_1_1SHAMap_1_1ConstIterator" prot="public">xrpl::SHAMap::ConstIterator</innerclass>
+    <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classxrpl_1_1SHAMap_1a1d423af32255a1d0e38c0092aaccdce3" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>BelowDirection</name>
+        <qualifiedname>xrpl::SHAMap::BelowDirection</qualifiedname>
+        <enumvalue id="classxrpl_1_1SHAMap_1a1d423af32255a1d0e38c0092aaccdce3a7fb55ed0b7a30342ba6da306428cae04" prot="private">
+          <name>First</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxrpl_1_1SHAMap_1a1d423af32255a1d0e38c0092aaccdce3ad55b30607c2a9a2616347d6edb789f6b" prot="private">
+          <name>Last</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="734" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="734" bodyend="734"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1SHAMap_1a3a629d6c37dba6a86cfe839b93077b39" prot="private" static="no">
+        <type>std::pair&lt; boost::intrusive_ptr&lt; SHAMapItem const  &gt;, boost::intrusive_ptr&lt; SHAMapItem const  &gt; &gt;</type>
+        <definition>using xrpl::SHAMap::DeltaRef = 
+std::pair&lt;boost::intrusive_ptr&lt;SHAMapItem const&gt;, boost::intrusive_ptr&lt;SHAMapItem const&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>DeltaRef</name>
+        <qualifiedname>xrpl::SHAMap::DeltaRef</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="627" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="627" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1SHAMap_1ab310d70f190c1dfa070f8f70dda87d84" prot="private" static="no">
+        <type>std::function&lt; void(SHAMapTreeNodePtr, SHAMapHash const  &amp;)&gt;</type>
+        <definition>using xrpl::SHAMap::DescendCallback = std::function&lt;void(SHAMapTreeNodePtr, SHAMapHash const&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>DescendCallback</name>
+        <qualifiedname>xrpl::SHAMap::DescendCallback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="770" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="770" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classxrpl_1_1SHAMap_1a2b3966c63129e3cc074debd30e31aea7" prot="public" static="no">
+        <type>std::pair&lt; boost::intrusive_ptr&lt; SHAMapItem const  &gt;, boost::intrusive_ptr&lt; SHAMapItem const  &gt; &gt;</type>
+        <definition>using xrpl::SHAMap::DeltaItem = 
+std::pair&lt;boost::intrusive_ptr&lt;SHAMapItem const&gt;, boost::intrusive_ptr&lt;SHAMapItem const&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>DeltaItem</name>
+        <qualifiedname>xrpl::SHAMap::DeltaItem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="174" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxrpl_1_1SHAMap_1a7185d4cc01663caa5a79ce4d841eb4bf" prot="public" static="no">
+        <type>std::map&lt; <ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref>, <ref refid="classxrpl_1_1SHAMap_1a2b3966c63129e3cc074debd30e31aea7" kindref="member">DeltaItem</ref> &gt;</type>
+        <definition>using xrpl::SHAMap::Delta = std::map&lt;UInt256, DeltaItem&gt;</definition>
+        <argsstring></argsstring>
+        <name>Delta</name>
+        <qualifiedname>xrpl::SHAMap::Delta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="176" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1a28ad752ef558a0e15853521c5782529b" prot="private" static="no" mutable="no">
+        <type>Family &amp;</type>
+        <definition>Family&amp; xrpl::SHAMap::f_</definition>
+        <argsstring></argsstring>
+        <name>f_</name>
+        <qualifiedname>xrpl::SHAMap::f_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="117" column="12" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1a6d2816abafc2c8ada86a94266352b25e" prot="private" static="no" mutable="no">
+        <type>beast::Journal</type>
+        <definition>beast::Journal xrpl::SHAMap::journal_</definition>
+        <argsstring></argsstring>
+        <name>journal_</name>
+        <qualifiedname>xrpl::SHAMap::journal_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="118" column="20" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1a225cf0aa1aa3728b86e6be6a8cac4769" prot="private" static="no" mutable="no">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t xrpl::SHAMap::cowid_</definition>
+        <argsstring></argsstring>
+        <name>cowid_</name>
+        <qualifiedname>xrpl::SHAMap::cowid_</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>ID to distinguish this map for all others we&apos;re sharing nodes with. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="123" column="19" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1a7315797db36ad67ea106d67138bf2978" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; std::uint32_t &gt;</type>
+        <definition>std::atomic&lt;std::uint32_t&gt; xrpl::SHAMap::ledgerSeq_</definition>
+        <argsstring></argsstring>
+        <name>ledgerSeq_</name>
+        <qualifiedname>xrpl::SHAMap::ledgerSeq_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The sequence of the ledger that this map references, if any. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Written when a map&apos;s ledger sequence is established (Ledger::setFull(), InboundLedger) while a nodestore reader thread reads it. Relaxed either way: it serves as a lookup hint for a nodestore keyed by hash. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="138" column="17" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1abad4f837e6b3f3c1e11839c79d9abab7" prot="private" static="no" mutable="no">
+        <type>SHAMapTreeNodePtr</type>
+        <definition>SHAMapTreeNodePtr xrpl::SHAMap::root_</definition>
+        <argsstring></argsstring>
+        <name>root_</name>
+        <qualifiedname>xrpl::SHAMap::root_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="140" column="23" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1a0a03fc4e5562161f329a8abcd835edc8" prot="private" static="no" mutable="yes">
+        <type>std::atomic&lt; <ref refid="namespacexrpl_1a1372aa772ea12b90b85caaef8f736e2a" kindref="member">SHAMapState</ref> &gt;</type>
+        <definition>std::atomic&lt;SHAMapState&gt; xrpl::SHAMap::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <qualifiedname>xrpl::SHAMap::state_</qualifiedname>
+        <briefdescription>
+<para>The map&apos;s state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A <ref refid="classxrpl_1_1SHAMap_1adcea30bd160fe455e65aa0c65b993497" kindref="member">getMissingNodes()</ref> walk writes it, through <ref refid="classxrpl_1_1SHAMap_1a8410428c2bc200b17e3ce9f50f1b78a3" kindref="member">setInvalid()</ref> and <ref refid="classxrpl_1_1SHAMap_1aa76973c74d3288bc60252c706fa0aa8d" kindref="member">clearSynching()</ref>, while whatever drives the acquisition reads it. The walk runs with the acquisition&apos;s lock released, so this is atomic rather than guarded. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="150" column="25" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1a918559c1b943ead4fe8e7c7fb97773a3" prot="private" static="no" mutable="no">
+        <type>SHAMapType const</type>
+        <definition>SHAMapType const xrpl::SHAMap::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <qualifiedname>xrpl::SHAMap::type_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="151" column="22" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1a82196cdec47759dedf4cf2b47fe648a2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::backed_</definition>
+        <argsstring></argsstring>
+        <name>backed_</name>
+        <qualifiedname>xrpl::SHAMap::backed_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="152" column="10" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1ad677163536d67339593daeb8a10f2e25" prot="private" static="no" mutable="yes">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; xrpl::SHAMap::full_</definition>
+        <argsstring></argsstring>
+        <name>full_</name>
+        <qualifiedname>xrpl::SHAMap::full_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Map is believed complete in database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Atomic because <ref refid="classxrpl_1_1SHAMap_1a2288f13a4c1547518b2114383a535e52" kindref="member">finishFetch()</ref> clears it on any nodestore reader thread, several of which can run at once. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="160" column="25" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1a36934308a89054dea55b06b8f6d1cce3" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int xrpl::SHAMap::kBranchFactor</definition>
+        <argsstring></argsstring>
+        <name>kBranchFactor</name>
+        <qualifiedname>xrpl::SHAMap::kBranchFactor</qualifiedname>
+        <initializer>= SHAMapInnerNode::kBranchFactor</initializer>
+        <briefdescription>
+<para>Number of children each non-leaf node has (the &apos;radix tree&apos; part of the map). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="167" column="35" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxrpl_1_1SHAMap_1a242f448e003ef9a7dfbf7ec5026de4fa" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int xrpl::SHAMap::kLeafDepth</definition>
+        <argsstring></argsstring>
+        <name>kLeafDepth</name>
+        <qualifiedname>xrpl::SHAMap::kLeafDepth</qualifiedname>
+        <initializer>= 64</initializer>
+        <briefdescription>
+<para>The depth of the hash map: data is only present in the leaves. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="172" column="35" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a93c516c466c297741850d7410990b18a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::SHAMap</definition>
+        <argsstring>()=delete</argsstring>
+        <name>SHAMap</name>
+        <qualifiedname>xrpl::SHAMap::SHAMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="178" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a5c9c5fb17c94d231e13c4609ca7bcb1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::SHAMap</definition>
+        <argsstring>(SHAMap const &amp;)=delete</argsstring>
+        <name>SHAMap</name>
+        <qualifiedname>xrpl::SHAMap::SHAMap</qualifiedname>
+        <param>
+          <type>SHAMap const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="179" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a659a0fa3c2d91513f60cf3c3d550b1f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SHAMap_1a93c516c466c297741850d7410990b18a" kindref="member">SHAMap</ref> &amp;</type>
+        <definition>SHAMap &amp; xrpl::SHAMap::operator=</definition>
+        <argsstring>(SHAMap const &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>xrpl::SHAMap::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1a93c516c466c297741850d7410990b18a" kindref="member">SHAMap</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="181" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ae3e52509cbc0754a268753384b42d875" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::SHAMap</definition>
+        <argsstring>(SHAMap const &amp;other, bool isMutable)</argsstring>
+        <name>SHAMap</name>
+        <qualifiedname>xrpl::SHAMap::SHAMap</qualifiedname>
+        <param>
+          <type>SHAMap const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMutable</declname>
+        </param>
+        <briefdescription>
+<para>Take a snapshot of the given map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The map to snapshot. An Invalid source yields an Invalid snapshot. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isMutable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the snapshot may be modified. Ignored when other is Invalid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="191" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a344f2939e0aa9b384b4e80ac7c584aa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::SHAMap</definition>
+        <argsstring>(SHAMapType t, Family &amp;f)</argsstring>
+        <name>SHAMap</name>
+        <qualifiedname>xrpl::SHAMap::SHAMap</qualifiedname>
+        <param>
+          <type>SHAMapType</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>Family &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="194" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1af2768942085d59e5422dfd28020c169d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::SHAMap</definition>
+        <argsstring>(SHAMapType t, UInt256 const &amp;hash, Family &amp;f)</argsstring>
+        <name>SHAMap</name>
+        <qualifiedname>xrpl::SHAMap::SHAMap</qualifiedname>
+        <param>
+          <type>SHAMapType</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>Family &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="196" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a317e70b85486785675840956b03fa206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::SHAMap::~SHAMap</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SHAMap</name>
+        <qualifiedname>xrpl::SHAMap::~SHAMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="198" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a0b8ebc382c944a7a4ec8a8efa348f804" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Family const &amp;</type>
+        <definition>Family const  &amp; xrpl::SHAMap::family</definition>
+        <argsstring>() const</argsstring>
+        <name>family</name>
+        <qualifiedname>xrpl::SHAMap::family</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="201" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="201" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a2bacaccf3f044d052063c7647052046c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Family &amp;</type>
+        <definition>Family &amp; xrpl::SHAMap::family</definition>
+        <argsstring>()</argsstring>
+        <name>family</name>
+        <qualifiedname>xrpl::SHAMap::family</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="207" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="207" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ae56bdf7577d9d63e9c0972397c9e9447" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator" kindref="compound">ConstIterator</ref></type>
+        <definition>SHAMap::ConstIterator xrpl::SHAMap::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <qualifiedname>xrpl::SHAMap::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="222" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1119" bodyend="1122"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1abb87d00b3a419abfe977a4bcaab7f7b0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator" kindref="compound">ConstIterator</ref></type>
+        <definition>SHAMap::ConstIterator xrpl::SHAMap::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <qualifiedname>xrpl::SHAMap::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="224" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1125" bodyend="1128"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a8883d3291f5c5bc48ae3fb101d65d696" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classxrpl_1_1SHAMap_1a93c516c466c297741850d7410990b18a" kindref="member">SHAMap</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; SHAMap &gt; xrpl::SHAMap::snapShot</definition>
+        <argsstring>(bool isMutable) const</argsstring>
+        <name>snapShot</name>
+        <qualifiedname>xrpl::SHAMap::snapShot</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>isMutable</declname>
+        </param>
+        <briefdescription>
+<para>Return a new map that is a snapshot of this one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles copy on write for mutable snapshots. An invalid map yields an invalid snapshot.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isMutable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the snapshot may be modified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The snapshot. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="238" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a2730c61a05ac4c35f8a81b065c2bd18d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::setFull</definition>
+        <argsstring>(std::uint32_t ledgerSeq)</argsstring>
+        <name>setFull</name>
+        <qualifiedname>xrpl::SHAMap::setFull</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>ledgerSeq</declname>
+        </param>
+        <briefdescription>
+<para>Mark this map as &quot;should be full&quot;: the local server wants every node it references in durable storage, so a nodestore miss is a gap to report. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Publishes the ledger sequence before the flag. The sequence store is relaxed and the flag store is release, and <ref refid="classxrpl_1_1SHAMap_1a2288f13a4c1547518b2114383a535e52" kindref="member">finishFetch()</ref> reads the sequence only after acquiring the flag, so the one miss that withdraws the flag always reports the sequence stored here. Keeping both stores in one place is what makes that order impossible to get wrong.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ledgerSeq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sequence of the ledger this map belongs to, which the gap report names. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="254" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="890" bodyend="894"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a23a6add71b3bf4b0b2c08884fe072c2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::setLedgerSeq</definition>
+        <argsstring>(std::uint32_t lseq)</argsstring>
+        <name>setLedgerSeq</name>
+        <qualifiedname>xrpl::SHAMap::setLedgerSeq</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>lseq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="257" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="897" bodyend="900"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a0516bf79935bfac8627c198ccf0faecb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::fetchRoot</definition>
+        <argsstring>(SHAMapHash const &amp;hash, SHAMapSyncFilter const *filter)</argsstring>
+        <name>fetchRoot</name>
+        <qualifiedname>xrpl::SHAMap::fetchRoot</qualifiedname>
+        <param>
+          <type>SHAMapHash const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>SHAMapSyncFilter const *</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="260" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a31c433df76663462beb64459e341a5b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::hasItem</definition>
+        <argsstring>(UInt256 const &amp;id) const</argsstring>
+        <name>hasItem</name>
+        <qualifiedname>xrpl::SHAMap::hasItem</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Does the tree have an item with the given ID? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="268" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a8d65c6e2649085205005074b353515ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::delItem</definition>
+        <argsstring>(UInt256 const &amp;id)</argsstring>
+        <name>delItem</name>
+        <qualifiedname>xrpl::SHAMap::delItem</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="271" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a0702c814901131d83d7b6ecf3c346834" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::addItem</definition>
+        <argsstring>(SHAMapNodeType type, boost::intrusive_ptr&lt; SHAMapItem const &gt; item)</argsstring>
+        <name>addItem</name>
+        <qualifiedname>xrpl::SHAMap::addItem</qualifiedname>
+        <param>
+          <type>SHAMapNodeType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>boost::intrusive_ptr&lt; SHAMapItem const &gt;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="274" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ae365d6320c65ecd25852387dd763d536" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapHash</type>
+        <definition>SHAMapHash xrpl::SHAMap::getHash</definition>
+        <argsstring>() const</argsstring>
+        <name>getHash</name>
+        <qualifiedname>xrpl::SHAMap::getHash</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="277" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a90b29e66f833dfb2fc6d365ac3319e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::updateGiveItem</definition>
+        <argsstring>(SHAMapNodeType type, boost::intrusive_ptr&lt; SHAMapItem const &gt; item)</argsstring>
+        <name>updateGiveItem</name>
+        <qualifiedname>xrpl::SHAMap::updateGiveItem</qualifiedname>
+        <param>
+          <type>SHAMapNodeType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>boost::intrusive_ptr&lt; SHAMapItem const &gt;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="281" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ab16d5380658635fcd157cbc92190a53b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::addGiveItem</definition>
+        <argsstring>(SHAMapNodeType type, boost::intrusive_ptr&lt; SHAMapItem const &gt; item)</argsstring>
+        <name>addGiveItem</name>
+        <qualifiedname>xrpl::SHAMap::addGiveItem</qualifiedname>
+        <param>
+          <type>SHAMapNodeType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>boost::intrusive_ptr&lt; SHAMapItem const &gt;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="284" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1aecb9b1f605beb9764d42f05c060050e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::intrusive_ptr&lt; SHAMapItem const &gt; const &amp;</type>
+        <definition>boost::intrusive_ptr&lt; SHAMapItem const  &gt; const  &amp; xrpl::SHAMap::peekItem</definition>
+        <argsstring>(UInt256 const &amp;id) const</argsstring>
+        <name>peekItem</name>
+        <qualifiedname>xrpl::SHAMap::peekItem</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="289" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a1eb0e749dede7875bb00b9ab53fedc16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::intrusive_ptr&lt; SHAMapItem const &gt; const &amp;</type>
+        <definition>boost::intrusive_ptr&lt; SHAMapItem const  &gt; const  &amp; xrpl::SHAMap::peekItem</definition>
+        <argsstring>(UInt256 const &amp;id, SHAMapHash &amp;hash) const</argsstring>
+        <name>peekItem</name>
+        <qualifiedname>xrpl::SHAMap::peekItem</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>SHAMapHash &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="291" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a3669bc1a365b6d4a2a867b16ebff0465" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator" kindref="compound">ConstIterator</ref></type>
+        <definition>ConstIterator xrpl::SHAMap::upperBound</definition>
+        <argsstring>(UInt256 const &amp;id) const</argsstring>
+        <name>upperBound</name>
+        <qualifiedname>xrpl::SHAMap::upperBound</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Find the first item after the given item. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the identifier of the item.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The item does not need to exist. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="302" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1af780a89c443ed796758c663e665df142" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator" kindref="compound">ConstIterator</ref></type>
+        <definition>ConstIterator xrpl::SHAMap::lowerBound</definition>
+        <argsstring>(UInt256 const &amp;id) const</argsstring>
+        <name>lowerBound</name>
+        <qualifiedname>xrpl::SHAMap::lowerBound</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Find the object with the greatest object id smaller than the input id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the identifier of the item.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The item does not need to exist. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="312" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ae77b2bfe9265c7f23e0183052d160555" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::visitNodes</definition>
+        <argsstring>(std::function&lt; bool(SHAMapTreeNode &amp;)&gt; const &amp;function) const</argsstring>
+        <name>visitNodes</name>
+        <qualifiedname>xrpl::SHAMap::visitNodes</qualifiedname>
+        <param>
+          <type>std::function&lt; bool(SHAMapTreeNode &amp;)&gt; const &amp;</type>
+          <declname>function</declname>
+        </param>
+        <briefdescription>
+<para>Visit every node in this <ref refid="classxrpl_1_1SHAMap" kindref="compound">SHAMap</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>called with every node visited. If function returns false, visitNodes exits. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="321" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a3d2393c957f8c1df98b9c6f2dc14e4c2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::visitDifferences</definition>
+        <argsstring>(SHAMap const *have, std::function&lt; bool(SHAMapTreeNode const &amp;)&gt; const &amp;) const</argsstring>
+        <name>visitDifferences</name>
+        <qualifiedname>xrpl::SHAMap::visitDifferences</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1a93c516c466c297741850d7410990b18a" kindref="member">SHAMap</ref> const *</type>
+          <declname>have</declname>
+        </param>
+        <param>
+          <type>std::function&lt; bool(SHAMapTreeNode const &amp;)&gt; const &amp;</type>
+        </param>
+        <briefdescription>
+<para>Visit every node in this <ref refid="classxrpl_1_1SHAMap" kindref="compound">SHAMap</ref> that is not present in the specified <ref refid="classxrpl_1_1SHAMap" kindref="compound">SHAMap</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>called with every node visited. If function returns false, visitDifferences exits. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="331" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a8e42b528b1da5c330135ef3f8317b744" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::visitLeaves</definition>
+        <argsstring>(std::function&lt; void(boost::intrusive_ptr&lt; SHAMapItem const &gt; const &amp;)&gt; const &amp;) const</argsstring>
+        <name>visitLeaves</name>
+        <qualifiedname>xrpl::SHAMap::visitLeaves</qualifiedname>
+        <param>
+          <type>std::function&lt; void(boost::intrusive_ptr&lt; SHAMapItem const &gt; const &amp;)&gt; const &amp;</type>
+        </param>
+        <briefdescription>
+<para>Visit every leaf node in this <ref refid="classxrpl_1_1SHAMap" kindref="compound">SHAMap</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>called with every non inner node visited. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="339" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1adcea30bd160fe455e65aa0c65b993497" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::pair&lt; SHAMapNodeID, <ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> &gt; &gt;</type>
+        <definition>std::vector&lt; std::pair&lt; SHAMapNodeID, UInt256 &gt; &gt; xrpl::SHAMap::getMissingNodes</definition>
+        <argsstring>(int maxNodes, SHAMapSyncFilter const *filter)</argsstring>
+        <name>getMissingNodes</name>
+        <qualifiedname>xrpl::SHAMap::getMissingNodes</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>maxNodes</declname>
+        </param>
+        <param>
+          <type>SHAMapSyncFilter const *</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+<para>Check for nodes in the <ref refid="classxrpl_1_1SHAMap" kindref="compound">SHAMap</ref> not available. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Traverse the <ref refid="classxrpl_1_1SHAMap" kindref="compound">SHAMap</ref> efficiently, maximizing I/O concurrency, to discover nodes referenced in the <ref refid="classxrpl_1_1SHAMap" kindref="compound">SHAMap</ref> but not available locally.</para>
+<para>Only a leaf may occupy a position at or beyond kLeafDepth. A map that breaks that is marked Invalid and the traversal is abandoned, so callers ask <ref refid="classxrpl_1_1SHAMap_1a8861abd940f45100850597a7e4e3d82a" kindref="member">isValid()</ref> to tell an empty result from a satisfied map.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum number of found nodes to return </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter to use when retrieving nodes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The nodes known to be missing, or empty if the map is Invalid </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="359" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a29f60deec7339672c208b0aa47fb4128" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::getNodeFat</definition>
+        <argsstring>(SHAMapNodeID const &amp;wanted, std::vector&lt; SHAMapNodeData &gt; &amp;data, bool fatLeaves, std::uint32_t depth) const</argsstring>
+        <name>getNodeFat</name>
+        <qualifiedname>xrpl::SHAMap::getNodeFat</qualifiedname>
+        <param>
+          <type>SHAMapNodeID const &amp;</type>
+          <declname>wanted</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structxrpl_1_1SHAMapNodeData" kindref="compound">SHAMapNodeData</ref> &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fatLeaves</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="362" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ae981a10541553d149c3aa7b8ff19cf98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; std::vector&lt; Blob &gt; &gt;</type>
+        <definition>std::optional&lt; std::vector&lt; Blob &gt; &gt; xrpl::SHAMap::getProofPath</definition>
+        <argsstring>(UInt256 const &amp;key) const</argsstring>
+        <name>getProofPath</name>
+        <qualifiedname>xrpl::SHAMap::getProofPath</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Get the proof path of the key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The proof path is every node on the path from leaf to root. Sibling hashes are stored in the parent nodes. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>key of the leaf </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the proof path if found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="375" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a7c37c5b031ed19779e1e0d3c6ede353e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::serializeRoot</definition>
+        <argsstring>(Serializer &amp;s) const</argsstring>
+        <name>serializeRoot</name>
+        <qualifiedname>xrpl::SHAMap::serializeRoot</qualifiedname>
+        <param>
+          <type>Serializer &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Serializes the root in a format appropriate for sending over the wire. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="391" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a7a493ef9fbdc344868a60dc922ba6cbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapAddNode</type>
+        <definition>SHAMapAddNode xrpl::SHAMap::addRootNode</definition>
+        <argsstring>(SHAMapHash const &amp;hash, SHAMapTreeNodePtr rootNode, SHAMapSyncFilter const *filter)</argsstring>
+        <name>addRootNode</name>
+        <qualifiedname>xrpl::SHAMap::addRootNode</qualifiedname>
+        <param>
+          <type>SHAMapHash const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>SHAMapTreeNodePtr</type>
+          <declname>rootNode</declname>
+        </param>
+        <param>
+          <type>SHAMapSyncFilter const *</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+<para>Add a root node to the <ref refid="classxrpl_1_1SHAMap" kindref="compound">SHAMap</ref> during synchronization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is used when receiving the root node of a <ref refid="classxrpl_1_1SHAMap" kindref="compound">SHAMap</ref> from a peer during ledger synchronization. The node must already have been deserialized.</para>
+<para>A root offered under a hash the map does not hold names another tree and is reported as invalid data. A root matching that hash is a duplicate.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected hash of the root node. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rootNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A deserialized root node to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional sync filter to track received nodes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Status indicating whether the node was useful, duplicate, or invalid.</para>
+</simplesect>
+<simplesect kind="note"><para>This function expects the rootNode to be a valid, deserialized SHAMapTreeNode. The caller is responsible for deserialization and basic validation before calling this function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="412" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a9c2b21061f59aadbc3eb5a35f9995855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapAddNode</type>
+        <definition>SHAMapAddNode xrpl::SHAMap::addKnownNode</definition>
+        <argsstring>(SHAMapNodeID const &amp;nodeID, SHAMapTreeNodePtr treeNode, SHAMapSyncFilter const *filter)</argsstring>
+        <name>addKnownNode</name>
+        <qualifiedname>xrpl::SHAMap::addKnownNode</qualifiedname>
+        <param>
+          <type>SHAMapNodeID const &amp;</type>
+          <declname>nodeID</declname>
+        </param>
+        <param>
+          <type>SHAMapTreeNodePtr</type>
+          <declname>treeNode</declname>
+        </param>
+        <param>
+          <type>SHAMapSyncFilter const *</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+<para>Add a known node at a specific position in the <ref refid="classxrpl_1_1SHAMap" kindref="compound">SHAMap</ref> during synchronization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is used when receiving nodes from peers during ledger synchronization. The node is inserted at the position specified by nodeID. The node must already have been deserialized.</para>
+<para>A node that no valid tree can hold makes the map Invalid, which is terminal: the root hash committed to an impossible shape, so no peer can satisfy it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position in the tree where this node belongs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>treeNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A deserialized tree node to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional sync filter to track received nodes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Status indicating whether the node was useful, duplicate, or invalid.</para>
+</simplesect>
+<simplesect kind="note"><para>This function expects the treeNode to be a valid, deserialized SHAMapTreeNode. The caller is responsible for deserialization and basic validation before calling this function. This also means that the nodeID must be consistent with the node&apos;s content. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="435" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a0df48fd2ab718bae3a113f9f732209c6" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::setImmutable</definition>
+        <argsstring>()</argsstring>
+        <name>setImmutable</name>
+        <qualifiedname>xrpl::SHAMap::setImmutable</qualifiedname>
+        <briefdescription>
+<para>Mark this map as immutable, so it can no longer be modified. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>false if the map is Invalid and was left unchanged, true otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="447" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="940" bodyend="944"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a5f77beb3ddd58fbcd071451df818ad03" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::isSynching</definition>
+        <argsstring>() const</argsstring>
+        <name>isSynching</name>
+        <qualifiedname>xrpl::SHAMap::isSynching</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Whether the map is being synced against a hash it was given, so its hash is fixed while nodes may still be added. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="454" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="947" bodyend="950"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a35ff8c2133ef838b14f379f33dfbe8cc" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::isImmutable</definition>
+        <argsstring>() const</argsstring>
+        <name>isImmutable</name>
+        <qualifiedname>xrpl::SHAMap::isImmutable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Whether the map is settled, with its hash and nodes fixed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="460" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="953" bodyend="956"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a59018824caa7cccbf68abc7c58054158" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::setSynching</definition>
+        <argsstring>()</argsstring>
+        <name>setSynching</name>
+        <qualifiedname>xrpl::SHAMap::setSynching</qualifiedname>
+        <briefdescription>
+<para>Mark this map as syncing, fixing its hash while still allowing missing nodes to be added. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The map must be freshly constructed. The body asserts that the map is not Invalid, so a caller that ignores the precondition stops a build with assertions enabled. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="471" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="959" bodyend="969"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1aa76973c74d3288bc60252c706fa0aa8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::clearSynching</definition>
+        <argsstring>()</argsstring>
+        <name>clearSynching</name>
+        <qualifiedname>xrpl::SHAMap::clearSynching</qualifiedname>
+        <briefdescription>
+<para>Mark this map as no longer syncing, so it can be modified again. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Moves only a Synching map. An Immutable map stays settled, a Modifying map has nothing to clear, and Invalid is terminal. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="480" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="972" bodyend="991"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a8861abd940f45100850597a7e4e3d82a" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::isValid</definition>
+        <argsstring>() const</argsstring>
+        <name>isValid</name>
+        <qualifiedname>xrpl::SHAMap::isValid</qualifiedname>
+        <briefdescription>
+<para>Whether the map can still be the map it claims to be. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A map that is merely missing nodes is valid, and stays valid until something proves the tree it is syncing against cannot exist.</para>
+<para><simplesect kind="return"><para>Whether the map has not been proven impossible. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="491" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="994" bodyend="997"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a74a09d591c7e39ba91abb60eaa42d173" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::compare</definition>
+        <argsstring>(SHAMap const &amp;otherMap, Delta &amp;differences, int maxCount) const</argsstring>
+        <name>compare</name>
+        <qualifiedname>xrpl::SHAMap::compare</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1a93c516c466c297741850d7410990b18a" kindref="member">SHAMap</ref> const &amp;</type>
+          <declname>otherMap</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1a7185d4cc01663caa5a79ce4d841eb4bf" kindref="member">Delta</ref> &amp;</type>
+          <declname>differences</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="496" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a8b46d2e254293a357509dc68c303e26f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xrpl::SHAMap::unshare</definition>
+        <argsstring>()</argsstring>
+        <name>unshare</name>
+        <qualifiedname>xrpl::SHAMap::unshare</qualifiedname>
+        <briefdescription>
+<para>Convert any modified nodes to shared. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="502" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a329e488db5c0fd989fc12489a4145fc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xrpl::SHAMap::flushDirty</definition>
+        <argsstring>(NodeObjectType t)</argsstring>
+        <name>flushDirty</name>
+        <qualifiedname>xrpl::SHAMap::flushDirty</qualifiedname>
+        <param>
+          <type>NodeObjectType</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Flush modified nodes to the nodestore and convert them to shared. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="508" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a536a065eacc5487aa63c43e090857fd3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::walkMap</definition>
+        <argsstring>(std::vector&lt; SHAMapMissingNode &gt; &amp;missingNodes, int maxMissing) const</argsstring>
+        <name>walkMap</name>
+        <qualifiedname>xrpl::SHAMap::walkMap</qualifiedname>
+        <param>
+          <type>std::vector&lt; SHAMapMissingNode &gt; &amp;</type>
+          <declname>missingNodes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxMissing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="511" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a4fd34c4f0889c7d0ec81ae29c3a0e3c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::walkMapParallel</definition>
+        <argsstring>(std::vector&lt; SHAMapMissingNode &gt; &amp;missingNodes, int maxMissing) const</argsstring>
+        <name>walkMapParallel</name>
+        <qualifiedname>xrpl::SHAMap::walkMapParallel</qualifiedname>
+        <param>
+          <type>std::vector&lt; SHAMapMissingNode &gt; &amp;</type>
+          <declname>missingNodes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxMissing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="513" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a61e009c0c559342ac2682b605cb67fb3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::deepCompare</definition>
+        <argsstring>(SHAMap &amp;other) const</argsstring>
+        <name>deepCompare</name>
+        <qualifiedname>xrpl::SHAMap::deepCompare</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1a93c516c466c297741850d7410990b18a" kindref="member">SHAMap</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="515" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a3ec8e3684a7eb7dfe7397faa60399444" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::setUnbacked</definition>
+        <argsstring>()</argsstring>
+        <name>setUnbacked</name>
+        <qualifiedname>xrpl::SHAMap::setUnbacked</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="518" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1007" bodyend="1010"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a67ef0c94cc228c167363ea37390fcf86" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::dump</definition>
+        <argsstring>(bool withHashes=false) const</argsstring>
+        <name>dump</name>
+        <qualifiedname>xrpl::SHAMap::dump</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>withHashes</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="521" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1aaff8f1be24849f1fd69b2c91948a8bad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::invariants</definition>
+        <argsstring>() const</argsstring>
+        <name>invariants</name>
+        <qualifiedname>xrpl::SHAMap::invariants</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="523" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ae34c6a68602e02c05a137f9d9781b8ca" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool xrpl::SHAMap::verifyProofPath</definition>
+        <argsstring>(UInt256 const &amp;rootHash, UInt256 const &amp;key, std::vector&lt; Blob &gt; const &amp;path)</argsstring>
+        <name>verifyProofPath</name>
+        <qualifiedname>xrpl::SHAMap::verifyProofPath</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>rootHash</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; Blob &gt; const &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Verify the proof path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rootHash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>root hash of the map </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>key of the leaf </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proof path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if verified successfully </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="385" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1aade0cb251cb6963498d1f16298a0eea4" prot="private" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t xrpl::SHAMap::ledgerSeq</definition>
+        <argsstring>() const</argsstring>
+        <name>ledgerSeq</name>
+        <qualifiedname>xrpl::SHAMap::ledgerSeq</qualifiedname>
+        <briefdescription>
+<para>The sequence of the ledger this map references, read atomically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The sequence, or zero if the map references no ledger. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="636" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="903" bodyend="906"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a8c83825beadd8d51e14ec31a71046bcf" prot="private" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacexrpl_1a1372aa772ea12b90b85caaef8f736e2a" kindref="member">SHAMapState</ref></type>
+        <definition>SHAMapState xrpl::SHAMap::state</definition>
+        <argsstring>() const</argsstring>
+        <name>state</name>
+        <qualifiedname>xrpl::SHAMap::state</qualifiedname>
+        <briefdescription>
+<para>The current state, read atomically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Orders state_ alone. The tree&apos;s nodes carry no ordering guarantees.</para>
+<para><simplesect kind="return"><para>The state as of the call, which a concurrent walk may already have moved past. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="647" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="909" bodyend="912"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a8410428c2bc200b17e3ce9f50f1b78a3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::setInvalid</definition>
+        <argsstring>()</argsstring>
+        <name>setInvalid</name>
+        <qualifiedname>xrpl::SHAMap::setInvalid</qualifiedname>
+        <briefdescription>
+<para>Record that the map is provably not the one it claims to be. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private because only the map itself can prove that, from a node that contradicts the hashes it is syncing against. Cannot fail, since Invalid outranks every other state; see <ref refid="classxrpl_1_1SHAMap_1ac952e764e86d57c9be356fd20b7b3348" kindref="member">trySetState()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="657" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="1000" bodyend="1004"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ac952e764e86d57c9be356fd20b7b3348" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::trySetState</definition>
+        <argsstring>(SHAMapState desired)</argsstring>
+        <name>trySetState</name>
+        <qualifiedname>xrpl::SHAMap::trySetState</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a1372aa772ea12b90b85caaef8f736e2a" kindref="member">SHAMapState</ref></type>
+          <declname>desired</declname>
+        </param>
+        <briefdescription>
+<para>Move the map to a new state, atomically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>With <ref refid="classxrpl_1_1SHAMap_1aa76973c74d3288bc60252c706fa0aa8d" kindref="member">clearSynching()</ref>, the only writer of state_ past construction, so the order between the states lives in one place: Invalid outranks all of them and is always stored, while every other transition is refused once the map is Invalid, which is what makes that verdict terminal. <ref refid="classxrpl_1_1SHAMap_1aa76973c74d3288bc60252c706fa0aa8d" kindref="member">clearSynching()</ref> is narrower and moves only Synching.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>desired</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state to move to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false if the map is Invalid and the requested state is not, leaving it unchanged; true otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="673" column="5" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="915" bodyend="937"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a2b5cdcd6606a27c8778d6300f95f5de6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNodePtr</type>
+        <definition>SHAMapTreeNodePtr xrpl::SHAMap::cacheLookup</definition>
+        <argsstring>(SHAMapHash const &amp;hash) const</argsstring>
+        <name>cacheLookup</name>
+        <qualifiedname>xrpl::SHAMap::cacheLookup</qualifiedname>
+        <param>
+          <type>SHAMapHash const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="677" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1aa1a11b79f0e618b2467c7799cd6fe27e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::canonicalize</definition>
+        <argsstring>(SHAMapHash const &amp;hash, SHAMapTreeNodePtr &amp;) const</argsstring>
+        <name>canonicalize</name>
+        <qualifiedname>xrpl::SHAMap::canonicalize</qualifiedname>
+        <param>
+          <type>SHAMapHash const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>SHAMapTreeNodePtr &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="680" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a279541ab45a3c6991108ae1424c3fdff" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNodePtr</type>
+        <definition>SHAMapTreeNodePtr xrpl::SHAMap::fetchNodeFromDB</definition>
+        <argsstring>(SHAMapHash const &amp;hash) const</argsstring>
+        <name>fetchNodeFromDB</name>
+        <qualifiedname>xrpl::SHAMap::fetchNodeFromDB</qualifiedname>
+        <param>
+          <type>SHAMapHash const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="684" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1aa4fc328a5f5bd9e82496e3ab2104e270" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNodePtr</type>
+        <definition>SHAMapTreeNodePtr xrpl::SHAMap::fetchNodeNT</definition>
+        <argsstring>(SHAMapHash const &amp;hash) const</argsstring>
+        <name>fetchNodeNT</name>
+        <qualifiedname>xrpl::SHAMap::fetchNodeNT</qualifiedname>
+        <param>
+          <type>SHAMapHash const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="686" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a2f019b62abaa70a3282d5e8aa02d5857" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNodePtr</type>
+        <definition>SHAMapTreeNodePtr xrpl::SHAMap::fetchNodeNT</definition>
+        <argsstring>(SHAMapHash const &amp;hash, SHAMapSyncFilter const *filter) const</argsstring>
+        <name>fetchNodeNT</name>
+        <qualifiedname>xrpl::SHAMap::fetchNodeNT</qualifiedname>
+        <param>
+          <type>SHAMapHash const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>SHAMapSyncFilter const *</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="688" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a3d9f83ac5c7ffa70f9dc36444c97c0e0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNodePtr</type>
+        <definition>SHAMapTreeNodePtr xrpl::SHAMap::fetchNode</definition>
+        <argsstring>(SHAMapHash const &amp;hash) const</argsstring>
+        <name>fetchNode</name>
+        <qualifiedname>xrpl::SHAMap::fetchNode</qualifiedname>
+        <param>
+          <type>SHAMapHash const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="690" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1aac4971157f435cc88c9e8713b96627e9" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNodePtr</type>
+        <definition>SHAMapTreeNodePtr xrpl::SHAMap::checkFilter</definition>
+        <argsstring>(SHAMapHash const &amp;hash, SHAMapSyncFilter const *filter) const</argsstring>
+        <name>checkFilter</name>
+        <qualifiedname>xrpl::SHAMap::checkFilter</qualifiedname>
+        <param>
+          <type>SHAMapHash const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>SHAMapSyncFilter const *</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="692" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a3a8c9e4aea84154e8dc2b07c9f6d4fda" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::dirtyUp</definition>
+        <argsstring>(NodePathStack &amp;stack, UInt256 const &amp;target, SHAMapTreeNodePtr terminal)</argsstring>
+        <name>dirtyUp</name>
+        <qualifiedname>xrpl::SHAMap::dirtyUp</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1NodePathStack" kindref="compound">NodePathStack</ref> &amp;</type>
+          <declname>stack</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>SHAMapTreeNodePtr</type>
+          <declname>terminal</declname>
+        </param>
+        <briefdescription>
+<para>Update hashes up to the root. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="698" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a8eee43f09cd884bece3853f80baf26a1" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapLeafNode *</type>
+        <definition>SHAMapLeafNode * xrpl::SHAMap::walkTowardsKey</definition>
+        <argsstring>(UInt256 const &amp;id, NodePathStack *stack=nullptr) const</argsstring>
+        <name>walkTowardsKey</name>
+        <qualifiedname>xrpl::SHAMap::walkTowardsKey</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1NodePathStack" kindref="compound">NodePathStack</ref> *</type>
+          <declname>stack</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Walk towards the specified id, returning the node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Caller must check if the return is nullptr, and if not, if the node-&gt;<ref refid="classxrpl_1_1SHAMap_1aecb9b1f605beb9764d42f05c060050e5" kindref="member">peekItem()</ref>-&gt;key() == id </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="706" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ac546faa7ad841370877a512ac748df98" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapLeafNode *</type>
+        <definition>SHAMapLeafNode * xrpl::SHAMap::findKey</definition>
+        <argsstring>(UInt256 const &amp;id) const</argsstring>
+        <name>findKey</name>
+        <qualifiedname>xrpl::SHAMap::findKey</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Return nullptr if key not found. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="711" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ac841f1ed717ea9a35bc0535bbe443202" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Node</type>
+          </param>
+        </templateparamlist>
+        <type>intr_ptr::SharedPtr&lt; Node &gt;</type>
+        <definition>intr_ptr::SharedPtr&lt; Node &gt; xrpl::SHAMap::unshareNode</definition>
+        <argsstring>(intr_ptr::SharedPtr&lt; Node &gt;, SHAMapNodeID const &amp;nodeID)</argsstring>
+        <name>unshareNode</name>
+        <qualifiedname>xrpl::SHAMap::unshareNode</qualifiedname>
+        <param>
+          <type>intr_ptr::SharedPtr&lt; Node &gt;</type>
+        </param>
+        <param>
+          <type>SHAMapNodeID const &amp;</type>
+          <declname>nodeID</declname>
+        </param>
+        <briefdescription>
+<para>Unshare the node, allowing it to be modified. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="718" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ac4b69c670fc62d44c0e0557f1a922e6e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Node</type>
+          </param>
+        </templateparamlist>
+        <type>intr_ptr::SharedPtr&lt; Node &gt;</type>
+        <definition>intr_ptr::SharedPtr&lt; Node &gt; xrpl::SHAMap::preFlushNode</definition>
+        <argsstring>(intr_ptr::SharedPtr&lt; Node &gt; node) const</argsstring>
+        <name>preFlushNode</name>
+        <qualifiedname>xrpl::SHAMap::preFlushNode</qualifiedname>
+        <param>
+          <type>intr_ptr::SharedPtr&lt; Node &gt;</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>prepare a node to be modified before flushing </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="725" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1abc86a31d345b378d201844e0c222344f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNodePtr</type>
+        <definition>SHAMapTreeNodePtr xrpl::SHAMap::writeNode</definition>
+        <argsstring>(NodeObjectType t, SHAMapTreeNodePtr node) const</argsstring>
+        <name>writeNode</name>
+        <qualifiedname>xrpl::SHAMap::writeNode</qualifiedname>
+        <param>
+          <type>NodeObjectType</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>SHAMapTreeNodePtr</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>write and canonicalize modified node </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="731" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ac2564cdd8c8b9f629c7792aa7a83edab" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapLeafNode *</type>
+        <definition>SHAMapLeafNode * xrpl::SHAMap::belowHelper</definition>
+        <argsstring>(NodePathStack &amp;stack, BelowDirection direction) const</argsstring>
+        <name>belowHelper</name>
+        <qualifiedname>xrpl::SHAMap::belowHelper</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1NodePathStack" kindref="compound">NodePathStack</ref> &amp;</type>
+          <declname>stack</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1a1d423af32255a1d0e38c0092aaccdce3" kindref="member">BelowDirection</ref></type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Returns the first or last item at or below the node already on top of <computeroutput>stack</computeroutput>, extending <computeroutput>stack</computeroutput> with the path walked to reach it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="741" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a393748177e2c99ae8e65f06207ffbba7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1SHAMap_1_1ConstIterator" kindref="compound">ConstIterator</ref></type>
+        <definition>ConstIterator xrpl::SHAMap::boundHelper</definition>
+        <argsstring>(UInt256 const &amp;id, BelowDirection direction) const</argsstring>
+        <name>boundHelper</name>
+        <qualifiedname>xrpl::SHAMap::boundHelper</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1a1d423af32255a1d0e38c0092aaccdce3" kindref="member">BelowDirection</ref></type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Returns the nearest item strictly past <computeroutput>id</computeroutput>, in the given direction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Walks back up the path to <computeroutput>id</computeroutput>. At each inner node the branches beyond the one <computeroutput>id</computeroutput> takes hold the candidates, so the first non-empty one is the closest and the extreme leaf below it is the answer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key to search from, which need not be in the map. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First to search upwards from <computeroutput>id</computeroutput>, Last to search downwards. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An iterator to the item found, or <ref refid="classxrpl_1_1SHAMap_1abb87d00b3a419abfe977a4bcaab7f7b0" kindref="member">end()</ref> if no item lies on that side of <computeroutput>id</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="755" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a21e642be90c1ad8bb7ce07ef7da5d9e3" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNode *</type>
+        <definition>SHAMapTreeNode * xrpl::SHAMap::descend</definition>
+        <argsstring>(SHAMapInnerNode *, unsigned int branch) const</argsstring>
+        <name>descend</name>
+        <qualifiedname>xrpl::SHAMap::descend</qualifiedname>
+        <param>
+          <type>SHAMapInnerNode *</type>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>branch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="760" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a7504eb71c2bc411463a3928972ee7c1c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNode *</type>
+        <definition>SHAMapTreeNode * xrpl::SHAMap::descendThrow</definition>
+        <argsstring>(SHAMapInnerNode *, unsigned int branch) const</argsstring>
+        <name>descendThrow</name>
+        <qualifiedname>xrpl::SHAMap::descendThrow</qualifiedname>
+        <param>
+          <type>SHAMapInnerNode *</type>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>branch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="762" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a2309b0477b414cea15ff3accadc94193" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNodePtr</type>
+        <definition>SHAMapTreeNodePtr xrpl::SHAMap::descend</definition>
+        <argsstring>(SHAMapInnerNode &amp;, unsigned int branch) const</argsstring>
+        <name>descend</name>
+        <qualifiedname>xrpl::SHAMap::descend</qualifiedname>
+        <param>
+          <type>SHAMapInnerNode &amp;</type>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>branch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="764" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a35f603806a68e1347634180dcdf5a1a1" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNodePtr</type>
+        <definition>SHAMapTreeNodePtr xrpl::SHAMap::descendThrow</definition>
+        <argsstring>(SHAMapInnerNode &amp;, unsigned int branch) const</argsstring>
+        <name>descendThrow</name>
+        <qualifiedname>xrpl::SHAMap::descendThrow</qualifiedname>
+        <param>
+          <type>SHAMapInnerNode &amp;</type>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>branch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="766" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a14e711351bcea0d12bece5104e274885" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNode *</type>
+        <definition>SHAMapTreeNode * xrpl::SHAMap::descendAsync</definition>
+        <argsstring>(SHAMapInnerNode *parent, unsigned int branch, SHAMapSyncFilter const *filter, bool &amp;pending, DescendCallback &amp;&amp;) const</argsstring>
+        <name>descendAsync</name>
+        <qualifiedname>xrpl::SHAMap::descendAsync</qualifiedname>
+        <param>
+          <type>SHAMapInnerNode *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>branch</declname>
+        </param>
+        <param>
+          <type>SHAMapSyncFilter const *</type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>pending</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1ab310d70f190c1dfa070f8f70dda87d84" kindref="member">DescendCallback</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="772" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ab8f1d5675ce25fa1aa535e3d0c61e01f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; SHAMapTreeNode *, SHAMapNodeID &gt;</type>
+        <definition>std::pair&lt; SHAMapTreeNode *, SHAMapNodeID &gt; xrpl::SHAMap::descend</definition>
+        <argsstring>(SHAMapInnerNode *parent, SHAMapNodeID const &amp;parentID, unsigned int branch, SHAMapSyncFilter const *filter) const</argsstring>
+        <name>descend</name>
+        <qualifiedname>xrpl::SHAMap::descend</qualifiedname>
+        <param>
+          <type>SHAMapInnerNode *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>SHAMapNodeID const &amp;</type>
+          <declname>parentID</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>branch</declname>
+        </param>
+        <param>
+          <type>SHAMapSyncFilter const *</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="780" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a36cbb5971194b745a5018d70f6d2015e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNodePtr</type>
+        <definition>SHAMapTreeNodePtr xrpl::SHAMap::descendNoStore</definition>
+        <argsstring>(SHAMapInnerNode &amp;, unsigned int branch) const</argsstring>
+        <name>descendNoStore</name>
+        <qualifiedname>xrpl::SHAMap::descendNoStore</qualifiedname>
+        <param>
+          <type>SHAMapInnerNode &amp;</type>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>branch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="789" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ae08b6cd82ed11ed425d2204515c40cc5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::intrusive_ptr&lt; SHAMapItem const &gt; const &amp;</type>
+        <definition>boost::intrusive_ptr&lt; SHAMapItem const  &gt; const  &amp; xrpl::SHAMap::onlyBelow</definition>
+        <argsstring>(SHAMapTreeNode *) const</argsstring>
+        <name>onlyBelow</name>
+        <qualifiedname>xrpl::SHAMap::onlyBelow</qualifiedname>
+        <param>
+          <type>SHAMapTreeNode *</type>
+        </param>
+        <briefdescription>
+<para>If there is only one leaf below this node, get its contents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="795" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a5a435e741305244231c0e6645ef167c6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::hasInnerNode</definition>
+        <argsstring>(SHAMapNodeID const &amp;nodeID, SHAMapHash const &amp;hash) const</argsstring>
+        <name>hasInnerNode</name>
+        <qualifiedname>xrpl::SHAMap::hasInnerNode</qualifiedname>
+        <param>
+          <type>SHAMapNodeID const &amp;</type>
+          <declname>nodeID</declname>
+        </param>
+        <param>
+          <type>SHAMapHash const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="798" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a1680bd3480cb3012afa5ed324e7a6a6c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::hasLeafNode</definition>
+        <argsstring>(UInt256 const &amp;tag, SHAMapHash const &amp;hash) const</argsstring>
+        <name>hasLeafNode</name>
+        <qualifiedname>xrpl::SHAMap::hasLeafNode</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>SHAMapHash const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="800" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a65a6a8117dea3f4fbb6074d669d08f1d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapLeafNode const *</type>
+        <definition>SHAMapLeafNode const  * xrpl::SHAMap::peekFirstItem</definition>
+        <argsstring>(NodePathStack &amp;stack) const</argsstring>
+        <name>peekFirstItem</name>
+        <qualifiedname>xrpl::SHAMap::peekFirstItem</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1NodePathStack" kindref="compound">NodePathStack</ref> &amp;</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="803" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1afce0bedbd9b333485eced02b45cb71e1" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapLeafNode const *</type>
+        <definition>SHAMapLeafNode const  * xrpl::SHAMap::peekNextItem</definition>
+        <argsstring>(UInt256 const &amp;id, NodePathStack &amp;stack) const</argsstring>
+        <name>peekNextItem</name>
+        <qualifiedname>xrpl::SHAMap::peekNextItem</qualifiedname>
+        <param>
+          <type><ref refid="namespacexrpl_1a828887c5b310e7be87ca398a23c99874" kindref="member">UInt256</ref> const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1_1NodePathStack" kindref="compound">NodePathStack</ref> &amp;</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="805" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1af6ee6b160f2a41f7bb86f0077ee72ee7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xrpl::SHAMap::walkBranch</definition>
+        <argsstring>(SHAMapTreeNode *node, boost::intrusive_ptr&lt; SHAMapItem const &gt; const &amp;otherMapItem, bool isFirstMap, Delta &amp;differences, int &amp;maxCount) const</argsstring>
+        <name>walkBranch</name>
+        <qualifiedname>xrpl::SHAMap::walkBranch</qualifiedname>
+        <param>
+          <type>SHAMapTreeNode *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>boost::intrusive_ptr&lt; SHAMapItem const &gt; const &amp;</type>
+          <declname>otherMapItem</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isFirstMap</declname>
+        </param>
+        <param>
+          <type><ref refid="classxrpl_1_1SHAMap_1a7185d4cc01663caa5a79ce4d841eb4bf" kindref="member">Delta</ref> &amp;</type>
+          <declname>differences</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>maxCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="807" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1ad794029ac600f4a937085e65e362ccc2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xrpl::SHAMap::walkSubTree</definition>
+        <argsstring>(bool doWrite, NodeObjectType t)</argsstring>
+        <name>walkSubTree</name>
+        <qualifiedname>xrpl::SHAMap::walkSubTree</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>doWrite</declname>
+        </param>
+        <param>
+          <type>NodeObjectType</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="814" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a6335ae19c28f651de77d19a189eb50fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xrpl::SHAMap::gmnProcessNodes</definition>
+        <argsstring>(MissingNodes &amp;, MissingNodes::StackEntry &amp;node)</argsstring>
+        <name>gmnProcessNodes</name>
+        <qualifiedname>xrpl::SHAMap::gmnProcessNodes</qualifiedname>
+        <param>
+          <type><ref refid="structxrpl_1_1SHAMap_1_1MissingNodes" kindref="compound">MissingNodes</ref> &amp;</type>
+        </param>
+        <param>
+          <type><ref refid="structxrpl_1_1SHAMap_1_1MissingNodes_1a0884e483f6f5ad640bc93f414a973365" kindref="member">MissingNodes::StackEntry</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="880" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1a2288f13a4c1547518b2114383a535e52" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SHAMapTreeNodePtr</type>
+        <definition>SHAMapTreeNodePtr xrpl::SHAMap::finishFetch</definition>
+        <argsstring>(SHAMapHash const &amp;hash, std::shared_ptr&lt; NodeObject &gt; const &amp;object) const</argsstring>
+        <name>finishFetch</name>
+        <qualifiedname>xrpl::SHAMap::finishFetch</qualifiedname>
+        <param>
+          <type>SHAMapHash const &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; NodeObject &gt; const &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="886" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classxrpl_1_1SHAMap_1abafe4756096191c02ca7ba079d9f1f99" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void xrpl::SHAMap::gmnProcessDeferredReads</definition>
+        <argsstring>(MissingNodes &amp;)</argsstring>
+        <name>gmnProcessDeferredReads</name>
+        <qualifiedname>xrpl::SHAMap::gmnProcessDeferredReads</qualifiedname>
+        <param>
+          <type><ref refid="structxrpl_1_1SHAMap_1_1MissingNodes" kindref="compound">MissingNodes</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/shamap/SHAMap.h" line="882" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>std::atomic&lt; SHAMapState &gt;</label>
+      </node>
+      <node id="4">
+        <label>std::atomic&lt; bool &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::atomic&lt; std::uint32_t &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::SHAMap</label>
+        <link refid="classxrpl_1_1SHAMap"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>ledgerSeq_</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>state_</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>full_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/shamap/SHAMap.h" line="114" column="1" bodyfile="include/xrpl/shamap/SHAMap.h" bodystart="115" bodyend="887"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1SHAMap_1ab16d5380658635fcd157cbc92190a53b" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>addGiveItem</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a0702c814901131d83d7b6ecf3c346834" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>addItem</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a9c2b21061f59aadbc3eb5a35f9995855" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>addKnownNode</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a7a493ef9fbdc344868a60dc922ba6cbb" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>addRootNode</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a82196cdec47759dedf4cf2b47fe648a2" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>backed_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ae56bdf7577d9d63e9c0972397c9e9447" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>begin</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a1d423af32255a1d0e38c0092aaccdce3" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>BelowDirection</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ac2564cdd8c8b9f629c7792aa7a83edab" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>belowHelper</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a393748177e2c99ae8e65f06207ffbba7" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>boundHelper</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a2b5cdcd6606a27c8778d6300f95f5de6" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>cacheLookup</name></member>
+      <member refid="classxrpl_1_1SHAMap_1aa1a11b79f0e618b2467c7799cd6fe27e" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>canonicalize</name></member>
+      <member refid="classxrpl_1_1SHAMap_1aac4971157f435cc88c9e8713b96627e9" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>checkFilter</name></member>
+      <member refid="classxrpl_1_1SHAMap_1aa76973c74d3288bc60252c706fa0aa8d" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>clearSynching</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a74a09d591c7e39ba91abb60eaa42d173" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>compare</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a225cf0aa1aa3728b86e6be6a8cac4769" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>cowid_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a61e009c0c559342ac2682b605cb67fb3" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>deepCompare</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a8d65c6e2649085205005074b353515ab" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>delItem</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a7185d4cc01663caa5a79ce4d841eb4bf" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>Delta</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a2b3966c63129e3cc074debd30e31aea7" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>DeltaItem</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a3a629d6c37dba6a86cfe839b93077b39" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>DeltaRef</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a21e642be90c1ad8bb7ce07ef7da5d9e3" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>descend</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a2309b0477b414cea15ff3accadc94193" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>descend</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ab8f1d5675ce25fa1aa535e3d0c61e01f" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>descend</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a14e711351bcea0d12bece5104e274885" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>descendAsync</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ab310d70f190c1dfa070f8f70dda87d84" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>DescendCallback</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a36cbb5971194b745a5018d70f6d2015e" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>descendNoStore</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a7504eb71c2bc411463a3928972ee7c1c" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>descendThrow</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a35f603806a68e1347634180dcdf5a1a1" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>descendThrow</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a3a8c9e4aea84154e8dc2b07c9f6d4fda" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>dirtyUp</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a67ef0c94cc228c167363ea37390fcf86" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>dump</name></member>
+      <member refid="classxrpl_1_1SHAMap_1abb87d00b3a419abfe977a4bcaab7f7b0" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>end</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a28ad752ef558a0e15853521c5782529b" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>f_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a0b8ebc382c944a7a4ec8a8efa348f804" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>family</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a2bacaccf3f044d052063c7647052046c" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>family</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a3d9f83ac5c7ffa70f9dc36444c97c0e0" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>fetchNode</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a279541ab45a3c6991108ae1424c3fdff" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>fetchNodeFromDB</name></member>
+      <member refid="classxrpl_1_1SHAMap_1aa4fc328a5f5bd9e82496e3ab2104e270" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>fetchNodeNT</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a2f019b62abaa70a3282d5e8aa02d5857" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>fetchNodeNT</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a0516bf79935bfac8627c198ccf0faecb" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>fetchRoot</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ac546faa7ad841370877a512ac748df98" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>findKey</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a2288f13a4c1547518b2114383a535e52" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>finishFetch</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a329e488db5c0fd989fc12489a4145fc1" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>flushDirty</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ad677163536d67339593daeb8a10f2e25" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>full_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ae365d6320c65ecd25852387dd763d536" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>getHash</name></member>
+      <member refid="classxrpl_1_1SHAMap_1adcea30bd160fe455e65aa0c65b993497" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>getMissingNodes</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a29f60deec7339672c208b0aa47fb4128" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>getNodeFat</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ae981a10541553d149c3aa7b8ff19cf98" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>getProofPath</name></member>
+      <member refid="classxrpl_1_1SHAMap_1abafe4756096191c02ca7ba079d9f1f99" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>gmnProcessDeferredReads</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a6335ae19c28f651de77d19a189eb50fa" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>gmnProcessNodes</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a5a435e741305244231c0e6645ef167c6" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>hasInnerNode</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a31c433df76663462beb64459e341a5b4" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>hasItem</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a1680bd3480cb3012afa5ed324e7a6a6c" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>hasLeafNode</name></member>
+      <member refid="classxrpl_1_1SHAMap_1aaff8f1be24849f1fd69b2c91948a8bad" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>invariants</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a35ff8c2133ef838b14f379f33dfbe8cc" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>isImmutable</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a5f77beb3ddd58fbcd071451df818ad03" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>isSynching</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a8861abd940f45100850597a7e4e3d82a" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>isValid</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a6d2816abafc2c8ada86a94266352b25e" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>journal_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a36934308a89054dea55b06b8f6d1cce3" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>kBranchFactor</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a242f448e003ef9a7dfbf7ec5026de4fa" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>kLeafDepth</name></member>
+      <member refid="classxrpl_1_1SHAMap_1aade0cb251cb6963498d1f16298a0eea4" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>ledgerSeq</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a7315797db36ad67ea106d67138bf2978" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>ledgerSeq_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1af780a89c443ed796758c663e665df142" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>lowerBound</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ae08b6cd82ed11ed425d2204515c40cc5" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>onlyBelow</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a659a0fa3c2d91513f60cf3c3d550b1f1" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>operator=</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a65a6a8117dea3f4fbb6074d669d08f1d" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>peekFirstItem</name></member>
+      <member refid="classxrpl_1_1SHAMap_1aecb9b1f605beb9764d42f05c060050e5" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>peekItem</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a1eb0e749dede7875bb00b9ab53fedc16" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>peekItem</name></member>
+      <member refid="classxrpl_1_1SHAMap_1afce0bedbd9b333485eced02b45cb71e1" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>peekNextItem</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ac4b69c670fc62d44c0e0557f1a922e6e" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>preFlushNode</name></member>
+      <member refid="classxrpl_1_1SHAMap_1abad4f837e6b3f3c1e11839c79d9abab7" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>root_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a7c37c5b031ed19779e1e0d3c6ede353e" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>serializeRoot</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a2730c61a05ac4c35f8a81b065c2bd18d" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>setFull</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a0df48fd2ab718bae3a113f9f732209c6" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>setImmutable</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a8410428c2bc200b17e3ce9f50f1b78a3" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>setInvalid</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a23a6add71b3bf4b0b2c08884fe072c2f" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>setLedgerSeq</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a59018824caa7cccbf68abc7c58054158" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>setSynching</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a3ec8e3684a7eb7dfe7397faa60399444" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>setUnbacked</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a93c516c466c297741850d7410990b18a" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>SHAMap</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a5c9c5fb17c94d231e13c4609ca7bcb1f" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>SHAMap</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ae3e52509cbc0754a268753384b42d875" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>SHAMap</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a344f2939e0aa9b384b4e80ac7c584aa6" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>SHAMap</name></member>
+      <member refid="classxrpl_1_1SHAMap_1af2768942085d59e5422dfd28020c169d" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>SHAMap</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a8883d3291f5c5bc48ae3fb101d65d696" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>snapShot</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a8c83825beadd8d51e14ec31a71046bcf" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>state</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a0a03fc4e5562161f329a8abcd835edc8" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>state_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ac952e764e86d57c9be356fd20b7b3348" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>trySetState</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a918559c1b943ead4fe8e7c7fb97773a3" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>type_</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a8b46d2e254293a357509dc68c303e26f" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>unshare</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ac841f1ed717ea9a35bc0535bbe443202" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>unshareNode</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a90b29e66f833dfb2fc6d365ac3319e55" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>updateGiveItem</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a3669bc1a365b6d4a2a867b16ebff0465" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>upperBound</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ae34c6a68602e02c05a137f9d9781b8ca" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>verifyProofPath</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a3d2393c957f8c1df98b9c6f2dc14e4c2" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>visitDifferences</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a8e42b528b1da5c330135ef3f8317b744" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>visitLeaves</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ae77b2bfe9265c7f23e0183052d160555" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>visitNodes</name></member>
+      <member refid="classxrpl_1_1SHAMap_1af6ee6b160f2a41f7bb86f0077ee72ee7" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>walkBranch</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a536a065eacc5487aa63c43e090857fd3" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>walkMap</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a4fd34c4f0889c7d0ec81ae29c3a0e3c7" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>walkMapParallel</name></member>
+      <member refid="classxrpl_1_1SHAMap_1ad794029ac600f4a937085e65e362ccc2" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>walkSubTree</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a8eee43f09cd884bece3853f80baf26a1" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>walkTowardsKey</name></member>
+      <member refid="classxrpl_1_1SHAMap_1abc86a31d345b378d201844e0c222344f" prot="private" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>writeNode</name></member>
+      <member refid="classxrpl_1_1SHAMap_1a317e70b85486785675840956b03fa206" prot="public" virt="non-virtual"><scope>xrpl::SHAMap</scope><name>~SHAMap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structxrpl_1_1ReadView_1_1SlesType" kind="struct" language="C++" prot="public">
+    <compoundname>xrpl::ReadView::SlesType</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">detail::ReadViewFwdRange&lt; SLE::const_pointer &gt;</basecompoundref>
+    <includes local="no">xrpl/ledger/ReadView.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structxrpl_1_1ReadView_1_1SlesType_1aea51908c390b5286aa0f6eb5396072de" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::ReadView::SlesType::SlesType</definition>
+        <argsstring>(ReadView const &amp;view)</argsstring>
+        <name>SlesType</name>
+        <qualifiedname>xrpl::ReadView::SlesType::SlesType</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ReadView_1a025a8816966f80cc1ef7e72a8f854bfb" kindref="member">ReadView</ref> const &amp;</type>
+          <declname>view</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="51" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structxrpl_1_1ReadView_1_1SlesType_1adc53c5972315b2eebcd14092e0dce54e" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Iterator</type>
+        <definition>Iterator xrpl::ReadView::SlesType::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <qualifiedname>xrpl::ReadView::SlesType::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="53" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structxrpl_1_1ReadView_1_1SlesType_1a797c4dc2ad312527f036c96240e0059a" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Iterator</type>
+        <definition>Iterator xrpl::ReadView::SlesType::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <qualifiedname>xrpl::ReadView::SlesType::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="55" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structxrpl_1_1ReadView_1_1SlesType_1a5b45f484053e74ce537f9ca0b8197e60" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Iterator</type>
+        <definition>Iterator xrpl::ReadView::SlesType::upperBound</definition>
+        <argsstring>(key_type const &amp;key) const</argsstring>
+        <name>upperBound</name>
+        <qualifiedname>xrpl::ReadView::SlesType::upperBound</qualifiedname>
+        <param>
+          <type><ref refid="classxrpl_1_1ReadView_1a6722acde83b5ecd55013e18b3616c6e1" kindref="member">key_type</ref> const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/ledger/ReadView.h" line="57" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>detail::ReadViewFwdRange&lt; SLE::const_pointer &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::ReadView::SlesType</label>
+        <link refid="structxrpl_1_1ReadView_1_1SlesType"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>detail::ReadViewFwdRange&lt; SLE::const_pointer &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::ReadView::SlesType</label>
+        <link refid="structxrpl_1_1ReadView_1_1SlesType"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/ledger/ReadView.h" line="49" column="5" bodyfile="include/xrpl/ledger/ReadView.h" bodystart="50" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structxrpl_1_1ReadView_1_1SlesType_1adc53c5972315b2eebcd14092e0dce54e" prot="public" virt="non-virtual"><scope>xrpl::ReadView::SlesType</scope><name>begin</name></member>
+      <member refid="structxrpl_1_1ReadView_1_1SlesType_1a797c4dc2ad312527f036c96240e0059a" prot="public" virt="non-virtual"><scope>xrpl::ReadView::SlesType</scope><name>end</name></member>
+      <member refid="structxrpl_1_1ReadView_1_1SlesType_1aea51908c390b5286aa0f6eb5396072de" prot="public" virt="non-virtual"><scope>xrpl::ReadView::SlesType</scope><name>SlesType</name></member>
+      <member refid="structxrpl_1_1ReadView_1_1SlesType_1a5b45f484053e74ce537f9ca0b8197e60" prot="public" virt="non-virtual"><scope>xrpl::ReadView::SlesType</scope><name>upperBound</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

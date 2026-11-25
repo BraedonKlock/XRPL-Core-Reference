@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="Feature_8cpp" kind="file" language="C++">
+    <compoundname>Feature.cpp</compoundname>
+    <includes refid="Feature_8h" local="no">xrpl/protocol/Feature.h</includes>
+    <includes local="no">xrpl/basics/Slice.h</includes>
+    <includes refid="base__uint_8h" local="no">xrpl/basics/base_uint.h</includes>
+    <includes refid="contract_8h" local="no">xrpl/basics/contract.h</includes>
+    <includes local="no">xrpl/beast/utility/instrumentation.h</includes>
+    <includes local="no">xrpl/protocol/digest.h</includes>
+    <includes local="no">boost/container_hash/hash.hpp</includes>
+    <includes local="no">boost/multi_index/hashed_index.hpp</includes>
+    <includes local="no">boost/multi_index/indexed_by.hpp</includes>
+    <includes local="no">boost/multi_index/member.hpp</includes>
+    <includes local="no">boost/multi_index/random_access_index.hpp</includes>
+    <includes local="no">boost/multi_index/tag.hpp</includes>
+    <includes local="no">boost/multi_index_container.hpp</includes>
+    <includes local="no">atomic</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">map</includes>
+    <includes local="no">optional</includes>
+    <includes local="no">string</includes>
+    <includes local="no">xrpl/protocol/detail/features.macro</includes>
+    <includes local="no">utility</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/libxrpl/protocol/Feature.cpp</label>
+        <link refid="Feature_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>atomic</label>
+      </node>
+      <node id="5">
+        <label>boost/container_hash/hash.hpp</label>
+      </node>
+      <node id="6">
+        <label>boost/multi_index/hashed_index.hpp</label>
+      </node>
+      <node id="7">
+        <label>boost/multi_index/indexed_by.hpp</label>
+      </node>
+      <node id="8">
+        <label>boost/multi_index/member.hpp</label>
+      </node>
+      <node id="9">
+        <label>boost/multi_index/random_access_index.hpp</label>
+      </node>
+      <node id="10">
+        <label>boost/multi_index/tag.hpp</label>
+      </node>
+      <node id="11">
+        <label>boost/multi_index_container.hpp</label>
+      </node>
+      <node id="13">
+        <label>cstddef</label>
+      </node>
+      <node id="14">
+        <label>map</label>
+      </node>
+      <node id="15">
+        <label>optional</label>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="18">
+        <label>utility</label>
+      </node>
+      <node id="2">
+        <label>xrpl/basics/Slice.h</label>
+      </node>
+      <node id="3">
+        <label>xrpl/beast/utility/instrumentation.h</label>
+      </node>
+      <node id="17">
+        <label>xrpl/protocol/detail/features.macro</label>
+      </node>
+      <node id="4">
+        <label>xrpl/protocol/digest.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacexrpl">xrpl</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="Feature_8cpp_1acf9e1dd519de25bd29c07ea7243401c1" prot="public" static="no">
+        <name>XRPL_FEATURE</name>
+        <param><defname>name</defname></param>
+        <param><defname>supported</defname></param>
+        <param><defname>vote</defname></param>
+        <initializer>UInt256 const feature##name =           \
+    registerFeature(enforceValidFeatureName([] { return #name; }), supported, vote);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/Feature.cpp" line="435" column="9" bodyfile="src/libxrpl/protocol/Feature.cpp" bodystart="435" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="define" id="Feature_8cpp_1a9c32b3c3595afc031ae0b98f9d4b9876" prot="public" static="no">
+        <name>XRPL_FIX</name>
+        <param><defname>name</defname></param>
+        <param><defname>supported</defname></param>
+        <param><defname>vote</defname></param>
+        <initializer>UInt256 const fix##name =           \
+    registerFeature(enforceValidFeatureName([] { return &quot;fix&quot; #name; }), supported, vote);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/Feature.cpp" line="438" column="9" bodyfile="src/libxrpl/protocol/Feature.cpp" bodystart="438" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="define" id="Feature_8cpp_1adcff49e47ce7acf2379a36fd529f82fb" prot="public" static="no">
+        <name>XRPL_RETIRE_FEATURE</name>
+        <param><defname>name</defname></param>
+        <initializer>[[deprecated(&quot;The referenced feature amendment has been retired&quot;)]] \
+[[maybe_unused]]                                                    \
+UInt256 const retiredFeature##name = retireFeature(#name);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/Feature.cpp" line="443" column="9" bodyfile="src/libxrpl/protocol/Feature.cpp" bodystart="443" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="define" id="Feature_8cpp_1a6f00ce52f2646420868a9872c85ca494" prot="public" static="no">
+        <name>XRPL_RETIRE_FIX</name>
+        <param><defname>name</defname></param>
+        <initializer>[[deprecated(&quot;The referenced fix amendment has been retired&quot;)]]     \
+[[maybe_unused]]                                                    \
+UInt256 const retiredFix##name = retireFeature(&quot;fix&quot; #name);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libxrpl/protocol/Feature.cpp" line="448" column="9" bodyfile="src/libxrpl/protocol/Feature.cpp" bodystart="448" bodyend="451"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/libxrpl/protocol/Feature.cpp"/>
+  </compounddef>
+</doxygen>

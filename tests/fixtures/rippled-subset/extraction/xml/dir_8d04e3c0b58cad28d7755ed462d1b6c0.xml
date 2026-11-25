@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_8d04e3c0b58cad28d7755ed462d1b6c0" kind="dir">
+    <compoundname>include/xrpl/protocol</compoundname>
+    <innerfile refid="Feature_8h">Feature.h</innerfile>
+    <innerfile refid="IOUAmount_8h">IOUAmount.h</innerfile>
+    <innerfile refid="jss_8h">jss.h</innerfile>
+    <innerfile refid="LedgerFormats_8h">LedgerFormats.h</innerfile>
+    <innerfile refid="Rate_8h">Rate.h</innerfile>
+    <innerfile refid="SField_8h">SField.h</innerfile>
+    <innerfile refid="STInteger_8h">STInteger.h</innerfile>
+    <innerfile refid="STTx_8h">STTx.h</innerfile>
+    <innerfile refid="TER_8h">TER.h</innerfile>
+    <innerfile refid="TxFormats_8h">TxFormats.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xrpl/protocol/"/>
+  </compounddef>
+</doxygen>

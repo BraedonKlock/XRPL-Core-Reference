@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classxrpl_1_1LedgerFormats" kind="class" language="C++" prot="public">
+    <compoundname>xrpl::LedgerFormats</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KnownFormats&lt; LedgerEntryType, LedgerFormats &gt;</basecompoundref>
+    <includes local="no">xrpl/protocol/LedgerFormats.h</includes>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxrpl_1_1LedgerFormats_1a8d53b8287d8dbee18f545f1725cc1388" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xrpl::LedgerFormats::LedgerFormats</definition>
+        <argsstring>()</argsstring>
+        <name>LedgerFormats</name>
+        <qualifiedname>xrpl::LedgerFormats::LedgerFormats</qualifiedname>
+        <briefdescription>
+<para>Create the object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This will load the object with all the known ledger formats. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/LedgerFormats.h" line="338" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classxrpl_1_1LedgerFormats_1a57757283534837f000f608c7c3fb2e8f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxrpl_1_1LedgerFormats_1a8d53b8287d8dbee18f545f1725cc1388" kindref="member">LedgerFormats</ref> const &amp;</type>
+        <definition>static LedgerFormats const  &amp; xrpl::LedgerFormats::getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <qualifiedname>xrpl::LedgerFormats::getInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/LedgerFormats.h" line="342" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxrpl_1_1LedgerFormats_1ae929bfba79c3b98a286b3cc7fd915628" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; SOElement &gt; const &amp;</type>
+        <definition>static std::vector&lt; SOElement &gt; const  &amp; xrpl::LedgerFormats::getCommonFields</definition>
+        <argsstring>()</argsstring>
+        <name>getCommonFields</name>
+        <qualifiedname>xrpl::LedgerFormats::getCommonFields</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xrpl/protocol/LedgerFormats.h" line="346" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Holds the list of known ledger entry formats. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>KnownFormats&lt; LedgerEntryType, LedgerFormats &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::LedgerFormats</label>
+        <link refid="classxrpl_1_1LedgerFormats"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>KnownFormats&lt; LedgerEntryType, LedgerFormats &gt;</label>
+      </node>
+      <node id="1">
+        <label>xrpl::LedgerFormats</label>
+        <link refid="classxrpl_1_1LedgerFormats"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xrpl/protocol/LedgerFormats.h" line="331" column="1" bodyfile="include/xrpl/protocol/LedgerFormats.h" bodystart="332" bodyend="347"/>
+    <listofallmembers>
+      <member refid="classxrpl_1_1LedgerFormats_1ae929bfba79c3b98a286b3cc7fd915628" prot="public" virt="non-virtual"><scope>xrpl::LedgerFormats</scope><name>getCommonFields</name></member>
+      <member refid="classxrpl_1_1LedgerFormats_1a57757283534837f000f608c7c3fb2e8f" prot="public" virt="non-virtual"><scope>xrpl::LedgerFormats</scope><name>getInstance</name></member>
+      <member refid="classxrpl_1_1LedgerFormats_1a8d53b8287d8dbee18f545f1725cc1388" prot="private" virt="non-virtual"><scope>xrpl::LedgerFormats</scope><name>LedgerFormats</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
