@@ -2,7 +2,6 @@ node_modules/
 .cache/
 coverage/
 dist/
-public/data/
 playwright-report/
 test-results/
 *.log
@@ -12,3 +11,9 @@ test-results/
 .vscode/
 .idea/
 dist-pages/
+.railway/
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc

@@ -15,6 +15,8 @@
     "build:pages": "XCR_BASE_PATH=/XRPL-Core-Reference/ XCR_OUT_DIR=dist-pages vite build",
     "preview": "vite preview",
     "preview:pages": "node tests/e2e/support/static-pages-server.js dist-pages 4174 /XRPL-Core-Reference/",
+    "serve": "node scripts/deployment/serve.js",
+    "deploy:railway": "bash scripts/deployment/deploy-railway.sh",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

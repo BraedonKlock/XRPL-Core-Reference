@@ -4,7 +4,7 @@ const PREVIEW_PORT = 4173;
 const PAGES_PORT = 4174;
 const PAGES_BASE_PATH = '/XRPL-Core-Reference/';
 const ENABLED_BROWSERS = new Set((process.env.XCR_E2E_BROWSERS ?? 'chromium,firefox,webkit').split(','));
-const SITE_TESTS = /(navigation|accessibility|responsive|errors|performance)\.spec\.js$/;
+const SITE_TESTS = /(navigation|accessibility|responsive|errors|performance|production-server)\.spec\.js$/;
 
 const SITE_PROJECTS = [
   { name: 'desktop-chromium', browser: 'chromium', use: devices['Desktop Chrome'] },
@@ -40,7 +40,7 @@ export default defineConfig({
   ],
   webServer: [
     {
-      command: `npm run build && npm run preview -- --port ${PREVIEW_PORT} --strictPort`,
+      command: `npm run build && PORT=${PREVIEW_PORT} npm run serve`,
       url: `http://localhost:${PREVIEW_PORT}/data/current.json`,
       reuseExistingServer: !process.env.CI,
       timeout: 120000,

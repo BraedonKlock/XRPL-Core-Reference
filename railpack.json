@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "node": "22"
+  },
+  "deploy": {
+    "startCommand": "node scripts/deployment/serve.js"
+  }
+}

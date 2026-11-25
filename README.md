@@ -16,8 +16,8 @@ The website runs locally with global search, namespace and class navigation, cla
 | 2     | Documentation extraction pipeline | Complete                                                         |
 | 3     | React foundation                  | Complete                                                         |
 | 4     | Core reference features           | Complete                                                         |
-| 5     | Integration and optimisation      | Complete, awaiting review                                        |
-| 6     | Deployment                        | Not started                                                      |
+| 5     | Integration and optimisation      | Complete                                                         |
+| 6     | Deployment                        | Prepared for Railway, awaiting review                            |
 
 ## What the pipeline produces
 
@@ -45,7 +45,7 @@ npm run docs:generate
 npm run dev
 ```
 
-To try the optimised production build, run `npm run build && npm run preview` and open http://localhost:4173. To try the GitHub Pages build under its repository sub-path, run `npm run build:pages && npm run preview:pages` and open http://localhost:4174/XRPL-Core-Reference/.
+To try the optimised production build exactly as it is served in production, run `npm run build && npm run serve` and open http://localhost:8080. To try the GitHub Pages build under its repository sub-path, run `npm run build:pages && npm run preview:pages` and open http://localhost:4174/XRPL-Core-Reference/.
 
 ## Prerequisites
 
@@ -84,7 +84,13 @@ Pass `--categories production,test` to include rippled's test code as a separate
 | `npm test`                                      | Pipeline, contract and browser tests (Vitest)                                                                                                                                                                                     |
 | `npm run test:e2e`                              | Playwright tests against the production build. Run `npx playwright install` once, and generate a dataset first. Set `XCR_E2E_BROWSERS=chromium,firefox` to choose browsers; WebKit also needs `sudo npx playwright install-deps`. |
 | `npm run test:a11y`                             | Only the accessibility tests                                                                                                                                                                                                      |
+| `npm run serve`                                 | Production server for `dist/` (the command Railway runs); `PORT` selects the port                                                                                                                                                 |
+| `npm run deploy:railway`                        | Manual, confirmed Railway deployment of the reviewed commit; `-- --check` runs every check without uploading                                                                                                                      |
 | `npm run build:pages` / `npm run preview:pages` | GitHub Pages build into `dist-pages/` under `/XRPL-Core-Reference/`, and a server that behaves like GitHub Pages                                                                                                                  |
+
+## Deployment
+
+[Railway](https://railway.com) is the production host: a static build served by a small Node server. Deployments are manual only: Railway is not connected to GitHub, so pushing never changes the site. Run `npm run deploy:railway`, which deploys the reviewed commit on `origin/main`, after validating the committed documentation dataset and building and smoke-testing the site. Setup, rollback, documentation updates and troubleshooting are covered in [docs/deployment/RAILWAY_DEPLOYMENT.md](docs/deployment/RAILWAY_DEPLOYMENT.md).
 
 ## License
 

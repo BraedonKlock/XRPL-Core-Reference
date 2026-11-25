@@ -44,6 +44,8 @@ tests/
   e2e/                       Playwright tests against the full generated dataset
   setup/                     jsdom test setup
 scripts/start-local.sh       One-command local start (`npm start`)
+scripts/deployment/          Production server (`npm run serve`) and manual Railway deployment (`npm run deploy:railway`)
+railpack.json                Railway build settings: Node 22 and the production server start command
 docs/                        Architecture, limitations, research records
 ```
 
@@ -231,21 +233,26 @@ The layout follows the navigation model of Revit API Docs: a dark header, a left
   - `errors.spec.js` checks that a failed data file affects only its own section.
   - `performance.spec.js` enforces bundle-size, long-task and search-latency budgets.
   - `deployment.spec.js` runs the GitHub Pages build behind `tests/e2e/support/static-pages-server.js`.
+  - `production-server.spec.js` checks the production server for content-security-policy violations, console errors, content types, security headers, deep-link reloads and 404s for missing files.
+- The site projects run against the production server (`npm run serve`), the command Railway runs. `scripts/deployment/production-server.test.js` covers routing, caching, compression, path traversal, hidden files, symbolic links, malformed requests and methods.
 - `scripts/quality/measure-performance.js` records bundle sizes, load, blocking time, heap and search latency under 4× CPU throttling. The results are in `docs/quality/`.
 
 ## Decisions
 
-| Decision                                             | Rationale                                                                                                    |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Overlay the upstream Doxyfile instead of forking it  | Upstream changes to extraction flags flow through, and the overlay changes only what XML extraction needs.   |
-| Targeted X-macro expansion                           | Recovers about 1,260 generated symbols without global expansion rewriting initialisers.                      |
-| Zod at the generation boundary and in `validate`     | One validated contract; consumers need not re-validate trusted data.                                         |
-| Plain JSON, sharded, without a prebuilt search index | Keeps the dataset reusable. The search implementation is a browser concern for Phase 4.                      |
-| No caching of Doxygen output between commits         | Extraction takes about 4 seconds; CI caching is a Phase 6 concern.                                           |
-| No UI framework or global state library              | The browser needs one context (the dataset) and a few components; CSS Modules and tokens are enough.         |
-| Custom search ranking instead of MiniSearch          | Exact and qualified C++ name matches must rank deterministically first; a linear scan is a few milliseconds. |
-| `zod/mini` instead of full Zod                       | The same schemas with a tree-shakable API, contributing to the smaller bundle measured in Phase 5.           |
-| Label inherited documentation instead of hiding it   | The text is real rippled documentation, but readers must know which method wrote it.                         |
-| `useResource` instead of a data-fetching library     | Loading is a small number of immutable, cached files; a race-safe hook covers it.                            |
-| Raw pathname for symbol routes                       | Preserves the published percent-encoding that route parameters would decode.                                 |
-| Ship rippled's ISC licence inside every dataset      | Datasets contain rippled documentation comments, so the licence travels with them.                           |
+| Decision                                             | Rationale                                                                                                          |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Overlay the upstream Doxyfile instead of forking it  | Upstream changes to extraction flags flow through, and the overlay changes only what XML extraction needs.         |
+| Targeted X-macro expansion                           | Recovers about 1,260 generated symbols without global expansion rewriting initialisers.                            |
+| Zod at the generation boundary and in `validate`     | One validated contract; consumers need not re-validate trusted data.                                               |
+| Plain JSON, sharded, without a prebuilt search index | Keeps the dataset reusable. The search implementation is a browser concern for Phase 4.                            |
+| No caching of Doxygen output between commits         | Extraction takes about 4 seconds; CI caching is a Phase 6 concern.                                                 |
+| No UI framework or global state library              | The browser needs one context (the dataset) and a few components; CSS Modules and tokens are enough.               |
+| Custom search ranking instead of MiniSearch          | Exact and qualified C++ name matches must rank deterministically first; a linear scan is a few milliseconds.       |
+| `zod/mini` instead of full Zod                       | The same schemas with a tree-shakable API, contributing to the smaller bundle measured in Phase 5.                 |
+| Label inherited documentation instead of hiding it   | The text is real rippled documentation, but readers must know which method wrote it.                               |
+| `useResource` instead of a data-fetching library     | Loading is a small number of immutable, cached files; a race-safe hook covers it.                                  |
+| Raw pathname for symbol routes                       | Preserves the published percent-encoding that route parameters would decode.                                       |
+| Ship rippled's ISC licence inside every dataset      | Datasets contain rippled documentation comments, so the licence travels with them.                                 |
+| The dataset is committed to git                      | Deployments build from a reviewed commit without regenerating documentation; dataset updates are reviewable diffs. |
+| Railway CLI uploads instead of a GitHub connection   | Pushing can never change the live site, and Railway never needs access to the GitHub account.                      |
+| A dependency-free Node server instead of Caddy       | Same behaviour locally and on Railway, tested by Vitest and Playwright; allow-list serving from memory.            |
