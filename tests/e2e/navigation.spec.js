@@ -22,6 +22,13 @@ test('overview identifies the documented develop commit', async ({ page, request
     `https://github.com/XRPLF/rippled/commit/${commitSha}`,
   );
   await expect(page).toHaveTitle('XRPL Core Reference');
+  const logo = page.getByRole('link', { name: 'XRPL Core Reference' }).locator('img');
+  await expect(logo).toBeVisible();
+  expect(
+    await logo.evaluate((image) => image.naturalWidth === image.naturalHeight && image.naturalWidth > 0),
+  ).toBe(true);
+  const favicon = await page.locator('link[rel="icon"]').getAttribute('href');
+  expect((await request.get(favicon)).ok()).toBe(true);
 });
 
 test('browse from the namespace tree to a class and back', async ({ page, request }) => {

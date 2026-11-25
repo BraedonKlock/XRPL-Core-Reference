@@ -27,6 +27,9 @@ describe('application with the rippled fixture dataset', () => {
   it('shows the documented revision on the overview page', async () => {
     renderApp({ client: fixtureClient() });
     expect(await screen.findByRole('heading', { level: 1, name: 'XRPL Core Reference' })).toBeInTheDocument();
+    const homeLink = screen.getByRole('link', { name: /^XRPL Core Reference/ });
+    expect(homeLink).toHaveAttribute('href', '/');
+    expect(homeLink.querySelector('img')).toHaveAttribute('src', expect.stringMatching(/images\.png$/));
     expect(screen.getByRole('link', { name: COMMIT })).toHaveAttribute(
       'href',
       `https://github.com/XRPLF/rippled/commit/${COMMIT}`,

@@ -14,7 +14,7 @@
 .brand {
   flex: none;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: var(--space-3);
   min-width: 0;
   color: var(--color-header-text);
@@ -23,6 +23,15 @@
 .brand:hover {
   color: var(--color-header-text);
   text-decoration: none;
+}
+
+.logo {
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 .title {
@@ -89,7 +98,12 @@
 }
 
 @media (max-width: 30rem) {
-  .brand {
-    display: none;
+  .title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
   }
 }

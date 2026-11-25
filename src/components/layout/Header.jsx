@@ -3,6 +3,7 @@ import { HOME_ROUTE } from '../../config/routes.js';
 import { SITE_NAME } from '../../config/site.js';
 import { shortCommitSha } from '../../services/documentation/source-links.js';
 import { ThemeToggle } from '../ui/ThemeToggle.jsx';
+import logoUrl from '../../../images/images.png';
 import styles from './Header.module.css';
 
 export function Header({ source, search, isNavigationOpen, onToggleNavigation, navigationId }) {
@@ -19,6 +20,7 @@ export function Header({ source, search, isNavigationOpen, onToggleNavigation, n
         <span aria-hidden="true">{'☰'}</span>
       </button>
       <Link to={HOME_ROUTE} className={styles.brand}>
+        <img className={styles.logo} src={logoUrl} alt="" width="28" height="28" />
         <span className={styles.title}>{SITE_NAME}</span>
         <span className={styles.revision}>
           {source.repository}@{source.branch} {shortCommitSha(source.commitSha)}
