@@ -61,11 +61,17 @@ describe('Sidebar', () => {
     const user = userEvent.setup();
     const onClose = vi.fn();
     render(
-      <Sidebar id="nav" isOpen onClose={onClose}>
-        <a href="/">link</a>
-      </Sidebar>,
+      <>
+        <button type="button" id="nav-toggle">
+          Menu
+        </button>
+        <Sidebar id="nav" toggleId="nav-toggle" isOpen onClose={onClose}>
+          <a href="/">link</a>
+        </Sidebar>
+      </>,
     );
     await user.keyboard('{Escape}');
     expect(onClose).toHaveBeenCalledTimes(1);
+    expect(screen.getByRole('button', { name: 'Menu' })).toHaveFocus();
   });
 });

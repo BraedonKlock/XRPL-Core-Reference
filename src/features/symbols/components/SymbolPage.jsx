@@ -72,7 +72,7 @@ function SymbolContent({ symbolPath }) {
 
   if (symbol.status === 'not-found') {
     return (
-      <EmptyState title="Symbol not found">
+      <EmptyState title="Symbol not found" headingLevel={1}>
         <p>
           <code>{symbolPath}</code> is not part of the dataset for this rippled commit.
         </p>

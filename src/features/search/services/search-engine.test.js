@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { createSearchEngine, MATCH_TIERS, parseQuery } from './search-engine.js';
+import { createLazySearchEngine, createSearchEngine, MATCH_TIERS, parseQuery } from './search-engine.js';
 
 function entry(qualifiedName, kind, overrides = {}) {
   const name = qualifiedName.split('::').at(-1);
@@ -98,5 +98,21 @@ describe('search engine', () => {
       isQualified: true,
       nameTerm: 'STTx',
     });
+  });
+});
+
+describe('lazy search engine', () => {
+  it('builds the index only when the first real query arrives', () => {
+    let loads = 0;
+    const lazy = createLazySearchEngine(() => {
+      loads += 1;
+      return ENTRIES;
+    });
+    expect(lazy.search('   ').results).toEqual([]);
+    expect(lazy.isBuilt).toBe(false);
+    expect(lazy.search('Payment').results[0].entry.qualifiedName).toBe('xrpl::Payment');
+    lazy.search('TER');
+    expect(loads).toBe(1);
+    expect(lazy.isBuilt).toBe(true);
   });
 });

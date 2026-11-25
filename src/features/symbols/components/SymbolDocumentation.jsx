@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+import { symbolUrl } from '../../../config/routes.js';
 import { DocumentationInline } from './DocumentationInline.jsx';
 import styles from './SymbolDocumentation.module.css';
 
@@ -53,6 +55,19 @@ function DocumentationNote({ note }) {
   );
 }
 
+function InheritedFrom({ inheritedFrom }) {
+  return (
+    <p className={styles.inherited}>
+      Documentation inherited from{' '}
+      {inheritedFrom.target ? (
+        <Link to={symbolUrl(inheritedFrom.target.path)}>{inheritedFrom.name}</Link>
+      ) : (
+        <code>{inheritedFrom.name}</code>
+      )}
+    </p>
+  );
+}
+
 export function SymbolDocumentation({ documentation }) {
   if (documentation.status === 'suppressed') {
     return (
@@ -66,6 +81,7 @@ export function SymbolDocumentation({ documentation }) {
   }
   return (
     <div className={styles.documentation}>
+      {documentation.inheritedFrom ? <InheritedFrom inheritedFrom={documentation.inheritedFrom} /> : null}
       {documentation.brief ? (
         <p className={styles.brief}>
           <DocumentationInline content={documentation.brief} />

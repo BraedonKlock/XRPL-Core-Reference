@@ -11,12 +11,16 @@ function InlineElement({ inline }) {
       return <strong>{inline.text}</strong>;
     case 'url':
       return (
-        <a href={inline.href} rel="noreferrer">
+        <a className="inline-link" href={inline.href} rel="noreferrer">
           {inline.text}
         </a>
       );
     case 'link':
-      return <Link to={symbolUrl(inline.target.path, inline.target.fragment)}>{inline.text}</Link>;
+      return (
+        <Link className="inline-link" to={symbolUrl(inline.target.path, inline.target.fragment)}>
+          {inline.text}
+        </Link>
+      );
     default:
       return inline.text;
   }

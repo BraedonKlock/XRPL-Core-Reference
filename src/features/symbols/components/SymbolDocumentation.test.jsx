@@ -10,6 +10,7 @@ const ABSENT = {
   returns: null,
   notes: [],
   suppressionReason: null,
+  inheritedFrom: null,
 };
 
 function renderDocumentation(documentation) {
@@ -60,5 +61,33 @@ describe('SymbolDocumentation', () => {
     });
     expect(screen.getByText('Documentation omitted.')).toBeInTheDocument();
     expect(screen.getByText(/unterminated comment/)).toBeInTheDocument();
+  });
+
+  it('names the overridden member whose documentation is shown', () => {
+    renderDocumentation({
+      ...ABSENT,
+      status: 'present',
+      brief: [{ type: 'text', text: 'Apply the transaction.' }],
+      inheritedFrom: {
+        name: 'xrpl::Transactor::doApply',
+        target: { path: 'xrpl/Transactor/doApply/0', resolution: 'doxygen' },
+      },
+    });
+    expect(screen.getByText(/Documentation inherited from/)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'xrpl::Transactor::doApply' })).toHaveAttribute(
+      'href',
+      '/symbols/xrpl/Transactor/doApply/0',
+    );
+  });
+
+  it('names an overridden member outside the reference without a link', () => {
+    renderDocumentation({
+      ...ABSENT,
+      status: 'present',
+      brief: [{ type: 'text', text: 'Run the job.' }],
+      inheritedFrom: { name: 'beast::Job::run', target: null },
+    });
+    expect(screen.getByText('beast::Job::run')).toBeInTheDocument();
+    expect(screen.queryByRole('link')).toBeNull();
   });
 });

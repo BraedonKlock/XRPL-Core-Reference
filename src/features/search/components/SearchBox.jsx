@@ -71,7 +71,7 @@ export function SearchBox() {
   const optionId = (index) => `${listboxId}-option-${index}`;
 
   return (
-    <div className={styles.search} role="search">
+    <div className={styles.search} role="search" aria-label="Site search">
       <span className={styles.icon} aria-hidden="true">
         {'⌕'}
       </span>
@@ -111,15 +111,11 @@ export function SearchBox() {
                   className={styles.option}
                   role="option"
                   aria-selected={index === activeIndex}
+                  onClick={() => goTo(symbolUrl(result.entry.path))}
                 >
-                  <Link
-                    to={symbolUrl(result.entry.path)}
-                    className={searchResultClassName}
-                    tabIndex={-1}
-                    onClick={reset}
-                  >
+                  <div className={searchResultClassName}>
                     <SearchResultContent result={result} />
-                  </Link>
+                  </div>
                 </li>
               ))}
             </ul>

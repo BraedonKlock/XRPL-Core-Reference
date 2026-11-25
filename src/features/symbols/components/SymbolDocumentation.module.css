@@ -56,6 +56,11 @@
   letter-spacing: 0.05em;
 }
 
+.inherited {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
 .absent {
   color: var(--color-text-muted);
   font-style: italic;

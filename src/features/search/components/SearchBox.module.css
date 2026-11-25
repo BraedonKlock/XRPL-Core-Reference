@@ -60,12 +60,16 @@
   list-style: none;
 }
 
-.option[aria-selected='true'] > a {
-  background: var(--color-surface-selected);
+.option {
+  cursor: pointer;
 }
 
-.option > a:hover {
+.option:hover > * {
   background: var(--color-surface-hover);
+}
+
+.option[aria-selected='true'] > * {
+  background: var(--color-surface-selected);
 }
 
 .footer {

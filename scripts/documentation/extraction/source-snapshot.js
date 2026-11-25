@@ -1,14 +1,14 @@
 import { createHash } from 'node:crypto';
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import { z } from 'zod';
+import * as z from 'zod/mini';
 import { commitShaSchema } from '../../../contract/schema.js';
 
 export const SOURCE_SNAPSHOT_FILE = 'source-snapshot.json';
 
 const sourceSnapshotSchema = z.strictObject({
   commitSha: commitShaSchema,
-  files: z.record(z.string().min(1), z.string().regex(/^[0-9a-f]{64}$/)),
+  files: z.record(z.string().check(z.minLength(1)), z.string().check(z.regex(/^[0-9a-f]{64}$/))),
 });
 
 function sha256Of(path) {

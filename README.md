@@ -8,15 +8,15 @@ This is a community-maintained project. It is not affiliated with or endorsed by
 
 ## Status
 
-The website runs locally with global search, namespace and class navigation, class pages with member tables and inheritance, dedicated method pages, clickable types, and links to the exact source lines.
+The website runs locally with global search, namespace and class navigation, class pages with member tables and inheritance, dedicated method pages, clickable types, and links to the exact source lines. It has been tested for accessibility (WCAG 2.2 AA), in Chromium and Firefox at desktop, tablet and phone sizes, and as a GitHub Pages build. Measurements and results are in the [quality report](docs/quality/QUALITY_REPORT.md).
 
 | Phase | Scope                             | State                                                            |
 | ----- | --------------------------------- | ---------------------------------------------------------------- |
 | 1     | Research and feasibility          | Complete ([report](docs/research/phase-1-feasibility-report.md)) |
 | 2     | Documentation extraction pipeline | Complete                                                         |
 | 3     | React foundation                  | Complete                                                         |
-| 4     | Core reference features           | Complete, awaiting review                                        |
-| 5     | Integration and optimisation      | Not started                                                      |
+| 4     | Core reference features           | Complete                                                         |
+| 5     | Integration and optimisation      | Complete, awaiting review                                        |
 | 6     | Deployment                        | Not started                                                      |
 
 ## What the pipeline produces
@@ -26,6 +26,7 @@ Each dataset documents exactly one `develop` commit. For commit `c2534ff9c84422e
 - 19,990 symbols: 76 namespaces, 929 classes, 360 structs, 31 concepts, 10,308 function overload sets, 5,356 variables, 929 type aliases, and 144 enums with 1,083 enumerators;
 - 47,377 resolved type and documentation links, with 0 broken internal links and 0 URL collisions;
 - source locations verified against the source, 98.8% on the exact line;
+- 470 overrides that show their base method's documentation, each labelled with the method that wrote it;
 - a coverage report covering documentation coverage, every correction applied, and every unresolved item.
 
 Known Doxygen limitations, and how each one is handled, are in [docs/EXTRACTION_LIMITATIONS.md](docs/EXTRACTION_LIMITATIONS.md). The design is described in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
@@ -44,7 +45,7 @@ npm run docs:generate
 npm run dev
 ```
 
-To try the optimised production build, run `npm run build && npm run preview` and open http://localhost:4173.
+To try the optimised production build, run `npm run build && npm run preview` and open http://localhost:4173. To try the GitHub Pages build under its repository sub-path, run `npm run build:pages && npm run preview:pages` and open http://localhost:4174/XRPL-Core-Reference/.
 
 ## Prerequisites
 
@@ -73,15 +74,17 @@ Pass `--categories production,test` to include rippled's test code as a separate
 
 ## Development commands
 
-| Command                                   | Effect                                                                                                                   |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `npm run dev`                             | Development server with hot reload                                                                                       |
-| `npm run build`                           | Production build into `dist/`, including the dataset in `public/data/`                                                   |
-| `npm run preview`                         | Serve the production build                                                                                               |
-| `npm run lint`                            | ESLint, including the no-comments and browser/pipeline boundary rules                                                    |
-| `npm run format` / `npm run format:check` | Prettier                                                                                                                 |
-| `npm test`                                | Pipeline, contract and browser tests (Vitest)                                                                            |
-| `npm run test:e2e`                        | Playwright tests against the production build. Run `npx playwright install chromium` once, and generate a dataset first. |
+| Command                                         | Effect                                                                                                                                                                                                                            |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run dev`                                   | Development server with hot reload                                                                                                                                                                                                |
+| `npm run build`                                 | Production build into `dist/`, including the dataset in `public/data/`                                                                                                                                                            |
+| `npm run preview`                               | Serve the production build                                                                                                                                                                                                        |
+| `npm run lint`                                  | ESLint, including the no-comments and browser/pipeline boundary rules                                                                                                                                                             |
+| `npm run format` / `npm run format:check`       | Prettier                                                                                                                                                                                                                          |
+| `npm test`                                      | Pipeline, contract and browser tests (Vitest)                                                                                                                                                                                     |
+| `npm run test:e2e`                              | Playwright tests against the production build. Run `npx playwright install` once, and generate a dataset first. Set `XCR_E2E_BROWSERS=chromium,firefox` to choose browsers; WebKit also needs `sudo npx playwright install-deps`. |
+| `npm run test:a11y`                             | Only the accessibility tests                                                                                                                                                                                                      |
+| `npm run build:pages` / `npm run preview:pages` | GitHub Pages build into `dist-pages/` under `/XRPL-Core-Reference/`, and a server that behaves like GitHub Pages                                                                                                                  |
 
 ## License
 

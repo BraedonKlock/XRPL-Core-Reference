@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styles from './Sidebar.module.css';
 
-export function Sidebar({ id, isOpen, onClose, children }) {
+export function Sidebar({ id, toggleId, isOpen, onClose, children }) {
   const sidebarReference = useRef(null);
 
   useEffect(() => {
@@ -12,11 +12,12 @@ export function Sidebar({ id, isOpen, onClose, children }) {
     const closeOnEscape = (event) => {
       if (event.key === 'Escape') {
         onClose();
+        document.getElementById(toggleId)?.focus();
       }
     };
     window.addEventListener('keydown', closeOnEscape);
     return () => window.removeEventListener('keydown', closeOnEscape);
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, toggleId]);
 
   return (
     <>

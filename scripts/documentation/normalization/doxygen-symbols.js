@@ -139,6 +139,9 @@ function functionSymbol(memberDefinition, context) {
     requiresClause: optionalValueExpressionOf(findChild(memberDefinition, 'requiresclause')),
     explicitSpecializations: [],
     qualifiers: functionQualifiersOf(attributes, argsString),
+    reimplementsIds: findChildren(memberDefinition, 'reimplements')
+      .map((reimplemented) => attributesOf(reimplemented).refid)
+      .filter(Boolean),
   };
 }
 

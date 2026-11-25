@@ -63,12 +63,14 @@ Pinned commit SHA
   ▼
 Internal symbols                      source-local IDs, token lists with refIds
   │  normalization/corrections/*      deterministic, tested fixes for known Doxygen deviations
+  │  normalization/documentation-inheritance.js  label documentation Doxygen copied from an overridden member
   │  normalization/exclusions.js      categories, anonymous/phantom namespaces, macros, friend classes
   │  resolution/symbol-paths.js       deterministic URLs, collision detection (fatal)
   │  resolution/scope-references.js   links proven by C++ scope rules
   │  resolution/reference-resolution.js  refId → public path; unresolved → plain text
   ▼
 Public records                        contract/schema.js
+  │  generation/symbol-records.js     completeDerivedEdges: every base-class edge has its derived edge
   │  generation/dataset-assembly.js   shards, search index, navigation, relationships
   │  validation/dataset-integrity.js  schemas, single SHA, unique paths, no broken links (fatal)
   ▼
@@ -127,7 +129,8 @@ Records are designed for focused pages:
 
 - each function carries a complete `declaration` token list, so the browser never assembles C++;
 - each class lists its member paths in source order;
-- descriptions are structured blocks (paragraphs, lists, code) with inline code, emphasis, URLs and links.
+- descriptions are structured blocks (paragraphs, lists, code) with inline code, emphasis, URLs and links;
+- `documentation.inheritedFrom` names the overridden member whose documentation Doxygen copied (`INHERIT_DOCS`). It is set only when the override has no documentation comment of its own, and the page shows "Documentation inherited from …".
 
 ## Documentation browser
 
@@ -185,6 +188,7 @@ The header search box follows the WAI-ARIA combobox pattern: `/` focuses it, arr
 
 - **Types are clickable everywhere they have a published target:** declarations, parameter and return types, field and alias types, default values and base classes. Anything without a target is plain text.
 - **The inheritance tree** is built from `relationships.json`, which is loaded once and cached. Inherited members load the base class's shard only when that base is expanded.
+- **The search engine** is built from the search index on the first query, so pages that never search do not pay for it.
 - **Namespace member lists** come from the search index, so even the `xrpl` namespace renders without loading its member shards.
 - **On narrow screens,** reference tables stack each row into name, type and description.
 
@@ -212,7 +216,22 @@ The layout follows the navigation model of Revit API Docs: a dark header, a left
 - `src/features/search/services/search-engine.test.js` covers ranking tiers, qualified queries, case, word starts, filters and limits. `src/features/symbols/utils/symbol-utils.test.js` covers member signatures, tags, grouping, inheritance trees (including cycles), breadcrumbs and initializer formatting.
 - `src/app/ReferencePages.test.jsx` checks the real fixture's member tables, inheritance in both directions, lazy inherited members, parameter and return-type links, enumerator anchors, alias links, namespace members, and keyboard search from the header and the results page.
 - `src/app/App.test.jsx` renders the whole app against a dataset that the real pipeline builds from the rippled fixture. It checks the overview, sidebar navigation, source links, overloads, encoded paths, not-found pages and data-loading errors.
-- `tests/e2e/navigation.spec.js` (Playwright) runs the production build against the full generated dataset on a desktop and a mobile profile. It covers browsing, breadcrumbs, Back, deep links, encoded URLs, overloads, theme persistence and the mobile drawer.
+- `tests/integration/dataset-consistency.test.js` checks the fixture and the published dataset for:
+  - a single commit;
+  - search rows that match their records;
+  - member, scope and inheritance relationships that agree in both directions;
+  - distinct overload pages;
+  - documentation status that matches the content;
+  - source lines that exist;
+  - summaries that appear in the rippled source.
+- Playwright runs the production build against the full generated dataset. The projects are desktop Chromium, Firefox and WebKit, a Chromium tablet, a Chromium phone and a WebKit phone; `XCR_E2E_BROWSERS` selects the browsers.
+  - `navigation.spec.js` covers browsing, breadcrumbs, Back, deep links, encoded URLs, overloads, inherited documentation, theme persistence and the mobile drawer.
+  - `accessibility.spec.js` runs axe (WCAG 2.2 AA and best practice) in both themes and tests keyboard operation.
+  - `responsive.spec.js` checks for horizontal overflow and the table layout at each size.
+  - `errors.spec.js` checks that a failed data file affects only its own section.
+  - `performance.spec.js` enforces bundle-size, long-task and search-latency budgets.
+  - `deployment.spec.js` runs the GitHub Pages build behind `tests/e2e/support/static-pages-server.js`.
+- `scripts/quality/measure-performance.js` records bundle sizes, load, blocking time, heap and search latency under 4× CPU throttling. The results are in `docs/quality/`.
 
 ## Decisions
 
@@ -225,6 +244,8 @@ The layout follows the navigation model of Revit API Docs: a dark header, a left
 | No caching of Doxygen output between commits         | Extraction takes about 4 seconds; CI caching is a Phase 6 concern.                                           |
 | No UI framework or global state library              | The browser needs one context (the dataset) and a few components; CSS Modules and tokens are enough.         |
 | Custom search ranking instead of MiniSearch          | Exact and qualified C++ name matches must rank deterministically first; a linear scan is a few milliseconds. |
+| `zod/mini` instead of full Zod                       | The same schemas with a tree-shakable API, contributing to the smaller bundle measured in Phase 5.           |
+| Label inherited documentation instead of hiding it   | The text is real rippled documentation, but readers must know which method wrote it.                         |
 | `useResource` instead of a data-fetching library     | Loading is a small number of immutable, cached files; a race-safe hook covers it.                            |
 | Raw pathname for symbol routes                       | Preserves the published percent-encoding that route parameters would decode.                                 |
 | Ship rippled's ISC licence inside every dataset      | Datasets contain rippled documentation comments, so the licence travels with them.                           |

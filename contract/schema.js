@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import * as z from 'zod/mini';
 import {
   ACCESS_LEVELS,
   DOCUMENTATION_STATUSES,
@@ -14,94 +14,104 @@ import {
 const COMMIT_SHA_PATTERN = /^[0-9a-f]{40}$/;
 const SHA256_PATTERN = /^[0-9a-f]{64}$/;
 
-export const commitShaSchema = z.string().regex(COMMIT_SHA_PATTERN, 'must be a full 40-character commit SHA');
-export const symbolPathSchema = z
+const nonEmptyString = () => z.string().check(z.minLength(1));
+const nonEmptyArray = (schema) => z.array(schema).check(z.minLength(1));
+const positiveInteger = () => z.number().check(z.int(), z.positive());
+const nonNegativeInteger = () => z.number().check(z.int(), z.nonnegative());
+
+export const commitShaSchema = z
   .string()
-  .min(1)
-  .refine((path) => !path.startsWith('/') && !path.endsWith('/') && !path.includes('//'), {
-    message: 'must be a relative path without empty segments',
-  });
+  .check(z.regex(COMMIT_SHA_PATTERN, { error: 'must be a full 40-character commit SHA' }));
+export const symbolPathSchema = z.string().check(
+  z.minLength(1),
+  z.refine((path) => !path.startsWith('/') && !path.endsWith('/') && !path.includes('//'), {
+    error: 'must be a relative path without empty segments',
+  }),
+);
 
 export const referenceTargetSchema = z.strictObject({
   path: symbolPathSchema,
-  fragment: z.string().min(1).optional(),
+  fragment: z.optional(nonEmptyString()),
   resolution: z.enum(REFERENCE_RESOLUTIONS),
 });
 
 export const typeTokenSchema = z.strictObject({
-  text: z.string().min(1),
-  target: referenceTargetSchema.optional(),
+  text: nonEmptyString(),
+  target: z.optional(referenceTargetSchema),
 });
 
 export const typeExpressionSchema = z.array(typeTokenSchema);
 
 export const inlineSchema = z.discriminatedUnion('type', [
-  z.strictObject({ type: z.literal('text'), text: z.string().min(1) }),
-  z.strictObject({ type: z.literal('code'), text: z.string().min(1) }),
-  z.strictObject({ type: z.literal('emphasis'), text: z.string().min(1) }),
-  z.strictObject({ type: z.literal('strong'), text: z.string().min(1) }),
-  z.strictObject({ type: z.literal('link'), text: z.string().min(1), target: referenceTargetSchema }),
-  z.strictObject({ type: z.literal('url'), text: z.string().min(1), href: z.url() }),
+  z.strictObject({ type: z.literal('text'), text: nonEmptyString() }),
+  z.strictObject({ type: z.literal('code'), text: nonEmptyString() }),
+  z.strictObject({ type: z.literal('emphasis'), text: nonEmptyString() }),
+  z.strictObject({ type: z.literal('strong'), text: nonEmptyString() }),
+  z.strictObject({ type: z.literal('link'), text: nonEmptyString(), target: referenceTargetSchema }),
+  z.strictObject({ type: z.literal('url'), text: nonEmptyString(), href: z.url() }),
 ]);
 
-export const inlineContentSchema = z.array(inlineSchema).min(1);
+export const inlineContentSchema = nonEmptyArray(inlineSchema);
 
 export const blockSchema = z.discriminatedUnion('type', [
   z.strictObject({ type: z.literal('paragraph'), content: inlineContentSchema }),
   z.strictObject({
     type: z.literal('list'),
     ordered: z.boolean(),
-    items: z.array(inlineContentSchema).min(1),
+    items: nonEmptyArray(inlineContentSchema),
   }),
-  z.strictObject({ type: z.literal('code'), text: z.string().min(1) }),
+  z.strictObject({ type: z.literal('code'), text: nonEmptyString() }),
 ]);
 
 export const documentationSchema = z.strictObject({
   status: z.enum(DOCUMENTATION_STATUSES),
-  brief: inlineContentSchema.nullable(),
+  brief: z.nullable(inlineContentSchema),
   description: z.array(blockSchema),
-  returns: inlineContentSchema.nullable(),
+  returns: z.nullable(inlineContentSchema),
   notes: z.array(z.strictObject({ kind: z.enum(NOTE_KINDS), content: inlineContentSchema })),
-  suppressionReason: z.string().min(1).nullable(),
+  suppressionReason: z.nullable(nonEmptyString()),
+  inheritedFrom: z.nullable(
+    z.strictObject({ name: nonEmptyString(), target: z.nullable(referenceTargetSchema) }),
+  ),
 });
 
-const lineNumberSchema = z.number().int().positive();
+const lineNumberSchema = positiveInteger();
 
 export const sourcePositionSchema = z.strictObject({
-  file: z.string().min(1),
-  line: lineNumberSchema.nullable(),
+  file: nonEmptyString(),
+  line: z.nullable(lineNumberSchema),
 });
 
 export const sourceLocationSchema = z.strictObject({
   declaration: sourcePositionSchema,
-  definition: z
-    .strictObject({ file: z.string().min(1), line: lineNumberSchema, endLine: lineNumberSchema.nullable() })
-    .nullable(),
+  definition: z.nullable(
+    z.strictObject({ file: nonEmptyString(), line: lineNumberSchema, endLine: z.nullable(lineNumberSchema) }),
+  ),
 });
 
 export const templateParameterSchema = z.strictObject({
   type: typeExpressionSchema,
-  name: z.string().min(1).nullable(),
-  defaultValue: typeExpressionSchema.nullable(),
+  name: z.nullable(nonEmptyString()),
+  defaultValue: z.nullable(typeExpressionSchema),
 });
 
-const templateParametersSchema = z.array(templateParameterSchema).nullable();
+const templateParametersSchema = z.nullable(z.array(templateParameterSchema));
 
 const symbolBaseShape = {
   path: symbolPathSchema,
-  name: z.string().min(1),
-  qualifiedName: z.string().min(1),
-  scope: symbolPathSchema.nullable(),
+  name: nonEmptyString(),
+  qualifiedName: nonEmptyString(),
+  scope: z.nullable(symbolPathSchema),
   category: z.enum(SOURCE_CATEGORIES),
-  access: z.enum(ACCESS_LEVELS).nullable(),
+  access: z.nullable(z.enum(ACCESS_LEVELS)),
   documentation: documentationSchema,
-  location: sourceLocationSchema.nullable(),
-  corrections: z.array(z.string().min(1)),
+  location: z.nullable(sourceLocationSchema),
+  corrections: z.array(nonEmptyString()),
 };
 
 const inheritanceEdgeSchema = z.strictObject({
-  name: z.string().min(1),
-  target: referenceTargetSchema.nullable(),
+  name: nonEmptyString(),
+  target: z.nullable(referenceTargetSchema),
   access: z.enum(ACCESS_LEVELS),
   isVirtual: z.boolean(),
 });
@@ -122,9 +132,9 @@ export const classSymbolSchema = z.strictObject({
   isAbstract: z.boolean(),
   baseClasses: z.array(inheritanceEdgeSchema),
   derivedClasses: z.array(inheritanceEdgeSchema),
-  friends: z.array(z.strictObject({ name: z.string().min(1), target: referenceTargetSchema.nullable() })),
+  friends: z.array(z.strictObject({ name: nonEmptyString(), target: z.nullable(referenceTargetSchema) })),
   deductionGuides: z.array(
-    z.strictObject({ declaration: typeExpressionSchema, location: sourcePositionSchema.nullable() }),
+    z.strictObject({ declaration: typeExpressionSchema, location: z.nullable(sourcePositionSchema) }),
   ),
   nested: z.array(symbolPathSchema),
   members: z.array(symbolPathSchema),
@@ -135,7 +145,7 @@ export const conceptSymbolSchema = z.strictObject({
   ...symbolBaseShape,
   kind: z.literal('concept'),
   templateParameters: templateParametersSchema,
-  definition: typeExpressionSchema.nullable(),
+  definition: z.nullable(typeExpressionSchema),
   declaration: typeExpressionSchema,
 });
 
@@ -154,16 +164,16 @@ export const functionQualifiersSchema = z.strictObject({
   isOverride: z.boolean(),
   isFinal: z.boolean(),
   virtuality: z.enum(['non-virtual', 'virtual', 'pure-virtual']),
-  referenceQualifier: z.enum(['lvalue', 'rvalue']).nullable(),
+  referenceQualifier: z.nullable(z.enum(['lvalue', 'rvalue'])),
 });
 
 export const parameterSchema = z.strictObject({
-  name: z.string().min(1).nullable(),
+  name: z.nullable(nonEmptyString()),
   type: typeExpressionSchema,
-  array: z.string().min(1).nullable(),
-  defaultValue: typeExpressionSchema.nullable(),
-  description: inlineContentSchema.nullable(),
-  direction: z.enum(['in', 'out', 'inout']).nullable(),
+  array: z.nullable(nonEmptyString()),
+  defaultValue: z.nullable(typeExpressionSchema),
+  description: z.nullable(inlineContentSchema),
+  direction: z.nullable(z.enum(['in', 'out', 'inout'])),
 });
 
 export const functionSymbolSchema = z.strictObject({
@@ -171,11 +181,11 @@ export const functionSymbolSchema = z.strictObject({
   kind: z.literal('function'),
   role: z.enum(FUNCTION_ROLES),
   overloadSet: symbolPathSchema,
-  signatureKey: z.string().min(1),
-  returnType: typeExpressionSchema.nullable(),
+  signatureKey: nonEmptyString(),
+  returnType: z.nullable(typeExpressionSchema),
   parameters: z.array(parameterSchema),
   templateParameters: templateParametersSchema,
-  requiresClause: typeExpressionSchema.nullable(),
+  requiresClause: z.nullable(typeExpressionSchema),
   explicitSpecializations: z.array(sourcePositionSchema),
   qualifiers: functionQualifiersSchema,
   declaration: typeExpressionSchema,
@@ -185,8 +195,8 @@ export const variableSymbolSchema = z.strictObject({
   ...symbolBaseShape,
   kind: z.literal('variable'),
   type: typeExpressionSchema,
-  initializer: typeExpressionSchema.nullable(),
-  bitfield: z.string().min(1).nullable(),
+  initializer: z.nullable(typeExpressionSchema),
+  bitfield: z.nullable(nonEmptyString()),
   qualifiers: z.strictObject({ isStatic: z.boolean(), isConstexpr: z.boolean(), isMutable: z.boolean() }),
   declaration: typeExpressionSchema,
 });
@@ -204,11 +214,11 @@ export const enumSymbolSchema = z.strictObject({
   ...symbolBaseShape,
   kind: z.literal('enum'),
   isScoped: z.boolean(),
-  underlyingType: typeExpressionSchema.nullable(),
+  underlyingType: z.nullable(typeExpressionSchema),
   enumerators: z.array(
     z.strictObject({
-      name: z.string().min(1),
-      initializer: typeExpressionSchema.nullable(),
+      name: nonEmptyString(),
+      initializer: z.nullable(typeExpressionSchema),
       documentation: documentationSchema,
     }),
   ),
@@ -232,37 +242,39 @@ const datasetHeaderShape = {
 
 export const symbolShardSchema = z.strictObject({
   ...datasetHeaderShape,
-  shard: z.string().min(1),
-  symbols: z.array(symbolSchema).min(1),
+  shard: nonEmptyString(),
+  symbols: nonEmptyArray(symbolSchema),
 });
 
 export const searchIndexSchema = z
   .strictObject({
     ...datasetHeaderShape,
     columns: z.tuple(SEARCH_INDEX_COLUMNS.map((column) => z.literal(column))),
-    shards: z.array(z.string().min(1)),
+    shards: z.array(nonEmptyString()),
     rows: z.array(
       z.tuple([
         symbolPathSchema,
-        z.string().min(1),
-        z.string().min(1),
+        nonEmptyString(),
+        nonEmptyString(),
         z.enum(SYMBOL_KINDS),
-        z.enum(FUNCTION_ROLES).nullable(),
-        z.string().nullable(),
+        z.nullable(z.enum(FUNCTION_ROLES)),
+        z.nullable(z.string()),
         z.enum(SOURCE_CATEGORIES),
-        z.string().nullable(),
-        z.number().int().nonnegative(),
-        z.number().int().positive(),
+        z.nullable(z.string()),
+        nonNegativeInteger(),
+        positiveInteger(),
       ]),
     ),
   })
-  .refine((index) => index.rows.every((row) => row[8] < index.shards.length), {
-    message: 'every row must reference an existing shard',
-  });
+  .check(
+    z.refine((index) => index.rows.every((row) => row[8] < index.shards.length), {
+      error: 'every row must reference an existing shard',
+    }),
+  );
 
 const navigationNodeSchema = z.strictObject({
   path: symbolPathSchema,
-  name: z.string().min(1),
+  name: nonEmptyString(),
   kind: z.enum(['namespace', 'class', 'struct', 'union', 'concept']),
   category: z.enum(SOURCE_CATEGORIES),
   get children() {
@@ -280,29 +292,29 @@ export const relationshipsSchema = z.strictObject({
   inheritance: z.array(
     z.strictObject({
       derived: symbolPathSchema,
-      base: symbolPathSchema.nullable(),
-      baseName: z.string().min(1),
+      base: z.nullable(symbolPathSchema),
+      baseName: nonEmptyString(),
       access: z.enum(ACCESS_LEVELS),
       isVirtual: z.boolean(),
     }),
   ),
-  aliases: z.array(z.strictObject({ alias: symbolPathSchema, targets: z.array(symbolPathSchema).min(1) })),
+  aliases: z.array(z.strictObject({ alias: symbolPathSchema, targets: nonEmptyArray(symbolPathSchema) })),
   friends: z.array(
-    z.strictObject({ owner: symbolPathSchema, friend: symbolPathSchema.nullable(), name: z.string().min(1) }),
+    z.strictObject({ owner: symbolPathSchema, friend: z.nullable(symbolPathSchema), name: nonEmptyString() }),
   ),
 });
 
 const fileEntrySchema = z.strictObject({
-  path: z.string().min(1),
-  bytes: z.number().int().nonnegative(),
-  sha256: z.string().regex(SHA256_PATTERN),
+  path: nonEmptyString(),
+  bytes: nonNegativeInteger(),
+  sha256: z.string().check(z.regex(SHA256_PATTERN)),
 });
 
 export const sourceRevisionSchema = z.strictObject({
-  repository: z.string().min(1),
+  repository: nonEmptyString(),
   repositoryUrl: z.url(),
   webUrl: z.url(),
-  branch: z.string().min(1),
+  branch: nonEmptyString(),
   commitSha: commitShaSchema,
   commitDate: z.iso.datetime({ offset: true }),
 });
@@ -313,16 +325,16 @@ export const manifestSchema = z.strictObject({
   generation: z.strictObject({
     generatedAt: z.iso.datetime(),
     extractedAt: z.iso.datetime(),
-    generatorVersion: z.string().min(1),
+    generatorVersion: nonEmptyString(),
     extractor: z.strictObject({
       name: z.literal('doxygen'),
-      version: z.string().min(1),
-      configSha256: z.string().regex(SHA256_PATTERN),
+      version: nonEmptyString(),
+      configSha256: z.string().check(z.regex(SHA256_PATTERN)),
     }),
   }),
   scope: z.strictObject({
-    categories: z.array(z.enum(SOURCE_CATEGORIES)).min(1),
-    inputs: z.array(z.string().min(1)).min(1),
+    categories: nonEmptyArray(z.enum(SOURCE_CATEGORIES)),
+    inputs: nonEmptyArray(nonEmptyString()),
   }),
   files: z.strictObject({
     searchIndex: fileEntrySchema,
@@ -331,16 +343,16 @@ export const manifestSchema = z.strictObject({
     coverage: fileEntrySchema,
     upstreamLicense: fileEntrySchema,
     shards: z.strictObject({
-      directory: z.string().min(1),
-      count: z.number().int().positive(),
-      bytes: z.number().int(),
+      directory: nonEmptyString(),
+      count: positiveInteger(),
+      bytes: z.number().check(z.int()),
     }),
   }),
-  counts: z.record(z.string(), z.number().int().nonnegative()),
+  counts: z.record(z.string(), nonNegativeInteger()),
 });
 
 export const currentDatasetPointerSchema = z.strictObject({
   schemaVersion: z.literal(SCHEMA_VERSION),
   commitSha: commitShaSchema,
-  manifest: z.string().min(1),
+  manifest: nonEmptyString(),
 });

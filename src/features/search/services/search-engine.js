@@ -175,3 +175,21 @@ export function createSearchEngine(entries) {
     },
   };
 }
+
+const EMPTY_RESULT = Object.freeze({ query: '', total: 0, results: Object.freeze([]) });
+
+export function createLazySearchEngine(loadEntries) {
+  let engine = null;
+  return {
+    get isBuilt() {
+      return engine !== null;
+    },
+    search(rawQuery, options) {
+      if (parseQuery(rawQuery).text.length === 0) {
+        return EMPTY_RESULT;
+      }
+      engine ??= createSearchEngine(loadEntries());
+      return engine.search(rawQuery, options);
+    },
+  };
+}

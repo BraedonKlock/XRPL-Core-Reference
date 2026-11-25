@@ -6,10 +6,18 @@ import { ThemeToggle } from '../ui/ThemeToggle.jsx';
 import logoUrl from '../../../images/images.png';
 import styles from './Header.module.css';
 
-export function Header({ source, search, isNavigationOpen, onToggleNavigation, navigationId }) {
+export function Header({
+  source,
+  search,
+  isNavigationOpen,
+  onToggleNavigation,
+  navigationId,
+  navigationToggleId,
+}) {
   return (
     <header className={styles.header}>
       <button
+        id={navigationToggleId}
         type="button"
         className={styles.menuButton}
         aria-controls={navigationId}

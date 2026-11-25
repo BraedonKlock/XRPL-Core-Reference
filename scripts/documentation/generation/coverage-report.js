@@ -81,6 +81,7 @@ export function measureDocumentationCoverage(records) {
     documentedSymbols: statusTotals.present,
     undocumentedSymbols: statusTotals.absent,
     suppressedSymbols: statusTotals.suppressed,
+    inheritedDocumentationSymbols: records.filter((record) => record.documentation.inheritedFrom).length,
     documentedRatio: records.length > 0 ? Number((statusTotals.present / records.length).toFixed(4)) : 0,
     byCategory,
     parameters: { total: parameters, described: describedParameters },

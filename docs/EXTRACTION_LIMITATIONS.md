@@ -29,6 +29,11 @@ All figures are for `XRPLF/rippled@develop` at commit `c2534ff9c84422e00711da316
 
 The 56 unresolved macro lines are `jss::` names generated through `TRANSACTION` and `LEDGER_ENTRY`. Doxygen's line counting inside those multi-line invocations that contain comments cannot be reconciled with the source, so these records keep the correct file without a line number.
 
+## Completed relationships
+
+- **Derived classes of templates.** Doxygen omits a class from a template's derived classes when the class derives from an instantiation of the template, such as `STTx` deriving from `CountedObject<STTx>`. `completeDerivedEdges` adds the derived edge for every structured base-class edge; 178 edges were added. Inheritance is therefore symmetric.
+- **Inherited documentation.** With `INHERIT_DOCS`, Doxygen copies an overridden member's documentation onto an override that has none. The pipeline reads Doxygen's `<reimplements>` references and finds the member that wrote the text. It labels the record with `documentation.inheritedFrom` only when the override has no documentation comment of its own next to its declaration or definition. 470 overrides are labelled. 37 overrides repeat the base text in their own comment and are not labelled.
+
 ## Excluded records
 
 | Reason                      | Count | Notes                                                                                         |
@@ -46,6 +51,7 @@ The 56 unresolved macro lines are `jss::` names generated through `TRANSACTION` 
 - **Lines near, but not on, the declaration (165).** These are mostly multi-line declarations where Doxygen reports the line next to the name. They are reported as `nearby` and kept.
 - **Documentation coverage.** 32.5% of symbols have documentation comments upstream. Undocumented symbols are presented as such.
 - **No semantic analysis.** Overload resolution, template instantiation, `auto` deduction, and code inside function bodies are outside Doxygen's model. Call graphs are deferred.
+- **`xrpl::nft::kPageMask` appears as a function.** It is a `constexpr UInt256` direct-initialised with a non-literal argument (`std::string_view("…")`), which Doxygen parses as a function declaration. `reclassify-literal-initialized-constants` accepts only literal arguments, because a non-literal argument does not prove the record is a variable. The declaration text and source link are correct.
 - **Test code.** `src/test`, `src/tests` and `src/benchmarks` are excluded. Including them is a configuration change (`--categories production,test`); every record already carries a `category` field so that the website can filter them.
 
 ## Accommodating another extraction source

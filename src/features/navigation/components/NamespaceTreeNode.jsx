@@ -44,9 +44,11 @@ export function NamespaceTreeNode({ node, activePath, expandedPaths, onToggle })
           aria-label={`${node.name} ${kindLabelOf(node)}`}
           aria-current={isActive ? 'page' : undefined}
         >
-          <span className={`${styles.glyph} ${styles[node.kind]}`} aria-hidden="true">
-            {kindGlyphOf(node.kind)}
-          </span>
+          <span
+            className={`${styles.glyph} ${styles[node.kind]}`}
+            data-glyph={kindGlyphOf(node.kind)}
+            aria-hidden="true"
+          />
           <span className={styles.name} title={node.name}>
             {node.name}
           </span>

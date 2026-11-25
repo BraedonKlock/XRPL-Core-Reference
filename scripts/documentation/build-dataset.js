@@ -11,9 +11,10 @@ import {
   buildSearchIndex,
 } from './generation/dataset-assembly.js';
 import { writeDataset } from './generation/dataset-writer.js';
-import { toPublicRecord } from './generation/symbol-records.js';
+import { completeDerivedEdges, toPublicRecord } from './generation/symbol-records.js';
 import { buildSourceModel } from './normalization/build-source-model.js';
 import { applyCorrections } from './normalization/corrections/index.js';
+import { attributeInheritedDocumentation } from './normalization/documentation-inheritance.js';
 import { applyExclusions, assignCategories } from './normalization/exclusions.js';
 import {
   findUnterminatedComments,
@@ -58,6 +59,7 @@ export function normalizeExtraction({ extractionDirectory, sourceRoot, includedC
   const sourceFiles = createSourceFileReader(sourceRoot);
   const model = buildSourceModel(xmlDirectory);
   const corrected = applyCorrections(model.symbols, { sourceFiles, unterminatedComments });
+  const inheritedDocumentationCount = attributeInheritedDocumentation(corrected.symbols, { sourceFiles });
   const { symbols, excluded, excludedReasons, friendClassSymbols } = applyExclusions(
     assignCategories(corrected.symbols),
     {
@@ -76,6 +78,7 @@ export function normalizeExtraction({ extractionDirectory, sourceRoot, includedC
     excludedReasons,
     friendClassSymbols,
     correctionReport: corrected.report,
+    inheritedDocumentationCount,
     warnings,
     unterminatedComments,
     sourceFiles,
@@ -99,7 +102,9 @@ export function resolveSymbols(normalized) {
     targets: buildTargetIndex(symbols, friendRedirects),
     excludedReasons,
   });
-  const records = symbols.map((symbol) => toPublicRecord(symbol, { resolver, symbolsById }));
+  const records = completeDerivedEdges(
+    symbols.map((symbol) => toPublicRecord(symbol, { resolver, symbolsById })),
+  );
   return { records, referenceStatistics: resolver.statistics, scopeLinks, pathCollisions };
 }
 

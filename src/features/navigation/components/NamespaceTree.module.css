@@ -102,6 +102,10 @@
   line-height: 1;
 }
 
+.glyph::before {
+  content: attr(data-glyph);
+}
+
 .namespace {
   background: var(--color-kind-namespace);
 }

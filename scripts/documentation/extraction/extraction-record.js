@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { z } from 'zod';
+import * as z from 'zod/mini';
 import { SOURCE_CATEGORIES } from '../../../contract/constants.js';
 import { sourceRevisionSchema } from '../../../contract/schema.js';
 import { EXTRACTION_FILES } from '../config/pipeline-config.js';
@@ -8,10 +8,10 @@ import { EXTRACTION_FILES } from '../config/pipeline-config.js';
 export const extractionRecordSchema = z.strictObject({
   source: sourceRevisionSchema,
   extractedAt: z.iso.datetime(),
-  doxygenVersion: z.string().min(1),
-  doxygenConfigSha256: z.string().regex(/^[0-9a-f]{64}$/),
-  categories: z.array(z.enum(SOURCE_CATEGORIES)).min(1),
-  inputs: z.array(z.string().min(1)).min(1),
+  doxygenVersion: z.string().check(z.minLength(1)),
+  doxygenConfigSha256: z.string().check(z.regex(/^[0-9a-f]{64}$/)),
+  categories: z.array(z.enum(SOURCE_CATEGORIES)).check(z.minLength(1)),
+  inputs: z.array(z.string().check(z.minLength(1))).check(z.minLength(1)),
 });
 
 export function writeExtractionRecord(extractionDirectory, record) {

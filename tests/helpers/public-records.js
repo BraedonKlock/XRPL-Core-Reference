@@ -5,6 +5,7 @@ const ABSENT_DOCUMENTATION = Object.freeze({
   returns: null,
   notes: [],
   suppressionReason: null,
+  inheritedFrom: null,
 });
 
 export const TEST_COMMIT_SHA = 'c2534ff9c84422e00711da31629a76f3f59feb98';

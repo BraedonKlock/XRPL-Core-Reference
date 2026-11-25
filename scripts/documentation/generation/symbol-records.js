@@ -31,6 +31,16 @@ export function publicDocumentation(documentation, resolver, context) {
       content: resolver.resolveInlineContent(note.content, context),
     })),
     suppressionReason: documentation.suppressionReason ?? null,
+    inheritedFrom: documentation.inheritedFrom
+      ? {
+          name: documentation.inheritedFrom.name,
+          target: resolver.resolveEdgeTarget(
+            documentation.inheritedFrom.refId,
+            documentation.inheritedFrom.name,
+            context,
+          ),
+        }
+      : null,
   };
 }
 
@@ -181,4 +191,26 @@ export function toPublicRecord(symbol, { resolver, symbolsById }) {
     corrections: [...symbol.corrections],
     ...kindSpecificFields(symbol, { resolver, symbolsById, context }),
   };
+}
+
+export function completeDerivedEdges(records) {
+  const recordsByPath = new Map(records.map((record) => [record.path, record]));
+  for (const record of records) {
+    for (const base of record.baseClasses ?? []) {
+      const baseRecord = base.target && recordsByPath.get(base.target.path);
+      if (!baseRecord?.derivedClasses) {
+        continue;
+      }
+      if (baseRecord.derivedClasses.some((edge) => edge.target?.path === record.path)) {
+        continue;
+      }
+      baseRecord.derivedClasses.push({
+        name: record.qualifiedName,
+        target: { path: record.path, resolution: base.target.resolution },
+        access: base.access,
+        isVirtual: base.isVirtual,
+      });
+    }
+  }
+  return records;
 }

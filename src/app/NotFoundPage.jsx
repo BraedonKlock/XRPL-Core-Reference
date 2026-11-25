@@ -7,9 +7,13 @@ export function NotFoundPage() {
   return (
     <>
       <title>{`Page not found – ${SITE_NAME}`}</title>
-      <EmptyState title="Page not found">
+      <EmptyState title="Page not found" headingLevel={1}>
         <p>
-          This address does not match any page. <Link to={HOME_ROUTE}>Return to the overview</Link>.
+          This address does not match any page.{' '}
+          <Link className="inline-link" to={HOME_ROUTE}>
+            Return to the overview
+          </Link>
+          .
         </p>
       </EmptyState>
     </>

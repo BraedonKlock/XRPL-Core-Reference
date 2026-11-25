@@ -54,7 +54,12 @@ export function SearchPage() {
     <div className={styles.page}>
       <title>{query ? `Search: ${query} – ${SITE_NAME}` : `Search – ${SITE_NAME}`}</title>
       <h1 className={styles.title}>Search</h1>
-      <form className={styles.form} role="search" onSubmit={(event) => event.preventDefault()}>
+      <form
+        className={styles.form}
+        role="search"
+        aria-label="Search filters"
+        onSubmit={(event) => event.preventDefault()}
+      >
         <label className={`${styles.field} ${styles.queryField}`}>
           Name or qualified name
           <input

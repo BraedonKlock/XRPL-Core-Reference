@@ -1,0 +1,134 @@
+{
+  "measuredAt": "2026-11-25T19:13:11.808Z",
+  "cpuSlowdown": 4,
+  "bundles": [
+    {
+      "file": "index-B6Fo_3ld.js",
+      "bytes": 333786,
+      "gzipBytes": 101103
+    },
+    {
+      "file": "useDataset-BYuLR_rz.js",
+      "bytes": 108985,
+      "gzipBytes": 35681
+    },
+    {
+      "file": "SymbolPage-DCf92dFM.js",
+      "bytes": 23295,
+      "gzipBytes": 6695
+    },
+    {
+      "file": "index-BCY1FbzN.css",
+      "bytes": 12591,
+      "gzipBytes": 3341
+    },
+    {
+      "file": "SymbolPage-DJALY2jp.css",
+      "bytes": 7680,
+      "gzipBytes": 1735
+    },
+    {
+      "file": "SearchPage-CyqIstXP.js",
+      "bytes": 3081,
+      "gzipBytes": 1441
+    },
+    {
+      "file": "HomePage-Dpi8Ohn5.js",
+      "bytes": 2795,
+      "gzipBytes": 1178
+    },
+    {
+      "file": "SearchPage-x9gIdhVo.css",
+      "bytes": 1746,
+      "gzipBytes": 596
+    },
+    {
+      "file": "SymbolList-DNd-24G7.js",
+      "bytes": 943,
+      "gzipBytes": 499
+    },
+    {
+      "file": "HomePage-nxdf1Y3P.css",
+      "bytes": 1136,
+      "gzipBytes": 420
+    },
+    {
+      "file": "SymbolList-CM3UJpXu.css",
+      "bytes": 922,
+      "gzipBytes": 412
+    }
+  ],
+  "pages": [
+    {
+      "page": "overview",
+      "loadMilliseconds": 1137,
+      "domNodes": 278,
+      "longestTaskMilliseconds": 129,
+      "blockingMilliseconds": 157,
+      "heapMegabytes": 20.4,
+      "transferredKilobytes": 529,
+      "requests": 13
+    },
+    {
+      "page": "namespace xrpl",
+      "loadMilliseconds": 1085,
+      "domNodes": 13024,
+      "longestTaskMilliseconds": 171,
+      "blockingMilliseconds": 255,
+      "heapMegabytes": 24.1,
+      "transferredKilobytes": 561,
+      "requests": 14
+    },
+    {
+      "page": "class STObject",
+      "loadMilliseconds": 1398,
+      "domNodes": 4774,
+      "longestTaskMilliseconds": 172,
+      "blockingMilliseconds": 208,
+      "heapMegabytes": 22.1,
+      "transferredKilobytes": 564,
+      "requests": 15
+    },
+    {
+      "page": "class ApplyContext",
+      "loadMilliseconds": 1248,
+      "domNodes": 4144,
+      "longestTaskMilliseconds": 163,
+      "blockingMilliseconds": 186,
+      "heapMegabytes": 19.2,
+      "transferredKilobytes": 539,
+      "requests": 14
+    },
+    {
+      "page": "search page",
+      "loadMilliseconds": 1150,
+      "domNodes": 792,
+      "longestTaskMilliseconds": 168,
+      "blockingMilliseconds": 205,
+      "heapMegabytes": 23,
+      "transferredKilobytes": 527,
+      "requests": 11
+    }
+  ],
+  "navigation": {
+    "sidebarNavigationMilliseconds": 224
+  },
+  "search": [
+    {
+      "query": "ApplyContext",
+      "milliseconds": 58
+    },
+    {
+      "query": "preflight",
+      "milliseconds": 64
+    },
+    {
+      "query": "a",
+      "milliseconds": 70
+    },
+    {
+      "query": "xrpl::STTx::getTxnType",
+      "milliseconds": 18
+    }
+  ]
+}

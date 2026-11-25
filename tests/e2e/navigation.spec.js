@@ -96,8 +96,13 @@ test('the theme choice persists across reloads', async ({ page }) => {
   await expect(page.locator('html')).toHaveAttribute('data-theme', after);
 });
 
-test('the mobile navigation drawer opens and closes after navigating', async ({ page, isMobile }) => {
-  test.skip(!isMobile, 'The drawer only exists on narrow screens');
+test('the mobile navigation drawer opens and closes after navigating', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('main').waitFor();
+  test.skip(
+    !(await page.getByRole('button', { name: 'Open navigation' }).isVisible()),
+    'The drawer only exists on narrow screens',
+  );
   const drawer = page.getByRole('complementary', { name: 'Symbol navigation' });
   await page.goto('/');
   const menuButton = page.getByRole('button', { name: 'Open navigation' });
@@ -155,6 +160,15 @@ test('member pages link to the exact pinned source line', async ({ page, request
     'href',
     new RegExp(`^https://github\\.com/XRPLF/rippled/blob/${commitSha}/include/xrpl/protocol/STTx\\.h#L\\d+$`),
   );
+});
+
+test('overrides showing base-class documentation name where it came from', async ({ page }) => {
+  await page.goto('/symbols/xrpl/detail/ApplyViewBase/open/3d5a0786');
+  await expect(page.getByText('Returns true if this reflects an open ledger.')).toBeVisible();
+  await expect(page.getByText(/Documentation inherited from/)).toBeVisible();
+  await page.getByRole('link', { name: 'xrpl::ReadView::open' }).click();
+  await expect(page).toHaveURL(/\/symbols\/xrpl\/ReadView\/open\/5ece40d4$/);
+  await expect(page.getByText(/Documentation inherited from/)).toHaveCount(0);
 });
 
 test('the full search page filters by kind', async ({ page }) => {

@@ -59,7 +59,7 @@ async function build(config, commitSha) {
 function summarizeBuild({ coverage }) {
   const { counts, documentation, references, identity, integrity, corrections } = coverage;
   log(
-    `Symbols: ${counts.totalSymbols}; documented ${documentation.documentedSymbols}, undocumented ${documentation.undocumentedSymbols}, suppressed ${documentation.suppressedSymbols}`,
+    `Symbols: ${counts.totalSymbols}; documented ${documentation.documentedSymbols}, undocumented ${documentation.undocumentedSymbols}, suppressed ${documentation.suppressedSymbols}, inherited from overridden members ${documentation.inheritedDocumentationSymbols}`,
   );
   log(
     `References: ${references.resolved.doxygen} Doxygen + ${references.resolved.scope} scope links, ${references.unresolvedTotal} unresolved`,

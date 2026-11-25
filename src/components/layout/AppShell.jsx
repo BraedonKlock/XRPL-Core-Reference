@@ -4,6 +4,7 @@ import { Header } from './Header.jsx';
 import { Sidebar } from './Sidebar.jsx';
 
 const NAVIGATION_ID = 'site-navigation';
+const NAVIGATION_TOGGLE_ID = 'site-navigation-toggle';
 const MAIN_CONTENT_ID = 'main-content';
 
 export function AppShell({
@@ -28,9 +29,15 @@ export function AppShell({
         isNavigationOpen={isNavigationOpen}
         onToggleNavigation={onToggleNavigation}
         navigationId={NAVIGATION_ID}
+        navigationToggleId={NAVIGATION_TOGGLE_ID}
       />
       <div className={styles.body}>
-        <Sidebar id={NAVIGATION_ID} isOpen={isNavigationOpen} onClose={onCloseNavigation}>
+        <Sidebar
+          id={NAVIGATION_ID}
+          toggleId={NAVIGATION_TOGGLE_ID}
+          isOpen={isNavigationOpen}
+          onClose={onCloseNavigation}
+        >
           {navigation}
         </Sidebar>
         <main id={MAIN_CONTENT_ID} className={styles.main} tabIndex={-1}>

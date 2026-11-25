@@ -30,6 +30,7 @@ export default [
       '.cache/',
       'coverage/',
       'dist/',
+      'dist-pages/',
       'public/data/',
       'playwright-report/',
       'test-results/',
@@ -81,7 +82,7 @@ export default [
     },
   },
   {
-    files: ['src/**/*.{js,jsx}', 'tests/e2e/**/*.js', 'tests/setup/**/*.js'],
+    files: ['src/**/*.{js,jsx}', 'tests/setup/**/*.js'],
     languageOptions: { globals: { ...globals.browser } },
     plugins: { 'react-hooks': reactHooks },
     rules: {
@@ -99,5 +100,9 @@ export default [
         },
       ],
     },
+  },
+  {
+    files: ['scripts/quality/**/*.js', 'tests/e2e/**/*.js'],
+    languageOptions: { globals: { ...globals.node, ...globals.browser } },
   },
 ];
