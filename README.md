@@ -88,3 +88,4 @@ Pass `--categories production,test` to include rippled's test code as a separate
 The original code in this repository is released under the [MIT License](LICENSE).
 
 Generated datasets and the test fixture contain material from rippled, which remains under rippled's ISC License. Each dataset ships rippled's license as `rippled-license.txt`, and the fixture keeps it at `tests/fixtures/rippled-subset/source/LICENSE.md`. See [NOTICE.md](NOTICE.md).
+=======
