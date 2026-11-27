@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './support/test.js';
 
 async function collectFailures(page) {
   const failures = [];
@@ -52,6 +52,22 @@ test('a malformed URL still renders the site with a helpful message', async ({ p
   await page.goto('symbols/xrpl/%E0%A4%A');
   await expect(page.getByRole('heading', { level: 1, name: 'Symbol not found' })).toBeVisible();
   await expect(page.getByRole('banner')).toBeVisible();
+});
+
+test('the GitHub Pages build does not load Cloudflare Web Analytics', async ({ page, request }) => {
+  const analyticsRequests = [];
+  page.on('request', (pageRequest) => {
+    if (pageRequest.url().includes('cloudflareinsights.com')) {
+      analyticsRequests.push(pageRequest.url());
+    }
+  });
+  await page.goto('./');
+  await expect(page.getByRole('heading', { level: 1, name: 'XRPLD C++ Reference' })).toBeVisible();
+  await page.waitForLoadState('networkidle');
+  expect(analyticsRequests).toEqual([]);
+  for (const path of ['./', 'symbols/xrpl/ApplyContext']) {
+    expect(await (await request.get(path)).text(), path).not.toContain('cloudflareinsights');
+  }
 });
 
 test('development-only files are not published', async ({ request }) => {

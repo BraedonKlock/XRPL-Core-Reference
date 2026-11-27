@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './support/test.js';
 
 async function currentCommitSha(request) {
   const pointer = await (await request.get('/data/current.json')).json();

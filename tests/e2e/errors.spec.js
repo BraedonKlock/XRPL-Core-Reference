@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './support/test.js';
 import { openPage } from './support/site.js';
 
 test('a missing dataset pointer explains how to recover', async ({ page }) => {

@@ -10,6 +10,8 @@ const EXCLUDED_FILES = new Set(['/404.html']);
 const MINIMUM_COMPRESSED_BYTES = 1024;
 const ALLOWED_METHODS = 'GET, HEAD';
 const HSTS_VALUE = 'max-age=31536000';
+const ANALYTICS_SCRIPT_SOURCE = 'https://static.cloudflareinsights.com/beacon.min.js';
+const ANALYTICS_REPORTING_ORIGIN = 'https://cloudflareinsights.com';
 
 const CONTENT_TYPES = Object.freeze({
   '.html': 'text/html; charset=utf-8',
@@ -91,11 +93,11 @@ function inlineScriptHashes(html) {
 function contentSecurityPolicy(scriptHashes) {
   return [
     "default-src 'self'",
-    `script-src 'self' ${scriptHashes.join(' ')}`.trim(),
+    ["script-src 'self'", ...scriptHashes, ANALYTICS_SCRIPT_SOURCE].join(' '),
     "style-src 'self'",
     "img-src 'self' data:",
     "font-src 'self'",
-    "connect-src 'self'",
+    `connect-src 'self' ${ANALYTICS_REPORTING_ORIGIN}`,
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",

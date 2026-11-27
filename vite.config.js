@@ -4,6 +4,16 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
 const OUTPUT_DIRECTORY = process.env.XCR_OUT_DIR ?? 'dist';
+const ANALYTICS_ENABLED = process.env.XCR_BASE_PATH === undefined;
+const ANALYTICS_SCRIPT =
+  /\s*<script\b[^>]*\bsrc="https:\/\/static\.cloudflareinsights\.com\/[^"]*"[^>]*><\/script>/g;
+
+function analyticsBeacon() {
+  return {
+    name: 'xcr-analytics-beacon',
+    transformIndexHtml: (html) => (ANALYTICS_ENABLED ? html : html.replace(ANALYTICS_SCRIPT, '')),
+  };
+}
 
 function staticHostingFiles() {
   let outputDirectory = OUTPUT_DIRECTORY;
@@ -22,7 +32,7 @@ function staticHostingFiles() {
 
 export default defineConfig({
   base: process.env.XCR_BASE_PATH ?? '/',
-  plugins: [react(), staticHostingFiles()],
+  plugins: [react(), analyticsBeacon(), staticHostingFiles()],
   build: {
     outDir: OUTPUT_DIRECTORY,
     sourcemap: false,

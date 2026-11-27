@@ -275,6 +275,23 @@ describe('production server', () => {
       expect(policy).toContain("object-src 'none'");
     });
 
+    it('allows only the Cloudflare Web Analytics beacon and its reporting origin as external sources', async () => {
+      const directives = Object.fromEntries(
+        (await get('/')).headers['content-security-policy'].split('; ').map((directive) => {
+          const [name, ...sources] = directive.split(' ');
+          return [name, sources];
+        }),
+      );
+      const external = (sources) => sources.filter((source) => source.startsWith('https:'));
+      expect(external(directives['script-src'])).toEqual([
+        'https://static.cloudflareinsights.com/beacon.min.js',
+      ]);
+      expect(directives['connect-src']).toEqual(["'self'", 'https://cloudflareinsights.com']);
+      for (const name of ['default-src', 'style-src', 'img-src', 'font-src']) {
+        expect(external(directives[name]), name).toEqual([]);
+      }
+    });
+
     it('sends HSTS only for requests that arrived over HTTPS', async () => {
       expect((await get('/')).headers['strict-transport-security']).toBeUndefined();
       const secure = await get('/', { headers: { 'X-Forwarded-Proto': 'https' } });

@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { ANALYTICS_SCRIPT_URL, expect, test } from './support/test.js';
 
 const PAGES = Object.freeze([
   ['overview', '/', 'XRPLD C++ Reference'],
@@ -100,6 +100,24 @@ test('the logo, styles and scripts load from the site root', async ({ page }) =>
   expect(favicon).toMatch(/^\/assets\//);
   expect((await page.request.get(favicon)).status()).toBe(200);
   expect(problems).toEqual([]);
+});
+
+test('every page loads the Cloudflare Web Analytics beacon with the site token', async ({ page }) => {
+  const beaconRequests = [];
+  page.on('request', (request) => {
+    if (request.url().startsWith(ANALYTICS_SCRIPT_URL)) {
+      beaconRequests.push(request.url());
+    }
+  });
+  for (const [, path] of PAGES) {
+    await page.goto(path);
+    const beacon = page.locator(`script[src="${ANALYTICS_SCRIPT_URL}"]`);
+    await expect(beacon).toHaveCount(1);
+    expect(JSON.parse(await beacon.getAttribute('data-cf-beacon'))).toEqual({
+      token: 'b0531d166cd9425f9724ce4542ae0fe3',
+    });
+  }
+  expect(beaconRequests).toHaveLength(PAGES.length);
 });
 
 test('documents carry the security headers', async ({ request }) => {
