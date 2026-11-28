@@ -28,7 +28,8 @@
     "docs:build": "node scripts/documentation/cli.js build",
     "docs:generate": "node scripts/documentation/cli.js generate",
     "docs:validate": "node scripts/documentation/cli.js validate",
-    "docs:fixtures": "node scripts/documentation/cli.js fixtures"
+    "docs:fixtures": "node scripts/documentation/cli.js fixtures",
+    "notes:validate": "node scripts/developer-notes/cli.js"
   },
   "dependencies": {
     "fast-xml-parser": "^5.12.1",

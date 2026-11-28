@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 2,
+  "symbol": "xrpl::isXRP",
+  "purpose": "Determines whether a value represents XRP, the XRP Ledger's native asset.",
+  "importantNotes": "`Asset::native()` provides equivalent functionality for `Asset` objects. Prefer `isXRP()` when checking whether an asset represents XRP, as it makes the intent more explicit.",
+  "examples": [
+    {
+      "signature": "xrpl::isXRP(Asset const&)",
+      "title": "Checking an Asset",
+      "code": "Asset const asset{xrpIssue()};\nbool native = isXRP(asset);"
+    },
+    {
+      "signature": "xrpl::isXRP(STAmount const&)",
+      "title": "Checking an STAmount",
+      "code": "bool native = isXRP(amount);"
+    }
+  ]
+}

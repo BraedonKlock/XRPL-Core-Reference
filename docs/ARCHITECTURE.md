@@ -13,6 +13,8 @@ The two meet at one boundary: the data contract in `contract/`. The browser neve
 contract/                    Published data contract shared by the engine and the browser
   constants.js               Schema version, symbol kinds, dataset file names, search index columns
   schema.js                  Zod schemas for every published file
+  developer-notes.js         Developer notes schema, symbol links, browser-side overload hashing
+  markdown.js                Safe Markdown subset used by developer notes
 scripts/documentation/
   cli.js                     Command entry point (extract, build, generate, validate, fixtures)
   build-dataset.js           Orchestrates normalisation, resolution, generation and validation
@@ -43,6 +45,7 @@ tests/
   integration/               End-to-end pipeline tests
   e2e/                       Playwright tests against the full generated dataset
   setup/                     jsdom test setup
+developer-notes/             Hand-written developer notes and code examples (see developer-notes/README.md)
 scripts/start-local.sh       One-command local start (`npm start`)
 scripts/deployment/          Production server (`npm run serve`) and manual Railway deployment (`npm run deploy:railway`)
 railpack.json                Railway build settings: Node 22 and the production server start command
@@ -204,6 +207,26 @@ The layout follows the navigation model of Revit API Docs: a dark header, a left
 - Components use CSS Modules. Fonts are system fonts, so nothing is requested from third parties.
 - Accessibility: a skip link, landmark roles, breadcrumbs with `aria-current`, labelled disclosure buttons with `aria-expanded`, visible focus outlines, and reduced-motion support.
 
+## Developer notes
+
+`developer-notes/` holds hand-written guidance, separate from the generated dataset. The contributor guide is `developer-notes/README.md`.
+
+- **Isolation.** The pipeline never reads or writes the directory. The dataset writer only replaces `public/data/`.
+- **Format.** There is one JSON file per function family or class, keyed by `symbol` (the qualified name). Each file holds `purpose`, `importantNotes` and `examples`. Examples for a function carry the overload's published `signatureKey`.
+- **Loading.** Vite bundles the JSON files, the catalog, the Markdown renderer and the C++ highlighter into one lazily loaded chunk, `developer-notes-module`. A symbol page requests it after the page renders. If it is still loading or fails, the page looks exactly as it does without notes.
+- **Rendering.** The page appends collapsed "Developer notes" (Purpose and Important notes) and "Code examples" sections after the generated sections.
+  - Purpose and Important notes appear on the class page, or on a function's overload list and every overload.
+  - Function examples appear only on the overload whose signature they name.
+  - A section without content is not rendered.
+- **Links.** `symbol:` links take a qualified name or a signature key. Links to individual overloads reproduce the pipeline's SHA-256 overload hash with Web Crypto.
+- **Drafts.** A file or an example with `"draft": true` appears only in the dev server. In production builds, `scripts/build/exclude-draft-notes.js` replaces the notes module with one generated from published content only, so no draft content or draft file name reaches `dist/` or `dist-pages/`.
+- **Safety.** Markdown is parsed into a tree and rendered as React elements, never as HTML. Only `https:`, `http:` and `symbol:` links are created.
+- **Validation.** `npm run notes:validate` (`scripts/developer-notes/`) checks the schema, duplicates, symbols, example signatures and every link against the published dataset. It also runs in `npm test`.
+- **Search.** Notes are not searched yet. The deferred design:
+  - load the notes chunk on the first query;
+  - match the query against Purpose text only;
+  - append matches as a new, lowest ranking tier, so existing rankings and the 50 ms budget are unaffected.
+
 ## Source categories
 
 `config/source-categories.js` maps repository paths to categories: `production` covers `include`, `src/libxrpl` and `src/xrpld`, and `test` covers `src/test`, `src/tests` and `src/benchmarks`. The selected categories set Doxygen's input and are recorded in the manifest. Every record and search row carries its category, so test symbols can be included and filtered later without schema changes.
@@ -233,6 +256,7 @@ The layout follows the navigation model of Revit API Docs: a dark header, a left
   - `errors.spec.js` checks that a failed data file affects only its own section.
   - `performance.spec.js` enforces bundle-size, long-task and search-latency budgets.
   - `deployment.spec.js` runs the GitHub Pages build behind `tests/e2e/support/static-pages-server.js`.
+  - `developer-notes.spec.js` runs on the production build. It checks that the committed `isXRP` entry is shared by the overload list and all seven overloads, and that each overload shows only its own published examples. `developer-notes-preview.spec.js` runs against the Vite dev server (port 4175) and serves a fixture notes module through Playwright route interception, so it doesn't depend on committed content. `optimizeDeps.entries` in `vite.config.js` makes that server pre-bundle the dependencies of every source file, including lazily loaded ones, at start-up; otherwise a late re-optimisation answers stale module requests with 504 and pages never render. The spec audits the expanded sections: accessibility in both themes, keyboard use, overflow, clipboard and links.
   - `production-server.spec.js` checks the production server for content-security-policy violations, console errors, content types, security headers, deep-link reloads and 404s for missing files.
 - The site projects run against the production server (`npm run serve`), the command Railway runs. `scripts/deployment/production-server.test.js` covers routing, caching, compression, path traversal, hidden files, symbolic links, malformed requests and methods.
 - `scripts/quality/measure-performance.js` records bundle sizes, load, blocking time, heap and search latency under 4× CPU throttling. The results are in `docs/quality/`.

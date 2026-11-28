@@ -2,9 +2,11 @@ import { defineConfig, devices } from '@playwright/test';
 
 const PREVIEW_PORT = 4173;
 const PAGES_PORT = 4174;
+const NOTES_PREVIEW_PORT = 4175;
 const PAGES_BASE_PATH = '/XRPL-Core-Reference/';
 const ENABLED_BROWSERS = new Set((process.env.XCR_E2E_BROWSERS ?? 'chromium,firefox,webkit').split(','));
-const SITE_TESTS = /(navigation|accessibility|responsive|errors|performance|production-server)\.spec\.js$/;
+const SITE_TESTS =
+  /(navigation|accessibility|responsive|errors|performance|production-server|developer-notes)\.spec\.js$/;
 
 const SITE_PROJECTS = [
   { name: 'desktop-chromium', browser: 'chromium', use: devices['Desktop Chrome'] },
@@ -18,6 +20,7 @@ const SITE_PROJECTS = [
   { name: 'mobile-chromium', browser: 'chromium', use: devices['Pixel 7'] },
   { name: 'mobile-webkit', browser: 'webkit', use: devices['iPhone 14'] },
 ];
+const NOTES_PREVIEW_PROJECTS = new Set(['desktop-chromium', 'desktop-firefox', 'mobile-chromium']);
 
 export default defineConfig({
   testDir: 'tests/e2e',
@@ -32,6 +35,13 @@ export default defineConfig({
       testMatch: SITE_TESTS,
       use: { ...project.use, baseURL: `http://localhost:${PREVIEW_PORT}` },
     })),
+    ...SITE_PROJECTS.filter(
+      (project) => NOTES_PREVIEW_PROJECTS.has(project.name) && ENABLED_BROWSERS.has(project.browser),
+    ).map((project) => ({
+      name: `notes-preview-${project.name}`,
+      testMatch: /developer-notes-preview\.spec\.js$/,
+      use: { ...project.use, baseURL: `http://localhost:${NOTES_PREVIEW_PORT}` },
+    })),
     {
       name: 'github-pages',
       testMatch: /deployment\.spec\.js$/,
@@ -39,6 +49,12 @@ export default defineConfig({
     },
   ],
   webServer: [
+    {
+      command: `npx vite --port ${NOTES_PREVIEW_PORT} --strictPort`,
+      url: `http://localhost:${NOTES_PREVIEW_PORT}/data/current.json`,
+      reuseExistingServer: !process.env.CI,
+      timeout: 120000,
+    },
     {
       command: `npm run build && PORT=${PREVIEW_PORT} npm run serve`,
       url: `http://localhost:${PREVIEW_PORT}/data/current.json`,

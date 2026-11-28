@@ -1,0 +1,74 @@
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.field,
+.example {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.prose p {
+  margin: 0;
+}
+
+.prose ul,
+.prose ol {
+  margin: 0;
+  padding-left: var(--space-5);
+}
+
+.prose li + li {
+  margin-top: var(--space-1);
+}
+
+.prose :not(pre) > code {
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius-sm);
+  background: var(--color-code-background);
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+}
+
+.fieldHeading {
+  margin: 0;
+  font-size: var(--font-size-md);
+}
+
+.meta {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.notice {
+  padding: var(--space-2) var(--space-3);
+  border-left: 3px solid var(--color-notice-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-notice-background);
+  font-size: var(--font-size-sm);
+}
+
+.exampleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.copyButton {
+  flex: none;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-raised);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.copyButton:hover {
+  background: var(--color-surface-hover);
+}

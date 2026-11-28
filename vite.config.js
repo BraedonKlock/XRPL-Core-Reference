@@ -2,6 +2,7 @@ import { copyFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
+import { excludeDraftNotes } from './scripts/build/exclude-draft-notes.js';
 
 const OUTPUT_DIRECTORY = process.env.XCR_OUT_DIR ?? 'dist';
 const ANALYTICS_ENABLED = process.env.XCR_BASE_PATH === undefined;
@@ -32,7 +33,10 @@ function staticHostingFiles() {
 
 export default defineConfig({
   base: process.env.XCR_BASE_PATH ?? '/',
-  plugins: [react(), analyticsBeacon(), staticHostingFiles()],
+  plugins: [excludeDraftNotes(), react(), analyticsBeacon(), staticHostingFiles()],
+  optimizeDeps: {
+    entries: ['index.html', 'src/**/*.{js,jsx}', '!src/**/*.test.{js,jsx}'],
+  },
   build: {
     outDir: OUTPUT_DIRECTORY,
     sourcemap: false,

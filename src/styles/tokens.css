@@ -48,6 +48,11 @@
   --color-focus: #2f81f7;
   --color-code-background: #f3f5f7;
   --color-code-text: #1f2328;
+  --color-syntax-comment: #59636e;
+  --color-syntax-keyword: #b31d28;
+  --color-syntax-string: #0a3069;
+  --color-syntax-number: #0550ae;
+  --color-syntax-preprocessor: #6639ba;
   --color-header-background: #10233b;
   --color-header-text: #f0f4f8;
   --color-header-muted: #a9bacb;
@@ -86,6 +91,11 @@
   --color-focus: #6cb6ff;
   --color-code-background: #1b222c;
   --color-code-text: #e6edf3;
+  --color-syntax-comment: #9ba7b4;
+  --color-syntax-keyword: #ff7b72;
+  --color-syntax-string: #a5d6ff;
+  --color-syntax-number: #79c0ff;
+  --color-syntax-preprocessor: #d2a8ff;
   --color-header-background: #0a1622;
   --color-notice-background: #2b2414;
   --color-notice-border: #7d6522;
